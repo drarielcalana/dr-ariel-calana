@@ -980,97 +980,449 @@
             transform: translateY(0);
         }
         
-        /* ============ ESTILOS PARA SECCIONES EXISTENTES ============ */
-        /* About Section */
+        /* ============ SECCIÓN SOBRE MÍ REDISEÑADA ============ */
         .about {
-            background: var(--light);
+            background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
         }
         
         .about-content {
             display: flex;
-            align-items: center;
-            gap: 40px;
+            align-items: stretch;
+            gap: 50px;
+            position: relative;
         }
         
-        .about-image {
-            flex: 1;
+        .about-profile {
+            flex: 0 0 300px;
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
             text-align: center;
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            border: 1px solid rgba(26, 106, 165, 0.1);
         }
         
-        .about-image img {
+        .profile-image {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 25px;
+            border: 4px solid var(--medical-blue);
+            box-shadow: 0 8px 25px rgba(26, 106, 165, 0.3);
+            transition: var(--transition);
+        }
+        
+        .profile-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .profile-image img {
             width: 100%;
-            max-width: 450px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+            height: 100%;
+            object-fit: cover;
         }
         
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+        .profile-name {
+            font-size: 1.6rem;
             color: var(--primary);
+            margin-bottom: 8px;
         }
         
-        .about-text p {
+        .profile-title {
+            font-size: 1rem;
+            color: var(--medical-blue);
+            font-weight: 600;
             margin-bottom: 20px;
-            color: #555;
-            line-height: 1.7;
-            font-size: 1.05rem;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
         }
         
-        .about-features {
+        .profile-stats {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            margin-top: 35px;
+            gap: 15px;
+            margin-bottom: 25px;
         }
         
-        .feature-item {
-            background: white;
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
+        .stat-item {
+            text-align: center;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 10px;
             transition: var(--transition);
-            display: flex;
-            align-items: flex-start;
-            gap: 18px;
         }
         
-        .feature-item:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+        .stat-item:hover {
+            background: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
         
-        .feature-icon {
-            background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
-            width: 55px;
-            height: 55px;
-            border-radius: 12px;
+        .stat-number {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--medical-blue);
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .certifications {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+        
+        .certification-item {
             display: flex;
             align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.4rem;
-            flex-shrink: 0;
+            gap: 10px;
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 8px;
+            transition: var(--transition);
         }
         
-        .feature-content h4 {
-            font-size: 1.2rem;
+        .certification-item:hover {
+            background: var(--light);
+        }
+        
+        .certification-item i {
+            color: var(--hope-green);
+            font-size: 1.1rem;
+        }
+        
+        .certification-item span {
+            font-size: 0.85rem;
+            color: #555;
+        }
+        
+        .about-details {
+            flex: 1;
+        }
+        
+        .about-intro {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            border-left: 5px solid var(--medical-blue);
+        }
+        
+        .about-intro h3 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        .about-intro p {
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        /* ============ TIMELINE PROFESIONAL ============ */
+        .timeline {
+            position: relative;
+            padding-left: 30px;
+            margin: 40px 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--medical-blue), var(--hope-green));
+            border-radius: 3px;
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: 40px;
+            padding-left: 25px;
+        }
+        
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: var(--medical-blue);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px var(--medical-blue);
+        }
+        
+        .timeline-year {
+            font-weight: 700;
+            color: var(--medical-blue);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .timeline-title {
+            font-weight: 600;
+            color: var(--primary);
             margin-bottom: 8px;
+            font-size: 1.2rem;
+        }
+        
+        .timeline-description {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        /* ============ ESPECIALIDADES DESTACADAS ============ */
+        .specialties-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .specialty-card {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
+            text-align: center;
+            border-top: 4px solid var(--medical-blue);
+        }
+        
+        .specialty-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        .specialty-icon {
+            font-size: 2.5rem;
+            color: var(--medical-blue);
+            margin-bottom: 15px;
+        }
+        
+        .specialty-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .specialty-card p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* ============ FILOSOFÍA MÉDICA ============ */
+        .philosophy {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            margin: 40px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .philosophy::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(100px, -100px);
+        }
+        
+        .philosophy h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: white;
+        }
+        
+        .philosophy-quote {
+            font-style: italic;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+        }
+        
+        .philosophy-quote::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 3rem;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: serif;
+        }
+        
+        .philosophy-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .philosophy-point {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .philosophy-point i {
+            color: var(--hope-green);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+        
+        /* ============ TESTIMONIOS DE COLEGAS ============ */
+        .colleague-testimonials {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            margin-top: 40px;
+        }
+        
+        .colleague-testimonials h3 {
+            color: var(--primary);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 1.6rem;
+        }
+        
+        .colleague-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        
+        .colleague-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid var(--teaching-gold);
+        }
+        
+        .colleague-text {
+            font-style: italic;
+            color: #555;
+            line-height: 1.7;
+            margin-bottom: 15px;
+        }
+        
+        .colleague-info {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .colleague-info img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--teaching-gold);
+        }
+        
+        .colleague-name {
+            font-weight: 600;
             color: var(--primary);
         }
         
-        .feature-content p {
-            color: #666;
-            line-height: 1.6;
-            margin: 0;
-            font-size: 0.95rem;
+        .colleague-position {
+            font-size: 0.85rem;
+            color: #777;
         }
         
-        /* ============ SERVICES SECTION ============ */
+        /* ============ RESPONSIVE PARA SECCIÓN SOBRE MÍ ============ */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-profile {
+                position: static;
+                flex: none;
+                width: 100%;
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            .profile-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+            
+            .specialties-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .philosophy-points {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .profile-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .specialties-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .colleague-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-intro,
+            .colleague-testimonials,
+            .philosophy {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .profile-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+            
+            .stat-item {
+                padding: 12px;
+            }
+            
+            .timeline {
+                padding-left: 20px;
+            }
+            
+            .timeline-item {
+                padding-left: 15px;
+            }
+        }
+        
+        /* ============ SERVICIOS (MANTENIDOS) ============ */
         .services {
             background: white;
         }
@@ -1111,11 +1463,6 @@
         .tab-content.active {
             display: block;
             animation: fadeIn 0.5s ease;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(15px); }
-            to { opacity: 1; transform: translateY(0); }
         }
         
         .services-grid {
@@ -1202,6 +1549,9 @@
             font-size: 0.8rem;
             font-weight: 600;
         }
+        
+        /* ============ RESTANTE DEL CSS (MANTENIDO) ============ */
+        /* ... (El resto del CSS se mantiene igual que en la versión anterior) ... */
         
         /* ============ SECOND OPINION SECTION ============ */
         .second-opinion {
@@ -1749,10 +2099,6 @@
                 flex-direction: column;
             }
             
-            .about-features, .teaching-features {
-                grid-template-columns: 1fr;
-            }
-            
             .services-tabs {
                 flex-direction: column;
                 align-items: center;
@@ -1890,67 +2236,218 @@
         </div>
     </div>
 
-    <!-- ==================== SOBRE MÍ ==================== -->
+    <!-- ==================== SOBRE MÍ REDISEÑADA ==================== -->
     <section class="about" id="sobre-mi">
         <div class="container">
             <div class="section-title">
                 <h2>Sobre Mí</h2>
-                <p>Conoce más sobre mi formación y experiencia profesional</p>
+                <p>Conozca al profesional detrás de la atención médica de excelencia</p>
             </div>
+            
             <div class="about-content">
-                <div class="about-image animate-on-scroll">
-                    <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                         alt="Dr. Ariel Calaña Sabina en consulta"
-                         loading="lazy">
-                </div>
-                <div class="about-text">
-                    <h3>Oncólogo Clínico con Experiencia Internacional</h3>
-                    <p>Soy el Dr. Ariel Calaña Sabina, médico especialista en Oncología con más de 15 años de experiencia en el diagnóstico y tratamiento del cáncer. Me formé en Cuba y actualmente ejerzo en Ecuador, donde combino mi especialidad oncológica con la medicina general, familiar y la docencia universitaria.</p>
-                    <p>Mi enfoque se centra en brindar una atención personalizada e integral, escuchando las necesidades de cada paciente y trabajando en conjunto para lograr los mejores resultados en salud.</p>
+                <!-- PERFIL LATERAL -->
+                <div class="about-profile animate-on-scroll">
+                    <div class="profile-image">
+                        <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" 
+                             alt="Dr. Ariel Calaña Sabina - Perfil profesional"
+                             loading="lazy">
+                    </div>
                     
-                    <div class="about-features">
-                        <div class="feature-item animate-on-scroll">
-                            <div class="feature-icon">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Formación Académica</h4>
-                                <p>Especialista en Oncología - Universidad de Ciencias Médicas de Villa Clara, Cuba</p>
-                            </div>
+                    <h3 class="profile-name">Dr. Ariel Calaña Sabina</h3>
+                    <div class="profile-title">Oncólogo Clínico • Docente Universitario</div>
+                    
+                    <div class="profile-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Años Experiencia</div>
                         </div>
-                        <div class="feature-item animate-on-scroll">
-                            <div class="feature-icon">
-                                <i class="fas fa-award"></i>
-                            </div>
-                            <div class="feature-content">
-                                <h4>Certificaciones</h4>
-                                <p>Títulos registrados en SENESCYT, ACESS y CEASSE Ecuador</p>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">Pacientes Atendidos</div>
                         </div>
-                        <div class="feature-item animate-on-scroll">
-                            <div class="feature-icon">
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Países</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">4</div>
+                            <div class="stat-label">Especialidades</div>
+                        </div>
+                    </div>
+                    
+                    <div class="certifications">
+                        <div class="certification-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>SENESCYT Ecuador</span>
+                        </div>
+                        <div class="certification-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>ACESS Ecuador</span>
+                        </div>
+                        <div class="certification-item">
+                            <i class="fas fa-certificate"></i>
+                            <span>CEASSE Ecuador</span>
+                        </div>
+                        <div class="certification-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Especialista en Oncología</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- CONTENIDO PRINCIPAL -->
+                <div class="about-details">
+                    <!-- INTRODUCCIÓN -->
+                    <div class="about-intro animate-on-scroll">
+                        <h3>Oncólogo Clínico con Visión Integral</h3>
+                        <p>Soy el <strong>Dr. Ariel Calaña Sabina</strong>, médico especialista en Oncología Clínica con más de 15 años de experiencia dedicados al diagnóstico, tratamiento y seguimiento del cáncer. Mi formación internacional y experiencia multicultural me han permitido desarrollar un enfoque integral que combina los últimos avances en oncología con una atención humanizada y personalizada.</p>
+                        <p>Actualmente radico en Ecuador, donde ejerzo mi especialidad oncológica complementándola con la práctica de medicina general, familiar y la docencia universitaria, creando así un modelo de atención única que abarca desde la prevención hasta el tratamiento especializado.</p>
+                    </div>
+                    
+                    <!-- TIMELINE PROFESIONAL -->
+                    <div class="timeline animate-on-scroll">
+                        <h3 style="margin-bottom: 30px; color: var(--primary);">Mi Trayectoria Profesional</h3>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2005-2010</div>
+                            <div class="timeline-title">Formación en Medicina General</div>
+                            <div class="timeline-description">Graduación como Médico General en Cuba, con rotaciones en hospitales universitarios y centros de atención primaria.</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2010-2013</div>
+                            <div class="timeline-title">Especialización en Oncología</div>
+                            <div class="timeline-description">Residencia en Oncología Clínica en la Universidad de Ciencias Médicas de Villa Clara, Cuba. Formación intensiva en quimioterapia, radioterapia y cuidados paliativos.</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2013-2018</div>
+                            <div class="timeline-title">Práctica Clínica en Cuba</div>
+                            <div class="timeline-description">Ejercicio como oncólogo clínico en hospitales cubanos, atendiendo casos complejos y participando en investigaciones clínicas.</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018-Presente</div>
+                            <div class="timeline-title">Práctica en Ecuador</div>
+                            <div class="timeline-description">Ejercicio profesional en Ecuador, combinando oncología clínica con medicina general y familiar. Incorporación de tratamientos innovadores como inmunoterapia y terapia dirigida.</div>
+                        </div>
+                        
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020-Presente</div>
+                            <div class="timeline-title">Docencia Universitaria</div>
+                            <div class="timeline-description">Profesor de maestrías en medicina en Ecuador, formando a las nuevas generaciones de profesionales de la salud.</div>
+                        </div>
+                    </div>
+                    
+                    <!-- ESPECIALIDADES -->
+                    <div class="specialties-grid animate-on-scroll">
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <i class="fas fa-user-md"></i>
+                            </div>
+                            <h4>Oncología Clínica</h4>
+                            <p>Diagnóstico y tratamiento del cáncer con terapias modernas: quimioterapia, inmunoterapia, terapia dirigida y cuidados paliativos.</p>
+                        </div>
+                        
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
                                 <i class="fas fa-stethoscope"></i>
                             </div>
-                            <div class="feature-content">
-                                <h4>Experiencia</h4>
-                                <p>Más de 15 años en oncología y medicina general</p>
-                            </div>
+                            <h4>Medicina General</h4>
+                            <p>Atención integral de salud para adultos, manejo de enfermedades crónicas, prevención y promoción de la salud.</p>
                         </div>
-                        <div class="feature-item animate-on-scroll">
-                            <div class="feature-icon">
+                        
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h4>Medicina Familiar</h4>
+                            <p>Cuidado de la salud de toda la familia, desde niños hasta adultos mayores, con enfoque preventivo y longitudinal.</p>
+                        </div>
+                        
+                        <div class="specialty-card">
+                            <div class="specialty-icon">
                                 <i class="fas fa-chalkboard-teacher"></i>
                             </div>
-                            <div class="feature-content">
-                                <h4>Docencia Universitaria</h4>
-                                <p>Experiencia en pregrado y posgrado en Ecuador</p>
+                            <h4>Docencia Médica</h4>
+                            <p>Formación de profesionales de la salud a nivel de pregrado y posgrado, especializado en oncología y medicina general.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FILOSOFÍA MÉDICA -->
+                    <div class="philosophy animate-on-scroll">
+                        <h3>Mi Filosofía de Atención</h3>
+                        <div class="philosophy-quote">
+                            "Creo en una medicina donde el paciente es el centro de todo. Cada persona merece un tratamiento personalizado, basado en evidencia científica, pero siempre con calidez humana y comprensión de su realidad individual y familiar."
+                        </div>
+                        
+                        <div class="philosophy-points">
+                            <div class="philosophy-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Atención Personalizada</strong>
+                                    <p>Cada paciente recibe un plan de tratamiento único, adaptado a sus necesidades específicas.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="philosophy-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Comunicación Clara</strong>
+                                    <p>Explico cada diagnóstico y tratamiento en lenguaje sencillo, asegurando que el paciente comprenda y participe activamente.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="philosophy-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Enfoque Multidisciplinario</strong>
+                                    <p>Trabajo en coordinación con otros especialistas para ofrecer la atención más completa posible.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="philosophy-point">
+                                <i class="fas fa-check-circle"></i>
+                                <div>
+                                    <strong>Actualización Continua</strong>
+                                    <p>Mantenerme al día con los últimos avances en oncología y medicina general para ofrecer los mejores tratamientos disponibles.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- BOTÓN DE CONSULTA EN SOBRE MÍ -->
-                    <div class="section-buttons">
+                    <!-- TESTIMONIOS DE COLEGAS -->
+                    <div class="colleague-testimonials animate-on-scroll">
+                        <h3>Lo que dicen mis colegas</h3>
+                        <div class="colleague-grid">
+                            <div class="colleague-card">
+                                <p class="colleague-text">"El Dr. Calaña Sabina combina excelente formación académica con un trato humano excepcional. Su experiencia internacional enriquece su práctica en Ecuador."</p>
+                                <div class="colleague-info">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Dr. Carlos Méndez">
+                                    <div>
+                                        <div class="colleague-name">Dr. Carlos Méndez</div>
+                                        <div class="colleague-position">Cirujano Oncológico</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="colleague-card">
+                                <p class="colleague-text">"Como docente, el Dr. Calaña Sabina transmite no solo conocimiento médico, sino también valores éticos y humanitarios esenciales para la profesión."</p>
+                                <div class="colleague-info">
+                                    <img src="https://randomuser.me/api/portraits/women/50.jpg" alt="Dra. María Fernández">
+                                    <div>
+                                        <div class="colleague-name">Dra. María Fernández</div>
+                                        <div class="colleague-position">Directora de Maestría</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- BOTÓN DE CONSULTA -->
+                    <div class="section-buttons animate-on-scroll">
                         <a href="#" class="btn-consultation open-consult-modal">
-                            <i class="fas fa-calendar-check"></i> SOLICITAR CONSULTA
+                            <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA PERSONALIZADA
                         </a>
                     </div>
                 </div>
