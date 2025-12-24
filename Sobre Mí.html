@@ -6,7 +6,7 @@
     
     <!-- ==================== SEO PROFESIONAL ==================== -->
     <meta name="description" content="Conozca al Dr. Ariel Calaña Sabina - Oncólogo Clínico en Ecuador con 15+ años de experiencia. Formación internacional, especialista en cáncer, docente universitario">
-    <meta name="keywords" content="oncólogo, cáncer, quito, ecuador, doctor, experiencia, formación, trayectoria, historia, médico especialista, oncología clínica">
+    <meta name="keywords" content="oncólogo, cáncer, quito, ecuador, doctor, experiencia, formación, trayectoria, historia, médico especialista, oncología clínica, docente, profesor universitario">
     <meta name="author" content="Dr. Ariel Calaña Sabina">
     <meta name="robots" content="index, follow">
     
@@ -32,7 +32,7 @@
     <link rel="canonical" href="https://drarielcalana.com/sobre-mi">
     
     <!-- ==================== TÍTULO ==================== -->
-    <title>Dr. Ariel Calaña Sabina | Sobre Mí | Trayectoria Profesional</title>
+    <title>Dr. Ariel Calaña Sabina | Sobre Mí | Trayectoria Profesional Completa</title>
     
     <!-- ==================== FAVICON ==================== -->
     <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/medical-doctor.png">
@@ -55,6 +55,8 @@
             --hope-green: #2E7D32;
             --prevention-teal: #00695C;
             --teaching-gold: #F57C00;
+            --research-purple: #7B1FA2;
+            --audit-blue: #0288D1;
             --light: #F5F9FF;
             --dark: #1A237E;
             --light-gray: #F8FAFC;
@@ -140,7 +142,7 @@
             line-height: 1.7;
         }
         
-        /* ============ HEADER MEJORADO CON DOS BOTONES ============ */
+        /* ============ HEADER MEJORADO ============ */
         header {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -166,7 +168,6 @@
             padding: 0;
         }
         
-        /* LOGO ELEGANTE */
         .logo {
             display: flex;
             align-items: center;
@@ -658,7 +659,7 @@
             font-size: 1.1rem;
         }
         
-        /* ============ SECCIÓN EXPERIENCIA ============ */
+        /* ============ SECCIÓN EXPERIENCIA COMPLETA ============ */
         .experience-section {
             background: white;
             border-radius: 20px;
@@ -722,13 +723,36 @@
             font-size: 1.3rem;
         }
         
+        .timeline-institution {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
         .timeline-description {
             color: var(--text-light);
             font-size: 1rem;
             line-height: 1.7;
         }
         
-        /* ============ SECCIÓN FORMACIÓN ============ */
+        .timeline-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+        
+        .timeline-badge {
+            background: var(--light);
+            color: var(--text-dark);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+        
+        /* ============ SECCIÓN FORMACIÓN COMPLETA ============ */
         .education-section {
             background: linear-gradient(135deg, #F0F9FF 0%, #E6F4FF 100%);
             border-radius: 20px;
@@ -772,13 +796,20 @@
             font-size: 1.3rem;
         }
         
+        .education-institution {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
         .education-description {
             color: var(--text-light);
             font-size: 1rem;
             line-height: 1.7;
         }
         
-        /* ============ SECCIÓN ESPECIALIDADES ============ */
+        /* ============ SECCIÓN ESPECIALIDADES AMPLIADA ============ */
         .specialties-section {
             background: white;
             border-radius: 20px;
@@ -827,6 +858,162 @@
             color: var(--text-light);
             font-size: 0.95rem;
             line-height: 1.6;
+        }
+        
+        /* ============ SECCIÓN HABILIDADES Y COMPETENCIAS ============ */
+        .skills-section {
+            background: linear-gradient(135deg, #FFF8E1 0%, #FFECB3 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--teaching-gold);
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .skill-category {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        
+        .skill-category h4 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skill-list {
+            list-style: none;
+        }
+        
+        .skill-list li {
+            margin-bottom: 12px;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .skill-list li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--hope-green);
+            font-weight: bold;
+        }
+        
+        /* ============ SECCIÓN DOCENCIA E INVESTIGACIÓN ============ */
+        .teaching-section {
+            background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--research-purple);
+        }
+        
+        .teaching-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .teaching-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transition: var(--transition);
+        }
+        
+        .teaching-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .teaching-icon {
+            font-size: 2.5rem;
+            color: var(--research-purple);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .teaching-card h4 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        
+        .teaching-card p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            text-align: center;
+        }
+        
+        /* ============ SECCIÓN CERTIFICACIONES Y LICENCIAS ============ */
+        .certifications-section {
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            margin-bottom: 40px;
+            box-shadow: var(--shadow);
+            border-left: 5px solid var(--audit-blue);
+        }
+        
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .certification-card {
+            background: var(--light);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid var(--audit-blue);
+        }
+        
+        .certification-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .certification-issuer {
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .certification-date {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        .certification-status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: var(--hope-green);
+            color: white;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
         }
         
         /* ============ SECCIÓN FILOSOFÍA ============ */
@@ -1054,7 +1241,7 @@
                 grid-template-columns: repeat(4, 1fr);
             }
             
-            .education-grid, .specialties-grid {
+            .education-grid, .specialties-grid, .skills-grid, .teaching-grid, .certifications-grid {
                 grid-template-columns: 1fr;
             }
             
@@ -1099,7 +1286,8 @@
             }
             
             .profile-section, .experience-section, .education-section,
-            .specialties-section, .philosophy-section, .cta-section {
+            .specialties-section, .skills-section, .teaching-section,
+            .certifications-section, .philosophy-section, .cta-section {
                 padding: 35px 25px;
             }
             
@@ -1239,14 +1427,15 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text animate-on-scroll">
-                    <h1>Mi <span>Trayectoria Profesional</span></h1>
+                    <h1>Mi <span>Trayectoria Profesional Completa</span></h1>
                     
-                    <div class="hero-subtitle">Oncólogo Clínico • Docente Universitario</div>
+                    <div class="hero-subtitle">Oncólogo Clínico • Docente Universitario • Investigador • Auditor Médico</div>
                     
                     <div class="hero-badges">
                         <div class="badge"><i class="fas fa-graduation-cap"></i> Especialista en Oncología</div>
-                        <div class="badge"><i class="fas fa-award"></i> 15+ Años Experiencia</div>
+                        <div class="badge"><i class="fas fa-award"></i> 18+ Años Experiencia</div>
                         <div class="badge"><i class="fas fa-globe-americas"></i> Formación Internacional</div>
+                        <div class="badge"><i class="fas fa-chalkboard-teacher"></i> Docente Universitario</div>
                     </div>
                     
                     <div class="hero-buttons">
@@ -1273,23 +1462,25 @@
     <!-- ==================== NAVEGACIÓN ENTRE SECCIONES ============ -->
     <div class="container">
         <div class="section-nav">
-            <h3>Explora Mi Trayectoria</h3>
+            <h3>Explora Mi Trayectoria Completa</h3>
             <div class="nav-links">
                 <a href="#perfil" class="nav-link"><i class="fas fa-user-md"></i> Perfil</a>
                 <a href="#experiencia" class="nav-link"><i class="fas fa-briefcase"></i> Experiencia</a>
                 <a href="#formacion" class="nav-link"><i class="fas fa-graduation-cap"></i> Formación</a>
-                <a href="#especialidades" class="nav-link"><i class="fas fa-stethoscope"></i> Especialidades</a>
+                <a href="#habilidades" class="nav-link"><i class="fas fa-cogs"></i> Habilidades</a>
+                <a href="#docencia" class="nav-link"><i class="fas fa-chalkboard-teacher"></i> Docencia</a>
+                <a href="#certificaciones" class="nav-link"><i class="fas fa-certificate"></i> Certificaciones</a>
                 <a href="#filosofia" class="nav-link"><i class="fas fa-heart"></i> Filosofía</a>
             </div>
         </div>
     </div>
 
-    <!-- ==================== SECCIÓN PERFIL ============ -->
+    <!-- ==================== SECCIÓN PERFIL MEJORADO ============ -->
     <section id="perfil" class="profile-section animate-on-scroll">
         <div class="container">
             <div class="section-title">
-                <h2>Mi Perfil Profesional</h2>
-                <p>Conozca al profesional detrás de más de 15 años de excelencia médica</p>
+                <h2>Mi Perfil Profesional Integral</h2>
+                <p>Conozca al profesional detrás de más de 18 años de excelencia médica, docencia e investigación</p>
             </div>
             
             <div class="profile-content">
@@ -1301,23 +1492,23 @@
                     </div>
                     
                     <h3 style="color: var(--primary); margin-bottom: 15px;">Dr. Ariel Calaña Sabina</h3>
-                    <p style="color: var(--medical-blue); font-weight: 600; margin-bottom: 25px;">Oncólogo Clínico • Docente Universitario</p>
+                    <p style="color: var(--medical-blue); font-weight: 600; margin-bottom: 25px;">Oncólogo Clínico • Docente • Investigador</p>
                     
                     <div class="profile-stats">
                         <div class="stat-item">
-                            <div class="stat-number">15+</div>
+                            <div class="stat-number">18+</div>
                             <div class="stat-label">Años Experiencia</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">1000+</div>
-                            <div class="stat-label">Pacientes Atendidos</div>
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Hospitales</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-number">3</div>
                             <div class="stat-label">Países</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">4</div>
+                            <div class="stat-number">8+</div>
                             <div class="stat-label">Especialidades</div>
                         </div>
                     </div>
@@ -1339,149 +1530,377 @@
                 </div>
                 
                 <div>
-                    <h3 style="color: var(--primary); margin-bottom: 20px;">Oncólogo Clínico con Visión Integral</h3>
-                    <p style="margin-bottom: 20px; line-height: 1.8;">Soy el <strong>Dr. Ariel Calaña Sabina</strong>, médico especialista en Oncología Clínica con más de 15 años de experiencia dedicados al diagnóstico, tratamiento y seguimiento del cáncer. Mi formación internacional y experiencia multicultural me han permitido desarrollar un enfoque integral que combina los últimos avances en oncología con una atención humanizada y personalizada.</p>
+                    <h3 style="color: var(--primary); margin-bottom: 20px;">Oncólogo Clínico con Visión Integral y Experiencia Internacional</h3>
+                    <p style="margin-bottom: 20px; line-height: 1.8;">Soy el <strong>Dr. Ariel Calaña Sabina</strong>, médico especialista en Oncología Clínica con más de <strong>18 años de experiencia</strong> dedicados al diagnóstico, tratamiento y seguimiento del cáncer. Mi formación internacional en Cuba y práctica en Ecuador me han permitido desarrollar un enfoque integral que combina los últimos avances en oncología con una atención humanizada y personalizada.</p>
                     
-                    <p style="margin-bottom: 20px; line-height: 1.8;">Mi trayectoria abarca desde la práctica clínica en prestigiosos hospitales oncológicos hasta la docencia universitaria y la atención privada, creando así un modelo de atención única que abarca desde la prevención hasta el tratamiento especializado y los cuidados paliativos.</p>
+                    <p style="margin-bottom: 20px; line-height: 1.8;">Mi trayectoria abarca <strong>práctica clínica en prestigiosos hospitales oncológicos, docencia universitaria, investigación médica, auditoría médica y atención privada</strong>, creando así un modelo de atención única que abarca desde la prevención hasta el tratamiento especializado y los cuidados paliativos.</p>
                     
-                    <p style="line-height: 1.8;">Actualmente radico en Ecuador, donde ejerzo mi especialidad oncológica complementándola con la práctica de medicina general y familiar, manteniendo siempre un compromiso con la actualización continua y la excelencia en el cuidado del paciente.</p>
+                    <p style="line-height: 1.8;">Actualmente radico en Ecuador, donde ejerzo mi especialidad oncológica complementándola con la práctica de medicina general y familiar, manteniendo siempre un compromiso con la actualización continua, la excelencia en el cuidado del paciente y la formación de nuevas generaciones de profesionales de la salud.</p>
+                    
+                    <div style="margin-top: 25px; padding: 20px; background: var(--light); border-radius: 10px; border-left: 4px solid var(--medical-blue);">
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">Mi Compromiso</h4>
+                        <p style="margin-bottom: 0; line-height: 1.6;">"Ofrecer atención oncológica de excelencia basada en evidencia científica, combinada con calidez humana y acompañamiento continuo a pacientes y familias durante todo el proceso de tratamiento."</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN EXPERIENCIA ============ -->
+    <!-- ==================== SECCIÓN EXPERIENCIA COMPLETA ============ -->
     <section id="experiencia" class="experience-section animate-on-scroll">
         <div class="container">
             <div class="section-title">
-                <h2>Experiencia Laboral</h2>
-                <p>15+ años de práctica médica especializada en oncología y medicina general</p>
+                <h2>Experiencia Laboral Completa</h2>
+                <p>18+ años de práctica médica especializada en oncología, medicina general, docencia e investigación</p>
             </div>
             
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-year">2018 - Actualmente</div>
                     <div class="timeline-title">Médico Oncólogo Clínico - Atención Privada</div>
-                    <div class="timeline-description">Diagnóstico, screening y manejo integral de pacientes oncológicos. Atención ambulatoria, hospitalaria y domiciliaria. Manejo de emergencias oncológicas y cuidados paliativos.</div>
+                    <div class="timeline-institution">Consultorio Privado • Quito, Ecuador</div>
+                    <div class="timeline-description">Diagnóstico, screening y manejo integral de pacientes oncológicos. Atención ambulatoria, hospitalaria y domiciliaria. Manejo de emergencias oncológicas y cuidados paliativos. Prescripción de quimioterapia, inmunoterapia, terapia dirigida y hormonoterapia.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Quimioterapia</span>
+                        <span class="timeline-badge">Inmunoterapia</span>
+                        <span class="timeline-badge">Cuidados Paliativos</span>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2018 - Actualmente</div>
-                    <div class="timeline-title">Médico General y Oncólogo - Fundación Salud igual para todos</div>
-                    <div class="timeline-description">Atención integral en medicina general y especializada en oncología. Diagnóstico, tratamiento y seguimiento de enfermedades oncológicas y condiciones médicas generales.</div>
+                    <div class="timeline-title">Médico General y Oncólogo</div>
+                    <div class="timeline-institution">Fundación Salud igual para todos • Tumbaco, Quito, Ecuador</div>
+                    <div class="timeline-description">Atención integral en medicina general y especializada en oncología. Diagnóstico, tratamiento y seguimiento de enfermedades oncológicas y condiciones médicas generales. Manejo de urgencias y emergencias médicas.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Medicina General</span>
+                        <span class="timeline-badge">Oncología</span>
+                        <span class="timeline-badge">Urgencias</span>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2017 - 2018</div>
-                    <div class="timeline-title">Médico General y Oncólogo - Club de Leones Carita de Dios</div>
-                    <div class="timeline-description">Atención médica general y especializada en oncología para población vulnerable. Implementación de programas de screening y prevención.</div>
+                    <div class="timeline-title">Médico General y Oncólogo</div>
+                    <div class="timeline-institution">Club de Leones Carita de Dios • Quito, Ecuador</div>
+                    <div class="timeline-description">Atención médica general y especializada en oncología para población vulnerable. Implementación de programas de screening y prevención del cáncer. Diagnóstico y tratamiento integral.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Medicina Comunitaria</span>
+                        <span class="timeline-badge">Prevención</span>
+                        <span class="timeline-badge">Screening</span>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2015 - 2017</div>
-                    <div class="timeline-title">Médico General y Especialista - Centro Médico Martha Bucaran</div>
-                    <div class="timeline-description">Práctica médica general complementada con atención oncológica especializada. Coordinación de cuidados y seguimiento multidisciplinario.</div>
+                    <div class="timeline-title">Médico General y Especialista</div>
+                    <div class="timeline-institution">Centro Médico Martha Bucaran • Quito, Ecuador</div>
+                    <div class="timeline-description">Práctica médica general complementada con atención oncológica especializada. Coordinación de cuidados y seguimiento multidisciplinario. Manejo de documentación médica y registros clínicos.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Atención Integral</span>
+                        <span class="timeline-badge">Multidisciplinario</span>
+                        <span class="timeline-badge">Documentación</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2015</div>
+                    <div class="timeline-title">Médico Auditor</div>
+                    <div class="timeline-institution">CONSORCIO AUDITAM • Quito, Ecuador</div>
+                    <div class="timeline-description">Auditorías médicas especializadas. Revisión y evaluación de procesos clínicos, documentación médica y calidad de atención. Implementación de mejoras en procesos asistenciales.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Auditoría Médica</span>
+                        <span class="timeline-badge">Calidad</span>
+                        <span class="timeline-badge">Procesos</span>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2012 - 2015</div>
-                    <div class="timeline-title">Médico Especialista en Oncología - Hospital Provincial Dr. Gustavo Aldereguia Lima</div>
-                    <div class="timeline-description">Práctica oncológica especializada en hospital de tercer nivel. Prescripción y supervisión de quimioterapia, inmunoterapia y terapia dirigida. Formación de residentes.</div>
+                    <div class="timeline-title">Médico Especialista en Oncología • Docente • Jefe de Servicio</div>
+                    <div class="timeline-institution">Hospital Provincial Dr. Gustavo Aldereguia Lima • Cienfuegos, Cuba</div>
+                    <div class="timeline-description">Práctica oncológica especializada en hospital de tercer nivel. Prescripción y supervisión de quimioterapia, inmunoterapia y terapia dirigida. Formación de residentes y estudiantes de medicina. Jefatura del servicio de oncología. Participación en consultas multidisciplinarias oncológicas.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Jefatura</span>
+                        <span class="timeline-badge">Docencia</span>
+                        <span class="timeline-badge">Multidisciplinario</span>
+                        <span class="timeline-badge">Terapia Dirigida</span>
+                    </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-year">2007 - 2011</div>
-                    <div class="timeline-title">Médico Especialista - Hospital Oncológico Dr. Celestino Hernández</div>
-                    <div class="timeline-description">Inicio de especialización en oncología clínica. Manejo integral del paciente oncológico, atención de urgencias y emergencias oncológicas.</div>
+                    <div class="timeline-title">Médico Especialista • Docente</div>
+                    <div class="timeline-institution">Hospital Oncológico Dr. Celestino Hernández • Santa Clara, Villa Clara, Cuba</div>
+                    <div class="timeline-description">Inicio de especialización en oncología clínica. Manejo integral del paciente oncológico, atención de urgencias y emergencias oncológicas. Docencia a estudiantes de medicina y residentes. Investigación clínica en oncología.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Especialización</span>
+                        <span class="timeline-badge">Docencia</span>
+                        <span class="timeline-badge">Investigación</span>
+                        <span class="timeline-badge">Urgencias Oncológicas</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2005 - 2007</div>
+                    <div class="timeline-title">Médico General</div>
+                    <div class="timeline-institution">Centro de atención integral al paciente que convive con VIH/SIDA • Cuba</div>
+                    <div class="timeline-description">Prevención, diagnóstico, tratamiento y seguimiento de enfermedades en pacientes con VIH/SIDA. Control y monitoreo del estado de salud de pacientes y trabajadores. Realización de documentación médica especializada.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">VIH/SIDA</span>
+                        <span class="timeline-badge">Medicina Preventiva</span>
+                        <span class="timeline-badge">Enfermedades Infecciosas</span>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-year">2004 - 2005</div>
+                    <div class="timeline-title">Médico General</div>
+                    <div class="timeline-institution">Policlínico Dr. Reinaldo García Pérez • San José, La Habana, Cuba</div>
+                    <div class="timeline-description">Prevención, diagnóstico, tratamiento y seguimiento de enfermedades en pacientes ambulatorios desde la comunidad. Diagnóstico y tratamiento de urgencias y emergencias médicas. Control, vigilancia y monitoreo del estado de salud de la comunidad.</div>
+                    <div class="timeline-badges">
+                        <span class="timeline-badge">Medicina Comunitaria</span>
+                        <span class="timeline-badge">Atención Primaria</span>
+                        <span class="timeline-badge">Salud Pública</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN FORMACIÓN ============ -->
+    <!-- ==================== SECCIÓN FORMACIÓN COMPLETA ============ -->
     <section id="formacion" class="education-section animate-on-scroll">
         <div class="container">
             <div class="section-title">
-                <h2>Formación Académica</h2>
-                <p>Formación médica especializada con sólidos fundamentos científicos</p>
+                <h2>Formación Académica Completa</h2>
+                <p>Formación médica especializada con sólidos fundamentos científicos y experiencia internacional</p>
             </div>
             
             <div class="education-grid">
                 <div class="education-card">
                     <div class="education-year">2007 - 2011</div>
                     <div class="education-title">Especialista de Primer Grado en Oncología</div>
-                    <div class="education-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz. Título homologado en Ecuador.</div>
+                    <div class="education-institution">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba</div>
+                    <div class="education-description">Formación especializada integral en oncología clínica. Programa completo que incluye diagnóstico, tratamiento, investigación y manejo del paciente oncológico. Título homologado en Ecuador por SENESCYT.</div>
                 </div>
                 
                 <div class="education-card">
                     <div class="education-year">2004 - 2006</div>
                     <div class="education-title">Especialista de Primer Grado en Medicina General Integral</div>
-                    <div class="education-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz. Formación en medicina familiar y comunitaria.</div>
+                    <div class="education-institution">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba</div>
+                    <div class="education-description">Formación especializada en medicina familiar y comunitaria. Enfoque integral en atención primaria, prevención y promoción de la salud. Base sólida para la práctica médica general.</div>
                 </div>
                 
                 <div class="education-card">
                     <div class="education-year">1998 - 2004</div>
                     <div class="education-title">Doctor en Medicina</div>
-                    <div class="education-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz. Formación médica integral con enfoque humanista.</div>
+                    <div class="education-institution">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba</div>
+                    <div class="education-description">Formación médica integral con enfoque humanista y científico. Programa completo de medicina general con rotaciones en todas las especialidades médicas. Base fundamental para la práctica médica.</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN ESPECIALIDADES ============ -->
-    <section id="especialidades" class="specialties-section animate-on-scroll">
+    <!-- ==================== SECCIÓN HABILIDADES Y COMPETENCIAS ============ -->
+    <section id="habilidades" class="skills-section animate-on-scroll">
         <div class="container">
             <div class="section-title">
-                <h2>Áreas de Especialización</h2>
-                <p>Dominio completo en múltiples áreas de la medicina oncológica y general</p>
+                <h2>Habilidades y Competencias</h2>
+                <p>Dominio completo en múltiples áreas de la medicina oncológica, general y administrativa</p>
             </div>
             
-            <div class="specialties-grid">
-                <div class="specialty-card">
-                    <div class="specialty-icon">
-                        <i class="fas fa-user-md"></i>
-                    </div>
-                    <h4>Oncología Clínica</h4>
-                    <p>Diagnóstico y tratamiento integral del cáncer con terapias modernas: quimioterapia, inmunoterapia, terapia dirigida y cuidados paliativos especializados.</p>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4><i class="fas fa-stethoscope"></i> Competencias Clínicas</h4>
+                    <ul class="skill-list">
+                        <li>Diagnóstico y tratamiento oncológico integral</li>
+                        <li>Prescripción de quimioterapia, inmunoterapia y terapia dirigida</li>
+                        <li>Manejo de emergencias oncológicas</li>
+                        <li>Cuidados paliativos especializados</li>
+                        <li>Medicina general y familiar</li>
+                        <li>Urgencias médico-quirúrgicas</li>
+                        <li>Enfermedades infecciosas (VIH/SIDA)</li>
+                        <li>Medicina natural y tradicional complementaria</li>
+                    </ul>
                 </div>
                 
-                <div class="specialty-card">
-                    <div class="specialty-icon">
-                        <i class="fas fa-stethoscope"></i>
-                    </div>
-                    <h4>Medicina General</h4>
-                    <p>Atención integral de salud para adultos, manejo de enfermedades crónicas, prevención primaria y promoción de estilos de vida saludables.</p>
+                <div class="skill-category">
+                    <h4><i class="fas fa-clinic-medical"></i> Procedimientos y Manejo</h4>
+                    <ul class="skill-list">
+                        <li>Screening y diagnóstico precoz del cáncer</li>
+                        <li>Manejo ambulatorio, hospitalario y domiciliario</li>
+                        <li>Consultas multidisciplinarias oncológicas</li>
+                        <li>Valoración de efectos adversos del tratamiento</li>
+                        <li>Documentación médica especializada</li>
+                        <li>Coordinación de cuidados integrados</li>
+                        <li>Manejo de síntomas relacionados con cáncer</li>
+                        <li>Seguridad del paciente y control de infecciones</li>
+                    </ul>
                 </div>
                 
-                <div class="specialty-card">
-                    <div class="specialty-icon">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <h4>Medicina Familiar</h4>
-                    <p>Cuidado longitudinal de la salud de toda la familia, desde la infancia hasta la vejez, con enfoque preventivo y de continuidad de cuidados.</p>
-                </div>
-                
-                <div class="specialty-card">
-                    <div class="specialty-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h4>Docencia Médica</h4>
-                    <p>Formación de profesionales de la salud a nivel de pregrado y posgrado. Desarrollo de contenido educativo especializado en oncología y medicina general.</p>
+                <div class="skill-category">
+                    <h4><i class="fas fa-chart-line"></i> Habilidades Administrativas y Técnicas</h4>
+                    <ul class="skill-list">
+                        <li>Auditoría médica y control de calidad</li>
+                        <li>Investigación clínica y ensayos clínicos</li>
+                        <li>Docencia y formación médica</li>
+                        <li>Gestión de servicios de salud</li>
+                        <li>Microsoft Office (Word, Excel, PowerPoint)</li>
+                        <li>Redes sociales profesionales</li>
+                        <li>Gestión de historias clínicas</li>
+                        <li>Planificación y organización de servicios</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN FILOSOFÍA ============ -->
+    <!-- ==================== SECCIÓN DOCENCIA E INVESTIGACIÓN ============ -->
+    <section id="docencia" class="teaching-section animate-on-scroll">
+        <div class="container">
+            <div class="section-title">
+                <h2>Docencia e Investigación</h2>
+                <p>Compromiso con la formación de nuevas generaciones de profesionales de la salud</p>
+            </div>
+            
+            <div class="teaching-grid">
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h4>Docencia Universitaria</h4>
+                    <p>Más de 8 años de experiencia como docente en instituciones médicas de prestigio. Formación de estudiantes de medicina y residentes en oncología clínica, medicina general y procedimientos especializados.</p>
+                </div>
+                
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h4>Formación de Residentes</h4>
+                    <p>Supervisión y formación de médicos residentes en oncología. Desarrollo de programas de rotación clínica, evaluación de competencias y mentoría profesional especializada.</p>
+                </div>
+                
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h4>Investigación Clínica</h4>
+                    <p>Participación en proyectos de investigación oncológica. Experiencia en ensayos clínicos, publicación de casos clínicos y desarrollo de protocolos de investigación.</p>
+                </div>
+                
+                <div class="teaching-card">
+                    <div class="teaching-icon">
+                        <i class="fas fa-book-medical"></i>
+                    </div>
+                    <h4>Desarrollo Académico</h4>
+                    <p>Creación de material educativo especializado. Participación en conferencias, simposios y congresos médicos nacionales e internacionales. Actualización continua del conocimiento médico.</p>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 10px 25px rgba(0,0,0,0.08);">
+                <h4 style="color: var(--primary); margin-bottom: 15px; text-align: center;">Experiencia Docente Específica</h4>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--research-purple); margin-bottom: 10px;">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <h5 style="color: var(--primary); margin-bottom: 5px;">Hospital Provincial Dr. Gustavo Aldereguia Lima</h5>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Docente y Jefe de Servicio de Oncología (2012-2015)</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 2rem; color: var(--research-purple); margin-bottom: 10px;">
+                            <i class="fas fa-hospital-alt"></i>
+                        </div>
+                        <h5 style="color: var(--primary); margin-bottom: 5px;">Hospital Oncológico Dr. Celestino Hernández</h5>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Docente especialista en oncología (2007-2011)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN CERTIFICACIONES Y LICENCIAS ============ -->
+    <section id="certificaciones" class="certifications-section animate-on-scroll">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certificaciones y Licencias Profesionales</h2>
+                <p>Certificaciones oficiales que avalan mi ejercicio profesional en Ecuador</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="certification-card">
+                    <div class="certification-title">Certificado de Registro de Título - Oncología</div>
+                    <div class="certification-issuer">Secretaría de Educación Superior, Ciencia, Tecnología e Innovación (SENESCYT)</div>
+                    <div class="certification-date">Fecha de registro: 22 de Marzo, 2019</div>
+                    <div class="certification-status">VIGENTE</div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-title">Certificado de Registro de Título - Medicina</div>
+                    <div class="certification-issuer">Secretaría de Educación Superior, Ciencia, Tecnología e Innovación (SENESCYT)</div>
+                    <div class="certification-date">Fecha de registro: 1 de Octubre, 2015</div>
+                    <div class="certification-status">VIGENTE</div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-title">Certificado de Aprobación del Examen de Habilitación Profesional</div>
+                    <div class="certification-issuer">Consejo de Aseguramiento de la Calidad de la Educación Superior (CACES)</div>
+                    <div class="certification-date">Fecha de examen: 4 de Agosto, 2019 • Aprobado</div>
+                    <div class="certification-status">APROBADO</div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-title">Registro de Título de Doctor en Medicina</div>
+                    <div class="certification-issuer">Agencia de Aseguramiento de la Calidad de los Servicios de Salud (ACESS)</div>
+                    <div class="certification-date">Fecha de registro: 7 de Octubre, 2019</div>
+                    <div class="certification-status">HABILITADO</div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-title">Registro de Título de Especialista en Oncología</div>
+                    <div class="certification-issuer">Agencia de Aseguramiento de la Calidad de los Servicios de Salud (ACESS)</div>
+                    <div class="certification-date">Fecha de registro: 8 de Octubre, 2019</div>
+                    <div class="certification-status">HABILITADO</div>
+                </div>
+                
+                <div class="certification-card">
+                    <div class="certification-title">Facultado para Prescripción de Medicamentos Controlados</div>
+                    <div class="certification-issuer">Agencia de Aseguramiento de la Calidad de los Servicios de Salud (ACESS)</div>
+                    <div class="certification-date">Incluye sustancias estupefacientes y psicotrópicas</div>
+                    <div class="certification-status" style="background: var(--medical-blue);">AUTORIZADO</div>
+                </div>
+            </div>
+            
+            <div style="margin-top: 40px; padding: 20px; background: var(--light); border-radius: 15px; text-align: center;">
+                <h4 style="color: var(--primary); margin-bottom: 10px;">Idiomas</h4>
+                <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div style="padding: 10px 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <span style="font-weight: 600; color: var(--primary);">Español</span>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Nativo</div>
+                    </div>
+                    <div style="padding: 10px 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <span style="font-weight: 600; color: var(--primary);">Inglés</span>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Profesional</div>
+                    </div>
+                    <div style="padding: 10px 20px; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05);">
+                        <span style="font-weight: 600; color: var(--primary);">Portugués</span>
+                        <div style="font-size: 0.85rem; color: var(--text-light);">Básico</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SECCIÓN FILOSOFÍA MEJORADA ============ -->
     <section id="filosofia" class="philosophy-section animate-on-scroll">
         <div class="container">
             <div class="section-title">
-                <h2 style="color: white;">Mi Filosofía de Atención</h2>
-                <p style="color: rgba(255,255,255,0.9);">La medicina como arte, ciencia y compromiso humano</p>
+                <h2 style="color: white;">Mi Filosofía de Atención Integral</h2>
+                <p style="color: rgba(255,255,255,0.9);">La medicina como arte, ciencia, compromiso humano y responsabilidad social</p>
             </div>
             
             <div class="philosophy-quote">
-                "La verdadera medicina no solo trata enfermedades, sino que acompaña personas. Cada encuentro médico es una oportunidad para sanar, educar y empoderar al paciente en su camino hacia la salud."
+                "La verdadera medicina no solo trata enfermedades, sino que acompaña personas. Cada encuentro médico es una oportunidad para sanar, educar y empoderar al paciente en su camino hacia la salud. Mi compromiso es ofrecer atención oncológica de excelencia combinando lo mejor de la ciencia médica con la calidez humana que todo paciente merece."
             </div>
             
             <div class="philosophy-points">
@@ -1489,7 +1908,7 @@
                     <i class="fas fa-check-circle"></i>
                     <div>
                         <strong>Comunicación Clara y Empática</strong>
-                        <p>Explico cada diagnóstico y opción de tratamiento en lenguaje accesible, asegurando que el paciente comprenda y participe activamente en las decisiones.</p>
+                        <p>Explico cada diagnóstico y opción de tratamiento en lenguaje accesible, asegurando que el paciente comprenda y participe activamente en las decisiones sobre su salud.</p>
                     </div>
                 </div>
                 
@@ -1497,7 +1916,7 @@
                     <i class="fas fa-check-circle"></i>
                     <div>
                         <strong>Personalización del Tratamiento</strong>
-                        <p>Cada plan terapéutico es único, adaptado a las características individuales del paciente, sus valores y su contexto de vida.</p>
+                        <p>Cada plan terapéutico es único, adaptado a las características individuales del paciente, sus valores, contexto de vida y expectativas de tratamiento.</p>
                     </div>
                 </div>
                 
@@ -1505,7 +1924,7 @@
                     <i class="fas fa-check-circle"></i>
                     <div>
                         <strong>Acompañamiento Continuo</strong>
-                        <p>El seguimiento cercano y la disponibilidad para consultas son pilares fundamentales de mi práctica médica.</p>
+                        <p>El seguimiento cercano y la disponibilidad para consultas son pilares fundamentales de mi práctica médica. Estoy comprometido con el acompañamiento durante todo el proceso.</p>
                     </div>
                 </div>
                 
@@ -1513,21 +1932,41 @@
                     <i class="fas fa-check-circle"></i>
                     <div>
                         <strong>Actualización Científica Permanente</strong>
-                        <p>Mantenerme al día con los avances en oncología es un compromiso ético con mis pacientes.</p>
+                        <p>Mantenerme al día con los avances en oncología es un compromiso ético con mis pacientes. Participo regularmente en congresos y capacitaciones especializadas.</p>
+                    </div>
+                </div>
+                
+                <div class="philosophy-point">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Enfoque Multidisciplinario</strong>
+                        <p>Colaboro estrechamente con otros especialistas para ofrecer una atención integral que aborde todos los aspectos de la salud del paciente.</p>
+                    </div>
+                </div>
+                
+                <div class="philosophy-point">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>Respeto y Dignidad</strong>
+                        <p>Cada paciente es tratado con el máximo respeto, dignidad y confidencialidad, reconociendo su individualidad y derecho a tomar decisiones informadas.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SECCIÓN CTA FINAL ============ -->
+    <!-- ==================== SECCIÓN CTA FINAL MEJORADA ============ -->
     <section class="cta-section animate-on-scroll">
         <div class="container">
-            <h3>¿Listo para comenzar su camino hacia la salud?</h3>
-            <p>Con más de 15 años de experiencia y formación internacional, estoy comprometido a ofrecerle la atención médica más completa y personalizada. Su salud merece el cuidado de un especialista con trayectoria comprobada.</p>
+            <h3>¿Listo para comenzar su camino hacia la salud con un especialista de trayectoria comprobada?</h3>
+            <p>Con más de 18 años de experiencia, formación internacional, docencia universitaria y certificaciones oficiales en Ecuador, estoy comprometido a ofrecerle la atención médica más completa, personalizada y basada en evidencia científica. Su salud merece el cuidado de un especialista con experiencia, calidez humana y compromiso profesional.</p>
             <a href="#" class="btn-consultation open-consult-modal" style="max-width: 350px; margin: 0 auto;">
                 <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA PERSONALIZADA
             </a>
+            <p style="margin-top: 20px; color: var(--text-light); font-size: 0.9rem;">
+                <i class="fas fa-phone-alt"></i> También puede contactarme directamente: <strong>098 470 8234</strong> • 
+                <i class="fas fa-envelope"></i> <strong>acalanasabina@gmail.com</strong>
+            </p>
         </div>
     </section>
 
@@ -1539,41 +1978,42 @@
             </button>
             
             <h3 class="modal-title">¿Cómo prefieres contactarme?</h3>
-            <p class="modal-subtitle">Elige el método que te sea más cómodo para tu consulta médica personalizada</p>
+            <p class="modal-subtitle">Elige el método que te sea más cómodo para tu consulta médica personalizada con un especialista de 18+ años de experiencia</p>
             
             <div class="modal-buttons">
-                <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña%20Sabina,%20vi%20su%20trayectoria%20profesional%20y%20me%20interesa%20solicitar%20una%20consulta%20médica" 
+                <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña%20Sabina,%20vi%20su%20trayectoria%20profesional%20completa%20y%20me%20interesa%20solicitar%20una%20consulta%20médica%20especializada" 
                    class="modal-btn whatsapp" 
                    target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <div>
                         <strong>WhatsApp</strong>
-                        <small>Respuesta inmediata</small>
+                        <small>Respuesta inmediata • Agendar consulta</small>
                     </div>
                 </a>
                 
-                <a href="mailto:acalanasabina@gmail.com?subject=Consulta%20Médica%20-%20Dr.%20Ariel%20Calaña&body=Estimado%20Dr.%20Ariel%20Calaña,%0D%0A%0D%0AHe%20revisado%20su%20trayectoria%20profesional%20y%20me%20interesa%20solicitar%20una%20consulta.%0D%0A%0D%0AFavor%20indicarme%20disponibilidad%20y%20requisitos.%0D%0A%0D%0ASaludos cordiales," 
+                <a href="mailto:acalanasabina@gmail.com?subject=Consulta%20Médica%20Especializada%20-%20Dr.%20Ariel%20Calaña&body=Estimado%20Dr.%20Ariel%20Calaña,%0D%0A%0D%0AHe%20revisado%20su%20trayectoria%20profesional%20completa%20y%20me%20interesa%20solicitar%20una%20consulta%20especializada.%0D%0A%0D%0AFavor%20indicarme%20disponibilidad,%20requisitos%20y%20costo%20de%20la%20consulta.%0D%0A%0D%0AAgradezco%20su%20atención.%0D%0A%0D%0ASaludos cordiales," 
                    class="modal-btn email">
                     <i class="fas fa-envelope"></i>
                     <div>
-                        <strong>Email</strong>
-                        <small>Respuesta en 24h</small>
+                        <strong>Email Profesional</strong>
+                        <small>Respuesta en 24 horas • Información detallada</small>
                     </div>
                 </a>
             </div>
             
             <p style="margin-top: 25px; color: #666; font-size: 0.9rem; padding-top: 20px; border-top: 1px solid #eee;">
-                <i class="fas fa-phone-alt"></i> También puedes llamar directamente: <strong>098 470 8234</strong>
+                <i class="fas fa-phone-alt"></i> Consultas telefónicas directas: <strong>098 470 8234</strong><br>
+                <i class="fas fa-map-marker-alt"></i> <strong>Quito, Ecuador</strong> • Disponibilidad para viajar y cambiar de residencia
             </p>
         </div>
     </div>
 
     <!-- ==================== WHATSAPP FLOAT ============ -->
-    <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña%20Sabina,%20he%20visto%20su%20trayectoria%20profesional%20y%20me%20gustaría%20agendar%20una%20consulta%20médica" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña%20Sabina,%20he%20visto%20su%20trayectoria%20profesional%20completa%20y%20me%20gustaría%20agendar%20una%20consulta%20médica%20especializada" class="whatsapp-float" target="_blank">
         <div class="whatsapp-icon">
             <i class="fab fa-whatsapp"></i>
         </div>
-        <div class="whatsapp-text">Agendar Consulta</div>
+        <div class="whatsapp-text">Agendar Consulta Especializada</div>
     </a>
 
     <!-- ==================== SCRIPT COMPLETO ============ -->
