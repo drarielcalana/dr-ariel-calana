@@ -1796,9 +1796,8 @@
             background: white;
             padding: 25px;
             border-radius: 12px;
-            text-align: center;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-            transition: var(--transition);
+            margin-bottom: 40px;
             border-top: 4px solid var(--hope-green);
         }
         
@@ -2011,6 +2010,10 @@
             color: var(--primary);
             margin-bottom: 15px;
             font-size: 1.3rem;
+            /* Asegurar que los títulos estén en una sola línea */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         
         .prevention-card p {
@@ -2037,52 +2040,6 @@
             font-size: 1rem;
             color: var(--prevention-teal);
             margin-top: 3px;
-        }
-        
-        .screening-tests {
-            background: linear-gradient(135deg, var(--prevention-teal), #16a085);
-            color: white;
-            padding: 40px;
-            border-radius: 16px;
-            margin: 40px 0;
-        }
-        
-        .screening-tests h3 {
-            color: white;
-            margin-bottom: 25px;
-            text-align: center;
-            font-size: 1.8rem;
-        }
-        
-        .tests-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-        }
-        
-        .test-item {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            transition: var(--transition);
-        }
-        
-        .test-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-5px);
-        }
-        
-        .test-item h4 {
-            color: white;
-            margin-bottom: 10px;
-            font-size: 1.1rem;
-        }
-        
-        .test-item p {
-            opacity: 0.9;
-            font-size: 0.9rem;
-            line-height: 1.5;
         }
         
         /* ============ CENTRO DE INFORMACIÓN EN SALUD ============ */
@@ -2568,10 +2525,6 @@
                 grid-template-columns: 1fr;
             }
             
-            .tests-grid {
-                grid-template-columns: 1fr;
-            }
-            
             .blog-header {
                 flex-direction: column;
                 align-items: stretch;
@@ -2606,6 +2559,13 @@
                 right: 10px;
                 width: 40px;
                 height: 40px;
+            }
+            
+            /* Ajustes para títulos en una línea en móvil */
+            .prevention-card h4 {
+                white-space: normal;
+                line-height: 1.3;
+                font-size: 1.2rem;
             }
         }
         
@@ -3097,7 +3057,7 @@
         </div>
     </div>
 
-    <!-- ==================== SOBRE MÍ REDISEÑADA ==================== -->
+    <!-- ==================== SOBRE MÍ RESUMIDA ==================== -->
     <section class="about" id="sobre-mi">
         <div class="container">
             <div class="section-title">
@@ -3154,18 +3114,23 @@
                             <span>Especialista en Oncología</span>
                         </div>
                     </div>
+                    
+                    <!-- BOTÓN PARA PÁGINA COMPLETA -->
+                    <a href="Sobre%20M%C3%AD.html" class="btn-consultation" style="width: 100%; margin-top: 20px; text-align: center;">
+                        <i class="fas fa-book-open"></i> CONOCER MÁS SOBRE MÍ
+                    </a>
                 </div>
                 
-                <!-- CONTENIDO PRINCIPAL -->
+                <!-- CONTENIDO PRINCIPAL RESUMIDO -->
                 <div class="about-details">
-                    <!-- INTRODUCCIÓN -->
+                    <!-- INTRODUCCIÓN RESUMIDA -->
                     <div class="about-intro animate-on-scroll">
                         <h3>Oncólogo Clínico con Visión Integral</h3>
-                        <p>Soy el <strong>Dr. Ariel Calaña Sabina</strong>, médico especialista en Oncología Clínica con más de 15 años de experiencia dedicados al diagnóstico, tratamiento y seguimiento del cáncer. Mi formación internacional y experiencia multicultural me han permitido desarrollar un enfoque integral que combina los últimos avances en oncología con una atención humanizada y personalizada.</p>
-                        <p>Actualmente radico en Ecuador, donde ejerzo mi especialidad oncológica complementándola con la práctica de medicina general, familiar y la docencia universitaria, creando así un modelo de atención única que abarca desde la prevención hasta el tratamiento especializado.</p>
+                        <p>Soy el <strong>Dr. Ariel Calaña Sabina</strong>, médico especialista en Oncología Clínica con más de <strong>15 años de experiencia</strong> dedicados al diagnóstico, tratamiento y seguimiento del cáncer. Mi formación internacional (Cuba y Ecuador) me ha permitido desarrollar un enfoque integral que combina los últimos avances en oncología con una atención humanizada y personalizada.</p>
+                        <p>Actualmente ejerzo en Ecuador, integrando mi especialidad oncológica con la práctica de <strong>medicina general, familiar y docencia universitaria</strong>, creando un modelo de atención único que abarca desde la prevención hasta el tratamiento especializado.</p>
                     </div>
                     
-                    <!-- PERFIL PROFESIONAL -->
+                    <!-- PERFIL PROFESIONAL RESUMIDO -->
                     <div class="philosophy animate-on-scroll">
                         <h3>Perfil Profesional</h3>
                         <div class="philosophy-quote">
@@ -3177,7 +3142,7 @@
                                 <i class="fas fa-check-circle"></i>
                                 <div>
                                     <strong>Experiencia Internacional</strong>
-                                    <p>Formación y práctica en Cuba y Ecuador, integrando diferentes enfoques médicos.</p>
+                                    <p>Formación y práctica en Cuba y Ecuador</p>
                                 </div>
                             </div>
                             
@@ -3185,7 +3150,7 @@
                                 <i class="fas fa-check-circle"></i>
                                 <div>
                                     <strong>Especialización Completa</strong>
-                                    <p>Manejo de todas las modalidades terapéuticas oncológicas modernas.</p>
+                                    <p>Manejo de todas las modalidades terapéuticas oncológicas modernas</p>
                                 </div>
                             </div>
                             
@@ -3193,7 +3158,7 @@
                                 <i class="fas fa-check-circle"></i>
                                 <div>
                                     <strong>Docencia Universitaria</strong>
-                                    <p>Formador de nuevas generaciones de profesionales de la salud.</p>
+                                    <p>Formador de nuevas generaciones de profesionales de la salud</p>
                                 </div>
                             </div>
                             
@@ -3201,97 +3166,13 @@
                                 <i class="fas fa-check-circle"></i>
                                 <div>
                                     <strong>Atención Integral</strong>
-                                    <p>Abordaje del paciente considerando aspectos médicos, psicológicos y sociales.</p>
+                                    <p>Abordaje del paciente considerando aspectos médicos, psicológicos y sociales</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
-                    <!-- TIMELINE PROFESIONAL ACTUALIZADO -->
-                    <div class="timeline animate-on-scroll">
-                        <h3 style="margin-bottom: 30px; color: var(--primary);">Experiencia Laboral</h3>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2018 - Actualmente</div>
-                            <div class="timeline-title">Médico Oncólogo Clínico - Atención Privada</div>
-                            <div class="timeline-description">Diagnóstico, screening, manejo de pacientes diagnosticados de cáncer, manejo ambulatorio, hospitalario y en domicilio de síntomas relacionados al tratamiento oncológico. Atención de emergencias oncológicas. Médico general y especialista en oncología.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2018 - Actualmente</div>
-                            <div class="timeline-title">Médico General y Oncólogo - Fundación Salud igual para todos</div>
-                            <div class="timeline-description">Diagnóstico, tratamiento y seguimiento de enfermedades en pacientes ambulatorios. Diagnóstico y tratamiento de pacientes con urgencias y emergencias médicas. Diagnóstico, screening, tratamiento y seguimiento de pacientes con enfermedades oncológicas.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2017 - 2018</div>
-                            <div class="timeline-title">Médico General y Oncólogo - Club de Leones Carita de Dios</div>
-                            <div class="timeline-description">Diagnóstico, tratamiento y seguimiento de enfermedades en pacientes ambulatorios. Diagnóstico y tratamiento de pacientes con urgencias y emergencias médicas. Diagnóstico, screening, tratamiento y seguimiento de pacientes con enfermedades oncológicas.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2015 - 2017</div>
-                            <div class="timeline-title">Médico General y Especialista - Centro Médico Martha Bucaran</div>
-                            <div class="timeline-description">Diagnóstico, tratamiento y seguimiento de enfermedades en pacientes ambulatorios. Diagnóstico y tratamiento de pacientes con urgencias y emergencias médicas. Diagnóstico, screening, tratamiento y seguimiento de pacientes con enfermedades oncológicas.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2015 - 2016</div>
-                            <div class="timeline-title">Médico Auditor - CONSORCIO AUDITAM</div>
-                            <div class="timeline-description">Auditorías médicas en empresa de auditorías médicas y prestación de servicios varios.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2012 - 2015</div>
-                            <div class="timeline-title">Médico Especialista en Oncología - Hospital Provincial Dr. Gustavo Aldereguia Lima</div>
-                            <div class="timeline-description">Diagnóstico, screening, tratamiento y seguimiento de pacientes con enfermedades oncológicas, valoración, diagnóstico y tratamiento de pacientes con urgencias y emergencias oncológicas, efectos adversos ligados al tratamiento y a su enfermedad de base. Prescripción de quimioterapia, inmunoterapia, terapia dirigida, hormonoterapia.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2007 - 2011</div>
-                            <div class="timeline-title">Médico Especialista - Hospital Oncológico Dr. Celestino Hernández</div>
-                            <div class="timeline-description">Diagnóstico, screening, tratamiento y seguimiento de pacientes diagnosticados de cáncer, manejo ambulatorio y hospitalario de síntomas relacionados al tratamiento oncológico y con su enfermedad de base. Atención a urgencias y emergencias oncológicas.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2005 - 2007</div>
-                            <div class="timeline-title">Médico General - Centro de atención integral al paciente que convive con VIH/SIDA</div>
-                            <div class="timeline-description">Prevención, diagnóstico, tratamiento y seguimiento de enfermedades al paciente que convive con VIH/SIDA. Realización de documentación médica.</div>
-                        </div>
-                        
-                        <div class="timeline-item">
-                            <div class="timeline-year">2004 - 2005</div>
-                            <div class="timeline-title">Médico General - Policlínico Dr. Reinaldo García Pérez</div>
-                            <div class="timeline-description">Prevención, diagnóstico, tratamiento y seguimiento de enfermedades en pacientes ambulatorios desde la comunidad. Realización de documentación médica. Diagnóstico y tratamiento de pacientes con urgencias y emergencias médicas.</div>
-                        </div>
-                    </div>
-                    
-                    <!-- FORMACIÓN ACADÉMICA -->
-                    <div class="about-intro animate-on-scroll" style="margin-top: 50px;">
-                        <h3>Formación Académica</h3>
-                        
-                        <div class="timeline" style="margin: 20px 0; padding-left: 20px;">
-                            <div class="timeline-item">
-                                <div class="timeline-year">2007 - 2011</div>
-                                <div class="timeline-title">Especialista de Primer Grado en Oncología</div>
-                                <div class="timeline-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz.</div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-year">2004 - 2006</div>
-                                <div class="timeline-title">Especialista de Primer Grado en Medicina General Integral</div>
-                                <div class="timeline-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz.</div>
-                            </div>
-                            
-                            <div class="timeline-item">
-                                <div class="timeline-year">1998 - 2004</div>
-                                <div class="timeline-title">Doctor en Medicina</div>
-                                <div class="timeline-description">Universidad Instituto Superior de Ciencias Médicas. Villa Clara, Cuba. Dr. Serafín Ruiz de Zárate Ruiz.</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- ESPECIALIDADES -->
+                    <!-- ESPECIALIDADES RESUMIDAS -->
                     <div class="specialties-grid animate-on-scroll">
                         <div class="specialty-card">
                             <div class="specialty-icon">
@@ -3326,7 +3207,7 @@
                         </div>
                     </div>
                     
-                    <!-- FILOSOFÍA MÉDICA -->
+                    <!-- FILOSOFÍA MÉDICA RESUMIDA -->
                     <div class="philosophy animate-on-scroll">
                         <h3>Mi Filosofía de Atención</h3>
                         <div class="philosophy-quote">
@@ -3357,21 +3238,16 @@
                                     <p>Trabajo en coordinación con otros especialistas para ofrecer la atención más completa posible.</p>
                                 </div>
                             </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Actualización Continua</strong>
-                                    <p>Mantenerme al día con los últimos avances en oncología y medicina general para ofrecer los mejores tratamientos disponibles.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
-                    <!-- BOTÓN DE CONSULTA -->
+                    <!-- BOTÓN PARA VER MÁS -->
                     <div class="section-buttons animate-on-scroll">
-                        <a href="#" class="btn-consultation open-consult-modal">
-                            <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA PERSONALIZADA
+                        <a href="Sobre%20M%C3%AD.html" class="btn-consultation" style="background: linear-gradient(135deg, var(--secondary), var(--primary));">
+                            <i class="fas fa-book-open"></i> VER MI HISTORIA COMPLETA
+                        </a>
+                        <a href="#" class="btn-opinion open-consult-modal">
+                            <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA
                         </a>
                     </div>
                 </div>
@@ -3692,7 +3568,7 @@
         </div>
     </section>
 
-    <!-- ==================== PREVENCIÓN ONCOLÓGICA - NUEVA SECCIÓN ==================== -->
+    <!-- ==================== PREVENCIÓN ONCOLÓGICA - MEJORADA ==================== -->
     <section class="prevention" id="prevencion">
         <div class="container">
             <div class="section-title">
@@ -3717,7 +3593,7 @@
                     <p>Como oncólogo, mi enfoque incluye tanto el tratamiento como la prevención activa, ayudando a mis pacientes a reducir sus factores de riesgo y detectar cualquier anomalía en sus etapas más tempranas.</p>
                 </div>
                 
-                <!-- ÁREAS DE PREVENCIÓN -->
+                <!-- ÁREAS DE PREVENCIÓN - MEJORADO -->
                 <div class="prevention-grid animate-on-scroll">
                     <div class="prevention-card">
                         <i class="fas fa-heartbeat"></i>
@@ -3750,29 +3626,6 @@
                             <li><i class="fas fa-check"></i> Estudios diagnósticos dirigidos</li>
                             <li><i class="fas fa-check"></i> Interpretación especializada de resultados</li>
                         </ul>
-                    </div>
-                </div>
-                
-                <!-- PRUEBAS DE SCREENING -->
-                <div class="screening-tests animate-on-scroll">
-                    <h3>Pruebas de Screening Recomendadas</h3>
-                    <div class="tests-grid">
-                        <div class="test-item">
-                            <h4>Mamografía</h4>
-                            <p>Detección temprana de cáncer de mama en mujeres a partir de los 40 años o según riesgo.</p>
-                        </div>
-                        <div class="test-item">
-                            <h4>Colonoscopía</h4>
-                            <p>Detección y prevención de cáncer colorrectal a partir de los 45-50 años.</p>
-                        </div>
-                        <div class="test-item">
-                            <h4>PSA y Tacto Rectal</h4>
-                            <p>Detección temprana de cáncer de próstata en hombres según edad y riesgo.</p>
-                        </div>
-                        <div class="test-item">
-                            <h4>Papanicolaou</h4>
-                            <p>Detección temprana de cáncer cervical en mujeres sexualmente activas.</p>
-                        </div>
                     </div>
                 </div>
                 
