@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO ONCOLÓGICO ESPECIALIZADO -->
+    <meta name="description" content="Guía Completa de Salud Oncológica del Dr. Ariel Calaña Sabina - Prevención, Diagnóstico y Tratamiento del Cáncer en Ecuador">
+    <meta name="keywords" content="cáncer, oncología, prevención cáncer, diagnóstico cáncer, tratamiento cáncer, quimioterapia, radioterapia, cuidados paliativos, cáncer Ecuador, señales cáncer, detección temprana cáncer">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Guía Completa de Salud Oncológica | Dr. Ariel Calaña Sabina">
+    <meta property="og:description" content="Información especializada sobre prevención, diagnóstico y tratamiento del cáncer en Ecuador">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://drarielcalana.com/guia-salud-oncologica">
+    
+    <!-- TÍTULO -->
+    <title>Guía de Salud Oncológica | Dr. Ariel Calaña Sabina | Oncólogo Especialista</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/medical-doctor.png">
+    
+    <!-- FUENTES E ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ESTILOS -->
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --medical-blue: #1976D2;
+            --hope-green: #2E7D32;
+            --prevention-teal: #00695C;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            --shadow: 0 15px 35px rgba(0,0,0,0.08);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            padding-top: 90px;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* HEADER */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 3px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+        }
+        
+        .logo-img {
+            height: 55px;
+            width: auto;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+        
+        .logo-specialty {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--medical-blue);
+            text-transform: uppercase;
+        }
+        
+        /* BOTONES */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), #FF5252);
+            color: white;
+            border: 2px solid transparent;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(211, 47, 47, 0.4);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--primary);
+            border: 2px solid var(--medical-blue);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--medical-blue);
+            color: white;
+        }
+        
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+        }
+        
+        /* CONTENIDO */
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            display: inline-block;
+            padding-bottom: 12px;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--medical-blue), var(--hope-green));
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+        
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+        
+        .guide-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .guide-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+        }
+        
+        .guide-header {
+            background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+        
+        .guide-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .guide-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .guide-content {
+            padding: 30px;
+        }
+        
+        .guide-content ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .guide-content li {
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .guide-content li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--hope-green);
+            font-weight: bold;
+        }
+        
+        /* BLOG PREVIEW */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, #f0f7ff, #e6f4ff);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--medical-blue);
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-content h3 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+        
+        .blog-content p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        /* CTA */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        .cta-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+        }
+        
+        .cta-section p {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            font-size: 1.1rem;
+            opacity: 0.95;
+        }
+        
+        /* FOOTER */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 60px 0 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: #B3E5FC;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .guide-grid, .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            body {
+                padding-top: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" 
+                         alt="Dr. Ariel Calaña Sabina" 
+                         class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+                
+                <div class="header-buttons">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="btn btn-secondary">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/sobre-mi" class="btn btn-secondary">
+                        <i class="fas fa-user-md"></i> Sobre Mí
+                    </a>
+                    <a href="#consulta" class="btn btn-primary">
+                        <i class="fas fa-calendar-check"></i> Consulta
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Guía Completa de Salud Oncológica</h1>
+            <p>Información especializada sobre prevención, diagnóstico y tratamiento del cáncer. Conozca las señales de alerta, métodos de detección temprana y opciones terapéuticas disponibles.</p>
+            <a href="#guia" class="btn btn-primary">
+                <i class="fas fa-book-medical"></i> Explorar Guía
+            </a>
+        </div>
+    </section>
+
+    <!-- GUÍA PRINCIPAL -->
+    <section id="guia" class="container">
+        <div class="section-title">
+            <h2>Información Especializada en Oncología</h2>
+            <p>Todo lo que necesita saber sobre el cáncer en una guía completa y accesible</p>
+        </div>
+        
+        <div class="guide-grid">
+            <!-- PREVENCIÓN -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Prevención del Cáncer</h3>
+                </div>
+                <div class="guide-content">
+                    <ul>
+                        <li>Factores de riesgo modificables</li>
+                        <li>Alimentación anticancerígena</li>
+                        <li>Ejercicio y control de peso</li>
+                        <li>Evitar tabaco y alcohol</li>
+                        <li>Protección solar adecuada</li>
+                        <li>Vacunas preventivas (VPH, Hepatitis B)</li>
+                        <li>Control de exposición ambiental</li>
+                        <li>Chequeos regulares según edad</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- DETECCIÓN TEMPRANA -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-icon">
+                        <i class="fas fa-search-plus"></i>
+                    </div>
+                    <h3>Detección Temprana</h3>
+                </div>
+                <div class="guide-content">
+                    <ul>
+                        <li>Signos y síntomas de alerta</li>
+                        <li>Estudios de screening por edad</li>
+                        <li>Mamografía y ecografía mamaria</li>
+                        <li>Colonoscopia y prueba de sangre oculta</li>
+                        <li>PSA y examen prostático</li>
+                        <li>Citología vaginal y prueba de VPH</li>
+                        <li>Tomografías y resonancias</li>
+                        <li>Marcadores tumorales</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- TRATAMIENTOS -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <h3>Tratamientos Oncológicos</h3>
+                </div>
+                <div class="guide-content">
+                    <ul>
+                        <li>Quimioterapia y sus efectos</li>
+                        <li>Radioterapia y braquiterapia</li>
+                        <li>Inmunoterapia avanzada</li>
+                        <li>Terapias dirigidas</li>
+                        <li>Hormonoterapia</li>
+                        <li>Cirugía oncológica</li>
+                        <li>Medicina de precisión</li>
+                        <li>Ensayos clínicos disponibles</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- CUIDADOS PALIATIVOS -->
+            <div class="guide-card">
+                <div class="guide-header">
+                    <div class="guide-icon">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h3>Cuidados Paliativos</h3>
+                </div>
+                <div class="guide-content">
+                    <ul>
+                        <li>Control del dolor oncológico</li>
+                        <li>Manejo de síntomas</li>
+                        <li>Apoyo nutricional</li>
+                        <li>Soporte psicológico</li>
+                        <li>Terapia física</li>
+                        <li>Atención domiciliaria</li>
+                        <li>Apoyo familiar</li>
+                        <li>Calidad de vida</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ARTÍCULOS DESTACADOS -->
+    <section class="container">
+        <div class="section-title">
+            <h2>Artículos Especializados</h2>
+            <p>Información actualizada sobre avances en oncología</p>
+        </div>
+        
+        <div class="blog-grid">
+            <article class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-dna"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Avances en Inmunoterapia 2024</h3>
+                    <p>Descubra las últimas innovaciones en tratamientos que estimulan el sistema inmunológico para combatir el cáncer.</p>
+                    <a href="#" class="btn btn-secondary">Leer más</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-apple-alt"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Alimentación Anticancerígena</h3>
+                    <p>Guía completa de alimentos que pueden ayudar a prevenir el cáncer y mejorar la respuesta al tratamiento.</p>
+                    <a href="#" class="btn btn-secondary">Leer más</a>
+                </div>
+            </article>
+            
+            <article class="blog-card">
+                <div class="blog-image">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="blog-content">
+                    <h3>Ejercicio Durante el Tratamiento</h3>
+                    <p>Beneficios del ejercicio controlado para pacientes en tratamiento oncológico y recomendaciones específicas.</p>
+                    <a href="#" class="btn btn-secondary">Leer más</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="consulta" class="cta-section">
+        <div class="container">
+            <h2>¿Necesita Orientación Especializada?</h2>
+            <p>Como oncólogo con más de 18 años de experiencia, puedo ayudarle a entender su diagnóstico, evaluar opciones de tratamiento y crear un plan personalizado para su situación específica.</p>
+            <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña,%20me%20interesa%20una%20consulta%20especializada%20en%20oncología" 
+               class="btn btn-primary" 
+               target="_blank">
+                <i class="fab fa-whatsapp"></i> Consulta por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 098 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> acalanasabina@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Enlaces Rápidos</h3>
+                    <ul>
+                        <li><a href="https://drarielcalana.github.io/dr-ariel-calana/">Inicio</a></li>
+                        <li><a href="https://drarielcalana.github.io/dr-ariel-calana/sobre-mi">Sobre Mí</a></li>
+                        <li><a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general">Medicina General</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horarios</h3>
+                    <ul>
+                        <li>Lunes a Viernes: 8:00 - 18:00</li>
+                        <li>Sábados: 9:00 - 13:00</li>
+                        <li>Consultas a domicilio</li>
+                        <li>Emergencias 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navegación suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 30) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '10px 0';
+            } else {
+                header.style.boxShadow = '0 3px 20px rgba(0, 0, 0, 0.08)';
+                header.style.padding = '15px 0';
+            }
+        });
+    </script>
+</body>
+</html>
