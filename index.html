@@ -896,7 +896,12 @@
     gap: 25px;
 }
 
-.blog-link {
+/* ============ BOTÓN CENTRO DE INFORMACIÓN DESPLEGABLE ============ */
+.info-compact {
+    position: relative;
+}
+
+.info-dropdown-btn {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -908,11 +913,91 @@
     border-radius: 8px;
     transition: var(--transition);
     white-space: nowrap;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
-.blog-link:hover {
+.info-dropdown-btn:hover {
     background: rgba(26, 106, 165, 0.1);
     color: var(--medical-blue);
+}
+
+.info-dropdown-btn i {
+    transition: transform 0.3s ease;
+}
+
+.info-dropdown-btn.active i {
+    transform: rotate(180deg);
+}
+
+.info-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    min-width: 220px;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.info-dropdown.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(5px);
+}
+
+.info-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 16px;
+    height: 16px;
+    background: white;
+    transform: rotate(45deg);
+    border-left: 1px solid rgba(0,0,0,0.1);
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.info-links {
+    list-style: none;
+    padding: 15px 0;
+}
+
+.info-links li {
+    padding: 0;
+}
+
+.info-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.info-links a:hover {
+    background: rgba(26, 106, 165, 0.08);
+    color: var(--medical-blue);
+    padding-left: 25px;
+}
+
+.info-links a i {
+    color: var(--medical-blue);
+    font-size: 0.85rem;
+    width: 20px;
+    text-align: center;
 }
 
 .nav-mobile {
@@ -957,24 +1042,41 @@
     margin-bottom: 20px;
     padding: 10px 0;
     box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: none;
 }
 
-.blog-link.mobile {
-    display: flex;
+.dropdown-links.mobile.active {
+    display: block;
+}
+
+.info-dropdown-btn.mobile {
     width: 100%;
+    justify-content: space-between;
     background: var(--light);
     margin-bottom: 10px;
     padding: 15px;
     border-radius: 10px;
-    justify-content: flex-start;
+}
+
+.info-links.mobile {
+    background: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: none;
+}
+
+.info-links.mobile.active {
+    display: block;
 }
 
 @media (max-width: 768px) {
-    .nav-compact, .blog-link, .header-consult-btn span {
+    .nav-compact, .info-compact, .header-consult-btn span {
         display: none;
     }
     
-    .blog-link.mobile {
+    .nav-dropdown-btn.mobile, .info-dropdown-btn.mobile {
         display: flex;
     }
 }
@@ -1368,63 +1470,6 @@
             margin-bottom: 15px;
         }
         
-        /* ============ TIMELINE PROFESIONAL ============ */
-        .timeline {
-            position: relative;
-            padding-left: 30px;
-            margin: 40px 0;
-        }
-        
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 3px;
-            height: 100%;
-            background: linear-gradient(to bottom, var(--medical-blue), var(--hope-green));
-            border-radius: 3px;
-        }
-        
-        .timeline-item {
-            position: relative;
-            margin-bottom: 40px;
-            padding-left: 25px;
-        }
-        
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -33px;
-            top: 5px;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background: var(--medical-blue);
-            border: 3px solid white;
-            box-shadow: 0 0 0 3px var(--medical-blue);
-        }
-        
-        .timeline-year {
-            font-weight: 700;
-            color: var(--medical-blue);
-            font-size: 1.1rem;
-            margin-bottom: 5px;
-        }
-        
-        .timeline-title {
-            font-weight: 600;
-            color: var(--primary);
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-        }
-        
-        .timeline-description {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
         /* ============ ESPECIALIDADES DESTACADAS ============ */
         .specialties-grid {
             display: grid;
@@ -1466,73 +1511,6 @@
             line-height: 1.5;
         }
         
-        /* ============ FILOSOFÍA MÉDICA ============ */
-        .philosophy {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 40px;
-            border-radius: 16px;
-            margin: 40px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .philosophy::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 200px;
-            height: 200px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            transform: translate(100px, -100px);
-        }
-        
-        .philosophy h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            color: white;
-        }
-        
-        .philosophy-quote {
-            font-style: italic;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            position: relative;
-            padding-left: 30px;
-        }
-        
-        .philosophy-quote::before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: -10px;
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.3);
-            font-family: serif;
-        }
-        
-        .philosophy-points {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .philosophy-point {
-            display: flex;
-            align-items: flex-start;
-            gap: 15px;
-        }
-        
-        .philosophy-point i {
-            color: var(--hope-green);
-            font-size: 1.2rem;
-            margin-top: 3px;
-        }
-        
         /* ============ RESPONSIVE PARA SECCIÓN SOBRE MÍ ============ */
         @media (max-width: 992px) {
             .about-content {
@@ -1554,10 +1532,6 @@
             .specialties-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
-            
-            .philosophy-points {
-                grid-template-columns: 1fr;
-            }
         }
         
         @media (max-width: 768px) {
@@ -1567,14 +1541,6 @@
             
             .specialties-grid {
                 grid-template-columns: 1fr;
-            }
-            
-            .timeline {
-                padding-left: 20px;
-            }
-            
-            .timeline-item {
-                padding-left: 15px;
             }
         }
         
@@ -1835,9 +1801,9 @@
         }
         
         .process-steps {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 25px;
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
             margin-top: 30px;
         }
         
@@ -1848,6 +1814,8 @@
             border-radius: 12px;
             transition: var(--transition);
             position: relative;
+            flex: 1;
+            min-width: 180px;
         }
         
         .process-step:hover {
@@ -1882,12 +1850,12 @@
         .process-step h4 {
             margin-bottom: 10px;
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
         
         .process-step p {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             line-height: 1.5;
         }
         
@@ -2010,10 +1978,6 @@
             color: var(--primary);
             margin-bottom: 15px;
             font-size: 1.3rem;
-            /* Asegurar que los títulos estén en una sola línea */
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
         
         .prevention-card p {
@@ -2231,341 +2195,125 @@
             gap: 10px;
         }
         
-        .blog-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
+        /* ============ RECURSOS DE SALUD ============ */
+        .health-resources {
+            margin-top: 50px;
         }
         
-        .pagination-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 8px;
-            border: 2px solid #eef5ff;
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        
+        .resource-card {
             background: white;
-            color: var(--dark);
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .pagination-btn:hover {
-            border-color: var(--medical-blue);
-            transform: translateY(-2px);
-        }
-        
-        .pagination-btn.active {
-            background: var(--medical-blue);
-            color: white;
-            border-color: var(--medical-blue);
-        }
-        
-        /* ============ MODAL DE ARTÍCULO COMPLETO ============ */
-        .article-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 2000;
-            overflow-y: auto;
-            padding: 20px;
-            animation: fadeIn 0.3s ease;
-        }
-        
-        .article-modal.active {
-            display: block;
-        }
-        
-        .article-content {
-            background: white;
-            max-width: 900px;
-            margin: 40px auto;
             border-radius: 16px;
             overflow: hidden;
-            position: relative;
-            animation: slideUp 0.5s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: var(--transition);
         }
         
-        .article-header {
-            position: relative;
-            height: 300px;
-            overflow: hidden;
+        .resource-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
         
-        .article-header img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .article-header-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-            padding: 40px;
-            color: white;
-        }
-        
-        .article-category {
+        .resource-header {
             background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
             color: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 15px;
-        }
-        
-        .article-title {
-            font-size: 2.2rem;
-            color: white;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-        
-        .article-meta {
-            display: flex;
-            gap: 20px;
-            color: rgba(255,255,255,0.9);
-            font-size: 0.9rem;
-        }
-        
-        .article-body {
-            padding: 40px;
-        }
-        
-        .article-body h2 {
-            color: var(--primary);
-            margin: 30px 0 15px;
-            font-size: 1.8rem;
-        }
-        
-        .article-body h3 {
-            color: var(--primary);
-            margin: 25px 0 12px;
-            font-size: 1.4rem;
-        }
-        
-        .article-body p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        .article-body ul, .article-body ol {
-            margin: 20px 0;
-            padding-left: 20px;
-        }
-        
-        .article-body li {
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        
-        .article-quote {
-            background: var(--light);
             padding: 25px;
-            border-left: 4px solid var(--medical-blue);
-            margin: 25px 0;
-            font-style: italic;
-            color: #555;
-        }
-        
-        .article-image {
-            margin: 30px 0;
             text-align: center;
         }
         
-        .article-image img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 10px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        .resource-header i {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
         }
         
-        .article-image-caption {
-            font-size: 0.9rem;
-            color: #777;
-            margin-top: 10px;
-            font-style: italic;
+        .resource-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
         }
         
-        .article-footer {
-            padding: 30px 40px;
+        .resource-header p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+        
+        .resource-content {
+            padding: 25px;
+        }
+        
+        .resource-list {
+            list-style: none;
+        }
+        
+        .resource-list li {
+            margin-bottom: 15px;
+            padding: 12px 15px;
             background: var(--light);
+            border-radius: 8px;
+            transition: var(--transition);
+        }
+        
+        .resource-list li:hover {
+            background: white;
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .resource-list a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+        }
+        
+        .resource-list a:hover {
+            color: var(--medical-blue);
+        }
+        
+        .resource-list i {
+            color: var(--medical-blue);
+            font-size: 1.1rem;
+        }
+        
+        .resource-cta {
+            text-align: center;
+            margin-top: 25px;
+            padding-top: 25px;
             border-top: 1px solid #eee;
         }
         
-        .article-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-            margin-bottom: 25px;
-        }
-        
-        .article-tag {
-            background: white;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            color: var(--dark);
-            border: 1px solid #eee;
-            transition: var(--transition);
-        }
-        
-        .article-tag:hover {
-            background: var(--medical-blue);
-            color: white;
-            border-color: var(--medical-blue);
-        }
-        
-        .article-share {
-            display: flex;
-            gap: 15px;
-        }
-        
-        .share-btn {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: var(--medical-blue);
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-        
-        .share-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .share-btn.facebook { background: #3b5998; }
-        .share-btn.twitter { background: #1da1f2; }
-        .share-btn.linkedin { background: #0077b5; }
-        .share-btn.whatsapp { background: var(--whatsapp); }
-        
-        .close-article {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            background: rgba(255,255,255,0.2);
-            backdrop-filter: blur(10px);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            z-index: 2001;
-            transition: var(--transition);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-        
-        .close-article:hover {
-            background: rgba(255,255,255,0.3);
-            transform: rotate(90deg);
-        }
-        
-        /* ============ RESPONSIVE ADICIONAL ============ */
-        @media (max-width: 992px) {
-            .process-steps {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .opinion-stats {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .prevention-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .article-header {
-                height: 250px;
-            }
-            
-            .article-title {
-                font-size: 1.8rem;
-            }
-        }
-        
         @media (max-width: 768px) {
-            .services-tabs {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .tab-btn {
-                width: 100%;
-                max-width: 280px;
-            }
-            
             .process-steps {
+                flex-wrap: wrap;
+            }
+            
+            .process-step {
+                min-width: calc(50% - 10px);
+            }
+            
+            .resources-grid {
                 grid-template-columns: 1fr;
             }
-            
-            .opinion-stats {
-                grid-template-columns: 1fr;
+        }
+        
+        @media (max-width: 576px) {
+            .process-step {
+                min-width: 100%;
             }
             
-            .blog-header {
-                flex-direction: column;
-                align-items: stretch;
+            .process-step h4 {
+                font-size: 1rem;
             }
             
-            .blog-filters {
-                justify-content: center;
-            }
-            
-            .blog-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .article-body {
-                padding: 25px;
-            }
-            
-            .article-footer {
-                padding: 25px;
-            }
-            
-            .article-header {
-                height: 200px;
-            }
-            
-            .article-title {
-                font-size: 1.5rem;
-            }
-            
-            .close-article {
-                top: 10px;
-                right: 10px;
-                width: 40px;
-                height: 40px;
-            }
-            
-            /* Ajustes para títulos en una línea en móvil */
-            .prevention-card h4 {
-                white-space: normal;
-                line-height: 1.3;
-                font-size: 1.2rem;
+            .process-step p {
+                font-size: 0.8rem;
             }
         }
         
@@ -2928,11 +2676,30 @@
                     </div>
                 </div>
                 
-                <!-- CENTRO DE INFORMACIÓN -->
-                <a href="#blog" class="blog-link">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Centro de Información</span>
-                </a>
+                <!-- CENTRO DE INFORMACIÓN DESPLEGABLE -->
+                <div class="info-compact">
+                    <button class="info-dropdown-btn" id="infoDropdownBtn">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Centro de Información</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="info-dropdown" id="infoDropdown">
+                        <ul class="info-links">
+                            <li>
+                                <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                    <i class="fas fa-book-medical"></i>
+                                    Guías de Salud Oncológica
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                    <i class="fas fa-stethoscope"></i>
+                                    Medicina General y Familiar
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
             <!-- Botón consulta optimizado -->
@@ -2962,10 +2729,24 @@
                     <li><a href="#prevencion"><i class="fas fa-shield-alt"></i> Prevención</a></li>
                 </ul>
                 
-                <a href="#blog" class="blog-link mobile">
-                    <i class="fas fa-info-circle"></i>
-                    <span>Centro de Información</span>
-                </a>
+                <button class="info-dropdown-btn mobile" id="infoDropdownBtnMobile">
+                    <span>CENTRO DE INFORMACIÓN</span>
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="info-links mobile" id="infoDropdownMobile">
+                    <li>
+                        <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                            <i class="fas fa-book-medical"></i>
+                            Guías de Salud Oncológica
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                            <i class="fas fa-stethoscope"></i>
+                            Medicina General y Familiar
+                        </a>
+                    </li>
+                </ul>
                 
                 <a href="#" class="header-consult-btn open-consult-modal" style="width: 100%; justify-content: center; margin-top: 20px;">
                     <i class="fas fa-calendar-check"></i>
@@ -3130,48 +2911,6 @@
                         <p>Actualmente ejerzo en Ecuador, integrando mi especialidad oncológica con la práctica de <strong>medicina general, familiar y docencia universitaria</strong>, creando un modelo de atención único que abarca desde la prevención hasta el tratamiento especializado.</p>
                     </div>
                     
-                    <!-- PERFIL PROFESIONAL RESUMIDO -->
-                    <div class="philosophy animate-on-scroll">
-                        <h3>Perfil Profesional</h3>
-                        <div class="philosophy-quote">
-                            "Oncólogo clínico con experiencia en el manejo de enfermedades oncológicas mediante el tratamiento con quimioterapia, inmunoterapia, terapia dirigida, entre otros. Abordaje integral del paciente en cuidados paliativos."
-                        </div>
-                        
-                        <div class="philosophy-points">
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Experiencia Internacional</strong>
-                                    <p>Formación y práctica en Cuba y Ecuador</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Especialización Completa</strong>
-                                    <p>Manejo de todas las modalidades terapéuticas oncológicas modernas</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Docencia Universitaria</strong>
-                                    <p>Formador de nuevas generaciones de profesionales de la salud</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Atención Integral</strong>
-                                    <p>Abordaje del paciente considerando aspectos médicos, psicológicos y sociales</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
                     <!-- ESPECIALIDADES RESUMIDAS -->
                     <div class="specialties-grid animate-on-scroll">
                         <div class="specialty-card">
@@ -3204,40 +2943,6 @@
                             </div>
                             <h4>Docencia Médica</h4>
                             <p>Formación de profesionales de la salud a nivel de pregrado y posgrado, especializado en oncología y medicina general.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- FILOSOFÍA MÉDICA RESUMIDA -->
-                    <div class="philosophy animate-on-scroll">
-                        <h3>Mi Filosofía de Atención</h3>
-                        <div class="philosophy-quote">
-                            "Creo en una medicina donde el paciente es el centro de todo. Cada persona merece un tratamiento personalizado, basado en evidencia científica, pero siempre con calidez humana y comprensión de su realidad individual y familiar."
-                        </div>
-                        
-                        <div class="philosophy-points">
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Atención Personalizada</strong>
-                                    <p>Cada paciente recibe un plan de tratamiento único, adaptado a sus necesidades específicas.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Comunicación Clara</strong>
-                                    <p>Explico cada diagnóstico y tratamiento en lenguaje sencillo, asegurando que el paciente comprenda y participe activamente.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="philosophy-point">
-                                <i class="fas fa-check-circle"></i>
-                                <div>
-                                    <strong>Enfoque Multidisciplinario</strong>
-                                    <p>Trabajo en coordinación con otros especialistas para ofrecer la atención más completa posible.</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                     
@@ -3644,57 +3349,104 @@
         <div class="container">
             <div class="section-title">
                 <h2>Centro de Información en Salud</h2>
-                <p>Artículos educativos sobre oncología, prevención y cuidados de salud</p>
+                <p>Recursos educativos sobre oncología, prevención y cuidados de salud</p>
             </div>
             
-            <!-- FILTROS DE CATEGORÍA -->
-            <div class="blog-header animate-on-scroll">
-                <h3 style="color: var(--primary);">Artículos Recientes</h3>
-                <div class="blog-filters">
-                    <button class="filter-btn active" data-filter="all">Todos</button>
-                    <button class="filter-btn" data-filter="oncologia">Oncología</button>
-                    <button class="filter-btn" data-filter="prevencion">Prevención</button>
-                    <button class="filter-btn" data-filter="tratamientos">Tratamientos</button>
-                    <button class="filter-btn" data-filter="salud">Salud General</button>
+            <!-- RECURSOS DE SALUD -->
+            <div class="health-resources">
+                <div class="resources-grid animate-on-scroll">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <i class="fas fa-book-medical"></i>
+                            <h3>Guías de Salud Oncológica</h3>
+                            <p>Recursos especializados para pacientes y familiares sobre prevención, diagnóstico y tratamiento del cáncer</p>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                        <i class="fas fa-file-medical"></i>
+                                        <span>Guía Completa de Prevención Oncológica</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                        <i class="fas fa-heartbeat"></i>
+                                        <span>Cuidados durante el Tratamiento</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                        <i class="fas fa-procedures"></i>
+                                        <span>Rehabilitación Post-Terapia</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                        <i class="fas fa-utensils"></i>
+                                        <span>Nutrición en Oncología</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="resource-cta">
+                                <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" class="btn-consultation" target="_blank" style="background: linear-gradient(135deg, var(--medical-blue), var(--secondary));">
+                                    <i class="fas fa-external-link-alt"></i> VER TODAS LAS GUÍAS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <i class="fas fa-stethoscope"></i>
+                            <h3>Medicina General y Familiar</h3>
+                            <p>Información sobre salud general, prevención de enfermedades y cuidados familiares</p>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                        <i class="fas fa-virus"></i>
+                                        <span>Prevención de Enfermedades Infecciosas</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                        <i class="fas fa-heart"></i>
+                                        <span>Salud Cardiovascular</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                        <i class="fas fa-baby"></i>
+                                        <span>Cuidados Pediátricos</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                        <i class="fas fa-user-plus"></i>
+                                        <span>Salud del Adulto Mayor</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="resource-cta">
+                                <a href="https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" class="btn-consultation" target="_blank" style="background: linear-gradient(135deg, var(--medical-blue), var(--secondary));">
+                                    <i class="fas fa-external-link-alt"></i> VER RECURSOS COMPLETOS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            
-            <!-- GRID DE ARTÍCULOS -->
-            <div class="blog-grid" id="blog-container">
-                <!-- Los artículos se cargan dinámicamente con JavaScript -->
-            </div>
-            
-            <!-- PAGINACIÓN -->
-            <div class="blog-pagination animate-on-scroll">
-                <button class="pagination-btn prev" disabled>
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-                <button class="pagination-btn active">1</button>
-                <button class="pagination-btn">2</button>
-                <button class="pagination-btn">3</button>
-                <button class="pagination-btn next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-            </div>
-            
-            <!-- CTA -->
-            <div class="section-buttons animate-on-scroll">
-                <a href="#" class="btn-consultation open-consult-modal">
-                    <i class="fas fa-question-circle"></i> ¿TIENES PREGUNTAS? CONTÁCTAME
-                </a>
+                
+                <!-- CTA -->
+                <div class="section-buttons animate-on-scroll" style="margin-top: 50px;">
+                    <a href="#" class="btn-consultation open-consult-modal">
+                        <i class="fas fa-question-circle"></i> ¿TIENES PREGUNTAS? CONTÁCTAME
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- ==================== MODAL DE ARTÍCULO COMPLETO ==================== -->
-    <div class="article-modal" id="articleModal">
-        <div class="close-article" id="closeArticle">
-            <i class="fas fa-times"></i>
-        </div>
-        <div class="article-content" id="articleContent">
-            <!-- El contenido del artículo se carga dinámicamente -->
-        </div>
-    </div>
 
     <!-- ==================== TESTIMONIOS ==================== -->
     <section class="testimonials" id="testimonios">
@@ -3911,19 +3663,157 @@
         // ============ CONFIGURACIÓN INICIAL ============
         const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw0790gb3KiYjqLLJZwA-ARtnJSJQyJHt-NZuFs3OBOl1cjaHWsCFFf7_VKjv6Sy58/exec';
         
-        // ============ MENÚ MÓVIL ============
-        document.querySelector('.menu-toggle').addEventListener('click', function() {
-            document.querySelector('.nav-links').classList.toggle('active');
-            this.querySelector('i').classList.toggle('fa-bars');
-            this.querySelector('i').classList.toggle('fa-times');
-        });
-        
-        // Cerrar menú al hacer clic en enlace
-        document.querySelectorAll('.nav-links a').forEach(link => {
+        // ============ HEADER OPTIMIZADO ============
+        const navDropdownBtn = document.getElementById('navDropdownBtn');
+        const navDropdown = document.getElementById('navDropdown');
+        const infoDropdownBtn = document.getElementById('infoDropdownBtn');
+        const infoDropdown = document.getElementById('infoDropdown');
+        const navDropdownBtnMobile = document.getElementById('navDropdownBtnMobile');
+        const navDropdownMobile = document.getElementById('navDropdownMobile');
+        const infoDropdownBtnMobile = document.getElementById('infoDropdownBtnMobile');
+        const infoDropdownMobile = document.getElementById('infoDropdownMobile');
+        const menuToggle = document.getElementById('menuToggle');
+        const navMobile = document.getElementById('navMobile');
+
+        // Cerrar todos los menús
+        function closeAllDropdowns() {
+            // Cerrar menús escritorio
+            navDropdown.classList.remove('active');
+            infoDropdown.classList.remove('active');
+            if (navDropdownBtn) navDropdownBtn.classList.remove('active');
+            if (infoDropdownBtn) infoDropdownBtn.classList.remove('active');
+            
+            // Cerrar menús móviles
+            navDropdownMobile.classList.remove('active');
+            infoDropdownMobile.classList.remove('active');
+            if (navDropdownBtnMobile) navDropdownBtnMobile.classList.remove('active');
+            if (infoDropdownBtnMobile) infoDropdownBtnMobile.classList.remove('active');
+        }
+
+        // Menú desplegable escritorio
+        if (navDropdownBtn) {
+            navDropdownBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const wasActive = this.classList.contains('active');
+                closeAllDropdowns();
+                
+                if (!wasActive) {
+                    this.classList.add('active');
+                    navDropdown.classList.add('active');
+                }
+            });
+        }
+
+        // Centro de información desplegable escritorio
+        if (infoDropdownBtn) {
+            infoDropdownBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const wasActive = this.classList.contains('active');
+                closeAllDropdowns();
+                
+                if (!wasActive) {
+                    this.classList.add('active');
+                    infoDropdown.classList.add('active');
+                }
+            });
+        }
+
+        // Menú desplegable móvil
+        if (navDropdownBtnMobile) {
+            navDropdownBtnMobile.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const wasActive = this.classList.contains('active');
+                
+                // Cerrar otros menús móviles
+                infoDropdownMobile.classList.remove('active');
+                infoDropdownBtnMobile.classList.remove('active');
+                
+                // Alternar menú actual
+                this.classList.toggle('active');
+                navDropdownMobile.classList.toggle('active');
+            });
+        }
+
+        // Centro de información desplegable móvil
+        if (infoDropdownBtnMobile) {
+            infoDropdownBtnMobile.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const wasActive = this.classList.contains('active');
+                
+                // Cerrar otros menús móviles
+                navDropdownMobile.classList.remove('active');
+                navDropdownBtnMobile.classList.remove('active');
+                
+                // Alternar menú actual
+                this.classList.toggle('active');
+                infoDropdownMobile.classList.toggle('active');
+            });
+        }
+
+        // Cerrar menús al hacer clic en un enlace dentro de ellos
+        document.querySelectorAll('.dropdown-links a, .info-links a').forEach(link => {
             link.addEventListener('click', () => {
-                document.querySelector('.nav-links').classList.remove('active');
-                document.querySelector('.menu-toggle i').classList.remove('fa-times');
-                document.querySelector('.menu-toggle i').classList.add('fa-bars');
+                closeAllDropdowns();
+                
+                // Cerrar menú móvil completo si está abierto
+                if (navMobile.classList.contains('active')) {
+                    navMobile.classList.remove('active');
+                    if (menuToggle) {
+                        menuToggle.querySelector('i').classList.remove('fa-times');
+                        menuToggle.querySelector('i').classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+
+        // Toggle menú móvil
+        if (menuToggle) {
+            menuToggle.addEventListener('click', function() {
+                const isActive = navMobile.classList.toggle('active');
+                this.querySelector('i').className = isActive ? 'fas fa-times' : 'fas fa-bars';
+                
+                // Cerrar submenús cuando se cierra el menú principal
+                if (!isActive) {
+                    closeAllDropdowns();
+                }
+            });
+        }
+
+        // Cerrar menús al hacer clic fuera
+        document.addEventListener('click', function(e) {
+            // Cerrar menús desplegables de escritorio
+            if (navDropdown && navDropdown.classList.contains('active') && 
+                !navDropdown.contains(e.target) && 
+                navDropdownBtn && !navDropdownBtn.contains(e.target)) {
+                closeAllDropdowns();
+            }
+            
+            if (infoDropdown && infoDropdown.classList.contains('active') && 
+                !infoDropdown.contains(e.target) && 
+                infoDropdownBtn && !infoDropdownBtn.contains(e.target)) {
+                closeAllDropdowns();
+            }
+            
+            // Cerrar menú móvil
+            if (navMobile.classList.contains('active') && 
+                !navMobile.contains(e.target) && 
+                menuToggle && !menuToggle.contains(e.target)) {
+                navMobile.classList.remove('active');
+                menuToggle.querySelector('i').classList.remove('fa-times');
+                menuToggle.querySelector('i').classList.add('fa-bars');
+                closeAllDropdowns();
+            }
+        });
+
+        // Cerrar menú móvil al hacer clic en enlace
+        document.querySelectorAll('.nav-mobile a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMobile.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.querySelector('i').classList.remove('fa-times');
+                    menuToggle.querySelector('i').classList.add('fa-bars');
+                }
+                closeAllDropdowns();
             });
         });
         
@@ -4094,620 +3984,14 @@
                     
                     const result = await response.json();
                     console.log('Formulario enviado:', result);
+                    
+                    // Resetear formulario
+                    form.reset();
                 } catch (error) {
                     console.error('Error al enviar formulario:', error);
                 }
             });
         }
-        
-        // ============ ARTÍCULOS DEL BLOG COMPLETOS ============
-        const blogArticles = [
-            {
-                id: 1,
-                title: "Importancia de la Detección Temprana del Cáncer",
-                excerpt: "La detección precoz puede aumentar significativamente las tasas de supervivencia. Conoce los métodos de screening recomendados para diferentes tipos de cáncer y cuándo realizarlos.",
-                image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "15 Nov, 2024",
-                category: "Prevención",
-                readTime: "5 min",
-                tags: ["detección temprana", "screening", "prevención", "cáncer"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>La Importancia Crítica de la Detección Temprana</h2>
-                    <p>La detección temprana del cáncer es uno de los factores más importantes en el éxito del tratamiento y la supervivencia del paciente. Cuando el cáncer se detecta en sus etapas iniciales, las opciones de tratamiento son más efectivas, menos invasivas y las tasas de curación aumentan significativamente.</p>
-                    
-                    <h3>¿Por qué es tan importante?</h3>
-                    <p>El cáncer detectado en estadios tempranos generalmente está localizado, lo que significa que no se ha diseminado a otros órganos. Esto permite tratamientos más dirigidos y con menos efectos secundarios. En contraste, un cáncer detectado en estadios avanzados puede requerir tratamientos más agresivos con mayores riesgos.</p>
-                    
-                    <div class="article-quote">
-                        "La detección temprana no es solo una opción; es una responsabilidad con nuestra salud y la de nuestras familias."
-                    </div>
-                    
-                    <h3>Métodos de Screening Recomendados</h3>
-                    <ul>
-                        <li><strong>Mamografía:</strong> Para mujeres a partir de los 40 años, anual o bianual según factores de riesgo.</li>
-                        <li><strong>Colonoscopía:</strong> A partir de los 45-50 años para detección de cáncer colorrectal.</li>
-                        <li><strong>Papanicolaou:</strong> Para detección temprana de cáncer cervical en mujeres.</li>
-                        <li><strong>PSA y tacto rectal:</strong> Para hombres según edad y factores de riesgo de cáncer de próstata.</li>
-                        <li><strong>Tomografía de tórax de baja dosis:</strong> Para fumadores activos o exfumadores recientes.</li>
-                    </ul>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Detección temprana del cáncer">
-                        <div class="article-image-caption">La detección temprana salva vidas</div>
-                    </div>
-                    
-                    <h3>Factores de Riesgo a Considerar</h3>
-                    <p>Cada persona tiene un riesgo diferente de desarrollar cáncer. Factores como la edad, antecedentes familiares, estilo de vida y exposición ambiental influyen en la necesidad y frecuencia de los estudios de screening.</p>
-                    
-                    <h3>Recomendaciones Personales</h3>
-                    <p>Como oncólogo, recomiendo una evaluación individualizada del riesgo oncológico. Cada paciente debe tener un plan de screening adaptado a sus circunstancias específicas. No existe un enfoque único para todos.</p>
-                    
-                    <p>La prevención y detección temprana son nuestras armas más poderosas en la lucha contra el cáncer. No subestime la importancia de los chequeos regulares y la atención a los síntomas de alarma.</p>
-                `
-            },
-            {
-                id: 2,
-                title: "Avances en Inmunoterapia para el Cáncer",
-                excerpt: "La inmunoterapia está revolucionando el tratamiento oncológico. Descubre cómo funciona, para qué tipos de cáncer es más efectiva y los últimos desarrollos en este campo.",
-                image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "8 Nov, 2024",
-                category: "Tratamientos",
-                readTime: "7 min",
-                tags: ["inmunoterapia", "tratamientos", "cáncer", "innovación"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>La Revolución de la Inmunoterapia en Oncología</h2>
-                    <p>La inmunoterapia representa uno de los avances más significativos en el tratamiento del cáncer en las últimas décadas. A diferencia de la quimioterapia tradicional que ataca directamente las células cancerosas, la inmunoterapia potencia el propio sistema inmunológico del paciente para combatir el cáncer.</p>
-                    
-                    <h3>¿Cómo funciona la inmunoterapia?</h3>
-                    <p>El sistema inmunológico tiene mecanismos naturales para identificar y destruir células anormales, incluyendo las cancerosas. Sin embargo, las células cancerosas pueden desarrollar estrategias para evadir esta vigilancia. La inmunoterapia ayuda al sistema inmunológico a reconocer y atacar estas células.</p>
-                    
-                    <div class="article-quote">
-                        "La inmunoterapia no trata el cáncer directamente; da a nuestro sistema inmunológico las herramientas para reconocerlo y combatirlo eficazmente."
-                    </div>
-                    
-                    <h3>Tipos de Inmunoterapia</h3>
-                    <ul>
-                        <li><strong>Inhibidores de puntos de control:</strong> Liberan los "frenos" del sistema inmunológico para que pueda atacar las células cancerosas.</li>
-                        <li><strong>Terapia celular adoptiva:</strong> Modifica las células T del paciente en el laboratorio para que sean más efectivas contra el cáncer.</li>
-                        <li><strong>Vacunas terapéuticas:</strong> Estimulan el sistema inmunológico para que ataque células cancerosas específicas.</li>
-                        <li><strong>Anticuerpos monoclonales:</strong> Se unen a proteínas específicas en las células cancerosas, marcándolas para su destrucción.</li>
-                        <li><strong>Citocinas:</strong> Proteínas que regulan y dirigen el sistema inmunológico.</li>
-                    </ul>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Avances en inmunoterapia">
-                        <div class="article-image-caption">La inmunoterapia potencia nuestras defensas naturales</div>
-                    </div>
-                    
-                    <h3>Cánceres que Responden Mejor</h3>
-                    <p>La inmunoterapia ha demostrado ser particularmente efectiva en:</p>
-                    <ul>
-                        <li>Melanoma avanzado</li>
-                        <li>Cáncer de pulmón no microcítico</li>
-                        <li>Cáncer de riñón</li>
-                        <li>Cáncer de vejiga</li>
-                        <li>Linfoma de Hodgkin</li>
-                        <li>Cáncer de cabeza y cuello</li>
-                    </ul>
-                    
-                    <h3>Ventajas de la Inmunoterapia</h3>
-                    <p>1. <strong>Respuestas duraderas:</strong> Algunos pacientes mantienen la respuesta durante años.<br>
-                    2. <strong>Menos efectos secundarios:</strong> En comparación con la quimioterapia tradicional.<br>
-                    3. <strong>Efectividad en cánceres resistentes:</strong> Puede funcionar donde otros tratamientos han fallado.<br>
-                    4. <strong>Memoria inmunológica:</strong> El sistema inmunológico "recuerda" las células cancerosas.</p>
-                    
-                    <h3>Consideraciones y Futuro</h3>
-                    <p>La inmunoterapia no es efectiva para todos los pacientes ni para todos los tipos de cáncer. Se necesitan biomarcadores específicos para predecir la respuesta. La investigación continúa para expandir su uso y combinarla con otros tratamientos para mejorar los resultados.</p>
-                    
-                    <p>En mi práctica en Ecuador, estamos incorporando progresivamente estas terapias innovadoras, siempre considerando la evidencia científica más actualizada y las características individuales de cada paciente.</p>
-                `
-            },
-            {
-                id: 3,
-                title: "Hábitos que Reducen el Riesgo de Cáncer",
-                excerpt: "El 40% de los casos de cáncer pueden prevenirse mediante cambios en el estilo de vida. Conoce los hábitos que marcan la diferencia en la prevención del cáncer.",
-                image: "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "1 Nov, 2024",
-                category: "Prevención",
-                readTime: "6 min",
-                tags: ["prevención", "estilo de vida", "salud", "hábitos saludables"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>Prevención del Cáncer: El Poder de Nuestros Hábitos</h2>
-                    <p>Según la Organización Mundial de la Salud, aproximadamente el 40% de los casos de cáncer podrían prevenirse mediante cambios en el estilo de vida. Esto significa que tenemos un control significativo sobre nuestro riesgo de desarrollar cáncer.</p>
-                    
-                    <h3>Los 7 Hábitos Clave para Reducir el Riesgo</h3>
-                    
-                    <h4>1. Alimentación Saludable</h4>
-                    <p>Una dieta rica en frutas, verduras, granos integrales y legumbres puede reducir significativamente el riesgo de varios tipos de cáncer. Limite el consumo de carnes rojas y procesadas, y evite los alimentos ultraprocesados.</p>
-                    
-                    <h4>2. Mantener un Peso Saludable</h4>
-                    <p>El exceso de peso está relacionado con al menos 13 tipos diferentes de cáncer, incluyendo mama, colon, riñón, páncreas y esófago. Mantener un IMC saludable es crucial.</p>
-                    
-                    <h4>3. Actividad Física Regular</h4>
-                    <p>El ejercicio moderado regular puede reducir el riesgo de cáncer de colon, mama y endometrio. Se recomiendan al menos 150 minutos de actividad moderada por semana.</p>
-                    
-                    <div class="article-quote">
-                        "La prevención del cáncer comienza en nuestro plato y en nuestros hábitos diarios."
-                    </div>
-                    
-                    <h4>4. Evitar el Tabaco</h4>
-                    <p>El tabaco es la causa principal de cáncer prevenible. Dejar de fumar reduce gradualmente el riesgo, independientemente de la edad o cuánto tiempo haya fumado.</p>
-                    
-                    <h4>5. Limitar el Consumo de Alcohol</h4>
-                    <p>El alcohol aumenta el riesgo de cáncer de boca, garganta, esófago, hígado, colon y mama. Cuanto menos alcohol, menor el riesgo.</p>
-                    
-                    <h4>6. Protección Solar Adecuada</h4>
-                    <p>El cáncer de piel es uno de los más prevenibles. Use protector solar de amplio espectro, evite el sol en horas pico y use ropa protectora.</p>
-                    
-                    <h4>7. Vacunación y Prevención de Infecciones</h4>
-                    <p>Algunos cánceres están relacionados con infecciones virales. Las vacunas contra el VPH y la hepatitis B pueden prevenir cánceres asociados.</p>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Hábitos saludables para prevenir el cáncer">
-                        <div class="article-image-caption">Pequeños cambios, grandes beneficios para la salud</div>
-                    </div>
-                    
-                    <h3>Factores de Riesgo Específicos</h3>
-                    <p>Además de los hábitos generales, ciertos factores específicos aumentan el riesgo:</p>
-                    <ul>
-                        <li><strong>Exposición ocupacional:</strong> A ciertos químicos y sustancias</li>
-                        <li><strong>Radiación:</strong> Exposición innecesaria a radiación médica</li>
-                        <li><strong>Contaminación ambiental:</strong> Calidad del aire y del agua</li>
-                        <li><strong>Factores hormonales:</strong> Uso prolongado de terapia hormonal</li>
-                    </ul>
-                    
-                    <h3>Implementación Práctica</h3>
-                    <p>No es necesario hacer todos los cambios de una vez. Pequeños ajustes graduales pueden tener un impacto significativo:</p>
-                    <ol>
-                        <li>Empiece con un cambio a la vez</li>
-                        <li>Establezca metas realistas</li>
-                        <li>Busque apoyo profesional si es necesario</li>
-                        <li>Monitoree su progreso</li>
-                        <li>Celebre los logros, por pequeños que sean</li>
-                    </ol>
-                    
-                    <p>Como oncólogo, veo diariamente el impacto de estos hábitos en la salud de mis pacientes. La prevención es siempre mejor que el tratamiento, y cada pequeño cambio cuenta en la reducción del riesgo de cáncer.</p>
-                `
-            },
-            {
-                id: 4,
-                title: "Terapia Dirigida: Tratamientos Personalizados para el Cáncer",
-                excerpt: "Descubre cómo la terapia dirigida revoluciona el tratamiento oncológico al atacar específicamente las células cancerosas, preservando las sanas.",
-                image: "https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "25 Oct, 2024",
-                category: "Tratamientos",
-                readTime: "6 min",
-                tags: ["terapia dirigida", "tratamientos", "personalización", "oncología de precisión"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>Terapia Dirigida: La Medicina de Precisión en Oncología</h2>
-                    <p>La terapia dirigida representa un avance fundamental en el tratamiento del cáncer, permitiendo atacar específicamente las células cancerosas mientras se preservan las células sanas. A diferencia de la quimioterapia tradicional que afecta a todas las células que se dividen rápidamente, la terapia dirigida se enfoca en alteraciones moleculares específicas presentes en las células cancerosas.</p>
-                    
-                    <h3>¿Cómo funciona la terapia dirigida?</h3>
-                    <p>Las células cancerosas presentan alteraciones genéticas y moleculares que las hacen diferentes de las células normales. La terapia dirigida identifica y ataca estas alteraciones específicas, bloqueando el crecimiento y la propagación del cáncer de manera más precisa.</p>
-                    
-                    <div class="article-quote">
-                        "La terapia dirigida es como usar una llave específica para una cerradura particular, en lugar de usar un martillo que destruye todo a su paso."
-                    </div>
-                    
-                    <h3>Tipos de Terapia Dirigida</h3>
-                    <ul>
-                        <li><strong>Inhibidores de tirosina quinasa:</strong> Bloquean las señales que las células cancerosas necesitan para crecer.</li>
-                        <li><strong>Anticuerpos monoclonales:</strong> Se unen a proteínas específicas en la superficie de las células cancerosas.</li>
-                        <li><strong>Inhibidores de la angiogénesis:</strong> Bloquean la formación de nuevos vasos sanguíneos que alimentan el tumor.</li>
-                        <li><strong>Moduladores de la apoptosis:</strong> Inducen la muerte programada de las células cancerosas.</li>
-                        <li><strong>Inhibidores de señales intracelulares:</strong> Interfieren con las vías de señalización dentro de las células cancerosas.</li>
-                    </ul>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Terapia dirigida en oncología">
-                        <div class="article-image-caption">Tratamientos personalizados para cada tipo de cáncer</div>
-                    </div>
-                    
-                    <h3>Ventajas de la Terapia Dirigida</h3>
-                    <p>1. <strong>Mayor especificidad:</strong> Ataca principalmente células cancerosas<br>
-                    2. <strong>Menos efectos secundarios:</strong> En comparación con la quimioterapia tradicional<br>
-                    3. <strong>Tratamiento personalizado:</strong> Basado en características moleculares específicas<br>
-                    4. <strong>Eficacia en cánceres resistentes:</strong> Puede funcionar donde otros tratamientos han fallado<br>
-                    5. <strong>Administración más cómoda:</strong> Muchos se administran por vía oral</p>
-                    
-                    <h3>Biomarcadores y Pruebas de Diagnóstico</h3>
-                    <p>Para determinar si un paciente es candidato para terapia dirigida, se requieren pruebas específicas que identifiquen las alteraciones moleculares presentes en el tumor. Estas pruebas incluyen:</p>
-                    <ul>
-                        <li>Secuenciación genómica</li>
-                        <li>Inmunohistoquímica</li>
-                        <li>Pruebas de fusión génica</li>
-                        <li>Análisis de expresión génica</li>
-                    </ul>
-                    
-                    <h3>Consideraciones Importantes</h3>
-                    <p>Aunque la terapia dirigida ofrece ventajas significativas, es importante considerar:</p>
-                    <ul>
-                        <li>No todos los pacientes tienen alteraciones moleculares tratables</li>
-                        <li>Pueden desarrollarse resistencias con el tiempo</li>
-                        <li>Requiere seguimiento y monitoreo continuo</li>
-                        <li>Puede tener efectos secundarios específicos diferentes a la quimioterapia</li>
-                    </ul>
-                    
-                    <p>En mi práctica en Ecuador, utilizo la terapia dirigida cuando las características moleculares del tumor lo indican, siempre basándome en la evidencia científica más actualizada y considerando las necesidades individuales de cada paciente.</p>
-                `
-            },
-            {
-                id: 5,
-                title: "Cuidados Paliativos en Oncología: Más Allá del Tratamiento",
-                excerpt: "Los cuidados paliativos mejoran la calidad de vida de pacientes con cáncer y sus familias. Conoce su importancia y beneficios.",
-                image: "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "18 Oct, 2024",
-                category: "Tratamientos",
-                readTime: "5 min",
-                tags: ["cuidados paliativos", "calidad de vida", "soporte", "oncología"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>Cuidados Paliativos: Atención Integral en Oncología</h2>
-                    <p>Los cuidados paliativos son un componente esencial en el manejo del cáncer, enfocados en mejorar la calidad de vida de los pacientes y sus familias mediante la prevención y alivio del sufrimiento. Contrario a la creencia común, los cuidados paliativos no son solo para pacientes terminales, sino que deben integrarse desde el diagnóstico.</p>
-                    
-                    <h3>¿Qué son los cuidados paliativos?</h3>
-                    <p>Los cuidados paliativos son un enfoque multidisciplinario que aborda las necesidades físicas, emocionales, sociales y espirituales del paciente con cáncer. Incluyen el manejo de síntomas, apoyo psicológico, asesoramiento nutricional y coordinación de cuidados.</p>
-                    
-                    <div class="article-quote">
-                        "Los cuidados paliativos no significan abandonar el tratamiento, sino agregar una capa adicional de apoyo para mejorar la calidad de vida durante todo el proceso."
-                    </div>
-                    
-                    <h3>Componentes de los Cuidados Paliativos</h3>
-                    <ul>
-                        <li><strong>Manejo de síntomas:</strong> Control del dolor, náuseas, fatiga y otros síntomas</li>
-                        <li><strong>Apoyo emocional y psicológico:</strong> Para pacientes y familiares</li>
-                        <li><strong>Asesoramiento nutricional:</strong> Adaptación de la dieta a las necesidades del paciente</li>
-                        <li><strong>Apoyo espiritual:</strong> Según las creencias y valores del paciente</li>
-                        <li><strong>Coordinación de cuidados:</strong> Entre diferentes especialistas y servicios</li>
-                        <li><strong>Planificación anticipada:</strong> Toma de decisiones sobre cuidados futuros</li>
-                    </ul>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Cuidados paliativos en oncología">
-                        <div class="article-image-caption">Atención integral para mejorar la calidad de vida</div>
-                    </div>
-                    
-                    <h3>Beneficios de los Cuidados Paliativos Tempranos</h3>
-                    <p>Estudios han demostrado que la integración temprana de cuidados paliativos ofrece múltiples beneficios:</p>
-                    <ul>
-                        <li>Mejor calidad de vida</li>
-                        <li>Menos síntomas depresivos</li>
-                        <li>Mayor satisfacción con el cuidado</li>
-                        <li>Mejor comunicación médico-paciente</li>
-                        <li>Posible prolongación de la supervivencia en algunos casos</li>
-                        <li>Menos hospitalizaciones y visitas a urgencias</li>
-                    </ul>
-                    
-                    <h3>Mitos Comunes sobre Cuidados Paliativos</h3>
-                    <p><strong>Mito 1:</strong> Son solo para pacientes terminales<br>
-                    <strong>Realidad:</strong> Deben iniciarse desde el diagnóstico</p>
-                    
-                    <p><strong>Mito 2:</strong> Significan abandonar el tratamiento curativo<br>
-                    <strong>Realidad:</strong> Se pueden administrar junto con tratamientos curativos</p>
-                    
-                    <p><strong>Mito 3:</strong> Son lo mismo que cuidados al final de la vida<br>
-                    <strong>Realidad:</strong> Los cuidados paliativos son más amplios y pueden durar años</p>
-                    
-                    <p><strong>Mito 4:</strong> Solo se enfocan en el manejo del dolor<br>
-                    <strong>Realidad:</strong> Abordan múltiples aspectos físicos, emocionales y espirituales</p>
-                    
-                    <h3>Implementación en la Práctica Clínica</h3>
-                    <p>En mi práctica como oncólogo, integro los cuidados paliativos desde el primer encuentro con el paciente. Esto incluye:</p>
-                    <ol>
-                        <li>Evaluación integral de síntomas desde el diagnóstico</li>
-                        <li>Establecimiento de objetivos de tratamiento realistas</li>
-                        <li>Coordinación con otros especialistas cuando es necesario</li>
-                        <li>Apoyo continuo al paciente y su familia</li>
-                        <li>Reevaluación periódica de necesidades y objetivos</li>
-                    </ol>
-                    
-                    <p>Los cuidados paliativos son una parte fundamental de la atención oncológica de calidad. Representan un compromiso con la dignidad y el bienestar del paciente en todas las etapas de su enfermedad.</p>
-                `
-            },
-            {
-                id: 6,
-                title: "Oncología Nutricional: Alimentación durante el Tratamiento",
-                excerpt: "La nutrición adecuada es fundamental durante el tratamiento del cáncer. Aprende cómo optimizar tu alimentación para mejores resultados.",
-                image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-                date: "11 Oct, 2024",
-                category: "Salud General",
-                readTime: "8 min",
-                tags: ["nutrición", "alimentación", "tratamiento", "salud"],
-                author: "Dr. Ariel Calaña Sabina",
-                content: `
-                    <h2>Nutrición en Oncología: Combustible para la Recuperación</h2>
-                    <p>La nutrición adecuada juega un papel crucial en el éxito del tratamiento oncológico. Una alimentación bien planificada puede ayudar a los pacientes a tolerar mejor los tratamientos, mantener la fuerza, preservar la masa muscular y mejorar la calidad de vida durante todo el proceso.</p>
-                    
-                    <h3>Importancia de la Nutrición durante el Tratamiento</h3>
-                    <p>El cáncer y sus tratamientos pueden afectar el estado nutricional de múltiples maneras: alterando el apetito, cambiando el metabolismo, causando síntomas digestivos o afectando la capacidad para absorber nutrientes. Una nutrición adecuada ayuda a:</p>
-                    <ul>
-                        <li>Mantener la fuerza y energía</li>
-                        <li>Preservar la masa muscular</li>
-                        <li>Mejorar la tolerancia a los tratamientos</li>
-                        <li>Reducir el riesgo de infecciones</li>
-                        <li>Acelerar la recuperación</li>
-                        <li>Mejorar la calidad de vida</li>
-                    </ul>
-                    
-                    <div class="article-quote">
-                        "La alimentación durante el tratamiento oncológico no es solo comer bien; es una parte integral del tratamiento mismo."
-                    </div>
-                    
-                    <h3>Desafíos Nutricionales Comunes</h3>
-                    <p>Los pacientes con cáncer pueden enfrentar diversos desafíos nutricionales:</p>
-                    
-                    <h4>Pérdida de Apetito</h4>
-                    <p>Muchos tratamientos y la enfermedad misma pueden reducir el apetito. Estrategias incluyen comidas pequeñas y frecuentes, alimentos de alto valor nutricional en pequeñas porciones, y evitar líquidos durante las comidas.</p>
-                    
-                    <h4>Cambios en el Gusto y el Olfato</h4>
-                    <p>La quimioterapia puede alterar las papilas gustativas. Se recomienda experimentar con diferentes sabores y texturas, usar hierbas y especias suaves, y mantener una buena higiene bucal.</p>
-                    
-                    <h4>Náuseas y Vómitos</h4>
-                    <p>Alimentos fríos o a temperatura ambiente, comidas secas como galletas saladas, y evitar alimentos grasosos o muy condimentados pueden ayudar.</p>
-                    
-                    <h4>Diarrea o Estreñimiento</h4>
-                    <p>Según el síntoma, se ajusta el contenido de fibra y líquidos. Es importante la hidratación adecuada y alimentos que regulen el tránsito intestinal.</p>
-                    
-                    <div class="article-image">
-                        <img src="https://images.unsplash.com/photo-1490818387583-1baba5e638af?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Nutrición en oncología">
-                        <div class="article-image-caption">Alimentos que apoyan el tratamiento oncológico</div>
-                    </div>
-                    
-                    <h3>Alimentos Recomendados</h3>
-                    <ul>
-                        <li><strong>Proteínas de alta calidad:</strong> Pescado, pollo, huevos, legumbres</li>
-                        <li><strong>Carbohidratos complejos:</strong> Granos integrales, avena, quinoa</li>
-                        <li><strong>Grasas saludables:</strong> Aguacate, nueces, aceite de oliva</li>
-                        <li><strong>Frutas y verduras:</strong> Variedad de colores para diferentes nutrientes</li>
-                        <li><strong>Líquidos:</strong> Agua, caldos, infusiones suaves</li>
-                    </ul>
-                    
-                    <h3>Alimentos a Limitar o Evitar</h3>
-                    <ul>
-                        <li>Alimentos crudos o poco cocidos (riesgo de infección)</li>
-                        <li>Alimentos muy procesados o con conservantes</li>
-                        <li>Azúcares refinados en exceso</li>
-                        <li>Alcohol (puede interferir con medicamentos)</li>
-                        <li>Alimentos muy picantes o irritantes</li>
-                    </ul>
-                    
-                    <h3>Suplementación Nutricional</h3>
-                    <p>En algunos casos, puede ser necesario utilizar suplementos nutricionales. Esto debe hacerse bajo supervisión médica, ya que algunos suplementos pueden interferir con los tratamientos oncológicos.</p>
-                    
-                    <h3>Recomendaciones Prácticas</h3>
-                    <ol>
-                        <li>Consulte con un nutricionista especializado en oncología</li>
-                        <li>Mantenga un diario de alimentos y síntomas</li>
-                        <li>Planifique las comidas con anticipación</li>
-                        <li>Prepare porciones adicionales para congelar</li>
-                        <li>No se fuerce a comer cuando tenga náuseas</li>
-                        <li>Manténgase hidratado incluso si no tiene hambre</li>
-                    </ol>
-                    
-                    <p>La nutrición adecuada es un pilar fundamental en el tratamiento del cáncer. Como oncólogo, trabajo en colaboración con nutricionistas especializados para asegurar que mis pacientes reciban el apoyo nutricional necesario durante todo su tratamiento.</p>
-                `
-            }
-        ];
-        
-        // ============ SISTEMA DE BLOG COMPLETO ============
-        let currentPage = 1;
-        const articlesPerPage = 3;
-        let currentFilter = 'all';
-        
-        // Cargar artículos del blog
-        function loadBlogArticles(page = 1, filter = 'all') {
-            const blogContainer = document.getElementById('blog-container');
-            if (!blogContainer) return;
-            
-            blogContainer.innerHTML = '';
-            
-            // Filtrar artículos
-            let filteredArticles = blogArticles;
-            if (filter !== 'all') {
-                filteredArticles = blogArticles.filter(article => 
-                    article.category.toLowerCase() === filter.toLowerCase()
-                );
-            }
-            
-            // Calcular paginación
-            const startIndex = (page - 1) * articlesPerPage;
-            const endIndex = startIndex + articlesPerPage;
-            const paginatedArticles = filteredArticles.slice(startIndex, endIndex);
-            
-            // Si no hay artículos en esta página
-            if (paginatedArticles.length === 0 && page > 1) {
-                loadBlogArticles(page - 1, filter);
-                return;
-            }
-            
-            // Renderizar artículos
-            paginatedArticles.forEach(article => {
-                const articleElement = document.createElement('div');
-                articleElement.className = 'blog-card animate-on-scroll';
-                articleElement.setAttribute('data-category', article.category.toLowerCase());
-                
-                articleElement.innerHTML = `
-                    <div class="blog-image">
-                        <img src="${article.image}" alt="${article.title}" loading="lazy">
-                        <div class="blog-category-badge">${article.category}</div>
-                    </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span class="blog-date"><i class="far fa-calendar"></i> ${article.date}</span>
-                            <span class="blog-read-time"><i class="far fa-clock"></i> ${article.readTime}</span>
-                        </div>
-                        <h3 class="blog-title">${article.title}</h3>
-                        <p class="blog-excerpt">${article.excerpt}</p>
-                        <div class="blog-footer">
-                            <div class="blog-author">
-                                <div class="author-avatar">
-                                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="${article.author}">
-                                </div>
-                                <div class="author-name">${article.author}</div>
-                            </div>
-                            <a href="#" class="blog-link read-article" data-article="${article.id}">
-                                Leer artículo <i class="fas fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                `;
-                blogContainer.appendChild(articleElement);
-            });
-            
-            // Actualizar paginación
-            updatePagination(filteredArticles.length, page);
-            
-            // Añadir event listeners a los enlaces
-            document.querySelectorAll('.read-article').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    showArticleModal(this.getAttribute('data-article'));
-                });
-            });
-        }
-        
-        // Actualizar paginación
-        function updatePagination(totalArticles, currentPage) {
-            const totalPages = Math.ceil(totalArticles / articlesPerPage);
-            const paginationContainer = document.querySelector('.blog-pagination');
-            
-            if (!paginationContainer) return;
-            
-            // Limpiar paginación (mantener botones prev/next)
-            const prevBtn = paginationContainer.querySelector('.prev');
-            const nextBtn = paginationContainer.querySelector('.next');
-            paginationContainer.innerHTML = '';
-            paginationContainer.appendChild(prevBtn);
-            
-            // Crear botones de página
-            for (let i = 1; i <= totalPages; i++) {
-                const pageBtn = document.createElement('button');
-                pageBtn.className = 'pagination-btn';
-                if (i === currentPage) pageBtn.classList.add('active');
-                pageBtn.textContent = i;
-                pageBtn.addEventListener('click', () => {
-                    loadBlogArticles(i, currentFilter);
-                });
-                paginationContainer.appendChild(pageBtn);
-            }
-            
-            paginationContainer.appendChild(nextBtn);
-            
-            // Actualizar estado de botones prev/next
-            prevBtn.disabled = currentPage === 1;
-            nextBtn.disabled = currentPage === totalPages || totalPages === 0;
-            
-            prevBtn.onclick = () => {
-                if (currentPage > 1) loadBlogArticles(currentPage - 1, currentFilter);
-            };
-            
-            nextBtn.onclick = () => {
-                if (currentPage < totalPages) loadBlogArticles(currentPage + 1, currentFilter);
-            };
-        }
-        
-        // Función para mostrar artículo en modal
-        function showArticleModal(articleId) {
-            const article = blogArticles.find(a => a.id == articleId);
-            if (!article) return;
-            
-            const articleModal = document.getElementById('articleModal');
-            const articleContent = document.getElementById('articleContent');
-            
-            // Construir contenido del artículo
-            articleContent.innerHTML = `
-                <div class="article-header">
-                    <img src="${article.image}" alt="${article.title}">
-                    <div class="article-header-overlay">
-                        <div class="article-category">${article.category}</div>
-                        <h1 class="article-title">${article.title}</h1>
-                        <div class="article-meta">
-                            <span><i class="far fa-calendar"></i> ${article.date}</span>
-                            <span><i class="far fa-clock"></i> ${article.readTime}</span>
-                            <span><i class="fas fa-user-md"></i> ${article.author}</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="article-body">
-                    ${article.content}
-                </div>
-                <div class="article-footer">
-                    <div class="article-tags">
-                        ${article.tags.map(tag => `<span class="article-tag">${tag}</span>`).join('')}
-                    </div>
-                    <div class="article-share">
-                        <a href="#" class="share-btn facebook" onclick="shareOnFacebook('${article.title}', '${window.location.href}#article-${article.id}')">
-                            <i class="fab fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="share-btn twitter" onclick="shareOnTwitter('${article.title}', '${window.location.href}#article-${article.id}')">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="share-btn linkedin" onclick="shareOnLinkedIn('${article.title}', '${window.location.href}#article-${article.id}')">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://wa.me/?text=Lee este artículo: ${encodeURIComponent(article.title)} ${encodeURIComponent(window.location.href)}#article-${article.id}" class="share-btn whatsapp" target="_blank">
-                            <i class="fab fa-whatsapp"></i>
-                        </a>
-                    </div>
-                </div>
-            `;
-            
-            // Mostrar modal
-            articleModal.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        
-        // Función para cerrar modal de artículo
-        document.getElementById('closeArticle').addEventListener('click', () => {
-            const articleModal = document.getElementById('articleModal');
-            articleModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        });
-        
-        // Cerrar modal al hacer clic fuera
-        document.getElementById('articleModal').addEventListener('click', function(e) {
-            if (e.target === this) {
-                this.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            }
-        });
-        
-        // Funciones de compartir
-        window.shareOnFacebook = function(title, url) {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}&quote=${encodeURIComponent(title)}`, '_blank');
-        };
-        
-        window.shareOnTwitter = function(title, url) {
-            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`, '_blank');
-        };
-        
-        window.shareOnLinkedIn = function(title, url) {
-            window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`, '_blank');
-        };
-        
-        // Filtros del blog
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remover active de todos
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                // Añadir active al actual
-                this.classList.add('active');
-                
-                // Actualizar filtro y cargar artículos
-                currentFilter = this.getAttribute('data-filter');
-                currentPage = 1;
-                loadBlogArticles(currentPage, currentFilter);
-            });
-        });
-        
-        // Cargar artículos cuando la página esté lista
-        document.addEventListener('DOMContentLoaded', () => {
-            loadBlogArticles(currentPage, currentFilter);
-        });
         
         // ============ SMOOTH SCROLL ============
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -4739,66 +4023,6 @@
                 img.src = src;
             });
         });
-// ============ HEADER OPTIMIZADO ============
-const navDropdownBtn = document.getElementById('navDropdownBtn');
-const navDropdown = document.getElementById('navDropdown');
-const navDropdownBtnMobile = document.getElementById('navDropdownBtnMobile');
-const navDropdownMobile = document.getElementById('navDropdownMobile');
-const menuToggle = document.getElementById('menuToggle');
-const navMobile = document.getElementById('navMobile');
-
-// Menú desplegable escritorio
-if (navDropdownBtn) {
-    navDropdownBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        this.classList.toggle('active');
-        navDropdown.classList.toggle('active');
-    });
-}
-
-// Menú desplegable móvil
-if (navDropdownBtnMobile) {
-    navDropdownBtnMobile.addEventListener('click', function() {
-        this.classList.toggle('active');
-        navDropdownMobile.style.display = 
-            navDropdownMobile.style.display === 'block' ? 'none' : 'block';
-    });
-}
-
-// Toggle menú móvil
-if (menuToggle) {
-    menuToggle.addEventListener('click', function() {
-        navMobile.classList.toggle('active');
-        this.querySelector('i').classList.toggle('fa-bars');
-        this.querySelector('i').classList.toggle('fa-times');
-    });
-}
-
-// Cerrar menús al hacer clic fuera
-document.addEventListener('click', function(e) {
-    if (navDropdown && !navDropdown.contains(e.target) && 
-        navDropdownBtn && !navDropdownBtn.contains(e.target)) {
-        navDropdown.classList.remove('active');
-        if (navDropdownBtn) navDropdownBtn.classList.remove('active');
-    }
-    
-    if (navMobile.classList.contains('active') && 
-        !navMobile.contains(e.target) && 
-        !menuToggle.contains(e.target)) {
-        navMobile.classList.remove('active');
-        menuToggle.querySelector('i').classList.remove('fa-times');
-        menuToggle.querySelector('i').classList.add('fa-bars');
-    }
-});
-
-// Cerrar menú móvil al hacer clic en enlace
-document.querySelectorAll('.nav-mobile a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMobile.classList.remove('active');
-        menuToggle.querySelector('i').classList.remove('fa-times');
-        menuToggle.querySelector('i').classList.add('fa-bars');
-    });
-});
     </script>
 </body>
 </html>
