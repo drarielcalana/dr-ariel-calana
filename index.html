@@ -701,8 +701,14 @@
         }
         
         @keyframes slideUp {
-            from { opacity: 0; transform: translateY(40px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
         
         /* ============ MODAL PARA CONTENIDO DE INFORMACIÓN ============ */
@@ -932,13 +938,25 @@
         
         /* ============ ANIMACIONES ============ */
         @keyframes fadeInLeft {
-            from { opacity: 0; transform: translateX(-40px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
         
         @keyframes fadeInRight {
-            from { opacity: 0; transform: translateX(40px); }
-            to { opacity: 1; transform: translateX(0); }
+            from {
+                opacity: 0;
+                transform: translateX(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
         }
 
         /* ============ HEADER OPTIMIZADO ============ */
@@ -2104,7 +2122,7 @@
             margin: 0 auto 25px;
         }
         
-        /* ============ PREVENCIÓN ONCOLÓGICA - MEJORADA ============ */
+        /* ============ PREVENCIÓN ONCOLÓGICA - NUEVA SECCIÓN ============ */
         .prevention {
             background: linear-gradient(135deg, #f0fdf9 0%, #e6f9f4 100%);
             position: relative;
@@ -2216,7 +2234,7 @@
             margin-top: 3px;
         }
         
-        /* ============ CENTRO DE INFORMACIÓN EN SALUD MEJORADO ============ */
+        /* ============ CENTRO DE INFORMACIÓN EN SALUD ============ */
         .blog {
             background: linear-gradient(135deg, #f8fafc 0%, #f0f5ff 100%);
         }
@@ -2405,7 +2423,7 @@
             gap: 10px;
         }
         
-        /* ============ RECURSOS DE SALUD MEJORADOS ============ */
+        /* ============ RECURSOS DE SALUD ============ */
         .health-resources {
             margin-top: 50px;
         }
@@ -2503,51 +2521,35 @@
         .info-link {
             background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
             color: white;
-            padding: 30px;
-            border-radius: 16px;
+            padding: 20px;
+            border-radius: 12px;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 20px;
+            gap: 15px;
             transition: var(--transition);
             text-align: center;
-            height: 100%;
-            justify-content: center;
         }
         
         .info-link:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(26, 106, 165, 0.25);
-            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            box-shadow: 0 15px 30px rgba(26, 106, 165, 0.2);
         }
         
         .info-link i {
-            font-size: 4rem;
-            margin-bottom: 15px;
+            font-size: 3rem;
         }
         
         .info-link h3 {
             margin: 0;
-            font-size: 1.6rem;
-            line-height: 1.3;
+            font-size: 1.4rem;
         }
         
         .info-link p {
             margin: 0;
             opacity: 0.9;
-            font-size: 1rem;
-            line-height: 1.5;
-        }
-        
-        .info-link .btn-consultation {
-            margin-top: 15px;
-            background: rgba(255,255,255,0.2);
-            border: 2px solid rgba(255,255,255,0.3);
-        }
-        
-        .info-link .btn-consultation:hover {
-            background: rgba(255,255,255,0.3);
+            font-size: 0.95rem;
         }
         
         @media (max-width: 768px) {
@@ -2582,15 +2584,15 @@
             }
             
             .info-link {
-                padding: 25px 20px;
+                padding: 15px;
             }
             
             .info-link i {
-                font-size: 3rem;
+                font-size: 2.5rem;
             }
             
             .info-link h3 {
-                font-size: 1.4rem;
+                font-size: 1.2rem;
             }
         }
         
@@ -3104,58 +3106,52 @@
             
             <div class="info-modal-body">
                 <div class="info-modal-tabs">
-                    <button class="info-tab-btn active" data-tab="oncologia">Oncología</button>
-                    <button class="info-tab-btn" data-tab="medicina-general">Medicina General y Familiar</button>
+                    <button class="info-tab-btn active" data-tab="oncologia">Guías Oncológicas</button>
+                    <button class="info-tab-btn" data-tab="medicina-general">Medicina General</button>
+                    <button class="info-tab-btn" data-tab="prevencion">Prevención</button>
+                    <button class="info-tab-btn" data-tab="recursos">Recursos Adicionales</button>
                 </div>
                 
-                <!-- PESTAÑA ONCOLOGÍA SIMPLIFICADA -->
+                <!-- PESTAÑA GUÍAS ONCOLÓGICAS -->
                 <div class="info-tab-content active" id="tab-oncologia">
                     <div class="info-content-section">
-                        <h3>Recursos de Oncología</h3>
-                        <p>Información especializada sobre prevención, diagnóstico y tratamiento del cáncer.</p>
+                        <h3>Guías de Salud Oncológica</h3>
+                        <p>Recursos especializados para pacientes y familiares sobre prevención, diagnóstico y tratamiento del cáncer.</p>
                         
                         <ul class="info-content-list">
                             <li>
-                                <a href="generalidades-oncologia.html" target="_blank">
-                                    <i class="fas fa-book-medical"></i>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                    <i class="fas fa-file-medical"></i>
                                     <div>
-                                        <strong>Generalidades de Oncología</strong>
-                                        <small>Conceptos básicos sobre cáncer, tipos y tratamientos</small>
+                                        <strong>Guía Completa de Prevención Oncológica</strong>
+                                        <small>Toda la información sobre prevención del cáncer</small>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="tipos-cancer.html" target="_blank">
-                                    <i class="fas fa-dna"></i>
-                                    <div>
-                                        <strong>Tipos de Cáncer</strong>
-                                        <small>Información específica sobre diferentes tipos de cáncer</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <div class="info-content-section">
-                        <h3>Guías de Prevención y Cuidado</h3>
-                        <p>Recursos para pacientes y familiares sobre cómo prevenir y manejar el cáncer.</p>
-                        
-                        <ul class="info-content-list">
-                            <li>
-                                <a href="guia-prevencion-oncologica.html" target="_blank">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <div>
-                                        <strong>Guía de Prevención Oncológica</strong>
-                                        <small>Medidas para reducir el riesgo de desarrollar cáncer</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="cuidados-tratamiento.html" target="_blank">
-                                    <i class="fas fa-procedures"></i>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                    <i class="fas fa-heartbeat"></i>
                                     <div>
                                         <strong>Cuidados durante el Tratamiento</strong>
-                                        <small>Recomendaciones para pacientes en tratamiento oncológico</small>
+                                        <small>Recomendaciones para pacientes en tratamiento</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                    <i class="fas fa-procedures"></i>
+                                    <div>
+                                        <strong>Rehabilitación Post-Terapia</strong>
+                                        <small>Guía de recuperación después del tratamiento</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
+                                    <i class="fas fa-utensils"></i>
+                                    <div>
+                                        <strong>Nutrición en Oncología</strong>
+                                        <small>Alimentación adecuada durante el tratamiento</small>
                                     </div>
                                 </a>
                             </li>
@@ -3163,7 +3159,7 @@
                     </div>
                 </div>
                 
-                <!-- PESTAÑA MEDICINA GENERAL SIMPLIFICADA -->
+                <!-- PESTAÑA MEDICINA GENERAL -->
                 <div class="info-tab-content" id="tab-medicina-general">
                     <div class="info-content-section">
                         <h3>Medicina General y Familiar</h3>
@@ -3171,46 +3167,114 @@
                         
                         <ul class="info-content-list">
                             <li>
-                                <a href="medicina-general.html" target="_blank">
-                                    <i class="fas fa-heartbeat"></i>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                    <i class="fas fa-virus"></i>
                                     <div>
-                                        <strong>Medicina General</strong>
-                                        <small>Información sobre salud general y prevención de enfermedades</small>
+                                        <strong>Prevención de Enfermedades Infecciosas</strong>
+                                        <small>Medidas preventivas para enfermedades comunes</small>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="medicina-familiar.html" target="_blank">
-                                    <i class="fas fa-home"></i>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                    <i class="fas fa-heart"></i>
                                     <div>
-                                        <strong>Medicina Familiar</strong>
-                                        <small>Cuidados de salud para toda la familia</small>
+                                        <strong>Salud Cardiovascular</strong>
+                                        <small>Cuidados para mantener un corazón saludable</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                    <i class="fas fa-baby"></i>
+                                    <div>
+                                        <strong>Cuidados Pediátricos</strong>
+                                        <small>Salud infantil y cuidados básicos</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
+                                    <i class="fas fa-user-plus"></i>
+                                    <div>
+                                        <strong>Salud del Adulto Mayor</strong>
+                                        <small>Cuidados específicos para la tercera edad</small>
                                     </div>
                                 </a>
                             </li>
                         </ul>
                     </div>
-                    
+                </div>
+                
+                <!-- PESTAÑA PREVENCIÓN -->
+                <div class="info-tab-content" id="tab-prevencion">
                     <div class="info-content-section">
-                        <h3>Recursos Adicionales</h3>
-                        <p>Más información sobre salud y bienestar.</p>
+                        <h3>Prevención del Cáncer</h3>
+                        <p>Información esencial sobre cómo prevenir diferentes tipos de cáncer.</p>
                         
                         <ul class="info-content-list">
                             <li>
-                                <a href="prevencion-enfermedades.html" target="_blank">
-                                    <i class="fas fa-shield-virus"></i>
+                                <a href="#" class="open-info-modal" data-content="prevencion-general">
+                                    <i class="fas fa-shield-alt"></i>
                                     <div>
-                                        <strong>Prevención de Enfermedades</strong>
-                                        <small>Medidas preventivas para mantener una buena salud</small>
+                                        <strong>Prevención General</strong>
+                                        <small>Medidas básicas para reducir el riesgo de cáncer</small>
                                     </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="nutricion-salud.html" target="_blank">
-                                    <i class="fas fa-utensils"></i>
+                                <a href="#" class="open-info-modal" data-content="deteccion-temprana">
+                                    <i class="fas fa-search"></i>
                                     <div>
-                                        <strong>Nutrición y Salud</strong>
-                                        <small>Guías de alimentación saludable</small>
+                                        <strong>Detección Temprana</strong>
+                                        <small>Importancia de los chequeos regulares</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="open-info-modal" data-content="factores-riesgo">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    <div>
+                                        <strong>Factores de Riesgo</strong>
+                                        <small>Identificación y manejo de factores de riesgo</small>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- PESTAÑA RECURSOS ADICIONALES -->
+                <div class="info-tab-content" id="tab-recursos">
+                    <div class="info-content-section">
+                        <h3>Recursos Adicionales</h3>
+                        <p>Herramientas y enlaces útiles para el cuidado de la salud.</p>
+                        
+                        <ul class="info-content-list">
+                            <li>
+                                <a href="#contacto">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <div>
+                                        <strong>Solicitar Consulta</strong>
+                                        <small>Agenda una cita con el Dr. Calaña</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#segunda-opinion">
+                                    <i class="fas fa-clipboard-check"></i>
+                                    <div>
+                                        <strong>Segunda Opinión Oncológica</strong>
+                                        <small>Obtén una evaluación especializada</small>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#testimonios">
+                                    <i class="fas fa-comments"></i>
+                                    <div>
+                                        <strong>Testimonios de Pacientes</strong>
+                                        <small>Experiencias de otros pacientes</small>
                                     </div>
                                 </a>
                             </li>
@@ -3740,7 +3804,7 @@
                     <a href="#" class="btn-prevention open-consult-modal">
                         <i class="fas fa-calendar-check"></i> AGENDAR EVALUACIÓN PREVENTIVA
                     </a>
-                    <a href="#" class="btn-consultation open-info-modal" data-content="oncologia">
+                    <a href="#" class="btn-consultation open-info-modal" data-content="prevencion">
                         <i class="fas fa-shield-alt"></i> MÁS SOBRE PREVENCIÓN
                     </a>
                 </div>
@@ -3748,7 +3812,7 @@
         </div>
     </section>
 
-    <!-- ==================== CENTRO DE INFORMACIÓN EN SALUD MEJORADO ==================== -->
+    <!-- ==================== CENTRO DE INFORMACIÓN EN SALUD ==================== -->
     <section class="blog" id="blog">
         <div class="container">
             <div class="section-title">
@@ -3758,96 +3822,32 @@
             
             <!-- ENLACES PRINCIPALES MEJORADOS -->
             <div class="resources-grid animate-on-scroll">
-                <div class="resource-card">
-                    <div class="resource-header">
-                        <i class="fas fa-book-medical"></i>
-                        <h3>Oncología</h3>
-                        <p>Información especializada sobre cáncer, prevención y tratamiento</p>
-                    </div>
-                    <div class="resource-content">
-                        <ul class="resource-list">
-                            <li>
-                                <a href="generalidades-oncologia.html" target="_blank">
-                                    <i class="fas fa-book-open"></i>
-                                    <span>Generalidades de Oncología</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="tipos-cancer.html" target="_blank">
-                                    <i class="fas fa-dna"></i>
-                                    <span>Tipos de Cáncer</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="guia-prevencion-oncologica.html" target="_blank">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <span>Guía de Prevención</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="cuidados-tratamiento.html" target="_blank">
-                                    <i class="fas fa-procedures"></i>
-                                    <span>Cuidados durante el Tratamiento</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="resource-cta">
-                            <a href="#" class="btn-consultation open-info-modal" data-content="oncologia" style="width: 100%;">
-                                <i class="fas fa-external-link-alt"></i> VER TODOS LOS RECURSOS DE ONCOLOGÍA
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="info-link open-info-modal" data-content="oncologia">
+                    <i class="fas fa-book-medical"></i>
+                    <h3>Guías de Salud Oncológica</h3>
+                    <p>Recursos especializados para pacientes y familiares sobre prevención, diagnóstico y tratamiento del cáncer</p>
+                    <span class="btn-consultation" style="margin-top: 10px; background: rgba(255,255,255,0.2);">
+                        <i class="fas fa-external-link-alt"></i> ACCEDER
+                    </span>
+                </a>
                 
-                <div class="resource-card">
-                    <div class="resource-header" style="background: linear-gradient(135deg, var(--prevention-teal), #16a085);">
-                        <i class="fas fa-stethoscope"></i>
-                        <h3>Medicina General y Familiar</h3>
-                        <p>Salud integral para toda la familia y prevención de enfermedades</p>
-                    </div>
-                    <div class="resource-content">
-                        <ul class="resource-list">
-                            <li>
-                                <a href="medicina-general.html" target="_blank">
-                                    <i class="fas fa-heartbeat"></i>
-                                    <span>Medicina General</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="medicina-familiar.html" target="_blank">
-                                    <i class="fas fa-home"></i>
-                                    <span>Medicina Familiar</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="prevencion-enfermedades.html" target="_blank">
-                                    <i class="fas fa-shield-virus"></i>
-                                    <span>Prevención de Enfermedades</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="nutricion-salud.html" target="_blank">
-                                    <i class="fas fa-utensils"></i>
-                                    <span>Nutrición y Salud</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="resource-cta">
-                            <a href="#" class="btn-opinion open-info-modal" data-content="medicina-general" style="width: 100%; background: linear-gradient(135deg, var(--prevention-teal), #16a085);">
-                                <i class="fas fa-external-link-alt"></i> VER TODOS LOS RECURSOS DE MEDICINA GENERAL
-                            </a>
-                        </div>
-                    </div>
-                </div>
+                <a href="#" class="info-link open-info-modal" data-content="medicina-general">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Medicina General y Familiar</h3>
+                    <p>Información sobre salud general, prevención de enfermedades y cuidados familiares</p>
+                    <span class="btn-consultation" style="margin-top: 10px; background: rgba(255,255,255,0.2);">
+                        <i class="fas fa-external-link-alt"></i> ACCEDER
+                    </span>
+                </a>
             </div>
             
             <!-- BOTONES ADICIONALES -->
             <div class="section-buttons animate-on-scroll" style="margin-top: 40px;">
-                <a href="#" class="btn-consultation open-info-modal" data-content="oncologia">
-                    <i class="fas fa-book-medical"></i> RECURSOS DE ONCOLOGÍA
+                <a href="#" class="btn-consultation open-info-modal" data-content="prevencion">
+                    <i class="fas fa-shield-alt"></i> GUÍAS DE PREVENCIÓN
                 </a>
-                <a href="#" class="btn-opinion open-info-modal" data-content="medicina-general">
-                    <i class="fas fa-heartbeat"></i> RECURSOS DE MEDICINA GENERAL
+                <a href="#" class="btn-opinion open-info-modal" data-content="recursos">
+                    <i class="fas fa-tools"></i> RECURSOS ADICIONALES
                 </a>
                 <a href="#" class="btn-prevention open-consult-modal">
                     <i class="fas fa-question-circle"></i> ¿TIENES PREGUNTAS?
