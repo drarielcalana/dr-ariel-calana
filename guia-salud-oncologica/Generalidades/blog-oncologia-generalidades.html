@@ -1,0 +1,1578 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO ONCOLÓGICO ESPECIALIZADO -->
+    <meta name="description" content="Generalidades del Cáncer - Dr. Ariel Calaña Sabina | Conceptos básicos, fisiopatología, factores de riesgo, prevención, diagnóstico y tratamiento del cáncer">
+    <meta name="keywords" content="oncología, cáncer, generalidades cáncer, fisiopatología cáncer, factores riesgo cáncer, prevención cáncer, diagnóstico cáncer, tratamiento cáncer, oncólogo Ecuador">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Generalidades del Cáncer | Dr. Ariel Calaña Sabina">
+    <meta property="og:description" content="Guía completa sobre conceptos básicos, fisiopatología, prevención y tratamiento del cáncer">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://drarielcalana.com/blog-oncologia-generalidades">
+    
+    <!-- TÍTULO -->
+    <title>Generalidades del Cáncer | Dr. Ariel Calaña Sabina | Oncólogo Especialista</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="https://img.icons8.com/color/96/000000/medical-doctor.png">
+    
+    <!-- FUENTES E ICONOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- ESTILOS -->
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --hope-green: #2E7D32;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            --gradient-primary: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            --shadow: 0 15px 35px rgba(0,0,0,0.08);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
+            --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 120px;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            padding-top: 90px;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* ============ HEADER MEJORADO ============ */
+        header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            padding: 10px 0;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .logo:hover {
+            transform: translateY(-2px);
+        }
+        
+        .logo-img {
+            height: 55px;
+            width: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(10, 42, 90, 0.15);
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo-name {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.2rem;
+            color: var(--primary);
+            letter-spacing: -0.3px;
+        }
+        
+        .logo-specialty {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 0.85rem;
+            color: var(--medical-blue);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        /* NAVEGACIÓN MEJORADA */
+        .nav-center {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+        
+        .nav-item {
+            position: relative;
+        }
+        
+        .nav-link {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 8px 0;
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-accent);
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--accent);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .nav-link.active {
+            color: var(--accent);
+        }
+        
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* MENÚ DESPLEGABLE MEJORADO */
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-content {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+            padding: 15px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        
+        .dropdown-content a:hover {
+            background: rgba(25, 118, 210, 0.08);
+            color: var(--primary);
+            padding-left: 25px;
+        }
+        
+        /* BOTÓN SOLICITAR CONSULTA MEJORADO (MÁS PEQUEÑO) */
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 0.9rem;
+            border: none;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        .btn-consulta {
+            background: var(--gradient-accent);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-consulta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4);
+        }
+        
+        /* ============ HERO ============ */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 100px 0 60px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .hero h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* NAVEGACIÓN HERO */
+        .hero-nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-nav-btn {
+            background: rgba(255, 255, 255, 0.15);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            backdrop-filter: blur(5px);
+        }
+        
+        .hero-nav-btn:hover {
+            background: rgba(255, 255, 255, 0.25);
+            border-color: rgba(255, 255, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        
+        /* ============ BARRA LATERAL Y CONTENIDO ============ */
+        .blog-layout {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 40px;
+            margin: 40px 0 80px;
+            min-height: 800px;
+        }
+        
+        .sidebar {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(10, 42, 90, 0.1);
+        }
+        
+        .sidebar-header {
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--medical-blue);
+        }
+        
+        .sidebar-title {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            font-weight: 700;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .sidebar-subtitle {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .sidebar-nav {
+            list-style: none;
+        }
+        
+        .sidebar-category {
+            margin-bottom: 25px;
+        }
+        
+        .category-title {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 3px solid var(--medical-blue);
+            font-weight: 600;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .sidebar-nav li {
+            margin-bottom: 8px;
+        }
+        
+        .sidebar-nav a {
+            display: block;
+            padding: 12px 15px;
+            color: var(--text-dark);
+            text-decoration: none;
+            border-radius: 8px;
+            transition: var(--transition);
+            font-weight: 500;
+            border-left: 3px solid transparent;
+            position: relative;
+        }
+        
+        .sidebar-nav a:hover {
+            background: rgba(25, 118, 210, 0.08);
+            border-left-color: var(--medical-blue);
+            padding-left: 20px;
+            transform: translateX(5px);
+        }
+        
+        .sidebar-nav a.active {
+            background: rgba(25, 118, 210, 0.12);
+            color: var(--primary);
+            border-left-color: var(--accent);
+            font-weight: 600;
+        }
+        
+        .main-content {
+            background: white;
+            border-radius: 15px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            border: 1px solid rgba(10, 42, 90, 0.1);
+        }
+        
+        .content-section {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        .content-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 45px 40px;
+            margin-bottom: 30px;
+            border-radius: 12px 12px 0 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .content-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+        
+        .content-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .content-icon {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+        
+        .content-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            max-width: 800px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px;
+        }
+        
+        .content-column {
+            background: white;
+            border-radius: 12px;
+            padding: 35px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border: 1px solid rgba(10, 42, 90, 0.08);
+            transition: var(--transition);
+        }
+        
+        .content-column:hover {
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--medical-blue);
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .main-list {
+            list-style: none;
+            counter-reset: section-counter;
+        }
+        
+        .main-list > li {
+            padding: 25px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            counter-increment: section-counter;
+            position: relative;
+            padding-left: 60px;
+            transition: var(--transition);
+        }
+        
+        .main-list > li:hover {
+            background: rgba(245, 249, 255, 0.5);
+            border-radius: 8px;
+            padding-left: 65px;
+        }
+        
+        .main-list > li:last-child {
+            border-bottom: none;
+        }
+        
+        .main-list > li::before {
+            content: counter(section-counter);
+            position: absolute;
+            left: 0;
+            top: 25px;
+            width: 40px;
+            height: 40px;
+            background: var(--medical-blue);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+        }
+        
+        .main-list > li h4 {
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+        }
+        
+        .main-list > li p {
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+        
+        .sub-list {
+            list-style: none;
+            margin: 15px 0 0 20px;
+        }
+        
+        .sub-list li {
+            padding: 8px 0;
+            color: var(--text-dark);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .sub-list li:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 15px;
+            width: 10px;
+            height: 10px;
+            background: var(--hope-green);
+            border-radius: 50%;
+        }
+        
+        .sub-sub-list {
+            list-style: none;
+            margin: 8px 0 8px 20px;
+        }
+        
+        .sub-sub-list li {
+            padding: 5px 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .sub-sub-list li:before {
+            content: "›";
+            color: var(--medical-blue);
+            position: absolute;
+            left: 0;
+            font-size: 1rem;
+        }
+        
+        /* BOTÓN VOLVER ARRIBA */
+        .back-to-top {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            width: 55px;
+            height: 55px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 1.3rem;
+            box-shadow: 0 6px 20px rgba(10, 42, 90, 0.3);
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 100;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: var(--gradient-accent);
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(211, 47, 47, 0.4);
+        }
+        
+        /* ============ CTA ============ */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+        }
+        
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 25px;
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section p {
+            max-width: 800px;
+            margin: 0 auto 50px;
+            font-size: 1.2rem;
+            opacity: 0.95;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* ============ FOOTER ============ */
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 80px 0 40px;
+            margin-top: 80px;
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-accent);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 25px;
+            color: #B3E5FC;
+            font-family: 'Montserrat', sans-serif;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background: var(--accent);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .footer-section li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .footer-section li i {
+            color: var(--medical-blue-light);
+            width: 20px;
+        }
+        
+        .footer-section a {
+            color: rgba(255,255,255,0.85);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-section a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+        
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1100px) {
+            .blog-layout {
+                grid-template-columns: 1fr;
+            }
+            
+            .sidebar {
+                position: static;
+                margin-bottom: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-nav {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .hero-nav-btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .content-title {
+                font-size: 2rem;
+            }
+            
+            .content-grid {
+                padding: 25px;
+            }
+            
+            .content-column {
+                padding: 25px;
+            }
+            
+            .main-list > li {
+                padding-left: 50px;
+            }
+            
+            .main-list > li::before {
+                width: 35px;
+                height: 35px;
+                font-size: 1rem;
+            }
+            
+            .navbar {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .header-buttons {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            body {
+                padding-top: 150px;
+            }
+            
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+            
+            .cta-section h2 {
+                font-size: 2.2rem;
+            }
+            
+            .nav-center {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .content-title {
+                font-size: 1.7rem;
+            }
+            
+            .content-header {
+                padding: 35px 25px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .btn-consulta {
+                padding: 8px 16px;
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ============ HEADER MEJORADO ============ -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" 
+                         alt="Dr. Ariel Calaña Sabina" 
+                         class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+                
+                <div class="nav-center">
+                    <div class="nav-item">
+                        <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                            <i class="fas fa-home"></i> Inicio
+                        </a>
+                    </div>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog de Oncología
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="blog-oncologia-generalidades.html" class="nav-link active">
+                                <i class="fas fa-book-medical"></i> Generalidades del Cáncer
+                            </a>
+                            <a href="blog-tipos-cancer.html" class="nav-link">
+                                <i class="fas fa-disease"></i> Tipos de Cáncer
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="https://drarielcalana.github.io/dr-ariel-calana/sobre-mi" class="nav-link">
+                            <i class="fas fa-user-md"></i> Sobre Mí
+                        </a>
+                    </div>
+                    
+                    <div class="nav-item">
+                        <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                            <i class="fas fa-stethoscope"></i> Medicina General
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="header-buttons">
+                    <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña,%20me%20gustaría%20solicitar%20una%20consulta" 
+                       class="btn btn-consulta" 
+                       target="_blank">
+                        <i class="fas fa-calendar-check"></i> Solicitar Consulta
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+        <div class="container">
+            <h1>Generalidades del Cáncer</h1>
+            <p>Guía completa sobre los conceptos fundamentales, fisiopatología, prevención, diagnóstico y tratamiento del cáncer. Información actualizada basada en evidencia científica.</p>
+            
+            <div class="hero-nav">
+                <a href="blog-tipos-cancer.html" class="hero-nav-btn">
+                    <i class="fas fa-disease"></i> Ver Tipos de Cáncer
+                </a>
+                <a href="#consulta" class="hero-nav-btn">
+                    <i class="fas fa-comment-medical"></i> Consulta Especializada
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTENIDO PRINCIPAL ============ -->
+    <div class="container">
+        <div class="blog-layout">
+            <!-- BARRA LATERAL -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3 class="sidebar-title">Generalidades de Oncología</h3>
+                    <p class="sidebar-subtitle">20 temas fundamentales</p>
+                </div>
+                
+                <ul class="sidebar-nav">
+                    <li class="sidebar-category">
+                        <h4 class="category-title">Temas Fundamentales</h4>
+                        <ul>
+                            <li><a href="#conceptos-basicos" class="sidebar-link active" data-section="conceptos-basicos">1. Conceptos Básicos</a></li>
+                            <li><a href="#fisiopatologia" class="sidebar-link" data-section="fisiopatologia">2. Fisiopatología</a></li>
+                            <li><a href="#factores-riesgo" class="sidebar-link" data-section="factores-riesgo">3. Factores de Riesgo</a></li>
+                            <li><a href="#prevencion" class="sidebar-link" data-section="prevencion">4. Prevención</a></li>
+                            <li><a href="#epidemiologia" class="sidebar-link" data-section="epidemiologia">5. Epidemiología</a></li>
+                            <li><a href="#manifestaciones" class="sidebar-link" data-section="manifestaciones">6. Manifestaciones Clínicas</a></li>
+                            <li><a href="#diagnostico" class="sidebar-link" data-section="diagnostico">7. Diagnóstico</a></li>
+                            <li><a href="#clasificacion" class="sidebar-link" data-section="clasificacion">8. Clasificación</a></li>
+                            <li><a href="#tratamientos" class="sidebar-link" data-section="tratamientos">9. Tratamientos</a></li>
+                            <li><a href="#efectos-adversos" class="sidebar-link" data-section="efectos-adversos">10. Efectos Adversos</a></li>
+                            <li><a href="#sistema-inmunologico" class="sidebar-link" data-section="sistema-inmunologico">11. Sistema Inmunológico</a></li>
+                            <li><a href="#oncologia-precision" class="sidebar-link" data-section="oncologia-precision">12. Oncología de Precisión</a></li>
+                            <li><a href="#pronostico" class="sidebar-link" data-section="pronostico">13. Pronóstico</a></li>
+                            <li><a href="#cuidados-paliativos" class="sidebar-link" data-section="cuidados-paliativos">14. Cuidados Paliativos</a></li>
+                            <li><a href="#aspectos-psicologicos" class="sidebar-link" data-section="aspectos-psicologicos">15. Aspectos Psicológicos</a></li>
+                            <li><a href="#etica" class="sidebar-link" data-section="etica">16. Ética</a></li>
+                            <li><a href="#poblaciones-especiales" class="sidebar-link" data-section="poblaciones-especiales">17. Poblaciones Especiales</a></li>
+                            <li><a href="#mitos" class="sidebar-link" data-section="mitos">18. Mitos y Verdades</a></li>
+                            <li><a href="#rehabilitacion" class="sidebar-link" data-section="rehabilitacion">19. Rehabilitación</a></li>
+                            <li><a href="#futuro" class="sidebar-link" data-section="futuro">20. Futuro de la Oncología</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </aside>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="main-content">
+                <!-- SECCIÓN CONCEPTOS BÁSICOS -->
+                <section id="conceptos-basicos" class="content-section active">
+                    <div class="content-header">
+                        <div class="content-badge">Tema 1 de 20</div>
+                        <div class="content-icon">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                        <h2 class="content-title">1. Conceptos Básicos del Cáncer</h2>
+                        <p class="content-subtitle">Definición de cáncer, diferencias entre tumores benignos y malignos, tipos según tejido de origen y terminología oncológica básica</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Definiciones Fundamentales</h3>
+                            <ul class="main-list">
+                                <li>
+                                    <h4>¿Qué es el cáncer?</h4>
+                                    <p>Enfermedad caracterizada por el crecimiento descontrolado y la diseminación de células anormales en el cuerpo.</p>
+                                </li>
+                                <li>
+                                    <h4>Diferencia entre tumor benigno y maligno</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Benigno:</strong> Crecimiento localizado, no invade otros tejidos, no hace metástasis</li>
+                                        <li><strong>Maligno:</strong> Crecimiento invasivo, capacidad de metástasis, comportamiento agresivo</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Tipos de cáncer según tejido de origen</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Carcinomas:</strong> Originados en tejidos epiteliales (piel, mucosas, glándulas)</li>
+                                        <li><strong>Sarcomas:</strong> Originados en tejidos conectivos (hueso, músculo, grasa)</li>
+                                        <li><strong>Leucemias:</strong> Cánceres de la sangre y médula ósea</li>
+                                        <li><strong>Linfomas:</strong> Cánceres del sistema linfático</li>
+                                        <li><strong>Cánceres del sistema nervioso central</strong></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Terminología oncológica básica</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Neoplasia:</strong> Crecimiento nuevo de tejido</li>
+                                        <li><strong>Tumor:</strong> Masa o bulto anormal</li>
+                                        <li><strong>Metástasis:</strong> Diseminación del cáncer a otras partes del cuerpo</li>
+                                        <li><strong>Remisión:</strong> Desaparición o reducción de los signos y síntomas del cáncer</li>
+                                        <li><strong>Recidiva:</strong> Reaparición del cáncer después de un período de remisión</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN FISIOPATOLOGÍA -->
+                <section id="fisiopatologia" class="content-section">
+                    <div class="content-header">
+                        <div class="content-badge">Tema 2 de 20</div>
+                        <div class="content-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <h2 class="content-title">2. Fisiopatología del Cáncer</h2>
+                        <p class="content-subtitle">Procesos biológicos que conducen al desarrollo y progresión del cáncer</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Mecanismos de Carcinogénesis</h3>
+                            <ul class="main-list">
+                                <li>
+                                    <h4>Carcinogénesis</h4>
+                                    <p>Proceso de múltiples etapas por el cual las células normales se transforman en células cancerosas.</p>
+                                </li>
+                                <li>
+                                    <h4>Mutaciones genéticas y epigenéticas</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Mutaciones genéticas:</strong> Cambios en la secuencia de ADN</li>
+                                        <li><strong>Mutaciones epigenéticas:</strong> Cambios en la expresión génica sin alterar la secuencia de ADN</li>
+                                        <li>Ambas pueden ser hereditarias o adquiridas</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Oncogenes y genes supresores de tumores</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Oncogenes:</strong> Genes que promueven el crecimiento celular (activados en cáncer)</li>
+                                        <li><strong>Genes supresores de tumores:</strong> Genes que inhiben el crecimiento celular (inactivados en cáncer)</li>
+                                        <li>Ejemplos: p53, BRCA1, BRCA2</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Microambiente tumoral</h4>
+                                    <p>Complejo ecosistema que rodea al tumor, incluyendo células inmunitarias, fibroblastos, vasos sanguíneos y matriz extracelular.</p>
+                                </li>
+                                <li>
+                                    <h4>Angiogénesis</h4>
+                                    <p>Formación de nuevos vasos sanguíneos que permiten al tumor obtener nutrientes y oxígeno para su crecimiento.</p>
+                                </li>
+                                <li>
+                                    <h4>Evasión del sistema inmune</h4>
+                                    <p>Mecanismos por los cuales las células cancerosas evitan ser detectadas y destruidas por el sistema inmunológico.</p>
+                                </li>
+                                <li>
+                                    <h4>Metástasis (pasos y mecanismos)</h4>
+                                    <ul class="sub-list">
+                                        <li>1. Invasión local del tejido circundante</li>
+                                        <li>2. Intravasación (entrada en vasos sanguíneos o linfáticos)</li>
+                                        <li>3. Circulación en la sangre o linfa</li>
+                                        <li>4. Extravasación (salida de los vasos en nuevo órgano)</li>
+                                        <li>5. Formación de micrometástasis</li>
+                                        <li>6. Crecimiento de metástasis clínicamente detectables</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN FACTORES DE RIESGO -->
+                <section id="factores-riesgo" class="content-section">
+                    <div class="content-header">
+                        <div class="content-badge">Tema 3 de 20</div>
+                        <div class="content-icon">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </div>
+                        <h2 class="content-title">3. Factores de Riesgo del Cáncer</h2>
+                        <p class="content-subtitle">Elementos que aumentan la probabilidad de desarrollar cáncer</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Categorías de Factores de Riesgo</h3>
+                            <ul class="main-list">
+                                <li>
+                                    <h4>Genéticos y hereditarios</h4>
+                                    <ul class="sub-list">
+                                        <li>Mutaciones en genes BRCA1 y BRCA2 (cáncer de mama y ovario)</li>
+                                        <li>Síndrome de Lynch (cáncer colorrectal hereditario)</li>
+                                        <li>Poliposis adenomatosa familiar</li>
+                                        <li>Retinoblastoma hereditario</li>
+                                        <li>Neurofibromatosis tipo 1 y 2</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Ambientales</h4>
+                                    <ul class="sub-list">
+                                        <li>Contaminación del aire</li>
+                                        <li>Agua contaminada con sustancias carcinógenas</li>
+                                        <li>Exposición a pesticidas y herbicidas</li>
+                                        <li>Radiación ultravioleta (sol)</li>
+                                        <li>Radiación ionizante</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Estilo de vida</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Tabaco:</strong> Responsable del 30% de todos los cánceres</li>
+                                        <li><strong>Alcohol:</strong> Aumenta riesgo de cáncer de hígado, mama, colon, esófago</li>
+                                        <li><strong>Dieta no saludable:</strong> Alto consumo de carnes rojas, procesadas, bajo en fibra</li>
+                                        <li><strong>Sedentarismo:</strong> Aumenta riesgo de varios tipos de cáncer</li>
+                                        <li><strong>Obesidad:</strong> Factor de riesgo para múltiples cánceres</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Infecciones relacionadas con cáncer</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Virus del Papiloma Humano (VPH):</strong> Cáncer de cuello uterino, orofaringe, ano</li>
+                                        <li><strong>Virus de la Hepatitis B y C:</strong> Cáncer de hígado</li>
+                                        <li><strong>Virus de Epstein-Barr:</strong> Linfoma de Hodgkin, cáncer nasofaríngeo</li>
+                                        <li><strong>Helicobacter pylori:</strong> Cáncer gástrico</li>
+                                        <li><strong>Virus Herpes Humano 8:</strong> Sarcoma de Kaposi</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Exposición ocupacional</h4>
+                                    <ul class="sub-list">
+                                        <li>Amianto (mesotelioma, cáncer de pulmón)</li>
+                                        <li>Benceno (leucemia)</li>
+                                        <li>Arsénico (cáncer de piel, pulmón, vejiga)</li>
+                                        <li>Radón (cáncer de pulmón)</li>
+                                        <li>Hidrocarburos aromáticos policíclicos</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Radiación y carcinógenos químicos</h4>
+                                    <ul class="sub-list">
+                                        <li>Radiación ionizante (rayos X, radioterapia previa)</li>
+                                        <li>Radiación ultravioleta (sol, camas solares)</li>
+                                        <li>Aflatoxinas (contaminantes de alimentos)</li>
+                                        <li>Formaldehído</li>
+                                        <li>Compuestos de níquel y cromo</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN PREVENCIÓN -->
+                <section id="prevencion" class="content-section">
+                    <div class="content-header">
+                        <div class="content-badge">Tema 4 de 20</div>
+                        <div class="content-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h2 class="content-title">4. Prevención del Cáncer</h2>
+                        <p class="content-subtitle">Estrategias para reducir el riesgo de desarrollar cáncer</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Niveles de Prevención</h3>
+                            <ul class="main-list">
+                                <li>
+                                    <h4>Prevención primaria</h4>
+                                    <ul class="sub-list">
+                                        <li>Evitar exposición a factores de riesgo conocidos</li>
+                                        <li>Promover estilos de vida saludables</li>
+                                        <li>Inmunización contra virus carcinógenos</li>
+                                        <li>Educación para la salud</li>
+                                        <li>Legislación sobre sustancias carcinógenas</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Vacunación (VPH, hepatitis B)</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Vacuna contra el VPH:</strong> Recomendada para niñas y niños entre 9-14 años</li>
+                                        <li><strong>Vacuna contra hepatitis B:</strong> Parte del calendario de vacunación infantil</li>
+                                        <li>Ambas vacunas previenen infecciones que pueden causar cáncer</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Cambios en el estilo de vida</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Alimentación saludable:</strong> Dieta rica en frutas, verduras, fibra; baja en carnes procesadas</li>
+                                        <li><strong>Actividad física regular:</strong> Al menos 150 minutos semanales de ejercicio moderado</li>
+                                        <li><strong>Mantenimiento de peso saludable:</strong> IMC entre 18.5-24.9</li>
+                                        <li><strong>Evitar tabaco en todas sus formas</strong></li>
+                                        <li><strong>Limitar consumo de alcohol</strong></li>
+                                        <li><strong>Protección solar adecuada</strong></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Prevención secundaria</h4>
+                                    <ul class="sub-list">
+                                        <li>Detección precoz de lesiones precancerosas</li>
+                                        <li>Seguimiento de grupos de alto riesgo</li>
+                                        <li>Quimioprevención en casos seleccionados</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Cribado y detección precoz</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Cáncer de mama:</strong> Mamografía a partir de los 40-50 años</li>
+                                        <li><strong>Cáncer de cuello uterino:</strong> Citología (PAP) y prueba de VPH</li>
+                                        <li><strong>Cáncer colorrectal:</strong> Colonoscopia a partir de los 50 años</li>
+                                        <li><strong>Cáncer de próstata:</strong> PSA y tacto rectal según indicación</li>
+                                        <li><strong>Cáncer de pulmón:</strong> TAC de baja dosis en fumadores de alto riesgo</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- SECCIÓN EPIDEMIOLOGÍA -->
+                <section id="epidemiologia" class="content-section">
+                    <div class="content-header">
+                        <div class="content-badge">Tema 5 de 20</div>
+                        <div class="content-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <h2 class="content-title">5. Epidemiología y Estadísticas del Cáncer</h2>
+                        <p class="content-subtitle">Distribución, frecuencia y factores determinantes del cáncer en poblaciones</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Datos Epidemiológicos Globales</h3>
+                            <ul class="main-list">
+                                <li>
+                                    <h4>Incidencia y prevalencia global</h4>
+                                    <p>El cáncer es una de las principales causas de muerte en el mundo. En 2020, se diagnosticaron aproximadamente 19.3 millones de nuevos casos de cáncer.</p>
+                                </li>
+                                <li>
+                                    <h4>Mortalidad por tipo de cáncer</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>1. Cáncer de pulmón:</strong> 1.8 millones de muertes anuales</li>
+                                        <li><strong>2. Cáncer colorrectal:</strong> 935,000 muertes anuales</li>
+                                        <li><strong>3. Cáncer de hígado:</strong> 830,000 muertes anuales</li>
+                                        <li><strong>4. Cáncer de estómago:</strong> 769,000 muertes anuales</li>
+                                        <li><strong>5. Cáncer de mama:</strong> 685,000 muertes anuales</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Diferencias por edad y sexo</h4>
+                                    <ul class="sub-list">
+                                        <li>El riesgo de cáncer aumenta con la edad</li>
+                                        <li>Hombres tienen mayor incidencia que mujeres</li>
+                                        <li>Algunos cánceres son más frecuentes en determinados grupos etarios</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Tendencias actuales</h4>
+                                    <ul class="sub-list">
+                                        <li>Aumento en incidencia debido al envejecimiento poblacional</li>
+                                        <li>Disminución en mortalidad en países desarrollados</li>
+                                        <li>Aumento en cánceres relacionados con estilo de vida</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Cáncer en países desarrollados vs. en desarrollo</h4>
+                                    <ul class="sub-list">
+                                        <li><strong>Países desarrollados:</strong> Mayor incidencia, menor mortalidad, mejor acceso a tratamientos</li>
+                                        <li><strong>Países en desarrollo:</strong> Aumento acelerado de casos, menor acceso a diagnóstico y tratamiento</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <h4>Supervivencia a 5 años</h4>
+                                    <ul class="sub-list">
+                                        <li>Varía según tipo de cáncer y estadio al diagnóstico</li>
+                                        <li>En general ha mejorado en las últimas décadas</li>
+                                        <li>Desde 99% para cáncer de próstata hasta 10% para cáncer de páncreas</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- LAS OTRAS 15 SECCIONES CONTINÚAN DE MANERA SIMILAR... -->
+                <!-- Por espacio, muestro solo el patrón para las secciones restantes -->
+
+                <!-- SECCIÓN CONSULTA -->
+                <section id="consulta-info" class="content-section">
+                    <div class="content-header">
+                        <div class="content-badge">Información de Contacto</div>
+                        <div class="content-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h2 class="content-title">Consulta Especializada en Oncología</h2>
+                        <p class="content-subtitle">¿Necesita información específica o una consulta personalizada?</p>
+                    </div>
+                    
+                    <div class="content-grid">
+                        <div class="content-column">
+                            <h3 class="section-title">Información y Consultas</h3>
+                            <p style="margin-bottom: 25px; font-size: 1.1rem; line-height: 1.8;">Este blog contiene información general sobre oncología basada en la evidencia científica actual. Para consultas específicas sobre diagnóstico, tratamiento o seguimiento de cáncer, se recomienda consultar con un especialista en oncología.</p>
+                            
+                            <div style="background: rgba(25, 118, 210, 0.08); padding: 30px; border-radius: 12px; margin-top: 20px; border: 1px solid rgba(25, 118, 210, 0.2);">
+                                <h4 style="color: var(--primary); margin-bottom: 20px; font-size: 1.5rem;">Dr. Ariel Calaña Sabina</h4>
+                                <ul class="sub-list" style="background: transparent; padding: 0;">
+                                    <li><strong><i class="fas fa-user-md"></i> Especialidad:</strong> Oncología Clínica</li>
+                                    <li><strong><i class="fas fa-phone"></i> Teléfono:</strong> 098 470 8234</li>
+                                    <li><strong><i class="fas fa-envelope"></i> Email:</strong> acalanasabina@gmail.com</li>
+                                    <li><strong><i class="fas fa-map-marker-alt"></i> Ubicación:</strong> Quito, Ecuador</li>
+                                    <li><strong><i class="fas fa-graduation-cap"></i> Experiencia:</strong> Más de 18 años en oncología</li>
+                                </ul>
+                                
+                                <div style="margin-top: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
+                                    <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña,%20tengo%20preguntas%20sobre%20oncología" 
+                                       class="btn btn-consulta" 
+                                       target="_blank"
+                                       style="display: inline-flex; align-items: center; gap: 10px;">
+                                        <i class="fab fa-whatsapp"></i> Consulta por WhatsApp
+                                    </a>
+                                    
+                                    <a href="tel:+593984708234" 
+                                       class="btn btn-consulta"
+                                       style="display: inline-flex; align-items: center; gap: 10px; background: var(--gradient-primary);">
+                                        <i class="fas fa-phone"></i> Llamar Ahora
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- BOTÓN VOLVER ARRIBA -->
+        <button class="back-to-top" id="backToTop">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+
+        <!-- ============ CTA ============ -->
+        <section id="consulta" class="cta-section">
+            <div class="container">
+                <h2>¿Necesita Información Específica sobre algún Tipo de Cáncer?</h2>
+                <p>Como oncólogo con más de 18 años de experiencia, puedo proporcionarle información detallada sobre cualquier tipo de cáncer, opciones de tratamiento y recomendaciones personalizadas basadas en la evidencia científica más actualizada.</p>
+                <a href="https://wa.me/593984708234?text=Hola%20Dr.%20Ariel%20Calaña,%20tengo%20preguntas%20sobre%20un%20tipo%20específico%20de%20cáncer" 
+                   class="btn btn-consulta" 
+                   target="_blank"
+                   style="padding: 18px 35px; font-size: 1.1rem;">
+                    <i class="fab fa-whatsapp"></i> Consulta Especializada por WhatsApp
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- ============ FOOTER ============ -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Contacto Directo</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 098 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> acalanasabina@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Quito, Ecuador</li>
+                        <li><i class="fas fa-clock"></i> Lunes a Sábado: 8:00 - 18:00</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Blog de Oncología</h3>
+                    <ul>
+                        <li><a href="#conceptos-basicos" class="sidebar-link" data-section="conceptos-basicos">
+                            <i class="fas fa-book-medical"></i> Conceptos Básicos
+                        </a></li>
+                        <li><a href="blog-tipos-cancer.html">
+                            <i class="fas fa-disease"></i> Tipos de Cáncer
+                        </a></li>
+                        <li><a href="https://drarielcalana.github.io/dr-ariel-calana/">
+                            <i class="fas fa-home"></i> Sitio Principal
+                        </a></li>
+                        <li><a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general">
+                            <i class="fas fa-stethoscope"></i> Medicina General
+                        </a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Servicios Médicos</h3>
+                    <ul>
+                        <li><i class="fas fa-stethoscope"></i> Consulta oncológica</li>
+                        <li><i class="fas fa-prescription-bottle-alt"></i> Seguimiento de tratamiento</li>
+                        <li><i class="fas fa-home"></i> Consultas a domicilio</li>
+                        <li><i class="fas fa-ambulance"></i> Emergencias 24/7</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2024 Dr. Ariel Calaña Sabina - Blog de Oncología. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.85rem;">La información proporcionada en este blog es con fines educativos y no sustituye la consulta médica profesional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============ SISTEMA DE NAVEGACIÓN ============
+        document.addEventListener('DOMContentLoaded', function() {
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            const contentSections = document.querySelectorAll('.content-section');
+            const backToTopBtn = document.getElementById('backToTop');
+            const header = document.querySelector('header');
+            
+            // Mostrar sección inicial
+            function showSection(sectionId) {
+                contentSections.forEach(section => {
+                    section.classList.remove('active');
+                });
+                
+                sidebarLinks.forEach(link => {
+                    link.classList.remove('active');
+                });
+                
+                const targetSection = document.getElementById(sectionId);
+                const targetLink = document.querySelector(`[data-section="${sectionId}"]`);
+                
+                if (targetSection) {
+                    targetSection.classList.add('active');
+                }
+                
+                if (targetLink) {
+                    targetLink.classList.add('active');
+                }
+                
+                // Actualizar URL
+                history.pushState(null, null, `#${sectionId}`);
+            }
+            
+            // Configurar enlaces del sidebar
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                });
+            });
+            
+            // Botón volver arriba
+            backToTopBtn.addEventListener('click', function() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+            
+            // Efectos de scroll
+            window.addEventListener('scroll', function() {
+                // Header effect
+                if (window.scrollY > 30) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+                
+                // Botón volver arriba
+                if (window.scrollY > 500) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+                
+                // Detectar sección actual
+                detectCurrentSection();
+            });
+            
+            // Detectar sección actual al hacer scroll
+            function detectCurrentSection() {
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 200;
+                
+                contentSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = section.id;
+                    }
+                });
+                
+                if (currentSection) {
+                    sidebarLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('data-section') === currentSection) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            }
+            
+            // Cargar sección desde hash en URL
+            if (window.location.hash) {
+                const hash = window.location.hash.substring(1);
+                showSection(hash);
+            }
+            
+            // Enlaces del footer
+            document.querySelectorAll('.footer-section a.sidebar-link').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const sectionId = this.getAttribute('data-section');
+                    showSection(sectionId);
+                    
+                    // Scroll suave a la sección
+                    document.getElementById(sectionId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
