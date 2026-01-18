@@ -701,17 +701,11 @@
         }
         
         @keyframes slideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
         }
         
-        /* ============ MODAL PARA CONTENIDO DE INFORMACIÓN ============ */
+        /* ============ MODAL DE CENTRO DE INFORMACIÓN MEJORADO ============ */
         .info-modal {
             display: none;
             position: fixed;
@@ -725,7 +719,6 @@
             align-items: center;
             padding: 20px;
             animation: fadeIn 0.3s ease;
-            overflow-y: auto;
         }
         
         .info-modal.active {
@@ -734,39 +727,37 @@
         
         .info-modal-content {
             background: white;
-            padding: 0;
             border-radius: 18px;
-            max-width: 900px;
+            max-width: 500px;
             width: 100%;
-            max-height: 90vh;
-            overflow-y: auto;
             position: relative;
             animation: slideUp 0.5s ease;
             box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            overflow: hidden;
         }
         
         .info-modal-header {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
             color: white;
             padding: 25px 30px;
-            border-radius: 18px 18px 0 0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            text-align: center;
         }
         
         .info-modal-title {
             font-size: 1.8rem;
-            margin: 0;
+            margin: 0 0 8px 0;
         }
         
         .info-modal-subtitle {
             font-size: 1rem;
             opacity: 0.9;
-            margin-top: 5px;
+            margin: 0;
         }
         
         .info-modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
             background: rgba(255,255,255,0.2);
             border: none;
             color: white;
@@ -778,6 +769,7 @@
             justify-content: center;
             cursor: pointer;
             transition: var(--transition);
+            z-index: 10;
         }
         
         .info-modal-close:hover {
@@ -789,99 +781,69 @@
             padding: 30px;
         }
         
-        .info-modal-tabs {
+        .info-options {
             display: flex;
-            gap: 5px;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 5px;
+            flex-direction: column;
+            gap: 15px;
         }
         
-        .info-tab-btn {
-            padding: 12px 25px;
-            background: none;
-            border: none;
-            border-radius: 8px 8px 0 0;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: var(--transition);
-            color: var(--dark);
-            position: relative;
-        }
-        
-        .info-tab-btn:hover {
-            background: rgba(26, 106, 165, 0.1);
-        }
-        
-        .info-tab-btn.active {
-            color: var(--medical-blue);
-        }
-        
-        .info-tab-btn.active::after {
-            content: '';
-            position: absolute;
-            bottom: -7px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--medical-blue);
-            border-radius: 2px;
-        }
-        
-        .info-tab-content {
-            display: none;
-        }
-        
-        .info-tab-content.active {
-            display: block;
-            animation: fadeIn 0.5s ease;
-        }
-        
-        .info-content-section {
-            margin-bottom: 30px;
-        }
-        
-        .info-content-section h3 {
-            color: var(--primary);
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #eee;
-        }
-        
-        .info-content-list {
-            list-style: none;
-        }
-        
-        .info-content-list li {
-            margin-bottom: 15px;
-            padding: 15px;
-            background: var(--light);
-            border-radius: 10px;
-            transition: var(--transition);
-        }
-        
-        .info-content-list li:hover {
-            background: rgba(26, 106, 165, 0.05);
-            transform: translateX(5px);
-        }
-        
-        .info-content-list a {
+        .info-option {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
+            padding: 22px;
+            background: var(--light);
+            border-radius: 12px;
             text-decoration: none;
             color: var(--dark);
+            transition: var(--transition);
+            border: 2px solid transparent;
         }
         
-        .info-content-list a:hover {
-            color: var(--medical-blue);
+        .info-option:hover {
+            background: white;
+            border-color: var(--medical-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
         
-        .info-content-list i {
+        .option-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .option-content {
+            flex: 1;
+        }
+        
+        .option-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary);
+        }
+        
+        .option-subtitle {
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .option-arrow {
             font-size: 1.2rem;
             color: var(--medical-blue);
-            width: 30px;
+            transition: transform 0.3s ease;
+        }
+        
+        .info-option:hover .option-arrow {
+            transform: translateX(5px);
         }
         
         /* ============ BOTONES EN CADA SECCIÓN ============ */
@@ -938,25 +900,13 @@
         
         /* ============ ANIMACIONES ============ */
         @keyframes fadeInLeft {
-            from {
-                opacity: 0;
-                transform: translateX(-40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(-40px); }
+            to { opacity: 1; transform: translateX(0); }
         }
         
         @keyframes fadeInRight {
-            from {
-                opacity: 0;
-                transform: translateX(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            from { opacity: 0; transform: translateX(40px); }
+            to { opacity: 1; transform: translateX(0); }
         }
 
         /* ============ HEADER OPTIMIZADO ============ */
@@ -1320,16 +1270,6 @@
             .nav-links {
                 gap: 12px;
             }
-            
-            .info-modal-tabs {
-                flex-wrap: wrap;
-            }
-            
-            .info-tab-btn {
-                flex: 1;
-                min-width: 150px;
-                text-align: center;
-            }
         }
         
         @media (max-width: 768px) {
@@ -1448,6 +1388,7 @@
             
             .info-modal-content {
                 max-height: 85vh;
+                overflow-y: auto;
             }
             
             .info-modal-header {
@@ -1462,9 +1403,14 @@
                 padding: 20px;
             }
             
-            .info-tab-btn {
-                padding: 10px 15px;
-                font-size: 0.9rem;
+            .info-option {
+                padding: 18px;
+            }
+            
+            .option-icon {
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
             }
         }
         
@@ -1509,9 +1455,7 @@
             }
             
             .info-modal-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
+                padding: 20px 15px;
             }
             
             .info-modal-title {
@@ -1519,13 +1463,25 @@
             }
             
             .info-modal-close {
-                position: absolute;
                 top: 15px;
                 right: 15px;
+                width: 35px;
+                height: 35px;
             }
             
-            .info-tab-btn {
-                min-width: 120px;
+            .info-option {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+                padding: 20px;
+            }
+            
+            .option-content {
+                width: 100%;
+            }
+            
+            .option-arrow {
+                display: none;
             }
         }
         
@@ -2122,7 +2078,7 @@
             margin: 0 auto 25px;
         }
         
-        /* ============ PREVENCIÓN ONCOLÓGICA - NUEVA SECCIÓN ============ */
+        /* ============ PREVENCIÓN ONCOLÓGICA - MEJORADA ============ */
         .prevention {
             background: linear-gradient(135deg, #f0fdf9 0%, #e6f9f4 100%);
             position: relative;
@@ -2234,7 +2190,7 @@
             margin-top: 3px;
         }
         
-        /* ============ CENTRO DE INFORMACIÓN EN SALUD ============ */
+        /* ============ CENTRO DE INFORMACIÓN EN SALUD MEJORADO ============ */
         .blog {
             background: linear-gradient(135deg, #f8fafc 0%, #f0f5ff 100%);
         }
@@ -2423,7 +2379,7 @@
             gap: 10px;
         }
         
-        /* ============ RECURSOS DE SALUD ============ */
+        /* ============ RECURSOS DE SALUD MEJORADOS ============ */
         .health-resources {
             margin-top: 50px;
         }
@@ -2521,35 +2477,51 @@
         .info-link {
             background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
             color: white;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 30px;
+            border-radius: 16px;
             text-decoration: none;
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 15px;
+            gap: 20px;
             transition: var(--transition);
             text-align: center;
+            height: 100%;
+            justify-content: center;
         }
         
         .info-link:hover {
             transform: translateY(-8px);
-            box-shadow: 0 15px 30px rgba(26, 106, 165, 0.2);
+            box-shadow: 0 15px 30px rgba(26, 106, 165, 0.25);
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
         }
         
         .info-link i {
-            font-size: 3rem;
+            font-size: 4rem;
+            margin-bottom: 15px;
         }
         
         .info-link h3 {
             margin: 0;
-            font-size: 1.4rem;
+            font-size: 1.6rem;
+            line-height: 1.3;
         }
         
         .info-link p {
             margin: 0;
             opacity: 0.9;
-            font-size: 0.95rem;
+            font-size: 1rem;
+            line-height: 1.5;
+        }
+        
+        .info-link .btn-consultation {
+            margin-top: 15px;
+            background: rgba(255,255,255,0.2);
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .info-link .btn-consultation:hover {
+            background: rgba(255,255,255,0.3);
         }
         
         @media (max-width: 768px) {
@@ -2584,15 +2556,15 @@
             }
             
             .info-link {
-                padding: 15px;
+                padding: 25px 20px;
             }
             
             .info-link i {
-                font-size: 2.5rem;
+                font-size: 3rem;
             }
             
             .info-link h3 {
-                font-size: 1.2rem;
+                font-size: 1.4rem;
             }
         }
         
@@ -3037,7 +3009,7 @@
                         <a href="#segunda-opinion" class="btn-opinion">
                             <i class="fas fa-clipboard-check"></i> SEGUNDA OPINIÓN
                         </a>
-                        <a href="#" class="btn-prevention open-info-modal" data-content="oncologia">
+                        <a href="#" class="btn-prevention open-info-modal">
                             <i class="fas fa-book-medical"></i> GUÍAS DE SALUD
                         </a>
                     </div>
@@ -3091,203 +3063,59 @@
         </div>
     </div>
 
-    <!-- ==================== MODAL DE INFORMACIÓN ==================== -->
+    <!-- ==================== MODAL DE CENTRO DE INFORMACIÓN MEJORADO ==================== -->
     <div class="info-modal" id="infoModal">
         <div class="info-modal-content">
             <div class="info-modal-header">
-                <div>
-                    <h2 class="info-modal-title">Centro de Información en Salud</h2>
-                    <p class="info-modal-subtitle">Recursos educativos sobre oncología, prevención y cuidados de salud</p>
-                </div>
+                <h2 class="info-modal-title">Centro de Información en Salud</h2>
+                <p class="info-modal-subtitle">Recursos educativos sobre oncología y medicina</p>
                 <button class="info-modal-close" id="infoModalClose">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
             <div class="info-modal-body">
-                <div class="info-modal-tabs">
-                    <button class="info-tab-btn active" data-tab="oncologia">Guías Oncológicas</button>
-                    <button class="info-tab-btn" data-tab="medicina-general">Medicina General</button>
-                    <button class="info-tab-btn" data-tab="prevencion">Prevención</button>
-                    <button class="info-tab-btn" data-tab="recursos">Recursos Adicionales</button>
-                </div>
-                
-                <!-- PESTAÑA GUÍAS ONCOLÓGICAS -->
-                <div class="info-tab-content active" id="tab-oncologia">
-                    <div class="info-content-section">
-                        <h3>Guías de Salud Oncológica</h3>
-                        <p>Recursos especializados para pacientes y familiares sobre prevención, diagnóstico y tratamiento del cáncer.</p>
-                        
-                        <ul class="info-content-list">
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
-                                    <i class="fas fa-file-medical"></i>
-                                    <div>
-                                        <strong>Guía Completa de Prevención Oncológica</strong>
-                                        <small>Toda la información sobre prevención del cáncer</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
-                                    <i class="fas fa-heartbeat"></i>
-                                    <div>
-                                        <strong>Cuidados durante el Tratamiento</strong>
-                                        <small>Recomendaciones para pacientes en tratamiento</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
-                                    <i class="fas fa-procedures"></i>
-                                    <div>
-                                        <strong>Rehabilitación Post-Terapia</strong>
-                                        <small>Guía de recuperación después del tratamiento</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/guia-salud-oncologica/index.html" target="_blank">
-                                    <i class="fas fa-utensils"></i>
-                                    <div>
-                                        <strong>Nutrición en Oncología</strong>
-                                        <small>Alimentación adecuada durante el tratamiento</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- PESTAÑA MEDICINA GENERAL -->
-                <div class="info-tab-content" id="tab-medicina-general">
-                    <div class="info-content-section">
-                        <h3>Medicina General y Familiar</h3>
-                        <p>Información sobre salud general, prevención de enfermedades y cuidados familiares.</p>
-                        
-                        <ul class="info-content-list">
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
-                                    <i class="fas fa-virus"></i>
-                                    <div>
-                                        <strong>Prevención de Enfermedades Infecciosas</strong>
-                                        <small>Medidas preventivas para enfermedades comunes</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
-                                    <i class="fas fa-heart"></i>
-                                    <div>
-                                        <strong>Salud Cardiovascular</strong>
-                                        <small>Cuidados para mantener un corazón saludable</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
-                                    <i class="fas fa-baby"></i>
-                                    <div>
-                                        <strong>Cuidados Pediátricos</strong>
-                                        <small>Salud infantil y cuidados básicos</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="https://htmlpreview.github.io/?https://github.com/drarielcalana/dr-ariel-calana/blob/main/medicina-general/index.html" target="_blank">
-                                    <i class="fas fa-user-plus"></i>
-                                    <div>
-                                        <strong>Salud del Adulto Mayor</strong>
-                                        <small>Cuidados específicos para la tercera edad</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- PESTAÑA PREVENCIÓN -->
-                <div class="info-tab-content" id="tab-prevencion">
-                    <div class="info-content-section">
-                        <h3>Prevención del Cáncer</h3>
-                        <p>Información esencial sobre cómo prevenir diferentes tipos de cáncer.</p>
-                        
-                        <ul class="info-content-list">
-                            <li>
-                                <a href="#" class="open-info-modal" data-content="prevencion-general">
-                                    <i class="fas fa-shield-alt"></i>
-                                    <div>
-                                        <strong>Prevención General</strong>
-                                        <small>Medidas básicas para reducir el riesgo de cáncer</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="open-info-modal" data-content="deteccion-temprana">
-                                    <i class="fas fa-search"></i>
-                                    <div>
-                                        <strong>Detección Temprana</strong>
-                                        <small>Importancia de los chequeos regulares</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" class="open-info-modal" data-content="factores-riesgo">
-                                    <i class="fas fa-exclamation-triangle"></i>
-                                    <div>
-                                        <strong>Factores de Riesgo</strong>
-                                        <small>Identificación y manejo de factores de riesgo</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- PESTAÑA RECURSOS ADICIONALES -->
-                <div class="info-tab-content" id="tab-recursos">
-                    <div class="info-content-section">
-                        <h3>Recursos Adicionales</h3>
-                        <p>Herramientas y enlaces útiles para el cuidado de la salud.</p>
-                        
-                        <ul class="info-content-list">
-                            <li>
-                                <a href="#contacto">
-                                    <i class="fas fa-calendar-check"></i>
-                                    <div>
-                                        <strong>Solicitar Consulta</strong>
-                                        <small>Agenda una cita con el Dr. Calaña</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#segunda-opinion">
-                                    <i class="fas fa-clipboard-check"></i>
-                                    <div>
-                                        <strong>Segunda Opinión Oncológica</strong>
-                                        <small>Obtén una evaluación especializada</small>
-                                    </div>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#testimonios">
-                                    <i class="fas fa-comments"></i>
-                                    <div>
-                                        <strong>Testimonios de Pacientes</strong>
-                                        <small>Experiencias de otros pacientes</small>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <div class="section-buttons" style="margin-top: 30px;">
-                    <a href="#" class="btn-consultation open-consult-modal">
-                        <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA
+                <div class="info-options">
+                    <!-- GENERALIDADES DEL CÁNCER -->
+                    <a href="guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html" class="info-option">
+                        <div class="option-icon">
+                            <i class="fas fa-book-medical"></i>
+                        </div>
+                        <div class="option-content">
+                            <div class="option-title">Generalidades del Cáncer</div>
+                            <div class="option-subtitle">Conceptos básicos sobre cáncer, tipos y tratamientos</div>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
                     </a>
-                    <a href="#contacto" class="btn-opinion">
-                        <i class="fas fa-envelope"></i> CONTACTO DIRECTO
+                    
+                    <!-- TIPOS DE CÁNCER -->
+                    <a href="guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html" class="info-option">
+                        <div class="option-icon">
+                            <i class="fas fa-dna"></i>
+                        </div>
+                        <div class="option-content">
+                            <div class="option-title">Tipos de Cáncer</div>
+                            <div class="option-subtitle">Información específica sobre diferentes tipos de cáncer</div>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </a>
+                    
+                    <!-- MEDICINA FAMILIAR Y GENERAL -->
+                    <a href="medicina-general/index.html" class="info-option">
+                        <div class="option-icon">
+                            <i class="fas fa-stethoscope"></i>
+                        </div>
+                        <div class="option-content">
+                            <div class="option-title">Medicina Familiar y General</div>
+                            <div class="option-subtitle">Salud integral para toda la familia y prevención de enfermedades</div>
+                        </div>
+                        <div class="option-arrow">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -3410,7 +3238,7 @@
                         <a href="#" class="btn-opinion open-consult-modal">
                             <i class="fas fa-calendar-check"></i> AGENDAR CONSULTA
                         </a>
-                        <a href="#" class="btn-prevention open-info-modal" data-content="oncologia">
+                        <a href="#" class="btn-prevention open-info-modal">
                             <i class="fas fa-book-medical"></i> GUÍAS DE SALUD
                         </a>
                     </div>
@@ -3640,7 +3468,7 @@
                 <a href="#" class="btn-consultation open-consult-modal">
                     <i class="fas fa-calendar-check"></i> SOLICITAR CONSULTA ESPECIALIZADA
                 </a>
-                <a href="#" class="btn-prevention open-info-modal" data-content="oncologia">
+                <a href="#" class="btn-prevention open-info-modal">
                     <i class="fas fa-book-medical"></i> VER GUÍAS DE SALUD
                 </a>
             </div>
@@ -3729,7 +3557,7 @@
                         <a href="#" class="btn-opinion open-consult-modal">
                             <i class="fas fa-clipboard-check"></i> SOLICITAR SEGUNDA OPINIÓN
                         </a>
-                        <a href="#" class="btn-prevention open-info-modal" data-content="oncologia">
+                        <a href="#" class="btn-prevention open-info-modal">
                             <i class="fas fa-book-medical"></i> VER GUÍAS DE CÁNCER
                         </a>
                     </div>
@@ -3804,7 +3632,7 @@
                     <a href="#" class="btn-prevention open-consult-modal">
                         <i class="fas fa-calendar-check"></i> AGENDAR EVALUACIÓN PREVENTIVA
                     </a>
-                    <a href="#" class="btn-consultation open-info-modal" data-content="prevencion">
+                    <a href="#" class="btn-consultation open-info-modal">
                         <i class="fas fa-shield-alt"></i> MÁS SOBRE PREVENCIÓN
                     </a>
                 </div>
@@ -3812,7 +3640,7 @@
         </div>
     </section>
 
-    <!-- ==================== CENTRO DE INFORMACIÓN EN SALUD ==================== -->
+    <!-- ==================== CENTRO DE INFORMACIÓN EN SALUD MEJORADO ==================== -->
     <section class="blog" id="blog">
         <div class="container">
             <div class="section-title">
@@ -3822,32 +3650,63 @@
             
             <!-- ENLACES PRINCIPALES MEJORADOS -->
             <div class="resources-grid animate-on-scroll">
-                <a href="#" class="info-link open-info-modal" data-content="oncologia">
-                    <i class="fas fa-book-medical"></i>
-                    <h3>Guías de Salud Oncológica</h3>
-                    <p>Recursos especializados para pacientes y familiares sobre prevención, diagnóstico y tratamiento del cáncer</p>
-                    <span class="btn-consultation" style="margin-top: 10px; background: rgba(255,255,255,0.2);">
-                        <i class="fas fa-external-link-alt"></i> ACCEDER
-                    </span>
-                </a>
+                <div class="resource-card">
+                    <div class="resource-header">
+                        <i class="fas fa-book-medical"></i>
+                        <h3>Oncología</h3>
+                        <p>Información especializada sobre cáncer, prevención y tratamiento</p>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>Generalidades del Cáncer</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">
+                                    <i class="fas fa-dna"></i>
+                                    <span>Tipos de Cáncer</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="resource-cta">
+                            <a href="#" class="btn-consultation open-info-modal" style="width: 100%;">
+                                <i class="fas fa-external-link-alt"></i> VER RECURSOS DE ONCOLOGÍA
+                            </a>
+                        </div>
+                    </div>
+                </div>
                 
-                <a href="#" class="info-link open-info-modal" data-content="medicina-general">
-                    <i class="fas fa-stethoscope"></i>
-                    <h3>Medicina General y Familiar</h3>
-                    <p>Información sobre salud general, prevención de enfermedades y cuidados familiares</p>
-                    <span class="btn-consultation" style="margin-top: 10px; background: rgba(255,255,255,0.2);">
-                        <i class="fas fa-external-link-alt"></i> ACCEDER
-                    </span>
-                </a>
+                <div class="resource-card">
+                    <div class="resource-header" style="background: linear-gradient(135deg, var(--prevention-teal), #16a085);">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Medicina Familiar y General</h3>
+                        <p>Salud integral para toda la familia y prevención de enfermedades</p>
+                    </div>
+                    <div class="resource-content">
+                        <ul class="resource-list">
+                            <li>
+                                <a href="medicina-general/index.html">
+                                    <i class="fas fa-home"></i>
+                                    <span>Medicina Familiar y General</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="resource-cta">
+                            <a href="#" class="btn-opinion open-info-modal" style="width: 100%; background: linear-gradient(135deg, var(--prevention-teal), #16a085);">
+                                <i class="fas fa-external-link-alt"></i> VER RECURSOS DE MEDICINA
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <!-- BOTONES ADICIONALES -->
             <div class="section-buttons animate-on-scroll" style="margin-top: 40px;">
-                <a href="#" class="btn-consultation open-info-modal" data-content="prevencion">
-                    <i class="fas fa-shield-alt"></i> GUÍAS DE PREVENCIÓN
-                </a>
-                <a href="#" class="btn-opinion open-info-modal" data-content="recursos">
-                    <i class="fas fa-tools"></i> RECURSOS ADICIONALES
+                <a href="#" class="btn-consultation open-info-modal">
+                    <i class="fas fa-book-medical"></i> RECURSOS DE ONCOLOGÍA
                 </a>
                 <a href="#" class="btn-prevention open-consult-modal">
                     <i class="fas fa-question-circle"></i> ¿TIENES PREGUNTAS?
@@ -4082,7 +3941,6 @@
         const navMobile = document.getElementById('navMobile');
         const infoModal = document.getElementById('infoModal');
         const infoModalClose = document.getElementById('infoModalClose');
-        const infoTabBtns = document.querySelectorAll('.info-tab-btn');
         const openInfoModalBtns = document.querySelectorAll('.open-info-modal');
 
         // Cerrar todos los menús
@@ -4115,7 +3973,7 @@
             infoDropdownBtn.addEventListener('click', function(e) {
                 e.stopPropagation();
                 closeAllDropdowns();
-                openInfoModal('oncologia');
+                openInfoModal();
             });
         }
 
@@ -4129,7 +3987,7 @@
                     menuToggle.querySelector('i').classList.remove('fa-times');
                     menuToggle.querySelector('i').classList.add('fa-bars');
                 }
-                openInfoModal('oncologia');
+                openInfoModal();
             });
         }
 
@@ -4224,31 +4082,16 @@
         });
         
         // ============ MODAL DE INFORMACIÓN ============
-        function openInfoModal(tab = 'oncologia') {
+        function openInfoModal() {
             infoModal.classList.add('active');
             document.body.style.overflow = 'hidden';
-            
-            // Activar la pestaña correspondiente
-            setTimeout(() => {
-                const tabBtn = document.querySelector(`.info-tab-btn[data-tab="${tab}"]`);
-                if (tabBtn) {
-                    infoTabBtns.forEach(btn => btn.classList.remove('active'));
-                    tabBtn.classList.add('active');
-                    
-                    document.querySelectorAll('.info-tab-content').forEach(content => {
-                        content.classList.remove('active');
-                    });
-                    document.getElementById(`tab-${tab}`).classList.add('active');
-                }
-            }, 50);
         }
         
         // Abrir modal de información desde botones
         openInfoModalBtns.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
-                const content = this.getAttribute('data-content');
-                openInfoModal(content);
+                openInfoModal();
             });
         });
         
@@ -4273,21 +4116,6 @@
                 infoModal.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
-        });
-        
-        // Sistema de pestañas en modal de información
-        infoTabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-                
-                // Remove active class from all buttons and contents
-                infoTabBtns.forEach(b => b.classList.remove('active'));
-                document.querySelectorAll('.info-tab-content').forEach(c => c.classList.remove('active'));
-                
-                // Add active class to clicked button and corresponding content
-                btn.classList.add('active');
-                document.getElementById(`tab-${tabId}`).classList.add('active');
-            });
         });
         
         // ============ ANIMACIÓN DE TEXTO TYPING ============
