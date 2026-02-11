@@ -41,22 +41,60 @@
         }
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #f8faff; padding-top: 90px; }
+        body { font-family: 'Poppins', sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #f8faff; padding-top: 80px; }
         a { text-decoration: none; }
         
-        /* HEADER (Tu estilo original) */
-        header { background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px); box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); position: fixed; width: 100%; top: 0; z-index: 1000; padding: 15px 0; }
-        .container { width: 90%; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
-        .navbar { display: flex; justify-content: space-between; align-items: center; }
-        .logo { display: flex; align-items: center; gap: 15px; color: var(--primary); }
-        .logo-img { height: 50px; border-radius: 8px; }
-        .logo-text { display: flex; flex-direction: column; }
-        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.2rem; }
-        .logo-specialty { font-size: 0.8rem; color: var(--medical-blue); text-transform: uppercase; letter-spacing: 1px; }
-        .btn-consulta { background: var(--gradient-accent); color: white; padding: 10px 20px; border-radius: 8px; font-weight: 600; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); transition: var(--transition); }
-        .btn-consulta:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(211, 47, 47, 0.4); }
+        /* ============ HEADER MEJORADO (IDÉNTICO A INDEX 11) ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
 
-        /* HERO COMPACTO */
+        header.scrolled { padding: 5px 0; background: rgba(255, 255, 255, 0.98); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 200px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--text-dark); font-size: 0.85rem; font-weight: 500; }
+        .dropdown-content a:hover { background: var(--light); color: var(--medical-blue); padding-left: 25px; }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* HERO COMPACTO (MANTENIDO) */
         .hero-mini {
             background: var(--gradient-primary);
             color: white;
@@ -68,7 +106,7 @@
         .hero-mini h1 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 10px; }
         .hero-mini p { opacity: 0.9; font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
 
-        /* BARRA DE BÚSQUEDA (NUEVO) */
+        /* BARRA DE BÚSQUEDA MEJORADA */
         .search-wrapper {
             margin-top: -50px;
             margin-bottom: 50px;
@@ -85,10 +123,24 @@
             display: flex;
             align-items: center;
             width: 100%;
-            max-width: 600px;
-            border: 1px solid rgba(0,0,0,0.05);
+            max-width: 700px;
+            border: 2px solid var(--accent);
+            transition: var(--transition);
         }
-        .search-icon { color: var(--medical-blue); font-size: 1.2rem; margin: 0 15px; }
+        .search-container:focus-within {
+            box-shadow: 0 10px 30px rgba(211, 47, 47, 0.2);
+            border-color: var(--accent-light);
+            transform: translateY(-2px);
+        }
+        .search-icon { 
+            color: var(--medical-blue); 
+            font-size: 1.2rem; 
+            margin: 0 15px; 
+            transition: var(--transition);
+        }
+        .search-container:focus-within .search-icon {
+            color: var(--accent);
+        }
         .search-input {
             border: none;
             outline: none;
@@ -97,9 +149,13 @@
             font-size: 1.1rem;
             color: var(--text-dark);
             font-family: 'Poppins', sans-serif;
+            background: transparent;
+        }
+        .search-input::placeholder {
+            color: #aaa;
         }
 
-        /* GRID DE DIRECTORIO (NUEVO DISEÑO) */
+        /* GRID DE DIRECTORIO */
         .directory-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -114,24 +170,75 @@
             padding: 25px;
             border-top: 4px solid var(--accent);
             transition: var(--transition);
-            height: 100%; /* Igualar alturas */
+            height: 100%;
+            position: relative;
+            overflow: hidden;
         }
         
-        .category-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.12); }
+        .category-card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12); 
+        }
 
-        .category-header { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding-bottom: 15px; border-bottom: 1px solid #eee; }
+        /* Efecto sutil de resplandor al pasar el mouse */
+        .category-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(25, 118, 210, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: var(--transition);
+            z-index: 1;
+        }
+        
+        .category-card:hover::after {
+            opacity: 1;
+        }
+
+        .category-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 15px; 
+            margin-bottom: 20px; 
+            padding-bottom: 15px; 
+            border-bottom: 1px solid #eee; 
+            position: relative;
+            z-index: 2;
+        }
         .category-icon { 
-            width: 50px; height: 50px; 
+            width: 50px; 
+            height: 50px; 
             background: rgba(25, 118, 210, 0.1); 
             color: var(--medical-blue); 
             border-radius: 12px; 
-            display: flex; align-items: center; justify-content: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
             font-size: 1.5rem;
+            transition: var(--transition);
         }
-        .category-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; font-weight: 700; color: var(--primary); }
+        
+        .category-card:hover .category-icon {
+            background: rgba(25, 118, 210, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .category-title { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 1.2rem; 
+            font-weight: 700; 
+            color: var(--primary); 
+        }
 
         /* LISTAS DE ENLACES */
-        .link-list { list-style: none; }
+        .link-list { 
+            list-style: none; 
+            position: relative;
+            z-index: 2;
+        }
         .link-list li { margin-bottom: 8px; }
         
         .cancer-link {
@@ -152,8 +259,17 @@
             padding-left: 18px;
         }
         
-        .cancer-link i { font-size: 0.7rem; color: #ccc; margin-right: 8px; vertical-align: middle; }
-        .cancer-link:hover i { color: var(--accent); }
+        .cancer-link i { 
+            font-size: 0.7rem; 
+            color: #ccc; 
+            margin-right: 8px; 
+            vertical-align: middle; 
+            transition: var(--transition);
+        }
+        .cancer-link:hover i { 
+            color: var(--accent); 
+            transform: translateX(2px);
+        }
 
         /* ESTILOS PARA MENSAJE "NO ENCONTRADO" */
         .no-results {
@@ -169,17 +285,29 @@
         .copyright { text-align: center; opacity: 0.7; font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
 
         /* RESPONSIVE */
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+        }
+
         @media (max-width: 768px) {
             .directory-grid { grid-template-columns: 1fr; }
             .hero-mini h1 { font-size: 1.8rem; }
             .search-container { width: 90%; }
             .category-card { margin-bottom: 10px; }
+            body { padding-top: 75px; }
         }
     </style>
 </head>
 <body>
 
-    <header>
+    <!-- HEADER MEJORADO (IDÉNTICO A INDEX 11) -->
+    <header id="mainHeader">
         <div class="container">
             <nav class="navbar">
                 <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
@@ -189,9 +317,31 @@
                         <span class="logo-specialty">Oncólogo Clínico</span>
                     </div>
                 </a>
-                <a href="https://wa.me/593984708234" class="btn btn-consulta" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Agendar Cita
-                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="blog-tipos-cancer.html" class="active"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
             </nav>
         </div>
     </header>
@@ -213,16 +363,167 @@
     <div class="container">
         <div class="directory-grid" id="cancerGrid">
 
+            <!-- Cáncer de Mama -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-female"></i></div>
+                    <h3 class="category-title">Cáncer de Mama</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Ductal In Situ</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Ductal Infiltrante</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Lobulillar</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama Inflamatorio</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama Triple Negativo</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama en Hombres</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Torácicos -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-lungs"></i></div>
+                    <h3 class="category-title">Cánceres Torácicos</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pulmón (No Microcítico)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pulmón (Microcítico)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Mesotelioma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Timoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores Carcinoides del Pulmón</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Genitourinarios -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-restroom"></i></div>
+                    <h3 class="category-title">Cánceres Genitourinarios</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Riñón (Renal)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vejiga</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Próstata</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Testicular</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pene</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Uréter/Uretra</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Ginecológicos -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-venus"></i></div>
+                    <h3 class="category-title">Cánceres Ginecológicos</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Cuello Uterino (Cervical)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Endometrio</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Ovario</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vulva / Vagina</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Coriocarcinoma (Placenta)</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Gastrointestinales -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-stomach"></i></div>
+                    <h3 class="category-title">Cánceres Gastrointestinales</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Esófago</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Gástrico (Estómago)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Colorrectal</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Anal</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>GIST (Estroma Gastrointestinal)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Intestino Delgado</a></li>
+                </ul>
+            </div>
+
+            <!-- Hígado y Páncreas -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-procedures"></i></div>
+                    <h3 class="category-title">Hígado y Páncreas</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Hepatocelular (Hígado)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Colangiocarcinoma (Vías Biliares)</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vesícula Biliar</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Adenocarcinoma Pancreático</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores Neuroendocrinos Pancreáticos</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres de Cabeza y Cuello -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-head-side-mask"></i></div>
+                    <h3 class="category-title">Cánceres de Cabeza y Cuello</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Cavidad Oral</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Orofaringe</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Nasofaringe</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Laringe</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Glándulas Salivales</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Senos Paranasales</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Endocrinos -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-dna"></i></div>
+                    <h3 class="category-title">Cánceres Endocrinos</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Tiroides</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Paratiroides</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Suprarrenal</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Feocromocitoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma de Células de Merkel</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres de Hueso y Tejidos Blandos -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-bone"></i></div>
+                    <h3 class="category-title">Sarcomas (Hueso/Tejido)</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Osteosarcoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Condrosarcoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Sarcoma de Ewing</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Liposarcoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leiomiosarcoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Rabdomiosarcoma</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Hematológicos Parte 1 (Leucemias) -->
             <div class="category-card">
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-tint"></i></div>
-                    <h3 class="category-title">Cánceres Hematológicos</h3>
+                    <h3 class="category-title">Leucemias</h3>
                 </div>
                 <ul class="link-list">
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leucemia Linfoblástica Aguda (LLA)</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leucemia Mieloide Aguda (LMA)</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leucemia Linfocítica Crónica (LLC)</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leucemia Mieloide Crónica (LMC)</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres Hematológicos Parte 2 (Linfomas y otros) -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-virus"></i></div>
+                    <h3 class="category-title">Linfomas y Otros</h3>
+                </div>
+                <ul class="link-list">
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Linfoma de Hodgkin</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Linfoma no Hodgkin</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Mieloma Múltiple</a></li>
@@ -230,6 +531,36 @@
                 </ul>
             </div>
 
+            <!-- Cánceres Pediátricos Específicos -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-child"></i></div>
+                    <h3 class="category-title">Cánceres Pediátricos</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumor de Wilms</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Neuroblastoma Infantil</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Retinoblastoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Hepatoblastoma</a></li>
+                </ul>
+            </div>
+
+            <!-- Cánceres de Piel -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-sun"></i></div>
+                    <h3 class="category-title">Cánceres de Piel</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Basocelular</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Espinocelular</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Melanoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Sarcoma de Kaposi</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Linfoma Cutáneo</a></li>
+                </ul>
+            </div>
+
+            <!-- Sistema Nervioso Central y Periférico -->
             <div class="category-card">
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-brain"></i></div>
@@ -246,151 +577,7 @@
                 </ul>
             </div>
 
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-head-side-mask"></i></div>
-                    <h3 class="category-title">Cabeza y Cuello</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Cavidad Oral</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Orofaringe</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Nasofaringe</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Laringe</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Glándulas Salivales</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Senos Paranasales</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-lungs"></i></div>
-                    <h3 class="category-title">Cánceres Torácicos</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pulmón (No Microcítico)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pulmón (Microcítico)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Mesotelioma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Timoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores Carcinoides del Pulmón</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-stomach"></i></div>
-                    <h3 class="category-title">Gastrointestinales</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Esófago</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Gástrico (Estómago)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Colorrectal</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Anal</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>GIST (Estroma Gastrointestinal)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Intestino Delgado</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-procedures"></i></div>
-                    <h3 class="category-title">Hígado y Páncreas</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Hepatocelular (Hígado)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Colangiocarcinoma (Vías Biliares)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vesícula Biliar</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Adenocarcinoma Pancreático</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores Neuroendocrinos Pancreáticos</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-restroom"></i></div>
-                    <h3 class="category-title">Genitourinarios</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Riñón (Renal)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vejiga</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Próstata</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Testicular</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Pene</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Uréter/Uretra</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-venus"></i></div>
-                    <h3 class="category-title">Ginecológicos</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Cuello Uterino (Cervical)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Endometrio</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Ovario</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Vulva / Vagina</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Coriocarcinoma (Placenta)</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-female"></i></div>
-                    <h3 class="category-title">Cáncer de Mama</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Ductal In Situ</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Ductal Infiltrante</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Lobulillar</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama Inflamatorio</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama Triple Negativo</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Mama en Hombres</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-dna"></i></div>
-                    <h3 class="category-title">Cánceres Endocrinos</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Tiroides</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer de Paratiroides</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Cáncer Suprarrenal</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Feocromocitoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma de Células de Merkel</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-sun"></i></div>
-                    <h3 class="category-title">Cánceres de Piel</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Basocelular</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma Espinocelular</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Melanoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Sarcoma de Kaposi</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Linfoma Cutáneo</a></li>
-                </ul>
-            </div>
-
-            <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-bone"></i></div>
-                    <h3 class="category-title">Sarcomas (Hueso/Tejido)</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Osteosarcoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Condrosarcoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Sarcoma de Ewing</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Liposarcoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Leiomiosarcoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Rabdomiosarcoma</a></li>
-                </ul>
-            </div>
-
+            <!-- Cánceres Oculares -->
             <div class="category-card">
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-eye"></i></div>
@@ -404,32 +591,35 @@
                 </ul>
             </div>
 
+            <!-- Cánceres Raros y de Origen Desconocido -->
             <div class="category-card">
-                <div class="category-header">
-                    <div class="category-icon"><i class="fas fa-child"></i></div>
-                    <h3 class="category-title">Cánceres Pediátricos</h3>
-                </div>
-                <ul class="link-list">
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumor de Wilms</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Neuroblastoma Infantil</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Retinoblastoma</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Hepatoblastoma</a></li>
-                </ul>
-            </div>
-            
-             <div class="category-card">
                 <div class="category-header">
                     <div class="category-icon"><i class="fas fa-question-circle"></i></div>
                     <h3 class="category-title">Raros y Origen Desconocido</h3>
                 </div>
                 <ul class="link-list">
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Carcinoma de Origen Desconocido (CUP)</a></li>
-                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores de Células Germinales</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumor Rabdoide</a></li>
                     <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Mastocitosis Sistémica</a></li>
                 </ul>
             </div>
 
+            <!-- Tumores de Células Germinales (NUEVA CATEGORÍA) -->
+            <div class="category-card">
+                <div class="category-header">
+                    <div class="category-icon"><i class="fas fa-seedling"></i></div>
+                    <h3 class="category-title">Tumores de Células Germinales</h3>
+                </div>
+                <ul class="link-list">
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Seminoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>No Seminoma</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores de Células Germinales Mixtos</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores de Células Germinales Extragonadales</a></li>
+                    <li><a href="#" class="cancer-link"><i class="fas fa-chevron-right"></i>Tumores de Células Germinales Especializados</a></li>
+                </ul>
+            </div>
+
+            <!-- Mensaje cuando no hay resultados -->
             <div class="no-results" id="noResults">
                 <i class="fas fa-search" style="font-size: 3rem; margin-bottom: 20px; color: #ddd;"></i>
                 <h3>No se encontraron resultados</h3>
@@ -449,6 +639,21 @@
     </footer>
 
     <script>
+        // Script para el Header (Scroll y Menú Móvil)
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuBtn.classList.toggle('fa-times');
+        });
+
+        // Buscador mejorado
         document.addEventListener('DOMContentLoaded', function() {
             const searchInput = document.getElementById('searchInput');
             const cancerGrid = document.getElementById('cancerGrid');
@@ -456,10 +661,14 @@
             const noResults = document.getElementById('noResults');
 
             searchInput.addEventListener('keyup', function(e) {
-                const term = e.target.value.toLowerCase();
+                const term = e.target.value.toLowerCase().trim();
                 let hasResults = false;
+                let totalVisibleCards = 0;
 
                 categoryCards.forEach(card => {
+                    // Excluir el mensaje de no resultados de la búsqueda
+                    if (card.classList.contains('no-results')) return;
+                    
                     const links = card.querySelectorAll('.cancer-link');
                     let cardHasMatch = false;
 
@@ -467,17 +676,19 @@
                     if (term === '') {
                         card.style.display = 'block';
                         links.forEach(link => link.parentElement.style.display = 'block');
+                        totalVisibleCards++;
                         hasResults = true;
                         return;
                     }
 
                     // Buscar dentro de cada tarjeta
+                    let visibleLinks = 0;
                     links.forEach(link => {
                         const text = link.textContent.toLowerCase();
                         if (text.includes(term)) {
                             link.parentElement.style.display = 'block';
                             cardHasMatch = true;
-                            hasResults = true;
+                            visibleLinks++;
                         } else {
                             link.parentElement.style.display = 'none';
                         }
@@ -490,7 +701,7 @@
                         // Si coincide el título, mostrar todos los hijos
                         links.forEach(link => link.parentElement.style.display = 'block');
                         cardHasMatch = true;
-                        hasResults = true;
+                        visibleLinks = links.length;
                     } else {
                         // Si no coincide título ni enlaces, ocultar tarjeta
                         if (cardHasMatch) {
@@ -499,11 +710,24 @@
                             card.style.display = 'none';
                         }
                     }
+
+                    if (card.style.display !== 'none') {
+                        totalVisibleCards++;
+                        hasResults = true;
+                    }
                 });
 
                 // Mostrar mensaje si no hay nada
                 noResults.style.display = hasResults ? 'none' : 'block';
+                
+                // Si solo queda el mensaje de no resultados, mostrarlo
+                if (totalVisibleCards === 0 && term !== '') {
+                    noResults.style.display = 'block';
+                }
             });
+
+            // Enfocar el campo de búsqueda al cargar la página
+            searchInput.focus();
         });
     </script>
 </body>
