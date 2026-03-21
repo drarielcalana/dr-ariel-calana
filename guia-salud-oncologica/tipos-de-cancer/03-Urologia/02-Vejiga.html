@@ -1,0 +1,1703 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Cáncer de Vejiga: Información completa sobre el tumor urológico más frecuente. Clasificación (NMIBC vs MIBC), diagnóstico, tratamiento intravesical, quimioterapia, inmunoterapia y nuevas terapias | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="cáncer de vejiga, carcinoma urotelial, NMIBC, MIBC, BCG, cisplatino, inmunoterapia vejiga, avelumab, enfortumab vedotin, oncología ecuador, dr ariel calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Cáncer de Vejiga (Urotelial) | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre el cáncer de vejiga: subtipos, manejo de enfermedad no invasiva (BCG, terapias intravesicales), tratamiento de enfermedad músculo-invasiva y avanzada.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Cáncer de Vejiga (Urotelial) | Dr. Ariel Calaña Sabina</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Cáncer de Vejiga */
+            --bladder-navy: #1A3A5A;
+            --bladder-blue: #2C5F8A;
+            --bladder-teal: #3A7CA5;
+            --bladder-gold: #D4A017;
+            --bladder-beige: #F5F0E6;
+            --bladder-stone: #A9B7C0;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-bladder: linear-gradient(135deg, #1A3A5A 0%, #2C5F8A 100%);
+            --gradient-bladder-soft: linear-gradient(135deg, #E6F0FA 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* ============ HEADER MEJORADO ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 200px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* ============ HERO ESPECÍFICO PARA CÁNCER DE VEJIGA ============ */
+        .hero-bladder {
+            background: var(--gradient-bladder);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-bladder::before {
+            content: '💧 💧 💧';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 15rem;
+            color: rgba(255, 255, 255, 0.02);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.3;
+        }
+        
+        .hero-bladder::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(212, 160, 23, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #D4A017;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(212, 160, 23, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #D4A017;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-bladder {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            border: 2px solid #D4A017;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-bladder i {
+            color: #D4A017;
+        }
+        
+        /* ============ BREADCRUMB ============ */
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* ============ CONTENIDO PRINCIPAL ============ */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        /* Tarjeta de resumen rápido */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #1A3A5A;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(26, 58, 90, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(26, 58, 90, 0.1);
+            color: #1A3A5A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #1A3A5A;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        /* Grid de contenido principal */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas de sección */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #1A3A5A;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.bladder-highlight {
+            background: linear-gradient(135deg, #E6F0FA 0%, #ffffff 100%);
+            border: 2px solid #1A3A5A;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(26, 58, 90, 0.1);
+            color: #1A3A5A;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        /* Tablas de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #1A3A5A;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1A3A5A;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Listas de características */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #1A3A5A;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        /* Clasificación NMIBC vs MIBC */
+        .classification-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .classification-card {
+            background: linear-gradient(135deg, #1A3A5A 0%, #2C5F8A 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #D4A017;
+        }
+        
+        .classification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(26, 58, 90, 0.3);
+        }
+        
+        .classification-icon {
+            font-size: 2.5rem;
+            color: #D4A017;
+            margin-bottom: 15px;
+        }
+        
+        .classification-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .classification-sub {
+            font-size: 1rem;
+            color: #D4A017;
+            margin-bottom: 15px;
+        }
+        
+        .classification-desc {
+            text-align: left;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .classification-desc p {
+            margin: 5px 0;
+            color: #E6F0FA;
+        }
+        
+        .classification-desc i {
+            color: #D4A017;
+            margin-right: 8px;
+        }
+        
+        /* Subtipos histológicos */
+        .histology-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .histology-card {
+            background: #F5F0E6;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #1A3A5A;
+        }
+        
+        .histology-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(26, 58, 90, 0.2);
+        }
+        
+        .histology-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: #1A3A5A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .histology-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .histology-percent {
+            font-weight: 700;
+            color: #1A3A5A;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        /* Terapias intravesicales */
+        .intravesical-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .intravesical-card {
+            background: #E6F0FA;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            border-left: 3px solid #1A3A5A;
+        }
+        
+        .intravesical-card i {
+            font-size: 2rem;
+            color: #1A3A5A;
+            margin-bottom: 10px;
+        }
+        
+        .intravesical-card h4 {
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .intravesical-card .approval-badge {
+            background: #D4A017;
+            color: white;
+            padding: 3px 8px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            display: inline-block;
+            margin-top: 8px;
+        }
+        
+        /* Tratamiento grid */
+        .treatment-bladder-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-bladder-item {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(26, 58, 90, 0.2);
+        }
+        
+        .treatment-bladder-item:hover {
+            transform: translateY(-5px);
+            border-color: #1A3A5A;
+            box-shadow: 0 10px 25px rgba(26, 58, 90, 0.1);
+        }
+        
+        .treatment-bladder-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #1A3A5A;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-bladder-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(26, 58, 90, 0.1);
+            color: #1A3A5A;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Terapias sistémicas */
+        .systemic-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .systemic-table th {
+            background: #1A3A5A;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .systemic-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .systemic-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .systemic-table tr:hover td {
+            background: #E6F0FA;
+        }
+        
+        /* Guías y novedades 2026 */
+        .guideline-update {
+            background: #F5F0E6;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #D4A017;
+        }
+        
+        .guideline-update h4 {
+            color: #1A3A5A;
+            margin-bottom: 10px;
+        }
+        
+        .guideline-update i {
+            color: #D4A017;
+            margin-right: 8px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #1A3A5A;
+        }
+        
+        .info-panel.bladder-panel {
+            background: linear-gradient(135deg, #1A3A5A 0%, #2C5F8A 100%);
+            color: white;
+        }
+        
+        .info-panel.bladder-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.bladder-panel .info-panel-title i {
+            color: #D4A017;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #1A3A5A;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1A3A5A;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #1A3A5A;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-bladder {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #D4A017;
+            color: #1A3A5A;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-bladder:hover {
+            background: #E5B73B;
+            transform: translateY(-2px);
+            color: #0A2A5A;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(26, 58, 90, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #1A3A5A;
+        }
+        
+        /* Citas destacadas */
+        .quote-block {
+            background: linear-gradient(135deg, #E6F0FA 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #1A3A5A;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(26, 58, 90, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #1A3A5A;
+        }
+        
+        /* Botón volver arriba */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #1A3A5A;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(26, 58, 90, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #2C5F8A;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        /* Footer */
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #1A3A5A;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #1A3A5A;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1200px) {
+            .hero-content h1 { font-size: 3rem; }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            
+            .hero-content { padding: 0 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content .subtitle { font-size: 1.3rem; }
+            
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            
+            .classification-grid { grid-template-columns: 1fr; }
+            .histology-grid { grid-template-columns: 1fr; }
+            .intravesical-grid { grid-template-columns: 1fr; }
+            .treatment-bladder-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+            .hero-badge-bladder { font-size: 1rem; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="cancer-vejiga.html" class="active"><i class="fas fa-tint"></i> Cáncer de Vejiga</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO ESPECÍFICO PARA CÁNCER DE VEJIGA -->
+    <section class="hero-bladder">
+        <div class="container">
+            <div class="hero-content">
+                <h1>CÁNCER DE VEJIGA <span>UROTELIAL</span></h1>
+                <p class="subtitle">El segundo tumor urológico más frecuente, con un espectro que va desde formas superficiales a enfermedad metastásica</p>
+                <p style="font-size: 1.3rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">El 75% se diagnostica como no músculo-invasivo (NMIBC) y tiene alta tasa de recurrencia. La inmunoterapia ha transformado el manejo de la enfermedad avanzada.</p>
+                <div class="hero-badge-bladder">
+                    <i class="fas fa-flask"></i> NMIBC (75%) vs MIBC (25%)
+                    <i class="fas fa-syringe"></i> Terapias intravesicales · BCG · Inmunoterapia
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Tumores Urológicos</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Cáncer de Vejiga (Urotelial)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- RESUMEN RÁPIDO -->
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-percentage"></i></div>
+                    <div class="summary-label">Incidencia</div>
+                    <div class="summary-value">10-15/100,000</div>
+                    <div class="summary-desc">por año</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-male"></i></div>
+                    <div class="summary-label">Sexo</div>
+                    <div class="summary-value">4:1</div>
+                    <div class="summary-desc">hombre:mujer</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-smoking"></i></div>
+                    <div class="summary-label">Tabaco</div>
+                    <div class="summary-value">50-60%</div>
+                    <div class="summary-desc">de los casos</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Recurrencia NMIBC</div>
+                    <div class="summary-value">30-80%</div>
+                    <div class="summary-desc">según riesgo</div>
+                </div>
+            </div>
+
+            <!-- GRID PRINCIPAL -->
+            <div class="content-grid">
+                <!-- COLUMNA PRINCIPAL -->
+                <div>
+                    <!-- SECCIÓN: ¿QUÉ ES EL CÁNCER DE VEJIGA? -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué es el Cáncer de Vejiga? <span>Carcinoma Urotelial</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>cáncer de vejiga</strong> es una neoplasia maligna que se origina en las células uroteliales que recubren la vejiga urinaria. El tipo histológico predominante (90%) es el <strong>carcinoma urotelial</strong>, aunque existen variantes como el carcinoma de células escamosas (5%) y el adenocarcinoma (1-2%) [8].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>Es el segundo tumor urológico más frecuente después del cáncer de próstata. Aproximadamente el 75% de los casos se diagnostican como enfermedad no músculo-invasiva (NMIBC), confinada a la mucosa o submucosa, con alta tasa de recurrencia pero baja progresión si se maneja adecuadamente [8].</p>
+                            <div class="quote-author">— Dr. Ariel Calaña, Oncólogo Clínico</div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Características clave:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Heterogeneidad:</strong> Espectro que va desde tumores papilares de bajo grado hasta carcinomas de alto grado con invasión muscular.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Alta recurrencia:</strong> Especialmente en NMIBC, requiriendo vigilancia y tratamientos intravesicales prolongados [8].</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Relación con carcinógenos:</strong> Fuerte asociación con tabaco (50-60% de los casos) y exposición ocupacional (aminas aromáticas) [8].</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Diagnóstico temprano:</strong> La hematuria es el síntoma más frecuente y permite diagnosticar en estadios iniciales en muchos casos.</li>
+                        </ul>
+                    </section>
+
+                    <!-- SECCIÓN: CLASIFICACIÓN NMIBC VS MIBC -->
+                    <section class="section-card bladder-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-dna"></i></div>
+                            <h2>Clasificación Fundamental <span>NMIBC vs MIBC</span></h2>
+                        </div>
+                        
+                        <p>La distinción más importante en cáncer de vejiga es si el tumor invade o no el músculo detrusor, ya que determina el pronóstico y el enfoque terapéutico [8].</p>
+                        
+                        <div class="classification-grid">
+                            <div class="classification-card">
+                                <div class="classification-icon"><i class="fas fa-leaf"></i></div>
+                                <h4>No Músculo-Invasivo (NMIBC)</h4>
+                                <div class="classification-sub">Ta · T1 · CIS</div>
+                                <div class="classification-desc">
+                                    <p><i class="fas fa-check"></i> <strong>Ta:</strong> Tumor papilar limitado a mucosa</p>
+                                    <p><i class="fas fa-check"></i> <strong>T1:</strong> Invade submucosa (lámina propia), no músculo</p>
+                                    <p><i class="fas fa-check"></i> <strong>CIS:</strong> Carcinoma in situ, plano, alto grado</p>
+                                    <p><i class="fas fa-chevron-right"></i> <strong>75% de los casos</strong></p>
+                                    <p><i class="fas fa-chevron-right"></i> <strong>Tratamiento:</strong> RTU + intravesical</p>
+                                </div>
+                            </div>
+                            
+                            <div class="classification-card">
+                                <div class="classification-icon"><i class="fas fa-bolt"></i></div>
+                                <h4>Músculo-Invasivo (MIBC)</h4>
+                                <div class="classification-sub">T2 · T3 · T4</div>
+                                <div class="classification-desc">
+                                    <p><i class="fas fa-check"></i> <strong>T2:</strong> Invade músculo detrusor</p>
+                                    <p><i class="fas fa-check"></i> <strong>T3:</strong> Invade grasa perivesical</p>
+                                    <p><i class="fas fa-check"></i> <strong>T4:</strong> Invade órganos vecinos (próstata, útero, pared pélvica)</p>
+                                    <p><i class="fas fa-chevron-right"></i> <strong>25% de los casos</strong></p>
+                                    <p><i class="fas fa-chevron-right"></i> <strong>Tratamiento:</strong> Cistectomía o TMT</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 15px;">La <strong>estratificación de riesgo</strong> en NMIBC es esencial para determinar la necesidad de tratamiento adyuvante y la frecuencia de vigilancia [9].</p>
+                    </section>
+
+                    <!-- SECCIÓN: SUBTIPOS HISTOLÓGICOS -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-microscope"></i></div>
+                            <h2>Subtipo Histológico <span>Variantes del carcinoma urotelial</span></h2>
+                        </div>
+                        
+                        <div class="histology-grid">
+                            <div class="histology-card">
+                                <div class="histology-icon"><i class="fas fa-circle"></i></div>
+                                <h4>Carcinoma Urotelial</h4>
+                                <p>Subtipo predominante (90%). Puede ser papilar o no papilar. El 70% son papilares de bajo grado [8].</p>
+                                <div class="histology-percent">90%</div>
+                            </div>
+                            
+                            <div class="histology-card">
+                                <div class="histology-icon"><i class="fas fa-square"></i></div>
+                                <h4>Carcinoma Escamoso</h4>
+                                <p>Asociado a esquistosomiasis, irritación crónica (sondas, litiasis). Más frecuente en regiones endémicas [8].</p>
+                                <div class="histology-percent">~5%</div>
+                            </div>
+                            
+                            <div class="histology-card">
+                                <div class="histology-icon"><i class="fas fa-grip-lines"></i></div>
+                                <h4>Adenocarcinoma</h4>
+                                <p>Primario o de uraco. Subtipo raro, puede originarse en extrofia vesical [8].</p>
+                                <div class="histology-percent">1-2%</div>
+                            </div>
+                            
+                            <div class="histology-card">
+                                <div class="histology-icon"><i class="fas fa-code-branch"></i></div>
+                                <h4>Variantes histológicas</h4>
+                                <p>Células pequeñas, sarcomatoide, micropapilar, plasmocitoide. Más agresivas y peor pronóstico [9].</p>
+                                <div class="histology-percent">Variable</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: DIAGNÓSTICO Y ESTADIFICACIÓN -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-stethoscope"></i></div>
+                            <h2>Diagnóstico y Estadificación</h2>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Pruebas diagnósticas:</h4>
+                        <table class="followup-table">
+                            <thead>
+                                <tr>
+                                    <th>Prueba</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Cistoscopia</strong></td>
+                                    <td>Gold standard para diagnóstico y vigilancia. Permite visualizar el tumor y realizar biopsia/resección [8].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>RTU de vejiga</strong></td>
+                                    <td>Resección transuretral del tumor. Terapéutica y diagnóstica. Debe incluir músculo en la muestra para correcta estadificación [9].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Citología urinaria</strong></td>
+                                    <td>Alta sensibilidad para tumores de alto grado y CIS. Puede ser falsamente negativa en tumores de bajo grado [9].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Biomarcadores urinarios</strong></td>
+                                    <td>UroVysion (FISH), NMP22, CxBladder. Guías AUA/NCCN permiten uso selectivo en casos de citología equívoca [9].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>TC urotomografía</strong></td>
+                                    <td>Estadificación de enfermedad músculo-invasiva, evaluación de ganglios y metástasis [8].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Segunda RTU</strong></td>
+                                    <td>Recomendada en T1 de alto grado, tumores grandes o multifocales, o si la primera RTU no incluyó músculo. Mejora estadificación y reduce recurrencia [9].</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO DE NMIBC (BCG Y NUEVAS TERAPIAS) -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento de NMIBC <span>BCG y terapias intravesicales</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Estratificación de riesgo en NMIBC [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Bajo riesgo:</strong> Ta de bajo grado, solitario, <3cm. Tratamiento: RTU + quimioterapia intravesical inmediata.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Riesgo intermedio:</strong> Ta/T1 de bajo grado multifocal/recurrente. Tratamiento: RTU + BCG (inducción + mantenimiento) o quimioterapia intravesical.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Alto riesgo:</strong> T1 de alto grado, CIS, múltiple T1 recurrente, variantes histológicas. Tratamiento: RTU + BCG (inducción + mantenimiento).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Muy alto riesgo:</strong> T1 con CIS, CIS extenso, fallo a BCG, variantes agresivas. Considerar cistectomía temprana [8].</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Terapias intravesicales:</h4>
+                        
+                        <div class="intravesical-grid">
+                            <div class="intravesical-card">
+                                <i class="fas fa-syringe"></i>
+                                <h4>BCG</h4>
+                                <p>Inmunoterapia intravesical estándar para alto riesgo. Disminuye recurrencia y progresión [8].</p>
+                                <span class="approval-badge">Gold standard</span>
+                            </div>
+                            
+                            <div class="intravesical-card">
+                                <i class="fas fa-flask"></i>
+                                <h4>Gemcitabina</h4>
+                                <p>Quimioterapia intravesical post-RTU en bajo riesgo. También en combinación con docetaxel en fallo a BCG [8].</p>
+                                <span class="approval-badge">Uso frecuente</span>
+                            </div>
+                            
+                            <div class="intravesical-card">
+                                <i class="fas fa-flask"></i>
+                                <h4>Mitomicina C</h4>
+                                <p>Quimioterapia intravesical. Útil en profilaxis post-RTU y en fallo a BCG [9].</p>
+                                <span class="approval-badge">Aprobada</span>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 25px 0 10px; color: var(--primary);">Manejo del fallo a BCG (BCG-unresponsive) - Actualización 2026:</h4>
+                        
+                        <div class="guideline-update">
+                            <h4><i class="fas fa-star"></i> Novedad NCCN Versión 1.2026 [1][5]</h4>
+                            <p>El NCCN ha actualizado sus guías para incluir <strong>nogapendekin alfa inbakicept (Anktiva) + BCG</strong> como recomendación categoría 2A para:</p>
+                            <ul>
+                                <li><i class="fas fa-check"></i> Pacientes con NMIBC no respondedor a BCG con CIS con o sin enfermedad papilar (previo).</li>
+                                <li><i class="fas fa-check"></i> Pacientes con <strong>enfermedad papilar exclusiva</strong> (Ta/T1) no respondedor a BCG - NUEVA INDICACIÓN 2026 [1][5].</li>
+                            </ul>
+                            <p>La recomendación se basa en el estudio QUILT-3.032 (cohorte B, n=80), que demostró supervivencia libre de enfermedad a 12, 24 y 36 meses de 58.2%, 52.1% y 38.2%, respectivamente [1].</p>
+                        </div>
+                        
+                        <p><strong>Otras opciones en BCG-unresponsive [8][9]:</strong></p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-arrow-right"></i> <strong>Pembrolizumab (Keytruda):</strong> Aprobado en CIS no respondedor a BCG, no candidatos a cistectomía.</li>
+                            <li><i class="fas fa-arrow-right"></i> <strong>Gemcitabina + Docetaxel intravesical:</strong> Ampliamente utilizado en EE.UU., con buena tolerancia y eficacia [8].</li>
+                            <li><i class="fas fa-arrow-right"></i> <strong>Nadofaragene firadenovec:</strong> Terapia génica intravesical, aprobada en CIS con/sin papilar.</li>
+                            <li><i class="fas fa-arrow-right"></i> <strong>Cistectomía radical:</strong> Gold standard para pacientes aptos, pero muchos pacientes la rechazan [8].</li>
+                        </ul>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO DE MIBC Y ENFERMEDAD AVANZADA -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-flask"></i></div>
+                            <h2>Enfermedad Músculo-Invasiva y Avanzada</h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Enfermedad localizada (MIBC):</h4>
+                        
+                        <div class="treatment-bladder-grid">
+                            <div class="treatment-bladder-item">
+                                <div class="treatment-bladder-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Cistectomía Radical</h4>
+                                <p>Tratamiento de elección para MIBC localizado (T2-T4a N0 M0). Incluye linfadenectomía pélvica y derivación urinaria [8].</p>
+                                <span class="treatment-tag">Gold standard</span>
+                            </div>
+                            
+                            <div class="treatment-bladder-item">
+                                <div class="treatment-bladder-icon"><i class="fas fa-radiation"></i></div>
+                                <h4>Terapia Trimodal (TMT)</h4>
+                                <p>Alternativa preservadora de vejiga en pacientes seleccionados: RTU máxima + radioterapia + quimioterapia radiosensibilizante [8].</p>
+                                <span class="treatment-tag">Preservación</span>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Quimioterapia neoadyuvante [8][10]:</h4>
+                        <p>Recomendada en MIBC candidatos a cistectomía (T2-T4a). Esquema: cisplatino + gemcitabina × 4 ciclos, o MVAC (metotrexato, vinblastina, doxorrubicina, cisplatino). Mejora supervivencia global en 5-8%.</p>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Enfermedad metastásica (estadio IV):</h4>
+                        
+                        <table class="systemic-table">
+                            <thead>
+                                <tr>
+                                    <th>Línea</th>
+                                    <th>Opciones</th>
+                                    <th>Comentarios</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>1ª línea</strong></td>
+                                    <td>Quimioterapia con platino (cisplatino + gemcitabina) seguido de <strong>mantenimiento con avelumab</strong> (si no progresión) [10]</td>
+                                    <td>Avelumab prolonga supervivencia global en respondedores</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>1ª línea alternativas</strong></td>
+                                    <td>Pembrolizumab (Keytruda) en pacientes no elegibles para cisplatino con PD-L1+ o inelegibles para cualquier platino</td>
+                                    <td>Inmunoterapia en primera línea</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2ª línea</strong></td>
+                                    <td>Enfortumab vedotin (conjugado anti-Nectin-4)</td>
+                                    <td>Estudio EV-301: mejora supervivencia</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>2ª línea alternativas</strong></td>
+                                    <td>Pembrolizumab, Sacituzumab govitecan (Trodelvy), Erdafitinib (si FGFR3+), quimioterapia (taxanos)</td>
+                                    <td>Elección según perfil molecular y previo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>3ª línea+</strong></td>
+                                    <td>Ensayos clínicos, combinaciones, terapias dirigidas según perfil</td>
+                                    <td>-</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <p style="margin-top: 15px;"><strong>Novedades 2026:</strong> La secuencia de enfortumab vedotin + pembrolizumab está siendo evaluada en primera línea, con resultados prometedores. Se esperan aprobaciones en los próximos meses.</p>
+                    </section>
+
+                    <!-- SECCIÓN: SEGUIMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-calendar-check"></i></div>
+                            <h2>Seguimiento <span>Vigilancia por riesgo</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Recomendaciones de seguimiento [8][9]:</h4>
+                        
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Bajo riesgo:</strong> Cistoscopia a los 3 meses, luego 9 meses, luego anual hasta 5 años, luego espaciar.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Riesgo intermedio/alto:</strong> Cistoscopia y citología cada 3 meses por 2 años, luego cada 6 meses hasta 5 años, luego anual. Seguimiento de por vida [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Evaluación del tracto superior:</strong> TC urotomografía o pielografía cada 1-2 años en alto riesgo [9].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Post-cistectomía:</strong> Evaluación de metástasis (TC tórax-abdomen-pelvis) cada 3-6 meses inicialmente.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <!-- TARJETA DEL MÉDICO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Registro Médico: 123456789</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL ESPECIAL VEJIGA -->
+                    <div class="info-panel bladder-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-tint"></i> Datos Clave Vejiga
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Incidencia global</span>
+                                <span style="color: #D4A017; font-weight: 700;">573,000 casos/año</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Mortalidad</span>
+                                <span style="color: #D4A017; font-weight: 700;">212,000/año</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Relación hombre:mujer</span>
+                                <span style="color: #D4A017; font-weight: 700;">4:1</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>Factor principal</span>
+                                <span style="color: #D4A017; font-weight: 700;">Tabaco (50-60%)</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-bladder" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación personalizada
+                        </a>
+                    </div>
+
+                    <!-- GLOSARIO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">NMIBC</span>
+                            <span class="definition">No músculo-invasivo (Ta, T1, CIS)</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">MIBC</span>
+                            <span class="definition">Músculo-invasivo (T2-T4)</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">BCG</span>
+                            <span class="definition">Bacillus Calmette-Guérin</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">RTU</span>
+                            <span class="definition">Resección transuretral</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">CIS</span>
+                            <span class="definition">Carcinoma in situ</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">TMT</span>
+                            <span class="definition">Terapia trimodal</span>
+                        </div>
+                    </div>
+
+                    <!-- RECURSOS DE APOYO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Asociaciones
+                        </div>
+                        <p style="margin-bottom: 15px;">Organizaciones especializadas:</p>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>BCAN</strong>
+                                <small style="color: var(--text-light); display: block;">Bladder Cancer Advocacy Network</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Fight Bladder Cancer</strong>
+                                <small style="color: var(--text-light); display: block;">Información y apoyo</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CTA ESPECIAL -->
+                    <div class="info-panel" style="background: linear-gradient(135deg, #1A3A5A 0%, #2C5F8A 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-tint" style="font-size: 3rem; margin-bottom: 15px; color: #D4A017;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Hematuria o diagnóstico reciente?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El manejo del cáncer de vejiga requiere un enfoque multidisciplinario. Consulte a un especialista.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: #D4A017; color: #1A3A5A; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes sobre Cáncer de Vejiga</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Cuáles son los principales factores de riesgo?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El tabaco es el principal factor, responsable del 50-60% de los casos. La exposición ocupacional a aminas aromáticas (industria química, colorantes, caucho) es el segundo. Otros: radioterapia pélvica previa, quimioterapia con ciclofosfamida, infección crónica por esquistosoma (asociado a carcinoma escamoso), irritación crónica (sondas de larga duración, litiasis) [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Cuál es el síntoma más frecuente?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La hematuria (sangre en la orina) es el síntoma de presentación en el 80-90% de los casos. Puede ser macroscópica o microscópica, intermitente y no dolorosa. Otros síntomas incluyen irritación miccional (disuria, frecuencia, urgencia) que puede simular una infección urinaria, especialmente en CIS [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Qué es el BCG-unresponsive y por qué es importante?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Se define como: persistencia de CIS después de al menos un ciclo de BCG (5/6 inducciones) o recurrencia de CIS dentro de los 12 meses posteriores; recurrencia de enfermedad papilar (Ta/T1) de alto grado dentro de los 6 meses posteriores a la última dosis de BCG; o enfermedad T1 de alto grado en la primera evaluación tras BCG [8]. Identificar estos pacientes es crucial porque tienen alto riesgo de progresión y requieren opciones de rescate (cistectomía o nuevas terapias intravesicales/sistémicas) [8][9].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Se puede conservar la vejiga en lugar de extirparla?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Sí, en NMIBC la conservación es la regla con tratamientos intravesicales. En MIBC localizado, la terapia trimodal (TMT: RTU máxima + radioterapia + quimioterapia) es una alternativa a la cistectomía en pacientes seleccionados, con tasas de control oncológico similares y preservación de la vejiga funcional en alrededor del 70-80% de los pacientes a largo plazo [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Qué pronóstico tiene el cáncer de vejiga?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Depende del estadio y grado. NMIBC de bajo riesgo: supervivencia cáncer-específica >95% a 5 años. NMIBC de alto riesgo: 60-80% con tratamiento adecuado. MIBC localizado: 50-60% con cistectomía. MIBC metastásico: mediana de supervivencia 12-18 meses con tratamiento moderno, aunque algunos pacientes alcanzan largas supervivencias con inmunoterapia [8][9].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Script para el Header (Scroll y Menú Móvil)
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            // Mostrar/ocultar botón volver arriba
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        // Menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuBtn.classList.toggle('fa-times');
+        });
+
+        // Botón volver arriba
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cerrar menú al hacer clic en un enlace (para móvil)
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        // Hacer que los details se abran/cierren suavemente
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
