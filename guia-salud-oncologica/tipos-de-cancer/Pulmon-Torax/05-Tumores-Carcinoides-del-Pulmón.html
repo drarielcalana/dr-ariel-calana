@@ -1,0 +1,1604 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Tumores Carcinoides del Pulmón (Tumores Neuroendocrinos): Información completa sobre el diagnóstico, subtipos (típico y atípico), síndromes asociados y tratamiento | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="carcinoide pulmonar, tumor carcinoide bronquial, tumor neuroendocrino pulmonar, carcinoide típico, carcinoide atípico, síndrome carcinoide, DIPNECH, MEN1, análogos de somatostatina, oncología ecuador, dr ariel calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Tumores Carcinoides del Pulmón | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre los tumores carcinoides pulmonares: clasificación WHO, diagnóstico por imagen y tratamiento quirúrgico y sistémico.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Tumores Carcinoides del Pulmón | Dr. Ariel Calaña Sabina</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Tumores Carcinoides */
+            --carcinoid-teal: #008080;
+            --carcinoid-teal-light: #20B2AA;
+            --carcinoid-green: #2E8B57;
+            --carcinoid-sea: #3CB371;
+            --carcinoid-gold: #DAA520;
+            --carcinoid-beige: #F5F5DC;
+            --carcinoid-sand: #F4A460;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-carcinoid: linear-gradient(135deg, #006D77 0%, #2E8B57 70%, #DAA520 100%);
+            --gradient-carcinoid-soft: linear-gradient(135deg, #E0F2F1 0%, #F5F5DC 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* ============ HEADER MEJORADO ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 200px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* ============ HERO ESPECÍFICO PARA CARCINOIDES ============ */
+        .hero-carcinoid {
+            background: var(--gradient-carcinoid);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-carcinoid::before {
+            content: '🌀 🌀 🌀';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 15rem;
+            color: rgba(255, 255, 255, 0.02);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.3;
+        }
+        
+        .hero-carcinoid::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(218, 165, 32, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #DAA520;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(218, 165, 32, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #DAA520;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-carcinoid {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            margin-top: 25px;
+            border: 2px solid #DAA520;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-carcinoid i {
+            color: #DAA520;
+        }
+        
+        /* ============ BREADCRUMB ============ */
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* ============ CONTENIDO PRINCIPAL ============ */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        /* Tarjeta de resumen rápido */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #008080;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(0, 128, 128, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(0, 128, 128, 0.1);
+            color: #008080;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #008080;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        /* Grid de contenido principal */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas de sección */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #008080;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.carcinoid-highlight {
+            background: linear-gradient(135deg, #E0F2F1 0%, #ffffff 100%);
+            border: 2px solid #008080;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 128, 128, 0.1);
+            color: #008080;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        /* Tablas de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #008080;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #008080;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Listas de características */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #008080;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        /* Clasificación (Típico vs Atípico) */
+        .classification-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .classification-card {
+            background: linear-gradient(135deg, #008080 0%, #20B2AA 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #DAA520;
+        }
+        
+        .classification-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 128, 128, 0.3);
+        }
+        
+        .classification-icon {
+            font-size: 2.5rem;
+            color: #DAA520;
+            margin-bottom: 15px;
+        }
+        
+        .classification-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        
+        .classification-sub {
+            font-size: 1rem;
+            color: #F5F5DC;
+            margin-bottom: 15px;
+        }
+        
+        .criteria {
+            text-align: left;
+            margin-top: 15px;
+            background: rgba(0,0,0,0.2);
+            border-radius: 10px;
+            padding: 15px;
+        }
+        
+        .criteria p {
+            margin: 5px 0;
+            color: #F5F5DC;
+        }
+        
+        .criteria i {
+            color: #DAA520;
+            margin-right: 8px;
+        }
+        
+        /* Síndromes */
+        .syndrome-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .syndrome-card {
+            background: #F5F5DC;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #008080;
+        }
+        
+        .syndrome-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 128, 128, 0.2);
+        }
+        
+        .syndrome-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            color: #008080;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .syndrome-card h4 {
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .syndrome-freq {
+            font-weight: 700;
+            color: #008080;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        /* DIPNECH */
+        .dipnech-box {
+            background: #E0F2F1;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border-left: 4px solid #008080;
+        }
+        
+        /* Tratamiento grid */
+        .treatment-carcinoid-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-carcinoid-item {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(0, 128, 128, 0.2);
+        }
+        
+        .treatment-carcinoid-item:hover {
+            transform: translateY(-5px);
+            border-color: #008080;
+            box-shadow: 0 10px 25px rgba(0, 128, 128, 0.1);
+        }
+        
+        .treatment-carcinoid-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #008080;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-carcinoid-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(0, 128, 128, 0.1);
+            color: #008080;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #008080;
+        }
+        
+        .info-panel.carcinoid-panel {
+            background: linear-gradient(135deg, #006D77 0%, #008080 100%);
+            color: white;
+        }
+        
+        .info-panel.carcinoid-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.carcinoid-panel .info-panel-title i {
+            color: #DAA520;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #008080;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #008080;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #008080;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-carcinoid {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #DAA520;
+            color: #006D77;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-carcinoid:hover {
+            background: #F4A460;
+            transform: translateY(-2px);
+            color: #0A2A5A;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(0, 128, 128, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #008080;
+        }
+        
+        /* Citas destacadas */
+        .quote-block {
+            background: linear-gradient(135deg, #E0F2F1 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #008080;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(0, 128, 128, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #008080;
+        }
+        
+        /* Botón volver arriba */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #008080;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(0, 128, 128, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #006D77;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        /* Footer */
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #008080;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #008080;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        /* ============ RESPONSIVE ============ */
+        @media (max-width: 1200px) {
+            .hero-content h1 { font-size: 3rem; }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            
+            .hero-content { padding: 0 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content .subtitle { font-size: 1.3rem; }
+            
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            
+            .classification-grid { grid-template-columns: 1fr; }
+            .syndrome-grid { grid-template-columns: 1fr; }
+            .treatment-carcinoid-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+            .hero-badge-carcinoid { font-size: 1rem; padding: 10px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="carcinoides-pulmonares.html" class="active"><i class="fas fa-lungs"></i> Tumores Carcinoides del Pulmón</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO ESPECÍFICO PARA CARCINOIDES -->
+    <section class="hero-carcinoid">
+        <div class="container">
+            <div class="hero-content">
+                <h1>TUMORES CARCINOIDES <span>DEL PULMÓN</span></h1>
+                <p class="subtitle">Tumores neuroendocrinos bien diferenciados: un espectro de comportamiento indolente a agresivo</p>
+                <p style="font-size: 1.3rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Segunda localización más frecuente de tumores neuroendocrinos después del tracto gastrointestinal. La clave está en la clasificación entre típico y atípico.</p>
+                <div class="hero-badge-carcinoid">
+                    <i class="fas fa-chart-line"></i> Típico (80-90%) vs Atípico (10-20%)
+                    <i class="fas fa-dna"></i> Asociado a MEN1 y DIPNECH
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Tumores Torácicos</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Tumores Carcinoides del Pulmón</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- RESUMEN RÁPIDO -->
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-percentage"></i></div>
+                    <div class="summary-label">Frecuencia</div>
+                    <div class="summary-value">1-2%</div>
+                    <div class="summary-desc">de todos los tumores pulmonares</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="summary-label">Típico</div>
+                    <div class="summary-value">80-90%</div>
+                    <div class="summary-desc">Bajo grado, excelente pronóstico</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="summary-label">Atípico</div>
+                    <div class="summary-value">10-20%</div>
+                    <div class="summary-desc">Grado intermedio, mayor agresividad</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <div class="summary-label">Edad media</div>
+                    <div class="summary-value">45-55 años</div>
+                    <div class="summary-desc">más jóvenes que otros tumores</div>
+                </div>
+            </div>
+
+            <!-- GRID PRINCIPAL -->
+            <div class="content-grid">
+                <!-- COLUMNA PRINCIPAL -->
+                <div>
+                    <!-- SECCIÓN: ¿QUÉ SON LOS CARCINOIDES PULMONARES? -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué son los Tumores Carcinoides Pulmonares? <span>Tumores neuroendocrinos bien diferenciados</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">Los tumores carcinoides pulmonares son neoplasias poco frecuentes que se originan en las células neuroendocrinas del pulmón. Son tumores bien diferenciados que forman parte del espectro de tumores neuroendocrinos pulmonares, que va desde los carcinoides típicos (bajo grado) hasta el carcinoma microcítico (alto grado) [citation:6].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>El pulmón es la segunda localización más frecuente de tumores neuroendocrinos después del tracto gastrointestinal. Su comportamiento clínico es notablemente heterogéneo: desde lesiones de crecimiento muy lento (típico) hasta tumores de grado intermedio con mayor potencial metastásico (atípico) [citation:2][citation:6].</p>
+                            <div class="quote-author">— Dr. Ariel Calaña, Oncólogo Clínico</div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Características clave:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i> <strong>Origen neuroendocrino:</strong> Derivados de células de Kulchitsky (células neuroendocrinas) de la mucosa bronquial.</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Bien diferenciados:</strong> A diferencia de los carcinomas neuroendocrinos de alto grado (microcítico).</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Espectro de agresividad:</strong> Clasificación en típico (bajo grado) y atípico (grado intermedio).</li>
+                            <li><i class="fas fa-check-circle"></i> <strong>Capacidad secretora:</strong> Pueden producir hormonas y causar síndromes paraneoplásicos (síndrome carcinoide, síndrome de Cushing).</li>
+                        </ul>
+                    </section>
+
+                    <!-- SECCIÓN: CLASIFICACIÓN (TÍPICO VS ATÍPICO) -->
+                    <section class="section-card carcinoid-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-dna"></i></div>
+                            <h2>Clasificación WHO <span>Típico vs Atípico</span></h2>
+                        </div>
+                        
+                        <p>La clasificación de la Organización Mundial de la Salud (OMS) distingue dos tipos principales de carcinoides pulmonares según su grado histológico y comportamiento biológico [citation:3][citation:6]:</p>
+                        
+                        <div class="classification-grid">
+                            <div class="classification-card">
+                                <div class="classification-icon"><i class="fas fa-feather-alt"></i></div>
+                                <h4>Carcinoide Típico (CT)</h4>
+                                <div class="classification-sub">Bajo grado (G1)</div>
+                                <div class="criteria">
+                                    <p><i class="fas fa-check"></i> < 2 mitosis por 2 mm² (10 campos de gran aumento)</p>
+                                    <p><i class="fas fa-check"></i> Sin necrosis</p>
+                                    <p><i class="fas fa-check"></i> Células uniformes, bien diferenciadas</p>
+                                    <p><i class="fas fa-check"></i> 80-90% de los casos</p>
+                                    <p><i class="fas fa-check"></i> Excelente pronóstico</p>
+                                </div>
+                            </div>
+                            
+                            <div class="classification-card">
+                                <div class="classification-icon"><i class="fas fa-bolt"></i></div>
+                                <h4>Carcinoide Atípico (CA)</h4>
+                                <div class="classification-sub">Grado intermedio (G2)</div>
+                                <div class="criteria">
+                                    <p><i class="fas fa-check"></i> 2-10 mitosis por 2 mm²</p>
+                                    <p><i class="fas fa-check"></i> Necrosis focal (puntiforme)</p>
+                                    <p><i class="fas fa-check"></i> Mayor pleomorfismo nuclear</p>
+                                    <p><i class="fas fa-check"></i> 10-20% de los casos</p>
+                                    <p><i class="fas fa-check"></i> Pronóstico intermedio</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <p>Los tumores con >10 mitosis por 2 mm² se clasifican como carcinomas neuroendocrinos de alto grado (carcinoma microcítico o de células grandes), que tienen un comportamiento mucho más agresivo [citation:6].</p>
+                    </section>
+
+                    <!-- SECCIÓN: DIPNECH Y PRECURSORES -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-project-diagram"></i></div>
+                            <h2>Lesiones Precursoras y DIPNECH</h2>
+                        </div>
+                        
+                        <div class="dipnech-box">
+                            <h4 style="color: #008080; margin-bottom: 10px;">Hiperplasia Neuroendocrina Pulmonar Idiopática Difusa (DIPNECH)</h4>
+                            <p>La DIPNECH es una condición precursora poco frecuente caracterizada por la proliferación difusa de células neuroendocrinas en la mucosa bronquial, que puede progresar a la formación de múltiples tumorlets (<5mm) y carcinoides invasivos [citation:3][citation:6].</p>
+                            <p style="margin-top: 10px;"><strong>Características:</strong></p>
+                            <ul style="list-style: none; padding-left: 0;">
+                                <li><i class="fas fa-check" style="color: #008080; margin-right: 8px;"></i> Más frecuente en mujeres de mediana edad</li>
+                                <li><i class="fas fa-check" style="color: #008080; margin-right: 8px;"></i> Síntomas obstructivos: tos, sibilancias, disnea (a veces confundido con asma)</li>
+                                <li><i class="fas fa-check" style="color: #008080; margin-right: 8px;"></i> TC: múltiples nódulos pulmonares bilaterales</li>
+                                <li><i class="fas fa-check" style="color: #008080; margin-right: 8px;"></i> Manejo: observación o resección de lesiones dominantes</li>
+                            </ul>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: SÍNDROMES PARANEOPLÁSICOS -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-bolt"></i></div>
+                            <h2>Síndromes Paraneoplásicos <span>Manifestaciones hormonales</span></h2>
+                        </div>
+                        
+                        <p>Los tumores carcinoides pueden secretar hormonas y péptidos bioactivos, causando síndromes clínicos característicos, aunque son menos frecuentes que en los tumores neuroendocrinos gastrointestinales [citation:3][citation:2].</p>
+                        
+                        <div class="syndrome-grid">
+                            <div class="syndrome-card">
+                                <div class="syndrome-icon"><i class="fas fa-heartbeat"></i></div>
+                                <h4>Síndrome Carcinoide</h4>
+                                <p>Rubor facial (flushing), diarrea acuosa, broncoespasmo y, en casos avanzados, enfermedad cardíaca derecha (fibrosis endocárdica).</p>
+                                <div class="syndrome-freq">Raro en carcinoides pulmonares (<5%)</div>
+                                <small>Por secreción de serotonina y otras aminas vasoactivas</small>
+                            </div>
+                            
+                            <div class="syndrome-card">
+                                <div class="syndrome-icon"><i class="fas fa-brain"></i></div>
+                                <h4>Síndrome de Cushing</h4>
+                                <p>Secreción ectópica de ACTH → hipercortisolismo. Cara de luna llena, obesidad troncular, debilidad proximal.</p>
+                                <div class="syndrome-freq">2-5% de los casos</div>
+                                <small>Más frecuente en varones y en tumores atípicos</small>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 15px;">Los análisis de sangre pueden mostrar niveles elevados de cromogranina A (marcador inespecífico) y, en casos seleccionados, enolasa neuroespecífica (NSE) [citation:2].</p>
+                    </section>
+
+                    <!-- SECCIÓN: DIAGNÓSTICO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-microscope"></i></div>
+                            <h2>Diagnóstico <span>Imagen y patología</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Pruebas diagnósticas:</h4>
+                        <table class="followup-table">
+                            <thead>
+                                <tr>
+                                    <th>Prueba</th>
+                                    <th>Descripción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Tomografía computarizada (TC)</strong></td>
+                                    <td>Gold standard diagnóstico. Los tumores suelen ser bien delimitados, esféricos u ovalados, a menudo con calcificaciones [citation:2].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Resonancia magnética (RMN)</strong></td>
+                                    <td>Útil para evaluar invasión de estructuras vecinas (mediastino, pared torácica).</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Gammagrafía con receptores de somatostatina (Octreoscan) / ⁶⁸Ga-DOTA-PET</strong></td>
+                                    <td>Visualiza hasta el 80% de los tumores primarios y es muy sensible para detectar metástasis. Expresión de receptores de somatostatina (SSTR) [citation:2][citation:3].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>18F-FDG PET</strong></td>
+                                    <td>Menos sensible en tumores de bajo grado. Útil en tumores atípicos o de mayor grado.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fibrobroncoscopia</strong></td>
+                                    <td>Esencial para tumores centrales (endobronquiales). Permite biopsia y resección endoscópica en casos seleccionados.</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Anatomía patológica + IHQ</strong></td>
+                                    <td>Confirmación con marcadores neuroendocrinos (cromogranina, sinaptofisina, CD56) y clasificación según mitosis y necrosis [citation:2].</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Biopsia percutánea guiada por TC</strong></td>
+                                    <td>Para tumores periféricos no accesibles por broncoscopia.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento <span>Enfoque multimodal</span></h2>
+                        </div>
+                        
+                        <h4 style="margin-bottom: 15px; color: var(--primary);">1. Enfermedad localizada (estadios I-III)</h4>
+                        <div class="treatment-carcinoid-grid">
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Cirugía</h4>
+                                <p>Tratamiento de elección. Objetivo: resección completa con preservación del mayor parénquima posible [citation:2].</p>
+                                <p><strong>Opciones:</strong> Resección en cuña, segmentectomía, lobectomía (dependiendo del tamaño y localización).</p>
+                                <p><strong>Linfadenectomía:</strong> Sistemática para estadificación adecuada [citation:2].</p>
+                                <span class="treatment-tag">Estándar de oro</span>
+                            </div>
+                            
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-wind"></i></div>
+                                <h4>Resección endobronquial</h4>
+                                <p>Alternativa en tumores endobronquiales pequeños (<2 cm), pediculados, con buena respuesta. Requiere seguimiento estricto [citation:6].</p>
+                                <span class="treatment-tag">Casos seleccionados</span>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 25px 0 15px; color: var(--primary);">2. Enfermedad avanzada/metastásica</h4>
+                        
+                        <div class="treatment-carcinoid-grid">
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-bullseye"></i></div>
+                                <h4>Análogos de somatostatina</h4>
+                                <p>Octreotida, lanreotida. Primera línea para control de síntomas del síndrome carcinoide. Pueden tener efecto antiproliferativo en tumores de bajo grado con receptores de somatostatina positivos [citation:2].</p>
+                                <span class="treatment-tag">Control sintomático</span>
+                            </div>
+                            
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-flask"></i></div>
+                                <h4>Quimioterapia</h4>
+                                <p>Reservada para tumores progresivos. Efectos limitados. El más utilizado: etopósido + platino. Temozolomida muestra beneficio clínico [citation:2].</p>
+                                <span class="treatment-tag">Segunda línea</span>
+                            </div>
+                            
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-radiation"></i></div>
+                                <h4>Terapia radiodirigida (PRRT)</h4>
+                                <p>Terapia con radionúclidos acoplados a análogos de somatostatina (ej. 177Lu-DOTATATE). Considerar en tumores con alta expresión de receptores [citation:2].</p>
+                                <span class="treatment-tag">En centros expertos</span>
+                            </div>
+                            
+                            <div class="treatment-carcinoid-item">
+                                <div class="treatment-carcinoid-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                <h4>Terapias locorregionales</h4>
+                                <p>Resección de metástasis hepáticas, radiofrecuencia, quimioembolización. Considerar siempre que sea posible con intención curativa [citation:2].</p>
+                                <span class="treatment-tag">Metástasis hepáticas</span>
+                            </div>
+                        </div>
+                        
+                        <p style="margin-top: 15px;"><strong>Inmunoterapia y terapias emergentes:</strong> En estudio para tumores avanzados. Algunos tumores carcinoides pueden beneficiarse de terapias agnósticas según perfil molecular [citation:3].</p>
+                    </section>
+
+                    <!-- SECCIÓN: PRONÓSTICO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Pronóstico <span>Supervivencia según tipo</span></h2>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin-bottom: 25px;">
+                            <div class="stat-item">
+                                <div class="stat-number">87-100%</div>
+                                <div class="stat-label">SV5 años - Típico</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">56-75%</div>
+                                <div class="stat-label">SV5 años - Atípico</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">~30%</div>
+                                <div class="stat-label">Metástasis - Atípico</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number"><5%</div>
+                                <div class="stat-label">Metástasis - Típico</div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="color: var(--primary); margin-bottom: 10px;">Factores pronósticos:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-plus-circle"></i> <strong>Tipo histológico:</strong> El factor más importante. Carcinoide típico tiene pronóstico excelente; atípico, intermedio.</li>
+                            <li><i class="fas fa-plus-circle"></i> <strong>Estadio al diagnóstico:</strong> Presencia de metástasis ganglionares o a distancia empeora el pronóstico [citation:2].</li>
+                            <li><i class="fas fa-plus-circle"></i> <strong>Resección completa (R0):</strong> Factor pronóstico independiente crucial.</li>
+                            <li><i class="fas fa-plus-circle"></i> <strong>Ki67:</strong> Correlacionado con el grado tumoral, aunque no forma parte de los criterios diagnósticos formales en pulmón (a diferencia de tumores gastrointestinales) [citation:6].</li>
+                        </ul>
+                    </section>
+
+                    <!-- SECCIÓN: SEGUIMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-calendar-check"></i></div>
+                            <h2>Seguimiento <span>Vigilancia a largo plazo</span></h2>
+                        </div>
+                        
+                        <p>Los tumores carcinoides pueden recidivar tardíamente, incluso después de 10 años. Se recomienda seguimiento prolongado [citation:2].</p>
+                        
+                        <h4 style="margin: 15px 0 10px; color: var(--primary);">Plan de seguimiento recomendado:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar"></i> <strong>TC de tórax:</strong> Cada 3-6 meses inicialmente, luego anual dependiendo del grado y estadio.</li>
+                            <li><i class="fas fa-calendar"></i> <strong>Marcadores tumorales:</strong> Cromogranina A en casos con elevación inicial.</li>
+                            <li><i class="fas fa-calendar"></i> <strong>Gammagrafía con receptores de somatostatina / ⁶⁸Ga-DOTA-PET:</strong> En enfermedad metastásica conocida o sospecha de recurrencia.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <!-- TARJETA DEL MÉDICO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Registro Médico: 123456789</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL ESPECIAL CARCINOIDE -->
+                    <div class="info-panel carcinoid-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-microscope"></i> Datos Clave Carcinoide
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Localización</span>
+                                <span style="color: #DAA520; font-weight: 700;">Central (80%) vs Periférico (20%)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Síndrome carcinoide</span>
+                                <span style="color: #DAA520; font-weight: 700;"><5%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <span>Asociación MEN1</span>
+                                <span style="color: #DAA520; font-weight: 700;">~5%</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>Multifocalidad</span>
+                                <span style="color: #DAA520; font-weight: 700;">En DIPNECH</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-carcinoid" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación personalizada
+                        </a>
+                    </div>
+
+                    <!-- GLOSARIO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">NET</span>
+                            <span class="definition">Neuroendocrine Tumor</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">DIPNECH</span>
+                            <span class="definition">Hiperplasia neuroendocrina difusa idiopática</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">PRRT</span>
+                            <span class="definition">Terapia con radionúclidos</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">SSTR</span>
+                            <span class="definition">Receptor de somatostatina</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">CgA</span>
+                            <span class="definition">Cromogranina A</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">MEN1</span>
+                            <span class="definition">Neoplasia endocrina múltiple tipo 1</span>
+                        </div>
+                    </div>
+
+                    <!-- RECURSOS DE APOYO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Asociaciones
+                        </div>
+                        <p style="margin-bottom: 15px;">Organizaciones especializadas:</p>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>ENETS</strong>
+                                <small style="color: var(--text-light); display: block;">European Neuroendocrine Tumor Society</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>NANETS</strong>
+                                <small style="color: var(--text-light); display: block;">North American Neuroendocrine Tumor Society</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CTA ESPECIAL -->
+                    <div class="info-panel" style="background: linear-gradient(135deg, #008080 0%, #006D77 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-lungs" style="font-size: 3rem; margin-bottom: 15px; color: #DAA520;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Tumor carcinoide?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">Manejo multidisciplinario esencial. Consulte a un especialista con experiencia.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: #DAA520; color: #006D77; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes sobre Tumores Carcinoides del Pulmón</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Cuál es la diferencia entre carcinoide típico y atípico?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La diferencia principal es histológica y se basa en el número de mitosis y la presencia de necrosis. El carcinoide típico tiene <2 mitosis por 2 mm² y no presenta necrosis. El atípico tiene 2-10 mitosis por 2 mm² y puede tener necrosis focal puntiforme. El típico tiene un comportamiento más indolente y mejor pronóstico, mientras que el atípico tiene mayor potencial metastásico [citation:6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Los tumores carcinoides producen síntomas?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Sí, pueden producir síntomas locales (obstrucción bronquial: tos, hemoptisis, neumonías recurrentes) y, en menos del 5% de los casos, síndromes paraneoplásicos por secreción hormonal. El síndrome carcinoide (rubor, diarrea) es raro en tumores pulmonares a diferencia de los gastrointestinales, porque las sustancias vasoactivas se metabolizan en el hígado antes de llegar a la circulación sistémica. El síndrome de Cushing por ACTH ectópica puede ocurrir en 2-5% de los casos [citation:3][citation:2].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Cuál es el tratamiento de elección?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La cirugía con resección completa (R0) es el tratamiento de elección para los tumores localizados. El objetivo es extirpar el tumor preservando la mayor cantidad posible de parénquima pulmonar. Se recomienda realizar también linfadenectomía para una adecuada estadificación. En casos seleccionados de tumores endobronquiales pequeños y pediculados, la resección endoscópica puede ser una alternativa, aunque requiere seguimiento estrecho [citation:2][citation:6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Qué es el DIPNECH?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">DIPNECH son las siglas en inglés de Hiperplasia Neuroendocrina Pulmonar Idiopática Difusa. Es una condición precursora poco frecuente en la que hay una proliferación difusa de células neuroendocrinas en las vías respiratorias pequeñas. Puede progresar a la formación de tumorlets (<5 mm) y carcinoides invasivos. Es más común en mujeres de mediana edad y puede causar síntomas obstructivos (tos, sibilancias) que a menudo se confunden con asma. El manejo incluye observación y, en casos sintomáticos, resección de lesiones dominantes [citation:3][citation:6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right" style="margin-right: 10px;"></i> ¿Qué opciones hay para enfermedad metastásica?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">En enfermedad avanzada o metastásica, las opciones incluyen: análogos de somatostatina (octreotida, lanreotida) para control de síntomas y efecto antiproliferativo en tumores con receptores de somatostatina; terapia con radionúclidos (PRRT) como 177Lu-DOTATATE; quimioterapia (etopósido+platino o temozolomida) para tumores progresivos; y terapias locorregionales para metástasis hepáticas (resección, radiofrecuencia, quimioembolización). La inmunoterapia y las terapias dirigidas están en investigación [citation:2][citation:3].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        // Script para el Header (Scroll y Menú Móvil)
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            // Mostrar/ocultar botón volver arriba
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        // Menú móvil
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuBtn.classList.toggle('fa-times');
+        });
+
+        // Botón volver arriba
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cerrar menú al hacer clic en un enlace (para móvil)
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        // Hacer que los details se abran/cierren suavemente
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
