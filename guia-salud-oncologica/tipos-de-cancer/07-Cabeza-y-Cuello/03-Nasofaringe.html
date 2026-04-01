@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Cáncer de Nasofaringe: Información completa sobre carcinoma nasofaríngeo, asociación con virus Epstein-Barr (VEB), tipos histológicos (queratinizante, no queratinizante, indiferenciado), clasificación WHO, estadificación TNM, tratamiento con quimiorradioterapia, radioterapia de intensidad modulada (IMRT), inmunoterapia | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="cáncer de nasofaringe, carcinoma nasofaríngeo, VEB, virus Epstein-Barr, tipo III, quimiorradioterapia, IMRT, nasofaringe, tumores de cabeza y cuello, oncología">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Cáncer de Nasofaringe | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre cáncer de nasofaringe: epidemiología, asociación con VEB, clasificación histológica, estadificación y tratamiento con quimiorradioterapia.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Cáncer de Nasofaringe | Dr. Ariel Calaña Sabina</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Cáncer de Nasofaringe - Verde Oliva / Dorado */
+            --np-green: #6B8E23;
+            --np-green-dark: #556B2F;
+            --np-green-light: #9ACD32;
+            --np-gold: #D4AF37;
+            --np-olive: #808000;
+            --np-sand: #F5F5DC;
+            --np-terracotta: #CD853F;
+            
+            --gradient-np: linear-gradient(135deg, #556B2F 0%, #6B8E23 100%);
+            --gradient-np-soft: linear-gradient(135deg, #F5F5DC 0%, #FFFFFF 100%);
+            --gradient-ebv: linear-gradient(135deg, #D4AF37 0%, #CD853F 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #FDFBF5; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* HEADER */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+        header.scrolled { padding: 5px 0; background: rgba(255, 255, 255, 0.98); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--np-green); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--text-dark); font-size: 0.85rem; font-weight: 500; }
+        .dropdown-content a:hover { background: var(--light); color: var(--np-green); padding-left: 25px; }
+        .dropdown-content a.active { background: var(--light); color: var(--accent); border-left: 3px solid var(--accent); }
+        .btn-header { background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); display: flex; align-items: center; gap: 8px; }
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+        
+        /* HERO ESPECÍFICO PARA CÁNCER DE NASOFARINGE */
+        .hero-np {
+            background: var(--gradient-np);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-np::before {
+            content: '🌏 🎗️ 🌏';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin-bottom: 15px; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+        .hero-content h1 span { color: var(--np-gold); position: relative; display: inline-block; }
+        .hero-content .subtitle { font-size: 1.5rem; opacity: 0.95; font-weight: 300; margin-bottom: 20px; }
+        .hero-badge-np {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid var(--np-gold);
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-badge-np i { color: var(--np-gold); }
+        
+        /* Breadcrumb */
+        .breadcrumb { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.02); margin-bottom: 30px; }
+        .breadcrumb-list { display: flex; align-items: center; gap: 10px; list-style: none; flex-wrap: wrap; }
+        
+        /* Quick Summary */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid var(--np-green);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(107, 142, 35, 0.2);
+        }
+        .summary-icon { width: 60px; height: 60px; background: rgba(107, 142, 35, 0.1); color: var(--np-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 15px; }
+        .summary-value { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--np-green); }
+        
+        /* Content Grid */
+        .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .section-card { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 30px; margin-bottom: 30px; transition: var(--transition); border-top: 6px solid var(--np-green); }
+        .section-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+        .section-card.np-highlight { background: linear-gradient(135deg, #F5F5DC 0%, #ffffff 100%); border: 2px solid var(--np-green); }
+        .section-title { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #f0f0f0; }
+        .section-title-icon { width: 50px; height: 50px; background: rgba(107, 142, 35, 0.1); color: var(--np-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--primary); margin: 0; }
+        .section-title h2 span { font-size: 1rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 3px; }
+        
+        /* EBV Card */
+        .ebv-card {
+            background: var(--gradient-ebv);
+            color: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .ebv-card i { font-size: 3rem; margin-bottom: 15px; }
+        
+        /* Classification Cards */
+        .class-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .class-card {
+            background: linear-gradient(135deg, var(--np-green) 0%, var(--np-green-light) 100%);
+            color: white;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .class-card:hover { transform: translateY(-3px); }
+        .class-card h4 { color: var(--np-gold); margin-bottom: 10px; }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .stat-item { background: var(--light); padding: 20px; border-radius: 15px; text-align: center; border-left: 4px solid var(--np-green); }
+        .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--np-green); line-height: 1; margin-bottom: 5px; }
+        
+        /* Feature List */
+        .feature-list { list-style: none; }
+        .feature-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list i { color: var(--np-green); font-size: 1.1rem; margin-top: 3px; }
+        
+        /* Staging Table */
+        .staging-table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 15px; overflow: hidden; }
+        .staging-table th { background: var(--np-green); color: white; padding: 15px; font-weight: 600; text-align: center; }
+        .staging-table td { padding: 12px 15px; border-bottom: 1px solid #f0f0f0; background: white; }
+        .staging-table tr:hover td { background: #F5F5DC; }
+        
+        /* Treatment Grid */
+        .treatment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .treatment-card { background: var(--light); border-radius: 15px; padding: 25px 20px; transition: var(--transition); border: 1px solid rgba(107, 142, 35, 0.2); }
+        .treatment-card:hover { transform: translateY(-5px); border-color: var(--np-green); }
+        .treatment-icon { width: 50px; height: 50px; background: white; color: var(--np-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 15px; }
+        .treatment-tag { display: inline-block; padding: 4px 12px; background: rgba(107, 142, 35, 0.1); color: var(--np-green); border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-top: 10px; }
+        
+        /* Sidebar */
+        .sidebar { position: sticky; top: 100px; }
+        .info-panel { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 25px; margin-bottom: 25px; border-top: 4px solid var(--np-green); }
+        .info-panel.np-panel { background: var(--gradient-np); color: white; border-top: none; }
+        .info-panel.np-panel .info-panel-title { color: white; border-bottom-color: rgba(255,255,255,0.2); }
+        .info-panel-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: var(--primary); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+        .doctor-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid var(--np-green); margin-bottom: 15px; }
+        .btn-whatsapp-sidebar { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; width: 100%; transition: var(--transition); }
+        .btn-np { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--np-green); padding: 15px 25px; border-radius: 50px; font-weight: 700; width: 100%; }
+        .glossary-term { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--np-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; opacity: 0; visibility: hidden; transition: var(--transition); cursor: pointer; z-index: 100; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        footer { background: var(--primary); color: white; padding: 60px 0 30px; margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .copyright { text-align: center; opacity: 0.7; font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        @media (max-width: 992px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .class-grid { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; top: 75px; left: -100%; width: 100%; background: white; flex-direction: column; padding: 40px; transition: 0.4s; }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        .bep-box { background: #F5F5DC; padding: 20px; border-radius: 15px; margin: 20px 0; border-left: 4px solid var(--np-green); }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } }
+        details { background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer; margin-bottom: 10px; }
+        summary { font-weight: 600; color: var(--primary); }
+        .ebv-fact { background: #F5F5DC; padding: 15px; border-radius: 10px; margin: 10px 0; border-left: 4px solid var(--np-gold); }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text"><span class="logo-name">Dr. Ariel Calaña</span><span class="logo-specialty">Oncólogo Clínico</span></div>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active"><i class="fas fa-book-medical"></i> Blog Oncológico</a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="cancer-intestino-delgado.html"><i class="fas fa-stethoscope"></i> Cáncer de Intestino Delgado</a>
+                            <a href="cancer-pancreas.html"><i class="fas fa-pancreas"></i> Cáncer de Páncreas</a>
+                            <a href="tumores-neuroendocrinos-pancreaticos.html"><i class="fas fa-hormone"></i> Tumores Neuroendocrinos Pancreáticos</a>
+                            <a href="cancer-cavidad-oral.html"><i class="fas fa-tooth"></i> Cáncer de Cavidad Oral</a>
+                            <a href="cancer-orofaringe.html"><i class="fas fa-virus"></i> Cáncer de Orofaringe</a>
+                            <a href="cancer-nasofaringe.html" class="active"><i class="fas fa-head-side-virus"></i> Cáncer de Nasofaringe</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link"><i class="fas fa-stethoscope"></i> Medicina General</a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank"><i class="fab fa-whatsapp"></i> <span>Agendar Cita</span></a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-np">
+        <div class="container">
+            <div class="hero-content">
+                <h1>CÁNCER DE <span>NASOFARINGE</span></h1>
+                <p class="subtitle">El tumor asociado al virus Epstein-Barr</p>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Carcinoma nasofaríngeo con <strong>fuerte asociación al VEB</strong>, alta incidencia en el sudeste asiático y norte de África. <strong>Quimiorradioterapia</strong> como pilar del tratamiento curativo con excelentes resultados en estadios localmente avanzados.</p>
+                <div class="hero-badge-np"><i class="fas fa-virus"></i> VEB asociado >90% <i class="fas fa-chart-line"></i> Endémico en Asia <i class="fas fa-radiation"></i> IMRT + QT</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="breadcrumb"><div class="container"><ul class="breadcrumb-list"><li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Tipos de Cáncer</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Cáncer de Cabeza y Cuello</a></li><li><i class="fas fa-chevron-right"></i></li><li>Cáncer de Nasofaringe</li></ul></div></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="quick-summary">
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-globe-asia"></i></div><div class="summary-label">Alta incidencia</div><div class="summary-value">Sudeste Asiático</div><div class="summary-desc">20-30 casos/100,000 hab/año</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-virus"></i></div><div class="summary-label">VEB asociado</div><div class="summary-value">>90%</div><div class="summary-desc">tipo no queratinizante</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-chart-line"></i></div><div class="summary-label">SV5 años localizado</div><div class="summary-value">80-90%</div><div class="summary-desc">con quimiorradioterapia</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-microscope"></i></div><div class="summary-label">Tipo histológico</div><div class="summary-value">Tipo III</div><div class="summary-desc">No queratinizante indiferenciado</div></div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-question-circle"></i></div><h2>¿Qué es? <span>El cáncer de la rinofaringe</span></h2></div>
+                        <p>El <strong>cáncer de nasofaringe</strong> es una neoplasia maligna que se origina en el epitelio de la <strong>nasofaringe</strong> (porción superior de la faringe, detrás de la cavidad nasal). Es un tumor <strong>único</strong> por su <strong>distribución geográfica característica</strong>, su <strong>fuerte asociación con el virus Epstein-Barr (VEB)</strong> y su <strong>excelente respuesta a la quimiorradioterapia</strong>. A diferencia de otros cánceres de cabeza y cuello, la cirugía tiene un papel limitado debido a la localización anatómica compleja y la alta radiosensibilidad del tumor [8].</p>
+                        
+                        <div class="ebv-card">
+                            <i class="fas fa-virus"></i>
+                            <h3 style="color: white;">Virus Epstein-Barr (VEB)</h3>
+                            <p>Más del <strong>90% de los carcinomas nasofaríngeos</strong> no queratinizantes están asociados a infección por VEB. La <strong>carga viral de ADN-VEB en plasma</strong> es un marcador pronóstico independiente y se utiliza para monitorizar respuesta al tratamiento [8].</p>
+                        </div>
+                        
+                        <div class="quote-block" style="background: #F5F5DC; padding: 20px; border-radius: 15px; margin-top: 20px;"><i class="fas fa-quote-right"></i><p>El cáncer de nasofaringe tiene una <strong>distribución geográfica única</strong>: es endémico en el <strong>sudeste asiático</strong> (sur de China, Hong Kong, Singapur), <strong>norte de África</strong> y <strong>Groenlandia</strong>. En estas regiones, la incidencia alcanza 20-30 casos por 100,000 habitantes por año, mientras que en Europa y América es <1 caso por 100,000 [8].</p><div class="quote-author">— Guías NCCN 2026, ESMO 2025</div></div>
+                    </section>
+
+                    <section class="section-card np-highlight">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-microscope"></i></div><h2>Clasificación Histológica <span>WHO 2019</span></h2></div>
+                        <div class="class-grid">
+                            <div class="class-card"><h4>TIPO I</h4><p>Carcinoma de células escamosas <strong>queratinizante</strong></p><span style="font-size: 0.7rem; opacity: 0.8;">Menos común, asociado a tabaco</span></div>
+                            <div class="class-card"><h4>TIPO II</h4><p>Carcinoma de células escamosas <strong>no queratinizante</strong></p><span style="font-size: 0.7rem; opacity: 0.8;">Asociado a VEB</span></div>
+                            <div class="class-card"><h4>TIPO III</h4><p>Carcinoma <strong>indiferenciado</strong> (linfoepitelioma)</p><span style="font-size: 0.7rem; opacity: 0.8;">Más frecuente, >90% VEB+</span></div>
+                        </div>
+                        <div class="bep-box"><i class="fas fa-info-circle"></i> <strong>Importancia pronóstica:</strong> Los tipos <strong>II y III (no queratinizantes)</strong> tienen <strong>mejor respuesta a quimiorradioterapia</strong> y mejor pronóstico que el tipo I queratinizante, que se comporta más similar a otros carcinomas de cabeza y cuello [8].</div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-exclamation-triangle"></i></div><h2>Factores de Riesgo <span>Genética, VEB y ambiente</span></h2></div>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-virus"></i></div><h4>Virus Epstein-Barr (VEB)</h4><p>Factor etiológico principal. ADN-VEB detectable en >90% de tumores no queratinizantes. Carga viral plasmática marcador pronóstico [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-dna"></i></div><h4>Predisposición genética</h4><p>Asociación con HLA (haplotipos específicos). Mayor incidencia en poblaciones de origen asiático y del norte de África.</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-utensils"></i></div><h4>Factores dietéticos</h4><p>Consumo de pescado salado (ricos en nitrosaminas) en poblaciones endémicas. Pescado fermentado (Cantón, China).</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-smoking"></i></div><h4>Tabaco y alcohol</h4><p>Factores de riesgo, especialmente para el tipo I queratinizante. Menor impacto que en otros cánceres de cabeza y cuello [8].</p></div>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-stethoscope"></i></div><h2>Síntomas y Diagnóstico <span>Presentación clínica característica</span></h2></div>
+                        <h4 style="margin: 0 0 10px; color: var(--np-green);">Síntomas de alarma:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Masa cervical</strong> (adenopatía) indolora, frecuentemente el primer síntoma (60-70% de los casos).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Obstrucción nasal</strong> unilateral, epistaxis, secreción nasal sanguinolenta.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Hipoacusia</strong> (pérdida auditiva) por disfunción tubárica o derrame seroso del oído medio.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Acúfenos</strong> (zumbido de oídos).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Otalgia refleja</strong> (dolor de oído sin patología ótica).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Diplopía</strong> (visión doble) por afectación de pares craneales (III, IV, VI) debido a extensión a base de cráneo.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Cefalea</strong> (dolor de cabeza) por invasión intracraneal.</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--np-green);">Estudios diagnósticos:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Nasofibrolaringoscopia</strong> con biopsia del tumor primario (fosa de Rosenmüller es la localización más frecuente).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>RMN de cabeza y cuello con contraste</strong>: Gold standard para evaluar extensión local, invasión de base de cráneo, espacio parafaríngeo y afectación de pares craneales.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>TC de cuello y tórax</strong>: Evaluación de adenopatías cervicales y metástasis pulmonares.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>PET-TC</strong>: Para estadificación completa en estadios avanzados.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>ADN-VEB en plasma</strong>: Marcador pronóstico y para monitorización post-tratamiento. Valores >1500 copias/mL se asocian a peor pronóstico [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Estudio de pares craneales</strong>: Evaluación neurológica completa ante sospecha de extensión intracraneal.</li>
+                        </ul>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Estadificación TNM (AJCC 8ª edición) <span>Clasificación específica</span></h2></div>
+                        <table class="staging-table">
+                            <thead><tr><th>Estadio</th><th>Descripción</th><th>Supervivencia 5 años</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>I</strong></td><td>T1 N0 (tumor confinado a nasofaringe, sin ganglios)</td><td>>90%</td></tr>
+                                <tr><td><strong>II</strong></td><td>T1 N1 / T2 N0-1 (extensión a orofaringe o fosas nasales, ganglio unilateral ≤6 cm)</td><td>80-85%</td></tr>
+                                <tr><td><strong>III</strong></td><td>T3 N0-2 (invasión de senos paranasales, base de cráneo) / T1-3 N2</td><td>70-75%</td></tr>
+                                <tr><td><strong>IVA</strong></td><td>T4 N0-2 (invasión intracraneal, pares craneales, fosa infratemporal, hipofaringe, órbita) / N3 (ganglio >6 cm)</td><td>50-60%</td></tr>
+                                <tr><td><strong>IVB</strong></td><td>M1 (metástasis a distancia)</td><td>20-30%</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="ebv-fact"><i class="fas fa-dna"></i> <strong>Marcador pronóstico clave:</strong> El <strong>ADN-VEB en plasma</strong> es un factor pronóstico independiente. La <strong>negativización del ADN-VEB</strong> post-tratamiento se asocia a excelente pronóstico, mientras que su persistencia o elevación predice recaída [8].</div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-syringe"></i></div><h2>Tratamiento <span>Radioterapia como pilar fundamental</span></h2></div>
+                        
+                        <h4 style="margin: 0 0 10px; color: var(--np-green);">Estadios tempranos (I-II):</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i></div><h4>Radioterapia exclusiva</h4><p><strong>IMRT (Radioterapia de Intensidad Modulada)</strong> es el estándar. Dosis: 66-70 Gy al tumor primario y adenopatías, 50-60 Gy a áreas de riesgo. Excelentes tasas de control local (>90%) [8].</p><span class="treatment-tag">Estándar</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i><i class="fas fa-flask"></i></div><h4>Quimiorradioterapia</h4><p>En estadio II con factores de riesgo (nivel nodal alto, carga viral elevada) puede considerarse quimioterapia concurrente con cisplatino [8].</p></div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--np-green);">Estadios localmente avanzados (III-IVA):</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i><i class="fas fa-flask"></i></div><h4>Quimiorradioterapia concurrente</h4><p><strong>Estándar de cuidado</strong>. Esquema: <strong>Cisplatino 100 mg/m² cada 3 semanas</strong> durante IMRT (70 Gy). Mejora control locorregional y supervivencia [8].</p><span class="treatment-tag">Estándar</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-flask"></i><i class="fas fa-chart-line"></i></div><h4>Quimioterapia de inducción</h4><p>Alternativa en tumores voluminosos (T4 o N3). Esquemas: <strong>TPF (docetaxel, cisplatino, 5-FU)</strong> o <strong>gemcitabina + cisplatino</strong> seguido de quimiorradioterapia. Mejora control a distancia [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i></div><h4>Radioterapia adyuvante</h4><p>En casos seleccionados tras quimioterapia de inducción o en pacientes con respuesta incompleta.</p></div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--np-green);">Enfermedad metastásica o recurrente:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-vial"></i></div><h4>Inmunoterapia</h4><p><strong>Pembrolizumab</strong> y <strong>nivolumab</strong> aprobados en segunda línea. Alta tasa de respuesta en tumores VEB+. <strong>Primera línea:</strong> pembrolizumab + quimioterapia si CPS ≥1 [1][8].</p><span class="treatment-tag">Revolución</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-flask"></i></div><h4>Quimioterapia</h4><p>Esquema <strong>gemcitabina + cisplatino</strong> es el estándar en primera línea (estudio GEM-2016). Alternativa: capecitabina, carboplatino + paclitaxel [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-pills"></i></div><h4>Terapias dirigidas</h4><p><strong>Cetuximab</strong> (anti-EGFR) en combinación con quimioterapia. Limitado por toxicidad.</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i></div><h4>Radioterapia en oligometástasis</h4><p>Radioterapia estereotáxica (SBRT) en metástasis hepáticas, pulmonares o cerebrales limitadas.</p></div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: var(--np-green);"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ <strong>Pembrolizumab</strong> en primera línea para enfermedad metastásica/recurrente con CPS ≥1 [1].<br>
+                            ✔ <strong>ADN-VEB en plasma</strong> como marcador de respuesta precoz: la negativización a las 4-6 semanas post-tratamiento predice excelente pronóstico.<br>
+                            ✔ <strong>IMRT de intensidad modulada volumétrica (VMAT)</strong> como estándar para reducir toxicidad (xerostomía, disfagia).<br>
+                            ✔ Nuevos inhibidores de PD-1 en desarrollo (tislelizumab, camrelizumab) con alta actividad en cáncer nasofaríngeo.</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Pronóstico y Seguimiento <span>Seguimiento con ADN-VEB</span></h2></div>
+                        <div class="stats-grid">
+                            <div class="stat-item"><div class="stat-number">>90%</div><div class="stat-label">SV5 años Estadio I</div></div>
+                            <div class="stat-item"><div class="stat-number">80-85%</div><div class="stat-label">SV5 años Estadio II</div></div>
+                            <div class="stat-item"><div class="stat-number">70-75%</div><div class="stat-label">SV5 años Estadio III</div></div>
+                            <div class="stat-item"><div class="stat-number">50-60%</div><div class="stat-label">SV5 años Estadio IVA</div></div>
+                        </div>
+                        <p><strong>Factores pronósticos favorables:</strong> Tipo histológico no queratinizante (II/III), estadio temprano, negativización del ADN-VEB post-tratamiento, buen estado funcional, edad <50 años [8].</p>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--np-green);">Seguimiento recomendado [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>Primeros 2 años:</strong> Evaluación clínica y nasofibrolaringoscopia cada 1-3 meses. <strong>ADN-VEB en plasma</strong> cada 3-6 meses.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Años 3-5:</strong> Cada 3-6 meses.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Más allá de 5 años:</strong> Cada 6-12 meses.</li>
+                            <li><i class="fas fa-camera"></i> <strong>Estudios de imagen:</strong> RMN de cabeza y cuello a los 3-6 meses post-tratamiento (basal), luego según sospecha clínica o elevación de ADN-VEB.</li>
+                            <li><i class="fas fa-dna"></i> <strong>Monitorización ADN-VEB:</strong> Elevación persistente o reaparición sugiere recaída (sensibilidad >90%).</li>
+                            <li><i class="fas fa-microphone-alt"></i> <strong>Rehabilitación:</strong> Manejo de xerostomía (sequedad bucal), disfagia, hipoacusia, trismus.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-user-md"></i> Especialista</div>
+                        <div style="text-align: center;">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem;">Experiencia en tumores de cabeza y cuello, manejo de cáncer nasofaríngeo y VEB.</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank"><i class="fab fa-whatsapp"></i> Consultar especialista</a>
+                        </div>
+                    </div>
+
+                    <div class="info-panel np-panel">
+                        <div class="info-panel-title"><i class="fas fa-stethoscope"></i> Datos Clave</div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>VEB en plasma</span><span style="font-weight: 700;">Marcador pronóstico</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>IMRT</span><span style="font-weight: 700;">Radioterapia estándar</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>Tipo III</span><span style="font-weight: 700;">Más frecuente (VEB+)</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0;"><span>Gemcitabina + Cisplatino</span><span style="font-weight: 700;">1ª línea metastásico</span></div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-np" target="_blank"><i class="fab fa-whatsapp"></i> Evaluación personalizada</a>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-book-open"></i> Glosario</div>
+                        <div class="glossary-term"><span class="term">VEB</span><span class="definition">Virus Epstein-Barr (HHV-4)</span></div>
+                        <div class="glossary-term"><span class="term">IMRT</span><span class="definition">Radioterapia de Intensidad Modulada</span></div>
+                        <div class="glossary-term"><span class="term">Fosa de Rosenmüller</span><span class="definition">Localización más frecuente</span></div>
+                        <div class="glossary-term"><span class="term">TPF</span><span class="definition">Docetaxel, Cisplatino, 5-FU</span></div>
+                        <div class="glossary-term"><span class="term">Xerostomía</span><span class="definition">Sequedad bucal post-radioterapia</span></div>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-globe-asia"></i> Epidemiología</div>
+                        <p><strong>Regiones de alta incidencia:</strong></p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li>Sudeste Asiático (sur de China, Hong Kong)</li>
+                            <li>Norte de África (Argelia, Marruecos, Túnez)</li>
+                            <li>Groenlandia (población Inuit)</li>
+                            <li>Pacífico Sur</li>
+                        </ul>
+                        <p style="margin-top: 15px;"><strong>Incidencia:</strong> 20-30/100,000 en zonas endémicas vs <1/100,000 en Europa/América [8].</p>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-syringe"></i> Vacunación VEB</div>
+                        <p style="font-size: 0.9rem;">Actualmente <strong>no existe vacuna aprobada contra VEB</strong>, pero hay múltiples candidatos vacunales en desarrollo clínico. La prevención se basa en evitar factores de riesgo y diagnóstico precoz.</p>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="section-card">
+                <div class="section-title"><div class="section-title-icon"><i class="fas fa-question"></i></div><h2>Preguntas Frecuentes</h2></div>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cuál es la relación entre el VEB y el cáncer de nasofaringe?</summary><p>El <strong>virus Epstein-Barr (VEB)</strong> es el factor etiológico principal en más del <strong>90% de los carcinomas nasofaríngeos no queratinizantes</strong>. El ADN viral se integra en las células epiteliales de la nasofaringe, activando oncogenes e inactivando genes supresores de tumores. La <strong>carga viral de ADN-VEB en plasma</strong> es un marcador pronóstico independiente y se utiliza para monitorizar respuesta al tratamiento [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cuáles son los síntomas iniciales del cáncer de nasofaringe?</summary><p>El síntoma más frecuente es una <strong>masa cervical indolora</strong> (60-70% de los casos). Otros síntomas incluyen: <strong>obstrucción nasal unilateral</strong>, <strong>epistaxis</strong> (sangrado nasal), <strong>hipoacusia</strong> (pérdida auditiva) por derrame seroso del oído medio, <strong>acúfenos</strong>, <strong>otalgia refleja</strong> y, en casos avanzados, <strong>diplopía</strong> (visión doble) o <strong>cefalea</strong> por invasión de base de cráneo [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cómo se trata el cáncer de nasofaringe?</summary><p>El tratamiento se basa en <strong>radioterapia de intensidad modulada (IMRT)</strong>. En <strong>estadios tempranos (I)</strong> se utiliza radioterapia exclusiva. En <strong>estadios localmente avanzados (II-IVA)</strong>, el estándar es la <strong>quimiorradioterapia concurrente</strong> con cisplatino. En tumores voluminosos (T4/N3) puede indicarse <strong>quimioterapia de inducción</strong> seguida de quimiorradioterapia. En <strong>enfermedad metastásica</strong>, la <strong>inmunoterapia</strong> (pembrolizumab) y la quimioterapia con gemcitabina + cisplatino son las opciones principales [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué es el ADN-VEB en plasma y para qué sirve?</summary><p>El <strong>ADN-VEB en plasma</strong> es una prueba que mide la cantidad de material genético del virus Epstein-Barr circulante en sangre. Es un <strong>marcador pronóstico independiente</strong> en cáncer de nasofaringe. Valores elevados al diagnóstico se asocian a peor pronóstico. La <strong>negativización del ADN-VEB post-tratamiento</strong> (a las 4-6 semanas) predice excelente pronóstico, mientras que su <strong>persistencia o reaparición</strong> sugiere recaída con alta sensibilidad (>90%) [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico del cáncer de nasofaringe?</summary><p>El pronóstico es <strong>excelente en estadios tempranos</strong> (supervivencia a 5 años >90%) y <strong>muy bueno en estadios localmente avanzados</strong> (70-80% con quimiorradioterapia). Los <strong>factores favorables</strong> incluyen: tipo histológico no queratinizante, estadio temprano, negativización del ADN-VEB post-tratamiento, y buen estado funcional. Los <strong>factores desfavorables</strong> son: tipo queratinizante, estadio IVB (metastásico), ADN-VEB persistentemente elevado [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué efectos secundarios tiene la radioterapia para cáncer de nasofaringe?</summary><p>La radioterapia de intensidad modulada (IMRT) ha reducido significativamente los efectos secundarios, pero pueden incluir: <strong>xerostomía</strong> (sequedad bucal), <strong>disfagia</strong> (dificultad para tragar), <strong>trismus</strong> (dificultad para abrir la boca), <strong>hipoacusia</strong> (pérdida auditiva), <strong>fibrosis cervical</strong>, <strong>hipotiroidismo</strong> y <strong>osteorradionecrosis</strong> (en casos extensos). La <strong>rehabilitación</strong> con logopedia, fisioterapia y cuidado odontológico es fundamental [9].</p></details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en tumores de cabeza y cuello, digestivos y neoplasias raras. Información basada en guías internacionales NCCN, ESMO y ASCO.</p>
+                    <div class="social-links" style="display: flex; gap: 15px; margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul><li><a href="#">Aviso legal</a></li><li><a href="#">Política de privacidad</a></li><li><a href="#">Términos de uso</a></li><li><a href="#">Contacto</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul><li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li><li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li><li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li></ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
+        });
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navMenu').classList.toggle('active'));
+        document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('navMenu').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
