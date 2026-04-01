@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Tumores Neuroendocrinos Pancreáticos (PNET): Información completa sobre insulinoma, gastrinoma, glucagonoma, VIPoma, somatostatinoma. Diagnóstico, síndromes paraneoplásicos, marcadores (cromogranina A), estadificación ENETS, tratamiento con análogos de somatostatina, everolimus, sunitinib, PRRT y cirugía | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="tumores neuroendocrinos pancreáticos, PNET, insulinoma, gastrinoma, síndrome de Zollinger-Ellison, glucagonoma, VIPoma, cromogranina A, análogos de somatostatina, everolimus, sunitinib, PRRT, NET, oncología endocrina">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Tumores Neuroendocrinos Pancreáticos | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre PNET: clasificación, síndromes hormonales, diagnóstico, estadificación y opciones terapéuticas actualizadas.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Tumores Neuroendocrinos Pancreáticos | Dr. Ariel Calaña Sabina</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Tumores Neuroendocrinos Pancreáticos - Verde Esperanza */
+            --net-green: #2E7D64;
+            --net-green-dark: #1B5E4A;
+            --net-green-light: #4CAF7A;
+            --net-emerald: #2E8B57;
+            --net-teal: #20B2AA;
+            --net-soft: #E8F5E9;
+            --net-gold: #FFD966;
+            
+            --gradient-net: linear-gradient(135deg, #1B5E4A 0%, #2E7D64 100%);
+            --gradient-net-soft: linear-gradient(135deg, #E8F5E9 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f5faf5; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* HEADER */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+        header.scrolled { padding: 5px 0; background: rgba(255, 255, 255, 0.98); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--net-green); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--text-dark); font-size: 0.85rem; font-weight: 500; }
+        .dropdown-content a:hover { background: var(--light); color: var(--net-green); padding-left: 25px; }
+        .dropdown-content a.active { background: var(--light); color: var(--accent); border-left: 3px solid var(--accent); }
+        .btn-header { background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); display: flex; align-items: center; gap: 8px; }
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+        
+        /* HERO ESPECÍFICO PARA PNET */
+        .hero-net {
+            background: var(--gradient-net);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-net::before {
+            content: '🌿 🎗️ 🌿';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin-bottom: 15px; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+        .hero-content h1 span { color: var(--net-gold); position: relative; display: inline-block; }
+        .hero-content .subtitle { font-size: 1.5rem; opacity: 0.95; font-weight: 300; margin-bottom: 20px; }
+        .hero-badge-net {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid var(--net-gold);
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-badge-net i { color: var(--net-gold); }
+        
+        /* Breadcrumb */
+        .breadcrumb { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.02); margin-bottom: 30px; }
+        .breadcrumb-list { display: flex; align-items: center; gap: 10px; list-style: none; flex-wrap: wrap; }
+        
+        /* Quick Summary */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid var(--net-green);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(46, 125, 100, 0.2);
+        }
+        .summary-icon { width: 60px; height: 60px; background: rgba(46, 125, 100, 0.1); color: var(--net-green); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 15px; }
+        .summary-value { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--net-green); }
+        
+        /* Content Grid */
+        .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .section-card { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 30px; margin-bottom: 30px; transition: var(--transition); border-top: 6px solid var(--net-green); }
+        .section-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+        .section-card.net-highlight { background: linear-gradient(135deg, #E8F5E9 0%, #ffffff 100%); border: 2px solid var(--net-green); }
+        .section-title { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #f0f0f0; }
+        .section-title-icon { width: 50px; height: 50px; background: rgba(46, 125, 100, 0.1); color: var(--net-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--primary); margin: 0; }
+        .section-title h2 span { font-size: 1rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 3px; }
+        
+        /* Syndrome Cards */
+        .syndrome-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .syndrome-card {
+            background: linear-gradient(135deg, var(--net-green) 0%, var(--net-green-light) 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            transition: var(--transition);
+        }
+        .syndrome-card:hover { transform: translateY(-5px); box-shadow: 0 15px 30px rgba(46, 125, 100, 0.3); }
+        .syndrome-icon { font-size: 2rem; color: var(--net-gold); margin-bottom: 10px; }
+        .syndrome-card h4 { color: white; margin-bottom: 10px; font-size: 1.2rem; }
+        .syndrome-tag { background: rgba(255, 255, 255, 0.2); padding: 4px 12px; border-radius: 50px; display: inline-block; font-size: 0.75rem; margin-top: 10px; }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .stat-item { background: var(--light); padding: 20px; border-radius: 15px; text-align: center; border-left: 4px solid var(--net-green); }
+        .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--net-green); line-height: 1; margin-bottom: 5px; }
+        
+        /* Feature List */
+        .feature-list { list-style: none; }
+        .feature-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list i { color: var(--net-green); font-size: 1.1rem; margin-top: 3px; }
+        
+        /* Staging Table */
+        .staging-table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 15px; overflow: hidden; }
+        .staging-table th { background: var(--net-green); color: white; padding: 15px; font-weight: 600; text-align: center; }
+        .staging-table td { padding: 12px 15px; border-bottom: 1px solid #f0f0f0; background: white; }
+        .staging-table tr:hover td { background: #E8F5E9; }
+        
+        /* Treatment Grid */
+        .treatment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .treatment-card { background: var(--light); border-radius: 15px; padding: 25px 20px; transition: var(--transition); border: 1px solid rgba(46, 125, 100, 0.2); }
+        .treatment-card:hover { transform: translateY(-5px); border-color: var(--net-green); }
+        .treatment-icon { width: 50px; height: 50px; background: white; color: var(--net-green); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 15px; }
+        .treatment-tag { display: inline-block; padding: 4px 12px; background: rgba(46, 125, 100, 0.1); color: var(--net-green); border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-top: 10px; }
+        
+        /* Sidebar */
+        .sidebar { position: sticky; top: 100px; }
+        .info-panel { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 25px; margin-bottom: 25px; border-top: 4px solid var(--net-green); }
+        .info-panel.net-panel { background: var(--gradient-net); color: white; border-top: none; }
+        .info-panel.net-panel .info-panel-title { color: white; border-bottom-color: rgba(255,255,255,0.2); }
+        .info-panel-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: var(--primary); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+        .doctor-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid var(--net-green); margin-bottom: 15px; }
+        .btn-whatsapp-sidebar { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; width: 100%; transition: var(--transition); }
+        .btn-net { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--net-green); padding: 15px 25px; border-radius: 50px; font-weight: 700; width: 100%; }
+        .glossary-term { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--net-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; opacity: 0; visibility: hidden; transition: var(--transition); cursor: pointer; z-index: 100; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        footer { background: var(--primary); color: white; padding: 60px 0 30px; margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .copyright { text-align: center; opacity: 0.7; font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        @media (max-width: 992px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .syndrome-grid { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; top: 75px; left: -100%; width: 100%; background: white; flex-direction: column; padding: 40px; transition: 0.4s; }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        .bep-box { background: #E8F5E9; padding: 20px; border-radius: 15px; margin: 20px 0; border-left: 4px solid var(--net-green); }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } }
+        details { background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer; margin-bottom: 10px; }
+        summary { font-weight: 600; color: var(--primary); }
+        .marker-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .marker-table td { padding: 10px; border-bottom: 1px solid #e0e0e0; }
+        .marker-table td:first-child { font-weight: 600; color: var(--net-green); }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text"><span class="logo-name">Dr. Ariel Calaña</span><span class="logo-specialty">Oncólogo Clínico</span></div>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active"><i class="fas fa-book-medical"></i> Blog Oncológico</a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="cancer-intestino-delgado.html"><i class="fas fa-stethoscope"></i> Cáncer de Intestino Delgado</a>
+                            <a href="cancer-pancreas.html"><i class="fas fa-pancreas"></i> Cáncer de Páncreas</a>
+                            <a href="tumores-neuroendocrinos-pancreaticos.html" class="active"><i class="fas fa-hormone"></i> Tumores Neuroendocrinos Pancreáticos</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link"><i class="fas fa-stethoscope"></i> Medicina General</a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank"><i class="fab fa-whatsapp"></i> <span>Agendar Cita</span></a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-net">
+        <div class="container">
+            <div class="hero-content">
+                <h1>TUMORES <span>NEUROENDOCRINOS</span><br>PANCREÁTICOS</h1>
+                <p class="subtitle">PNET: Tumores raros con síndromes hormonales distintivos</p>
+                <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Insulinoma, gastrinoma (Síndrome de Zollinger-Ellison), glucagonoma, VIPoma, somatostatinoma. <strong>Excelente pronóstico</strong> con manejo multidisciplinario: análogos de somatostatina, everolimus, sunitinib, PRRT y cirugía.</p>
+                <div class="hero-badge-net"><i class="fas fa-chart-line"></i> 1-2% de neoplasias pancreáticas <i class="fas fa-tachometer-alt"></i> Sobrevida >90% en localizados <i class="fas fa-syringe"></i> Análogos de somatostatina</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="breadcrumb"><div class="container"><ul class="breadcrumb-list"><li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Tipos de Cáncer</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Tumores Digestivos</a></li><li><i class="fas fa-chevron-right"></i></li><li>Tumores Neuroendocrinos Pancreáticos</li></ul></div></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="quick-summary">
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-chart-line"></i></div><div class="summary-label">Incidencia</div><div class="summary-value">0.5-1/100,000</div><div class="summary-desc">Tumores raros</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-microscope"></i></div><div class="summary-label">Funcionales</div><div class="summary-value">30-40%</div><div class="summary-desc">Producen síntomas hormonales</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-chart-line"></i></div><div class="summary-label">Supervivencia 5 años</div><div class="summary-value">>90%</div><div class="summary-desc">Localizados / Bien diferenciados</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-dna"></i></div><div class="summary-label">MEN1 asociado</div><div class="summary-value">20-30%</div><div class="summary-desc">Síndromes hereditarios</div></div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-question-circle"></i></div><h2>¿Qué son? <span>Tumores de células neuroendocrinas pancreáticas</span></h2></div>
+                        <p>Los <strong>Tumores Neuroendocrinos Pancreáticos (PNET)</strong> son neoplasias que se originan en las células de los islotes de Langerhans del páncreas. A diferencia del adenocarcinoma pancreático, los PNET suelen tener un <strong>comportamiento más indolente</strong> y un <strong>pronóstico significativamente mejor</strong>. Se clasifican en <strong>funcionales</strong> (producen síntomas por secreción hormonal) y <strong>no funcionales</strong> (se presentan como masa o metástasis). Representan el <strong>1-2% de todas las neoplasias pancreáticas</strong> [8].</p>
+                        <div class="quote-block" style="background: #E8F5E9; padding: 20px; border-radius: 15px; margin-top: 20px;"><i class="fas fa-quote-right"></i><p>Los PNET son un grupo heterogéneo con pronóstico variable según el grado histológico (G1, G2, G3) y la presencia de síndromes hereditarios como <strong>MEN1</strong>, <strong>von Hippel-Lindau</strong> y <strong>neurofibromatosis tipo 1</strong>. El manejo requiere un enfoque multidisciplinario con participación de endocrinología, cirugía y oncología [8][9].</p><div class="quote-author">— Guías ESMO 2025, NCCN 2026</div></div>
+                    </section>
+
+                    <section class="section-card net-highlight">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-hormone"></i></div><h2>Síndromes Hormonales <span>Tumores funcionales</span></h2></div>
+                        <div class="syndrome-grid">
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-tachometer-alt"></i></div><h4>Insulinoma</h4><p>Hipoglucemia (síntomas adrenérgicos: palpitaciones, sudoración; neuroglucopénicos: confusión, coma). Tríada de Whipple. <strong>Más frecuente (60% de funcionales)</strong>.</p><span class="syndrome-tag">Insulina ↑</span></div>
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-fire"></i></div><h4>Gastrinoma</h4><p>Síndrome de Zollinger-Ellison: úlceras pépticas múltiples, refractarias, diarrea. 25% asociado a MEN1. Localización duodenal frecuente.</p><span class="syndrome-tag">Gastrina ↑</span></div>
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-chart-line"></i></div><h4>Glucagonoma</h4><p>Dermatitis necrolítica migratoria, diabetes, pérdida de peso, trombosis. <strong>Síndrome de glucagonoma</strong>.</p><span class="syndrome-tag">Glucagón ↑</span></div>
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-water"></i></div><h4>VIPoma</h4><p>Síndrome WDHA: <strong>W</strong>atery diarrhea (diarrea acuosa), <strong>H</strong>ypokalemia, <strong>A</strong>chlorhydria. Deshidratación severa.</p><span class="syndrome-tag">VIP ↑</span></div>
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-ban"></i></div><h4>Somatostatinoma</h4><p>Diabetes, colelitiasis, esteatorrea. Síndrome inhibitorio. <strong>Muy raro</strong>.</p><span class="syndrome-tag">Somatostatina ↑</span></div>
+                            <div class="syndrome-card"><div class="syndrome-icon"><i class="fas fa-question-circle"></i></div><h4>No funcionales</h4><p>50-60% de los PNET. Se presentan como masa, dolor abdominal, ictericia obstructiva o metástasis hepáticas.</p><span class="syndrome-tag">Sin síntomas hormonales</span></div>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-dna"></i></div><h2>Diagnóstico <span>Marcadores, imagen y anatomía patológica</span></h2></div>
+                        <h4 style="margin: 0 0 10px; color: var(--net-green);">Marcadores bioquímicos:</h4>
+                        <table class="marker-table">
+                            <tr><td><strong>Cromogranina A (CgA)</strong></td><td>Marcador general de NET (sensibilidad 60-90%). Elevada en >80% de PNET.</td></tr>
+                            <tr><td><strong>Insulina / Péptido C</strong></td><td>Insulinoma (índice insulina/glucosa >0.3).</td></tr>
+                            <tr><td><strong>Gastrina</strong></td><td>Gastrinoma (ayunas >1000 pg/mL o prueba de secreción ácida basal).</td></tr>
+                            <tr><td><strong>Glucagón</strong></td><td>Glucagonoma (>500 pg/mL).</td></tr>
+                            <tr><td><strong>VIP</strong></td><td>VIPoma (>200 pg/mL).</td></tr>
+                            <tr><td><strong>Pancreastatina (PP)</strong></td><td>Elevada en PNET no funcionales.</td></tr>
+                        </table>
+                        <h4 style="margin: 20px 0 10px; color: var(--net-green);">Estudios de imagen:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>TC con contraste / RMN:</strong> Evaluación de tumor primario y metástasis hepáticas.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Ecoendoscopia (EUS):</strong> Ideal para localización y biopsia de tumores pequeños.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Octreoscan (gammagrafía de receptores de somatostatina):</strong> Fundamental para estadificación y selección de terapia con análogos/PRRT.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>68Ga-DOTATATE PET/TC:</strong> Gold standard para NET bien diferenciados. Mayor sensibilidad que Octreoscan [9].</li>
+                        </ul>
+                        <h4 style="margin: 20px 0 10px; color: var(--net-green);">Grado histológico (ENETS/WHO 2019):</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-star"></i></div><h4>G1 (Bajo grado)</h4><p>Índice mitótico <2 /10 HPF, Ki-67 <3%. Excelente pronóstico.</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-star-half-alt"></i></div><h4>G2 (Grado intermedio)</h4><p>Índice mitótico 2-20 /10 HPF, Ki-67 3-20%. Pronóstico intermedio.</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-bolt"></i></div><h4>G3 (Alto grado)</h4><p>Índice mitótico >20 /10 HPF, Ki-67 >20%. NET G3 (bien diferenciado) vs NEC (neuroendocrino de células pequeñas/grandes).</p></div>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Estadificación ENETS / AJCC <span>Pronóstico y manejo</span></h2></div>
+                        <table class="staging-table">
+                            <thead><tr><th>Estadio</th><th>Descripción</th><th>Supervivencia 5 años</th></tr></thead>
+                            <tbody>
+                                <tr><td><strong>I</strong> (T1 N0)</td><td>Tumor ≤2 cm, limitado a páncreas</td><td>>95%</td></tr>
+                                <tr><td><strong>II</strong> (T2-3 N0)</td><td>Tumor 2-4 cm o >4 cm, sin ganglios</td><td>80-90%</td></tr>
+                                <tr><td><strong>III</strong> (any T N1)</td><td>Ganglios regionales positivos</td><td>50-70%</td></tr>
+                                <tr><td><strong>IV</strong> (M1)</td><td>Metástasis a distancia (principalmente hígado)</td><td>20-50% (depende de grado y carga metastásica)</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-syringe"></i></div><h2>Tratamiento <span>Enfoque multimodal</span></h2></div>
+                        
+                        <h4 style="margin: 0 0 10px; color: var(--net-green);">Tumores localizados / resecables:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-cut"></i></div><h4>Cirugía curativa</h4><p><strong>Enucleación</strong> para tumores pequeños (<2 cm), <strong>pancreaticoduodenectomía</strong> o <strong>pancreatectomía distal</strong> según localización. Linfadenectomía regional.</p><span class="treatment-tag">Estándar</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-chart-line"></i></div><h4>Vigilancia activa</h4><p>PNET no funcionales <2 cm, G1, asintomáticos → seguimiento con imagen cada 6-12 meses [8].</p></div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--net-green);">Enfermedad avanzada / metastásica:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-pills"></i></div><h4>Análogos de somatostatina</h4><p><strong>Octreótide LAR, lanreótide</strong>. Control de síntomas (síndromes hormonales) y efecto antiproliferativo en G1-G2. Primera línea [8].</p><span class="treatment-tag">Estándar</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-pills"></i></div><h4>Everolimus (mTOR)</h4><p>Inhibidor de mTOR. Indicado en PNET G1-G2 progresivos a análogos de somatostatina. Supervivencia libre de progresión 11 meses [9].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-pills"></i></div><h4>Sunitinib (TKI)</h4><p>Inhibidor de tirosina quinasa. Primera línea en PNET avanzados. Eficaz en G1-G2 [9].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i></div><h4>PRRT (Peptide Receptor Radionuclide Therapy)</h4><p><strong>177Lu-DOTATATE</strong>. Terapia dirigida con radionúclidos. Indicada en NET G1-G2 con captación positiva en Octreoscan. Mejora supervivencia global [8][9].</p><span class="treatment-tag">Revolución en NET</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-flask"></i></div><h4>Quimioterapia</h4><p>En NET G3 o NEC: esquemas con <strong>estreptozocina + 5-FU/doxorrubicina</strong> o <strong>temozolomida ± capecitabina</strong> (especialmente en tumores funcionantes) [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-burn"></i></div><h4>Terapias locorregionales hepáticas</h4><p>Ablación por radiofrecuencia, quimioembolización (TACE), radioembolización (SIRT) en metástasis hepáticas dominantes.</p></div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: var(--net-green);"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ <strong>PRRT</strong> consolidado como estándar en NET G1-G2 metastásicos con captación positiva.<br>
+                            ✔ Combinación <strong>cabozantinib + atezolizumab</strong> en estudio en NET avanzados.<br>
+                            ✔ Nuevos análogos de somatostatina de acción prolongada.<br>
+                            ✔ <strong>Terapias dirigidas</strong> en NET G3 bien diferenciados.</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Pronóstico y Seguimiento</h2></div>
+                        <div class="stats-grid">
+                            <div class="stat-item"><div class="stat-number">>90%</div><div class="stat-label">SV5 años G1 localizado</div></div>
+                            <div class="stat-item"><div class="stat-number">70-80%</div><div class="stat-label">SV5 años G2 localizado</div></div>
+                            <div class="stat-item"><div class="stat-number">40-50%</div><div class="stat-label">SV5 años G1-G2 metastásico</div></div>
+                            <div class="stat-item"><div class="stat-number">< 20%</div><div class="stat-label">SV5 años G3 / NEC</div></div>
+                        </div>
+                        <p><strong>Seguimiento recomendado [9]:</strong> Evaluación clínica, marcadores (cromogranina A, hormona específica) y TC/RMN cada 6-12 meses según grado y estadio. En pacientes con Octreoscan positivo, seguimiento con 68Ga-DOTATATE PET/TC cada 1-2 años. <strong>Asesoramiento genético</strong> para MEN1 y otros síndromes hereditarios.</p>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-user-md"></i> Especialista</div>
+                        <div style="text-align: center;">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem;">Experiencia en tumores neuroendocrinos y manejo con PRRT.</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank"><i class="fab fa-whatsapp"></i> Consultar especialista</a>
+                        </div>
+                    </div>
+
+                    <div class="info-panel net-panel">
+                        <div class="info-panel-title"><i class="fas fa-stethoscope"></i> Datos Clave</div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>Cromogranina A (CgA)</span><span style="font-weight: 700;">Marcador universal</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>68Ga-DOTATATE PET/TC</span><span style="font-weight: 700;">Gold standard</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>MEN1</span><span style="font-weight: 700;">Asociación 20-30%</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0;"><span>PRRT (177Lu-DOTATATE)</span><span style="font-weight: 700;">Terapia dirigida</span></div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-net" target="_blank"><i class="fab fa-whatsapp"></i> Evaluación personalizada</a>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-book-open"></i> Glosario</div>
+                        <div class="glossary-term"><span class="term">PRRT</span><span class="definition">Terapia con radionúclidos</span></div>
+                        <div class="glossary-term"><span class="term">MEN1</span><span class="definition">Neoplasia endocrina múltiple tipo 1</span></div>
+                        <div class="glossary-term"><span class="term">CgA</span><span class="definition">Cromogranina A</span></div>
+                        <div class="glossary-term"><span class="term">WDHA</span><span class="definition">Watery Diarrhea, Hypokalemia, Achlorhydria</span></div>
+                        <div class="glossary-term"><span class="term">Síndrome de Zollinger-Ellison</span><span class="definition">Gastrinoma</span></div>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="section-card">
+                <div class="section-title"><div class="section-title-icon"><i class="fas fa-question"></i></div><h2>Preguntas Frecuentes</h2></div>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué diferencia hay entre un PNET y el cáncer de páncreas común?</summary><p>El adenocarcinoma pancreático (cáncer de páncreas común) es mucho más agresivo, con supervivencia a 5 años <10%. Los PNET son tumores de células neuroendocrinas, generalmente de <strong>crecimiento más lento</strong> y con <strong>mejor pronóstico</strong>. Además, los PNET pueden producir hormonas que causan síndromes específicos (insulinoma, gastrinoma, etc.) [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué es la PRRT y en qué casos se usa?</summary><p>La <strong>PRRT (Peptide Receptor Radionuclide Therapy)</strong> es una terapia dirigida que utiliza un péptido análogo de somatostatina unido a un isótopo radiactivo (177Lu-DOTATATE). Se administra por vía intravenosa y se dirige a los receptores de somatostatina sobreexpresados en los NET. Está indicada en <strong>NET G1-G2 metastásicos o localmente avanzados</strong> con captación positiva en Octreoscan o 68Ga-DOTATATE PET/TC [8][9].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cuándo debo sospechar un insulinoma?</summary><p>El insulinoma se sospecha ante episodios de <strong>hipoglucemia sintomática</strong> (palpitaciones, sudoración, confusión, pérdida de conciencia) que se alivian con la ingesta de alimentos. El diagnóstico se confirma con <strong>prueba de ayuno prolongado</strong> supervisado, documentando hipoglucemia (<50 mg/dL) con niveles elevados de insulina y péptido C [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué seguimiento necesito después del tratamiento?</summary><p>El seguimiento incluye evaluación clínica, marcadores (cromogranina A, hormona específica) y estudios de imagen (TC/RMN) cada <strong>6-12 meses</strong>. En pacientes con Octreoscan positivo, se recomienda 68Ga-DOTATATE PET/TC periódico. La duración del seguimiento es de por vida debido al riesgo de recaída tardía [9].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Existe predisposición hereditaria?</summary><p>Sí. Los PNET pueden asociarse a síndromes hereditarios como <strong>MEN1 (neoplasia endocrina múltiple tipo 1)</strong>, <strong>von Hippel-Lindau</strong>, <strong>neurofibromatosis tipo 1</strong> y <strong>tuberous sclerosis</strong>. Se recomienda <strong>asesoramiento genético</strong> en pacientes jóvenes, con tumores múltiples o antecedentes familiares [8].</p></details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en tumores neuroendocrinos y neoplasias digestivas. Información basada en guías ESMO, NCCN y ENETS.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul><li><a href="#">Aviso legal</a></li><li><a href="#">Política de privacidad</a></li><li><a href="#">Términos de uso</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul><li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li><li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li><li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li></ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada es solo para fines educativos y no sustituye la consulta médica profesional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
+        });
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navMenu').classList.toggle('active'));
+        document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('navMenu').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
