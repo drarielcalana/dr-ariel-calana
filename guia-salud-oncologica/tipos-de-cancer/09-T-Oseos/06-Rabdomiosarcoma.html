@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <meta name="description" content="Osteosarcoma: Información completa sobre este tumor óseo maligno primario. Epidemiología en adolescentes y adultos jóvenes, localización más frecuente (metáfisis de huesos largos), diagnóstico por imagen (triángulo de Codman, reacción en espolón), tratamiento con quimioterapia neoadyuvante (MAP) y cirugía conservadora de extremidades según guías ESMO/NCCN 2025-2026 | Dr. Ariel Calaña Sabina">
-    <meta name="keywords" content="osteosarcoma, sarcoma óseo, tumor óseo maligno, triángulo de Codman, quimioterapia MAP, metotrexato, doxorrubicina, cisplatino, cirugía conservadora de extremidades, prótesis oncológica, dr ariel calaña">
+    <meta name="description" content="Rabdomiosarcoma: Información completa sobre este sarcoma de partes blandas de origen muscular estriado, el más frecuente en la población pediátrica. Subtipos histológicos (embrionario, alveolar, pleomórfico), localizaciones (cabeza y cuello, genitourinario, extremidades), diagnóstico por imagen y biopsia, tratamiento multimodal con quimioterapia (VAC/VIE), cirugía y radioterapia según guías COG/EpSSG 2025-2026 | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="rabdomiosarcoma, RMS, sarcoma pediátrico, tumor de partes blandas, cabeza y cuello, embrionario, alveolar, FOXO1, VAC, VIE, radioterapia pediátrica, dr ariel calaña">
     <meta name="author" content="Dr. Ariel Calaña Sabina">
     <meta name="robots" content="index, follow">
     
-    <meta property="og:title" content="Osteosarcoma | Dr. Ariel Calaña">
-    <meta property="og:description" content="Guía completa sobre osteosarcoma: diagnóstico diferencial, quimioterapia neoadyuvante, cirugía conservadora de extremidades y seguimiento.">
+    <meta property="og:title" content="Rabdomiosarcoma | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre rabdomiosarcoma: subtipos histológicos, diagnóstico molecular (PAX-FOXO1), tratamiento multimodal y pronóstico.">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
     
-    <title>Osteosarcoma | Dr. Ariel Calaña Sabina</title>
+    <title>Rabdomiosarcoma | Dr. Ariel Calaña Sabina</title>
     
     <!-- FAVICON - LOGO PERSONALIZADO -->
     <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
@@ -38,17 +38,17 @@
             --text-dark: #263238;
             --text-light: #546E7A;
             
-            /* Paleta para Osteosarcoma */
-            --osteo-teal: #2C7A6E;
-            --osteo-teal-dark: #1E5A50;
-            --osteo-teal-light: #4FB3A3;
-            --osteo-gold: #E6B422;
-            --osteo-soft: #E0F2F0;
+            /* Paleta para Rabdomiosarcoma */
+            --rhabdo-pink: #D81B60;
+            --rhabdo-pink-dark: #AD1457;
+            --rhabdo-pink-light: #EC407A;
+            --rhabdo-gold: #FFB74D;
+            --rhabdo-soft: #FCE4EC;
             
             --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
             --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
-            --gradient-osteo: linear-gradient(135deg, #1E5A50 0%, #2C7A6E 100%);
-            --gradient-osteo-soft: linear-gradient(135deg, #E0F2F0 0%, #FFFFFF 100%);
+            --gradient-rhabdo: linear-gradient(135deg, #AD1457 0%, #D81B60 100%);
+            --gradient-rhabdo-soft: linear-gradient(135deg, #FCE4EC 0%, #FFFFFF 100%);
             --shadow: 0 10px 30px rgba(0,0,0,0.08);
             --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
             --transition: all 0.3s ease;
@@ -127,35 +127,35 @@
 
         .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
 
-        /* ============ HERO ESPECÍFICO PARA OSTEOSARCOMA ============ */
-        .hero-osteo {
-            background: var(--gradient-osteo);
+        /* ============ HERO ESPECÍFICO PARA RABDOMIOSARCOMA ============ */
+        .hero-rhabdo {
+            background: var(--gradient-rhabdo);
             color: white;
             padding: 70px 0;
             position: relative;
             overflow: hidden;
         }
         
-        .hero-osteo::before {
-            content: '🦴 💊 🦴';
+        .hero-rhabdo::before {
+            content: '💪 🧬 💪';
             position: absolute;
             top: -30px;
             right: 5%;
             font-size: 12rem;
-            color: rgba(230, 180, 34, 0.05);
+            color: rgba(255, 183, 77, 0.05);
             font-weight: 800;
             transform: rotate(15deg);
             z-index: 1;
         }
         
-        .hero-osteo::after {
+        .hero-rhabdo::after {
             content: '';
             position: absolute;
             bottom: -100px;
             left: -50px;
             width: 400px;
             height: 400px;
-            background: rgba(230, 180, 34, 0.02);
+            background: rgba(255, 183, 77, 0.02);
             border-radius: 50%;
             z-index: 1;
         }
@@ -178,7 +178,7 @@
         }
         
         .hero-content h1 span {
-            color: #E6B422;
+            color: #FFB74D;
             position: relative;
             display: inline-block;
             text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -191,7 +191,7 @@
             left: 0;
             width: 100%;
             height: 8px;
-            background: rgba(230, 180, 34, 0.3);
+            background: rgba(255, 183, 77, 0.3);
             z-index: -1;
         }
         
@@ -203,14 +203,14 @@
         }
         
         .hero-content .highlight {
-            color: #E6B422;
+            color: #FFB74D;
             font-weight: 700;
             background: rgba(0,0,0,0.3);
             padding: 2px 15px;
             border-radius: 50px;
         }
         
-        .hero-badge-osteo {
+        .hero-badge-rhabdo {
             display: inline-flex;
             align-items: center;
             gap: 15px;
@@ -220,14 +220,14 @@
             border-radius: 50px;
             font-size: 1.1rem;
             margin-top: 25px;
-            border: 2px solid #E6B422;
+            border: 2px solid #FFB74D;
             font-weight: 600;
             flex-wrap: wrap;
             justify-content: center;
         }
         
-        .hero-badge-osteo i {
-            color: #E6B422;
+        .hero-badge-rhabdo i {
+            color: #FFB74D;
         }
         
         /* ============ BREADCRUMB ============ */
@@ -281,11 +281,11 @@
             box-shadow: var(--shadow);
             padding: 30px;
             margin-bottom: 40px;
-            border-left: 6px solid #2C7A6E;
+            border-left: 6px solid #D81B60;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 25px;
-            border: 2px solid rgba(44, 122, 110, 0.2);
+            border: 2px solid rgba(216, 27, 96, 0.2);
         }
         
         .summary-item {
@@ -300,8 +300,8 @@
         .summary-icon {
             width: 60px;
             height: 60px;
-            background: rgba(44, 122, 110, 0.1);
-            color: #2C7A6E;
+            background: rgba(216, 27, 96, 0.1);
+            color: #D81B60;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -322,7 +322,7 @@
             font-family: 'Montserrat', sans-serif;
             font-size: 1.3rem;
             font-weight: 700;
-            color: #2C7A6E;
+            color: #D81B60;
         }
         
         .summary-desc {
@@ -347,7 +347,7 @@
             padding: 30px;
             margin-bottom: 30px;
             transition: var(--transition);
-            border-top: 6px solid #2C7A6E;
+            border-top: 6px solid #D81B60;
             position: relative;
         }
         
@@ -356,9 +356,9 @@
             transform: translateY(-3px);
         }
         
-        .section-card.osteo-highlight {
-            background: linear-gradient(135deg, #E0F2F0 0%, #ffffff 100%);
-            border: 2px solid #2C7A6E;
+        .section-card.rhabdo-highlight {
+            background: linear-gradient(135deg, #FCE4EC 0%, #ffffff 100%);
+            border: 2px solid #D81B60;
         }
         
         .section-title {
@@ -373,8 +373,8 @@
         .section-title-icon {
             width: 50px;
             height: 50px;
-            background: rgba(44, 122, 110, 0.1);
-            color: #2C7A6E;
+            background: rgba(216, 27, 96, 0.1);
+            color: #D81B60;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -410,14 +410,14 @@
             padding: 20px;
             border-radius: 15px;
             text-align: center;
-            border-left: 4px solid #2C7A6E;
+            border-left: 4px solid #D81B60;
         }
         
         .stat-number {
             font-family: 'Montserrat', sans-serif;
             font-size: 2.2rem;
             font-weight: 800;
-            color: #2C7A6E;
+            color: #D81B60;
             line-height: 1;
             margin-bottom: 5px;
         }
@@ -445,7 +445,7 @@
         }
         
         .feature-list i {
-            color: #2C7A6E;
+            color: #D81B60;
             font-size: 1.1rem;
             margin-top: 3px;
         }
@@ -454,7 +454,51 @@
             color: var(--primary);
         }
         
-        /* Localizaciones */
+        /* Subtipos grid */
+        .subtype-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .subtype-card {
+            background: linear-gradient(135deg, #D81B60 0%, #EC407A 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #FFB74D;
+        }
+        
+        .subtype-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(216, 27, 96, 0.3);
+        }
+        
+        .subtype-icon {
+            font-size: 2rem;
+            color: #FFB74D;
+            margin-bottom: 15px;
+        }
+        
+        .subtype-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .subtype-risk {
+            background: rgba(255, 183, 77, 0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        /* Localizaciones grid */
         .location-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -463,23 +507,23 @@
         }
         
         .location-card {
-            background: linear-gradient(135deg, #2C7A6E 0%, #4FB3A3 100%);
+            background: linear-gradient(135deg, #D81B60 0%, #EC407A 100%);
             color: white;
             border-radius: 15px;
             padding: 20px;
             text-align: center;
             transition: var(--transition);
-            border: 1px solid #E6B422;
+            border: 1px solid #FFB74D;
         }
         
         .location-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(44, 122, 110, 0.3);
+            box-shadow: 0 15px 30px rgba(216, 27, 96, 0.3);
         }
         
         .location-icon {
             font-size: 2rem;
-            color: #E6B422;
+            color: #FFB74D;
             margin-bottom: 15px;
         }
         
@@ -490,7 +534,7 @@
         }
         
         .location-percent {
-            background: rgba(230, 180, 34, 0.3);
+            background: rgba(255, 183, 77, 0.3);
             padding: 3px 10px;
             border-radius: 50px;
             display: inline-block;
@@ -499,8 +543,8 @@
             font-size: 0.8rem;
         }
         
-        /* Tabla de estadificación */
-        .staging-table {
+        /* Tabla de grupos de riesgo */
+        .risk-table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
@@ -509,26 +553,26 @@
             box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
-        .staging-table th {
-            background: #2C7A6E;
+        .risk-table th {
+            background: #D81B60;
             color: white;
             padding: 15px;
             font-weight: 600;
             text-align: center;
         }
         
-        .staging-table td {
+        .risk-table td {
             padding: 12px 15px;
             border-bottom: 1px solid #f0f0f0;
             background: white;
         }
         
-        .staging-table tr:last-child td {
+        .risk-table tr:last-child td {
             border-bottom: none;
         }
         
-        .staging-table tr:hover td {
-            background: #E0F2F0;
+        .risk-table tr:hover td {
+            background: #FCE4EC;
         }
         
         /* Tratamiento grid */
@@ -544,20 +588,20 @@
             border-radius: 15px;
             padding: 25px 20px;
             transition: var(--transition);
-            border: 1px solid rgba(44, 122, 110, 0.2);
+            border: 1px solid rgba(216, 27, 96, 0.2);
         }
         
         .treatment-card:hover {
             transform: translateY(-5px);
-            border-color: #2C7A6E;
-            box-shadow: 0 10px 25px rgba(44, 122, 110, 0.1);
+            border-color: #D81B60;
+            box-shadow: 0 10px 25px rgba(216, 27, 96, 0.1);
         }
         
         .treatment-icon {
             width: 50px;
             height: 50px;
             background: white;
-            color: #2C7A6E;
+            color: #D81B60;
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -577,8 +621,8 @@
         .treatment-tag {
             display: inline-block;
             padding: 4px 12px;
-            background: rgba(44, 122, 110, 0.1);
-            color: #2C7A6E;
+            background: rgba(216, 27, 96, 0.1);
+            color: #D81B60;
             border-radius: 50px;
             font-size: 0.8rem;
             font-weight: 600;
@@ -597,21 +641,21 @@
             box-shadow: var(--shadow);
             padding: 25px;
             margin-bottom: 25px;
-            border-top: 4px solid #2C7A6E;
+            border-top: 4px solid #D81B60;
         }
         
-        .info-panel.osteo-panel {
-            background: linear-gradient(135deg, #2C7A6E 0%, #4FB3A3 100%);
+        .info-panel.rhabdo-panel {
+            background: linear-gradient(135deg, #D81B60 0%, #EC407A 100%);
             color: white;
         }
         
-        .info-panel.osteo-panel .info-panel-title {
+        .info-panel.rhabdo-panel .info-panel-title {
             color: white;
             border-bottom-color: rgba(255,255,255,0.2);
         }
         
-        .info-panel.osteo-panel .info-panel-title i {
-            color: #E6B422;
+        .info-panel.rhabdo-panel .info-panel-title i {
+            color: #FFB74D;
         }
         
         .info-panel-title {
@@ -627,7 +671,7 @@
         }
         
         .info-panel-title i {
-            color: #2C7A6E;
+            color: #D81B60;
         }
         
         .doctor-card {
@@ -640,7 +684,7 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid #2C7A6E;
+            border: 4px solid #D81B60;
             margin-bottom: 15px;
         }
         
@@ -652,7 +696,7 @@
         }
         
         .doctor-specialty {
-            color: #2C7A6E;
+            color: #D81B60;
             font-weight: 500;
             margin-bottom: 15px;
         }
@@ -677,13 +721,13 @@
             transform: translateY(-2px);
         }
         
-        .btn-osteo {
+        .btn-rhabdo {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
             background: white;
-            color: #2C7A6E;
+            color: #D81B60;
             padding: 15px 25px;
             border-radius: 50px;
             font-weight: 700;
@@ -693,10 +737,10 @@
             font-size: 1.1rem;
         }
         
-        .btn-osteo:hover {
-            background: #E0F2F0;
+        .btn-rhabdo:hover {
+            background: #FCE4EC;
             transform: translateY(-2px);
-            color: #1E5A50;
+            color: #AD1457;
         }
         
         .glossary-term {
@@ -733,26 +777,26 @@
         }
         
         .resource-link:hover {
-            background: rgba(44, 122, 110, 0.1);
+            background: rgba(216, 27, 96, 0.1);
             transform: translateX(5px);
         }
         
         .resource-link i {
-            color: #2C7A6E;
+            color: #D81B60;
         }
         
         .quote-block {
-            background: linear-gradient(135deg, #E0F2F0 0%, #ffffff 100%);
+            background: linear-gradient(135deg, #FCE4EC 0%, #ffffff 100%);
             padding: 25px;
             border-radius: 15px;
             position: relative;
             margin: 20px 0;
-            border-left: 4px solid #2C7A6E;
+            border-left: 4px solid #D81B60;
         }
         
         .quote-block i {
             font-size: 2rem;
-            color: rgba(44, 122, 110, 0.2);
+            color: rgba(216, 27, 96, 0.2);
             position: absolute;
             top: 15px;
             right: 20px;
@@ -767,7 +811,7 @@
         .quote-author {
             margin-top: 10px;
             font-weight: 600;
-            color: #2C7A6E;
+            color: #D81B60;
         }
         
         .back-to-top {
@@ -776,14 +820,14 @@
             right: 30px;
             width: 50px;
             height: 50px;
-            background: #2C7A6E;
+            background: #D81B60;
             color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 1.2rem;
-            box-shadow: 0 5px 20px rgba(44, 122, 110, 0.4);
+            box-shadow: 0 5px 20px rgba(216, 27, 96, 0.4);
             opacity: 0;
             visibility: hidden;
             transition: var(--transition);
@@ -797,7 +841,7 @@
         }
         
         .back-to-top:hover {
-            background: #4FB3A3;
+            background: #EC407A;
             transform: translateY(-3px);
             color: white;
         }
@@ -831,7 +875,7 @@
             left: 0;
             width: 50px;
             height: 2px;
-            background: #2C7A6E;
+            background: #D81B60;
         }
         
         .footer-section ul {
@@ -871,7 +915,7 @@
         }
         
         .social-links a:hover {
-            background: #2C7A6E;
+            background: #D81B60;
             transform: translateY(-3px);
         }
         
@@ -898,6 +942,7 @@
             .sidebar { position: static; }
             .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
             .quick-summary { grid-template-columns: 1fr; }
+            .subtype-grid { grid-template-columns: 1fr; }
             .location-grid { grid-template-columns: 1fr; }
             .treatment-grid { grid-template-columns: 1fr; }
         }
@@ -915,11 +960,11 @@
         }
         
         .bep-box {
-            background: #E0F2F0;
+            background: #FCE4EC;
             padding: 20px;
             border-radius: 15px;
             margin: 20px 0;
-            border-left: 4px solid #2C7A6E;
+            border-left: 4px solid #D81B60;
         }
         
         .two-column {
@@ -937,7 +982,7 @@
         
         .chemo-alert {
             background: #FFF8E7;
-            border-left: 4px solid #E6B422;
+            border-left: 4px solid #FFB74D;
         }
     </style>
 </head>
@@ -966,7 +1011,7 @@
                         <div class="dropdown-content">
                             <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
                             <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
-                            <a href="osteosarcoma.html" class="active"><i class="fas fa-bone"></i> Osteosarcoma</a>
+                            <a href="rabdomiosarcoma.html" class="active"><i class="fas fa-child"></i> Rabdomiosarcoma</a>
                         </div>
                     </div>
                     <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
@@ -984,17 +1029,17 @@
         </div>
     </header>
 
-    <!-- HERO ESPECÍFICO PARA OSTEOSARCOMA -->
-    <section class="hero-osteo">
+    <!-- HERO ESPECÍFICO PARA RABDOMIOSARCOMA -->
+    <section class="hero-rhabdo">
         <div class="container">
             <div class="hero-content">
-                <h1>OSTEOSARCOMA <span>Tumor Óseo Maligno</span></h1>
-                <p class="subtitle">El sarcoma óseo primario más frecuente</p>
-                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Tumor maligno que produce <strong>matriz ósea</strong>. Pico de incidencia en <strong>adolescentes y adultos jóvenes</strong> (segunda década de la vida). Localización típica: <strong>metáfisis de huesos largos</strong> (fémur distal, tibia proximal, húmero proximal). Tratamiento: <strong>quimioterapia neoadyuvante (MAP)</strong> + cirugía conservadora de extremidades.</p>
-                <div class="hero-badge-osteo">
-                    <i class="fas fa-chart-line"></i> 2-3 casos/millón/año
-                    <i class="fas fa-bone"></i> Metáfisis
-                    <i class="fas fa-syringe"></i> Quimioterapia MAP
+                <h1>RABDOMIOSARCOMA <span>Sarcoma de Músculo Estriado</span></h1>
+                <p class="subtitle">El sarcoma de partes blandas más frecuente en niños</p>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Tumor maligno de <strong>origen muscular estriado</strong>, representa el <strong>3-5% de todos los cánceres pediátricos</strong> y el <strong>50% de los sarcomas de partes blandas en niños</strong>. Subtipos principales: <strong>embrionario</strong> (mejor pronóstico) y <strong>alveolar</strong> (asociado a translocaciones PAX-FOXO1, peor pronóstico). Tratamiento multimodal: <strong>quimioterapia (VAC/VIE)</strong> + cirugía + radioterapia.</p>
+                <div class="hero-badge-rhabdo">
+                    <i class="fas fa-chart-line"></i> 50% sarcomas pediátricos
+                    <i class="fas fa-dna"></i> Translocación PAX-FOXO1
+                    <i class="fas fa-syringe"></i> Quimioterapia VAC/VIE
                 </div>
             </div>
         </div>
@@ -1008,9 +1053,9 @@
                 <li><i class="fas fa-chevron-right"></i></li>
                 <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
                 <li><i class="fas fa-chevron-right"></i></li>
-                <li><a href="#">Sarcomas</a></li>
+                <li><a href="#">Sarcomas Pediátricos</a></li>
                 <li><i class="fas fa-chevron-right"></i></li>
-                <li>Osteosarcoma</li>
+                <li>Rabdomiosarcoma</li>
             </ul>
         </div>
     </div>
@@ -1024,26 +1069,26 @@
                 <div class="summary-item">
                     <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
                     <div class="summary-label">Incidencia</div>
-                    <div class="summary-value">2-3 / millón</div>
-                    <div class="summary-desc">Pico en segunda década</div>
+                    <div class="summary-value">50% sarcomas pediátricos</div>
+                    <div class="summary-desc">3-5% de cánceres infantiles</div>
                 </div>
                 <div class="summary-item">
-                    <div class="summary-icon"><i class="fas fa-bone"></i></div>
-                    <div class="summary-label">Localización</div>
-                    <div class="summary-value">Metáfisis</div>
-                    <div class="summary-desc">Fémur distal > tibia proximal > húmero proximal</div>
+                    <div class="summary-icon"><i class="fas fa-child"></i></div>
+                    <div class="summary-label">Edad media</div>
+                    <div class="summary-value">2-6 años</div>
+                    <div class="summary-desc">Pico en edad preescolar</div>
                 </div>
                 <div class="summary-item">
                     <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
                     <div class="summary-label">Supervivencia</div>
-                    <div class="summary-value">60-70%</div>
-                    <div class="summary-desc">SV5 años con tratamiento multimodal</div>
+                    <div class="summary-value">60-80%</div>
+                    <div class="summary-desc">depende del grupo de riesgo</div>
                 </div>
                 <div class="summary-item">
                     <div class="summary-icon"><i class="fas fa-syringe"></i></div>
                     <div class="summary-label">Quimioterapia</div>
-                    <div class="summary-value">MAP</div>
-                    <div class="summary-desc">Metotrexato + Doxorrubicina + Cisplatino</div>
+                    <div class="summary-value">VAC / VIE</div>
+                    <div class="summary-desc">Vincristina, Act D, Ciclofosfamida / Ifosfamida, Etopósido</div>
                 </div>
             </div>
 
@@ -1055,65 +1100,76 @@
                     <section class="section-card">
                         <div class="section-title">
                             <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
-                            <h2>¿Qué es? <span>Sarcoma óseo productor de matriz osteoide</span></h2>
+                            <h2>¿Qué es? <span>Sarcoma de partes blandas de origen muscular estriado</span></h2>
                         </div>
                         
-                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>osteosarcoma</strong> es el <strong>sarcoma óseo primario más frecuente</strong>, caracterizado por la producción de <strong>matriz osteoide</strong> por las células tumorales. Representa aproximadamente el <strong>20% de los sarcomas de partes blandas y hueso</strong>. Tiene un pico de incidencia bimodal: el principal en la <strong>segunda década de la vida</strong> (durante el estirón de crecimiento) y un segundo pico en <strong>mayores de 60 años</strong> (frecuentemente asociado a enfermedad ósea de Paget o radioterapia previa) [1][8].</p>
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>rabdomiosarcoma (RMS)</strong> es un sarcoma de partes blandas que se origina en las células del <strong>músculo estriado</strong> (embrionario o esquelético). Es el <strong>sarcoma de partes blandas más frecuente en la población pediátrica</strong>, representando aproximadamente el <strong>50% de todos los sarcomas de partes blandas en niños</strong> y el <strong>3-5% de todos los cánceres infantiles</strong>. Tiene dos picos de incidencia: el principal en <strong>niños de 2 a 6 años</strong> y un segundo pico en <strong>adolescentes</strong>. Los subtipos histológicos principales son el <strong>embrionario</strong> (mejor pronóstico) y el <strong>alveolar</strong> (peor pronóstico, asociado a translocaciones PAX3/7-FOXO1) [1][8].</p>
                         
                         <div class="quote-block">
                             <i class="fas fa-quote-right"></i>
-                            <p>El osteosarcoma es un tumor <strong>altamente agresivo</strong> con tendencia a metástasis hematógenas, principalmente pulmonares. El tratamiento con <strong>quimioterapia neoadyuvante (MAP: metotrexato, doxorrubicina, cisplatino)</strong> seguido de <strong>cirugía conservadora de extremidades</strong> ha mejorado drásticamente la supervivencia, pasando de <20% a 60-70% en pacientes con enfermedad localizada [1][8].</p>
-                            <div class="quote-author">— Guías ESMO 2025, NCCN 2026</div>
+                            <p>El rabdomiosarcoma es un tumor <strong>quimiosensible y radiosensible</strong>. El tratamiento multimodal con <strong>quimioterapia (VAC o VIE)</strong>, <strong>cirugía</strong> y <strong>radioterapia</strong> ha mejorado drásticamente la supervivencia, que actualmente alcanza el <strong>60-80% en enfermedad localizada</strong>. La estratificación por <strong>grupos de riesgo</strong> (bajo, intermedio, alto) según el subtipo histológico, la localización, el tamaño y la presencia de metástasis guía la intensidad del tratamiento [1][8].</p>
+                            <div class="quote-author">— Guías COG (Children's Oncology Group) 2025, EpSSG 2026</div>
                         </div>
                         
                         <div class="two-column">
                             <div class="bep-box" style="margin: 0;">
-                                <h4 style="color: #2C7A6E;"><i class="fas fa-microscope"></i> Subtipos histológicos</h4>
-                                <p><strong>Convencional (75-80%):</strong> osteoblástico, condroblástico, fibroblástico.<br>
-                                <strong>Telangiectásico:</strong> cavidades hemorrágicas.<br>
-                                <strong>De células pequeñas:</strong> similar a sarcoma de Ewing.<br>
-                                <strong>Parosteal / Periosteal:</strong> variantes de bajo grado [8].</p>
+                                <h4 style="color: #D81B60;"><i class="fas fa-microscope"></i> Subtipos histológicos</h4>
+                                <p><strong>Embrionario (50-60%):</strong> Más frecuente en niños pequeños. Localización: cabeza y cuello, genitourinario. Mejor pronóstico [8].<br>
+                                <strong>Alveolar (20-30%):</strong> Asociado a translocaciones PAX3/7-FOXO1. Localización: extremidades, tronco. Peor pronóstico [8].<br>
+                                <strong>Pleomórfico (<5%):</strong> Raro en niños, más común en adultos [8].</p>
                             </div>
                             <div class="bep-box" style="margin: 0;">
-                                <h4 style="color: #2C7A6E;"><i class="fas fa-chart-line"></i> Epidemiología</h4>
-                                <p>Incidencia: 2-3 casos por millón de habitantes/año. Más frecuente en <strong>varones</strong> (relación 1.5:1). Pico: 10-20 años. Segundo pico >60 años [8].</p>
+                                <h4 style="color: #D81B60;"><i class="fas fa-chart-line"></i> Epidemiología</h4>
+                                <p>Incidencia: 4-5 casos por millón de niños/año. Más frecuente en <strong>varones</strong> (relación 1.3:1). Pico: 2-6 años. Segundo pico en adolescentes (asociado a subtipo alveolar) [8].</p>
                             </div>
                         </div>
                     </section>
 
                     <!-- SECCIÓN: LOCALIZACIONES -->
-                    <section class="section-card osteo-highlight">
+                    <section class="section-card rhabdo-highlight">
                         <div class="section-title">
                             <div class="section-title-icon"><i class="fas fa-map-marker-alt"></i></div>
-                            <h2>Localizaciones <span>Metáfisis de huesos largos</span></h2>
+                            <h2>Localizaciones <span>Cabeza y cuello, genitourinario, extremidades</span></h2>
                         </div>
                         
                         <div class="location-grid">
                             <div class="location-card">
-                                <div class="location-icon"><i class="fas fa-bone"></i></div>
-                                <h4>Fémur distal</h4>
-                                <p>Región supracondílea</p>
-                                <span class="location-percent">40-45%</span>
+                                <div class="location-icon"><i class="fas fa-head-side"></i></div>
+                                <h4>Cabeza y cuello</h4>
+                                <p>Órbita, nasofaringe, senos paranasales</p>
+                                <span class="location-percent">30-40%</span>
                             </div>
                             <div class="location-card">
-                                <div class="location-icon"><i class="fas fa-bone"></i></div>
-                                <h4>Tibia proximal</h4>
-                                <p>Meseta tibial</p>
+                                <div class="location-icon"><i class="fas fa-female"></i></div>
+                                <h4>Genitourinario</h4>
+                                <p>Vejiga, próstata, vagina, testículo</p>
                                 <span class="location-percent">20-25%</span>
                             </div>
                             <div class="location-card">
-                                <div class="location-icon"><i class="fas fa-bone"></i></div>
-                                <h4>Húmero proximal</h4>
-                                <p>Cabeza humeral</p>
+                                <div class="location-icon"><i class="fas fa-walking"></i></div>
+                                <h4>Extremidades</h4>
+                                <p>Manos, pies, brazos, piernas</p>
+                                <span class="location-percent">15-20%</span>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-icon"><i class="fas fa-torso"></i></div>
+                                <h4>Tronco / Retroperitoneo</h4>
+                                <p>Pared torácica, abdomen, pelvis</p>
                                 <span class="location-percent">10-15%</span>
+                            </div>
+                            <div class="location-card">
+                                <div class="location-icon"><i class="fas fa-smile"></i></div>
+                                <h4>Orbitario</h4>
+                                <p>Subtipo de mejor pronóstico</p>
+                                <span class="location-percent">10%</span>
                             </div>
                         </div>
                         
                         <div class="bep-box">
-                            <h4 style="color: #2C7A6E;"><i class="fas fa-lightbulb"></i> Signos radiológicos clásicos:</h4>
-                            <p><strong>Triángulo de Codman:</strong> elevación del periostio en los bordes del tumor.<br>
-                            <strong>Reacción en espolón (spiculated periosteal reaction):</strong> patrón "rayos de sol" (sunburst).<br>
-                            <strong>Destrucción ósea lítica o mixta,</strong> con áreas de osteogénesis [8].</p>
+                            <h4 style="color: #D81B60;"><i class="fas fa-lightbulb"></i> Localizaciones de especial atención:</h4>
+                            <p><strong>Rabdomiosarcoma orbitario:</strong> Excelente pronóstico (>90% supervivencia). Se presenta con proptosis, oftalmoplejía.<br>
+                            <strong>Rabdomiosarcoma parameníngeo:</strong> Localización en nasofaringe, senos paranasales. Alto riesgo de extensión al SNC.<br>
+                            <strong>Rabdomiosarcoma de vejiga/prostata:</strong> Se presenta con retención urinaria, masa pélvica [8].</p>
                         </div>
                     </section>
 
@@ -1121,39 +1177,44 @@
                     <section class="section-card">
                         <div class="section-title">
                             <div class="section-title-icon"><i class="fas fa-stethoscope"></i></div>
-                            <h2>Diagnóstico <span>Clínico, radiológico e histológico</span></h2>
+                            <h2>Diagnóstico <span>Clínico, radiológico y molecular</span></h2>
                         </div>
                         
                         <h4 style="margin: 0 0 15px; color: var(--primary);">Manifestaciones clínicas:</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-chevron-right"></i> <strong>Dolor óseo localizado:</strong> Inicialmente intermitente, luego continuo y nocturno.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>Tumoración palpable:</strong> Masa de consistencia dura, fija, con aumento de temperatura local.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>Limitación funcional:</strong> Claudicación si afecta extremidad inferior.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>Fractura patológica:</strong> En 5-10% de los casos [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Masa de crecimiento rápido:</strong> Síntoma más frecuente, indolora o dolorosa.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Síntomas compresivos:</strong> Según localización: proptosis (órbita), obstrucción nasal (nasofaringe), retención urinaria (vejiga).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Síntomas sistémicos:</strong> Fiebre, pérdida de peso en enfermedad avanzada.</li>
                         </ul>
                         
                         <h4 style="margin: 20px 0 10px; color: var(--primary);">Pruebas de imagen [8]:</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-chevron-right"></i> <strong>Radiografía simple:</strong> Primera aproximación. Revela lesión metafisaria con patrón mixto lítico/blástico, triángulo de Codman, reacción en espolón.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>RMN de extremidad:</strong> Evaluación de extensión intraósea, invasión de partes blandas, compromiso vascular.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>TC de tórax:</strong> Fundamental para estadificación (metástasis pulmonares, sitio más frecuente).</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>PET-TC:</strong> Útil para estadificación y evaluación de respuesta [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>RMN de la localización primaria:</strong> Estándar para evaluar extensión local, relación con estructuras adyacentes.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>TC de tórax, abdomen y pelvis:</strong> Estadificación (metástasis pulmonares, ganglios, hígado).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>PET-TC con FDG:</strong> Útil para estadificación y evaluación de respuesta.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Punción lumbar:</strong> En tumores parameníngeos para descartar extensión al SNC [8].</li>
                         </ul>
                         
-                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Diagnóstico histológico [8]:</h4>
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Diagnóstico histológico y molecular [8]:</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-chevron-right"></i> <strong>Biopsia:</strong> Imprescindible antes del tratamiento. Debe ser realizada por el equipo quirúrgico que realizará la cirugía definitiva.</li>
-                            <li><i class="fas fa-chevron-right"></i> <strong>Hallazgos:</strong> Células malignas que producen matriz osteoide. Inmunohistoquímica: <strong>osteocalcina (+), osteopontina (+), SATB2 (+)</strong> [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Biopsia:</strong> Imprescindible antes del tratamiento. Puede ser por escisión o tru-cut.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Histología:</strong> Células pequeñas, redondas, azules. Inmunohistoquímica: <strong>desmina (+), miogenina (+), MyoD1 (+), actina músculo liso (+)</strong> [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Diagnóstico molecular:</strong> Detección de translocaciones <strong>PAX3-FOXO1</strong> o <strong>PAX7-FOXO1</strong> por FISH o RT-PCR (característico de subtipo alveolar) [8].</li>
                         </ul>
                         
-                        <table class="staging-table">
+                        <table class="risk-table">
                             <thead>
-                                32<th>Estadio (Enneking/MSTS)</th><th>Descripción</th><th>Supervivencia a 5 años</th>
+                                32<th>Grupo de riesgo</th><th>Características</th><th>Supervivencia a 5 años</th><th>Tratamiento</th>
                             </thead>
                             <tbody>
-                                <tr><td><strong>I (bajo grado)</strong></td><td>Intracompartimental (IA) o extracompartimental (IB)</td><td>80-90%</td></tr>
-                                <tr><td><strong>II (alto grado)</strong></td><td>Intracompartimental (IIA) o extracompartimental (IIB)</td><td>60-70%</td></tr>
-                                <tr><td><strong>III</strong></td><td>Metástasis a distancia</td><td>20-30%</td></tr>
+                                32<td><strong>Bajo riesgo</strong> ("uid="embrionario, localización favorable, tamaño <5 cm, sin metástasis) <td>80-90%</td><td>Quimioterapia VAC (9-12 ciclos) + cirugía/RT</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Riesgo intermedio</strong> ("uid="embrionario localización desfavorable o tamaño >5 cm, o alveolar sin metástasis) <td>60-80%</td><td>Quimioterapia VAC/VIE intensificada (12-15 ciclos) + cirugía/RT</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Alto riesgo</strong> ("uid="metástasis al diagnóstico, especialmente alveolar) <td>20-40%</td><td>Quimioterapia dosis intensiva + trasplante de progenitores</td>
+                                </tr>
                             </tbody>
                         </table>
                     </section>
@@ -1162,67 +1223,66 @@
                     <section class="section-card">
                         <div class="section-title">
                             <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
-                            <h2>Tratamiento <span>Quimioterapia + cirugía conservadora</span></h2>
+                            <h2>Tratamiento <span>Quimioterapia multimodal + control local</span></h2>
                         </div>
                         
                         <div class="quote-block chemo-alert" style="background: #FFF8E7;">
                             <i class="fas fa-flask"></i>
-                            <p>El tratamiento estándar del osteosarcoma localizado incluye <strong>quimioterapia neoadyuvante (preoperatoria)</strong> con el régimen <strong>MAP (metotrexato, doxorrubicina, cisplatino)</strong>, seguida de <strong>cirugía conservadora de extremidades</strong> y <strong>quimioterapia adyuvante</strong>. La <strong>respuesta histológica</strong> a la quimioterapia neoadyuvante (>90% necrosis) es el factor pronóstico más importante [1][8].</p>
+                            <p>El tratamiento del rabdomiosarcoma es <strong>multimodal</strong> e incluye <strong>quimioterapia neoadyuvante</strong>, <strong>cirugía</strong> y <strong>radioterapia</strong>. Los regímenes de quimioterapia estándar son <strong>VAC (vincristina, dactinomicina, ciclofosfamida)</strong> para riesgo bajo/intermedio y <strong>VIE (vincristina, ifosfamida, etopósido)</strong> para riesgo alto o alternancia. La <strong>radioterapia</strong> es fundamental en localizaciones irresecables o márgenes positivos [1][8].</p>
                         </div>
                         
                         <h4 style="margin: 20px 0 10px; color: var(--primary);">Quimioterapia [8]:</h4>
                         <div class="treatment-grid">
                             <div class="treatment-card">
                                 <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
-                                <h4>MAP (régimen estándar)</h4>
-                                <p><strong>Metotrexato</strong> (dosis altas, 12 g/m²) + <strong>Doxorrubicina</strong> (60-75 mg/m²) + <strong>Cisplatino</strong> (100-120 mg/m²). 2-3 ciclos preoperatorios, 2-3 postoperatorios [8].</p>
-                                <span class="treatment-tag">Estándar oro</span>
-                            </div>
-                            
-                            <div class="treatment-card">
-                                <div class="treatment-icon"><i class="fas fa-chart-line"></i></div>
-                                <h4>Respuesta histológica</h4>
-                                <p><strong>Buena respuesta:</strong> >90% necrosis tumoral → mejor pronóstico.<br>
-                                <strong>Mala respuesta:</strong> <90% necrosis → considerar cambio de esquema postoperatorio [8].</p>
-                            </div>
-                        </div>
-                        
-                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Cirugía [8]:</h4>
-                        <div class="treatment-grid">
-                            <div class="treatment-card">
-                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
-                                <h4>Cirugía conservadora de extremidades</h4>
-                                <p><strong>Resección en bloque</strong> con márgenes amplios. Reconstrucción con <strong>prótesis oncológica</strong>, aloinjerto o artrodesis. Tasa de preservación de extremidad >90% [8].</p>
-                                <span class="treatment-tag">Estándar actual</span>
-                            </div>
-                            
-                            <div class="treatment-card">
-                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
-                                <h4>Amputación</h4>
-                                <p>Reservada para casos con <strong>invasión vascular mayor</strong>, <strong>márgenes inciertos</strong> o <strong>tumores irresecables</strong>. Actualmente <10% de los casos [8].</p>
-                            </div>
-                        </div>
-                        
-                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Enfermedad metastásica [8]:</h4>
-                        <div class="treatment-grid">
-                            <div class="treatment-card">
-                                <div class="treatment-icon"><i class="fas fa-lungs"></i></div>
-                                <h4>Metastasectomía pulmonar</h4>
-                                <p>Indicada en metástasis pulmonares resecables. Mejora supervivencia si resección completa [8].</p>
+                                <h4>Régimen VAC</h4>
+                                <p><strong>Vincristina + Dactinomicina + Ciclofosfamida</strong>. Estándar para riesgo bajo/intermedio. Duración: 9-15 ciclos (aproximadamente 6-9 meses) [8].</p>
+                                <span class="treatment-tag">Estándar internacional</span>
                             </div>
                             
                             <div class="treatment-card">
                                 <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
-                                <h4>Quimioterapia de segunda línea</h4>
-                                <p>Ifosfamida, etopósido, gemcitabina, docetaxel. Terapias dirigidas en investigación [8].</p>
+                                <h4>Régimen VIE</h4>
+                                <p><strong>Vincristina + Ifosfamida + Etopósido</strong>. Para riesgo alto o alternancia con VAC. Mayor toxicidad renal [8].</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Control local [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Cirugía</h4>
+                                <p><strong>Resección en bloque</strong> con márgenes amplios. Preferida si es posible sin morbilidad significativa. En órbita se evita cirugía mutilante [8].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-radiation"></i></div>
+                                <h4>Radioterapia</h4>
+                                <p>Indicada en <strong>tumores irresecables, márgenes positivos, respuesta incompleta a quimioterapia</strong>. Dosis: 36-54 Gy según edad y localización. En niños pequeños se intenta diferir [8].</p>
+                                <span class="treatment-tag">Fundamental</span>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Enfermedad metastásica y de alto riesgo [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                                <h4>Quimioterapia intensificada</h4>
+                                <p>Régimen VAC/VIE con dosis altas de ciclofosfamida/ifosfamida. Trasplante de progenitores hematopoyéticos en pacientes con respuesta [8].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-lungs"></i></div>
+                                <h4>Metastasectomía</h4>
+                                <p>Indicada en metástasis pulmonares resecables después de quimioterapia. Mejora supervivencia [8].</p>
                             </div>
                         </div>
                         
                         <div class="bep-box">
-                            <h4 style="color: #2C7A6E;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
-                            <p>✔ Inmunoterapia en osteosarcoma: estudios con inhibidores de PD-1 en combinación con quimioterapia.<br>
-                            ✔ Terapias dirigidas: inhibidores de m-TOR, inhibidores de tirosina quinasa (regorafenib).<br>
-                            ✔ Nuevos marcadores predictivos de respuesta a quimioterapia [1][8].</p>
+                            <h4 style="color: #D81B60;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ Terapias dirigidas: inhibidores de ALK, inhibidores de PARP en estudios.<br>
+                            ✔ Inmunoterapia: inhibidores de PD-1 en combinación con quimioterapia en ensayos clínicos.<br>
+                            ✔ Nuevos regímenes de quimioterapia para reducir toxicidad a largo plazo [1][8].</p>
                         </div>
                     </section>
 
@@ -1230,42 +1290,43 @@
                     <section class="section-card">
                         <div class="section-title">
                             <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
-                            <h2>Pronóstico y Seguimiento <span>Factores pronósticos clave</span></h2>
+                            <h2>Pronóstico y Seguimiento <span>Seguimiento de por vida por efectos tardíos</span></h2>
                         </div>
                         
                         <div class="stats-grid" style="margin-bottom: 20px;">
                             <div class="stat-item">
-                                <div class="stat-number">60-70%</div>
-                                <div class="stat-label">SV5 años localizado</div>
+                                <div class="stat-number">80-90%</div>
+                                <div class="stat-label">SV5 años Bajo riesgo</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">20-30%</div>
-                                <div class="stat-label">SV5 años metastásico</div>
+                                <div class="stat-number">60-80%</div>
+                                <div class="stat-label">SV5 años Riesgo intermedio</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">20-40%</div>
+                                <div class="stat-label">SV5 años Alto riesgo</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">>90%</div>
-                                <div class="stat-label">Buena respuesta histológica</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">30-40%</div>
-                                <div class="stat-label">Recaída en enfermedad localizada</div>
+                                <div class="stat-label">SV5 años Orbitario</div>
                             </div>
                         </div>
                         
                         <h4 style="margin: 20px 0 10px; color: var(--primary);">Factores pronósticos [8]:</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-star"></i> <strong>Respuesta histológica a quimioterapia neoadyuvante:</strong> El factor más importante. >90% necrosis = buen pronóstico.</li>
-                            <li><i class="fas fa-chart-line"></i> <strong>Estadio al diagnóstico:</strong> Localizado vs metastásico.</li>
-                            <li><i class="fas fa-cut"></i> <strong>Márgenes quirúrgicos:</strong> R0 (negativos) vs R1/R2.</li>
-                            <li><i class="fas fa-dna"></i> <strong>Localización:</strong> Tumores axiales (pelvis, columna) peor pronóstico.</li>
+                            <li><i class="fas fa-star"></i> <strong>Grupo de riesgo:</strong> El factor pronóstico más importante.</li>
+                            <li><i class="fas fa-dna"></i> <strong>Subtipo alveolar con PAX-FOXO1:</strong> Peor pronóstico que embrionario.</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Localización:</strong> Orbitario mejor pronóstico; parameníngeo, extremidades peor pronóstico.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Respuesta a quimioterapia:</strong> Buena respuesta (<25% residual) asocia a mejor supervivencia.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Metástasis al diagnóstico:</strong> Principal factor de mal pronóstico [8].</li>
                         </ul>
                         
-                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento recomendado [9]:</h4>
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento y efectos tardíos [9]:</h4>
                         <ul class="feature-list">
-                            <li><i class="fas fa-calendar-check"></i> <strong>Primeros 2 años:</strong> Exploración física cada 3 meses. TC de tórax cada 3-6 meses (metástasis pulmonares). RMN de extremidad según indicación.</li>
-                            <li><i class="fas fa-calendar-check"></i> <strong>Años 3-5:</strong> Exploración cada 6 meses. TC de tórax cada 6-12 meses.</li>
-                            <li><i class="fas fa-calendar-check"></i> <strong>Más allá de 5 años:</strong> Seguimiento anual (riesgo de recurrencia tardía y segundos tumores).</li>
-                            <li><i class="fas fa-camera"></i> <strong>Ecografía cardíaca:</strong> Vigilancia de cardiotoxicidad por doxorrubicina [9].</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Primeros 5 años:</strong> Exploración física cada 3-6 meses. TC/RMN según localización cada 6-12 meses.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Más allá de 5 años:</strong> Seguimiento anual de por vida por efectos tardíos.</li>
+                            <li><i class="fas fa-heartbeat"></i> <strong>Efectos tardíos:</strong> Cardiotoxicidad (doxorrubicina), nefrotoxicidad (ifosfamida), infertilidad, segundos tumores, déficit de crecimiento, disfunción endocrina [9].</li>
+                            <li><i class="fas fa-brain"></i> <strong>Evaluación neurocognitiva:</strong> Especialmente en niños que recibieron radioterapia craneal [9].</li>
                         </ul>
                     </section>
                 </div>
@@ -1281,37 +1342,37 @@
                             <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
                             <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
                             <div class="doctor-specialty">Oncólogo Clínico</div>
-                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Sarcomas y Tumores Musculoesqueléticos</p>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Tumores Pediátricos y Sarcomas</p>
                             <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar al especialista
                             </a>
                         </div>
                     </div>
 
-                    <!-- PANEL ESPECIAL OSTEOSARCOMA -->
-                    <div class="info-panel osteo-panel">
+                    <!-- PANEL ESPECIAL RABDOMIOSARCOMA -->
+                    <div class="info-panel rhabdo-panel">
                         <div class="info-panel-title">
-                            <i class="fas fa-bone"></i> Datos Clave
+                            <i class="fas fa-child"></i> Datos Clave
                         </div>
                         <div style="padding: 10px 0;">
                             <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                <span>Signos radiológicos</span>
-                                <span style="font-weight: 700;">Triángulo de Codman + Sunburst</span>
+                                <span>Inmunohistoquímica</span>
+                                <span style="font-weight: 700;">Miogenina (+), MyoD1 (+), Desmina (+)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Translocación alveolar</span>
+                                <span style="font-weight: 700;">PAX3/7-FOXO1</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
                                 <span>Quimioterapia</span>
-                                <span style="font-weight: 700;">MAP (Metotrexato + Doxorrubicina + Cisplatino)</span>
-                            </div>
-                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
-                                <span>Cirugía</span>
-                                <span style="font-weight: 700;">Conservadora + prótesis oncológica</span>
+                                <span style="font-weight: 700;">VAC (riesgo bajo) / VIE (riesgo alto)</span>
                             </div>
                             <div style="display: flex; justify-content: space-between; padding: 10px 0;">
-                                <span>Metástasis</span>
-                                <span style="font-weight: 700;">Pulmón (principalmente)</span>
+                                <span>Mejor pronóstico</span>
+                                <span style="font-weight: 700;">Orbitario, embrionario</span>
                             </div>
                         </div>
-                        <a href="https://wa.me/593984708234" class="btn-osteo" target="_blank">
+                        <a href="https://wa.me/593984708234" class="btn-rhabdo" target="_blank">
                             <i class="fab fa-whatsapp"></i> Evaluación personalizada
                         </a>
                     </div>
@@ -1322,24 +1383,24 @@
                             <i class="fas fa-book-open"></i> Glosario
                         </div>
                         <div class="glossary-term">
-                            <span class="term">MAP</span>
-                            <span class="definition">Metotrexato + Doxorrubicina + Cisplatino</span>
+                            <span class="term">VAC / VIE</span>
+                            <span class="definition">Regímenes de quimioterapia estándar</span>
                         </div>
                         <div class="glossary-term">
-                            <span class="term">Triángulo de Codman</span>
-                            <span class="definition">Elevación periostea en bordes tumorales</span>
+                            <span class="term">PAX-FOXO1</span>
+                            <span class="definition">Translocación característica de subtipo alveolar</span>
                         </div>
                         <div class="glossary-term">
-                            <span class="term">Respuesta histológica</span>
-                            <span class="definition">Necrosis tumoral post-quimioterapia</span>
+                            <span class="term">Miogenina</span>
+                            <span class="definition">Marcador inmunohistoquímico específico</span>
                         </div>
                         <div class="glossary-term">
-                            <span class="term">Prótesis oncológica</span>
-                            <span class="definition">Implante para reconstrucción post-resección</span>
+                            <span class="term">Rabdomiosarcoma parameníngeo</span>
+                            <span class="definition">Localización de alto riesgo</span>
                         </div>
                         <div class="glossary-term">
-                            <span class="term">Metastasectomía pulmonar</span>
-                            <span class="definition">Resección de metástasis pulmonares</span>
+                            <span class="term">EpSSG / COG</span>
+                            <span class="definition">Grupos cooperativos europeo y americano</span>
                         </div>
                     </div>
 
@@ -1351,33 +1412,33 @@
                         <a href="#" class="resource-link">
                             <i class="fas fa-external-link-alt"></i>
                             <div>
-                                <strong>Sarcoma Foundation of America</strong>
+                                <strong>Rhabdomyosarcoma Alliance</strong>
                                 <small style="color: var(--text-light); display: block;">Información y apoyo a pacientes</small>
                             </div>
                         </a>
                         <a href="#" class="resource-link">
                             <i class="fas fa-external-link-alt"></i>
                             <div>
-                                <strong>Asociación Española de Sarcomas (ASES)</strong>
+                                <strong>Asociación de Padres de Niños con Cáncer (ASPANOA)</strong>
                                 <small style="color: var(--text-light); display: block;">Recursos en español</small>
                             </div>
                         </a>
                         <a href="#" class="resource-link">
                             <i class="fas fa-external-link-alt"></i>
                             <div>
-                                <strong>Guía ESMO para pacientes</strong>
-                                <small style="color: var(--text-light); display: block;">Información en español</small>
+                                <strong>Children's Oncology Group (COG)</strong>
+                                <small style="color: var(--text-light); display: block;">Información para pacientes y familias</small>
                             </div>
                         </a>
                     </div>
 
                     <!-- CTA ESPECIAL -->
-                    <div class="info-panel" style="background: linear-gradient(135deg, #2C7A6E 0%, #4FB3A3 100%); color: white; border-top: none;">
+                    <div class="info-panel" style="background: linear-gradient(135deg, #D81B60 0%, #EC407A 100%); color: white; border-top: none;">
                         <div style="text-align: center; padding: 15px 0;">
-                            <i class="fas fa-bone" style="font-size: 3rem; margin-bottom: 15px; color: #E6B422;"></i>
-                            <h4 style="color: white; margin-bottom: 10px;">¿Dolor óseo persistente o masa en extremidad?</h4>
-                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El diagnóstico precoz y el tratamiento multimodal en centros especializados son clave para preservar la extremidad y mejorar la supervivencia.</p>
-                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #2C7A6E; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                            <i class="fas fa-child" style="font-size: 3rem; margin-bottom: 15px; color: #FFB74D;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Masa de rápido crecimiento en cabeza, cuello o pelvis en un niño?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El diagnóstico precoz y el tratamiento multimodal en centros especializados son clave para lograr altas tasas de curación.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #D81B60; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
                                 <i class="fab fa-whatsapp"></i> Consultar especialista
                             </a>
                         </div>
@@ -1394,33 +1455,33 @@
                 
                 <div style="display: flex; flex-direction: column; gap: 15px;">
                     <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuáles son los síntomas del osteosarcoma?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">El síntoma más frecuente es <strong>dolor óseo localizado</strong>, inicialmente intermitente y relacionado con la actividad, que progresa a <strong>dolor continuo y nocturno</strong>. También puede presentarse <strong>tumoración palpable</strong> (masa dura, fija), <strong>limitación funcional</strong> (claudicación si afecta extremidad inferior) y <strong>fractura patológica</strong> en 5-10% de los casos [8].</p>
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuáles son los síntomas del rabdomiosarcoma en niños?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Los síntomas dependen de la localización. En <strong>cabeza y cuello</strong>: proptosis (ojos saltones), obstrucción nasal, masa en cuello. En <strong>genitourinario</strong>: retención urinaria, masa pélvica, sangrado vaginal. En <strong>extremidades</strong>: masa indolora de rápido crecimiento. También puede presentar <strong>síntomas sistémicos</strong> como fiebre y pérdida de peso en etapas avanzadas [8].</p>
                     </details>
                     
                     <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica el osteosarcoma?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico se basa en <strong>radiografía simple</strong> (triángulo de Codman, reacción en espolón), <strong>RMN de extremidad</strong> (extensión local), <strong>TC de tórax</strong> (metástasis pulmonares) y <strong>biopsia</strong> con estudio histológico e inmunohistoquímico. La biopsia debe ser realizada por el equipo que realizará la cirugía definitiva [8].</p>
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico se basa en <strong>RMN</strong> para evaluar extensión local, <strong>TC de tórax, abdomen y pelvis</strong> para estadificación, <strong>biopsia</strong> con estudio histológico e <strong>inmunohistoquímica</strong> (miogenina, MyoD1, desmina) y <strong>diagnóstico molecular</strong> para detectar translocaciones PAX-FOXO1 (características del subtipo alveolar). El <strong>PET-TC</strong> es útil para estadificación y evaluación de respuesta [8].</p>
                     </details>
                     
                     <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el tratamiento estándar?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">El tratamiento multimodal incluye <strong>quimioterapia neoadyuvante (MAP)</strong> durante 2-3 ciclos, seguida de <strong>cirugía conservadora de extremidades</strong> (resección con márgenes amplios y reconstrucción con prótesis oncológica) y <strong>quimioterapia adyuvante</strong> postoperatoria. La <strong>respuesta histológica</strong> a la quimioterapia neoadyuvante es el factor pronóstico más importante [1][8].</p>
-                    </details>
-                    
-                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Se puede conservar la extremidad?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">Sí, actualmente la <strong>cirugía conservadora de extremidades</strong> se realiza en más del <strong>90% de los casos</strong>. Tras la resección del tumor con márgenes amplios, se realiza reconstrucción con <strong>prótesis oncológica</strong> (endoprótesis), aloinjerto o artrodesis. La amputación se reserva para casos con invasión vascular mayor, márgenes inciertos o tumores irresecables [8].</p>
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el tratamiento del rabdomiosarcoma?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El tratamiento es <strong>multimodal</strong> e incluye <strong>quimioterapia neoadyuvante</strong> con regímenes VAC (vincristina, dactinomicina, ciclofosfamida) o VIE (vincristina, ifosfamida, etopósido), seguida de <strong>cirugía</strong> (resección con márgenes amplios) o <strong>radioterapia</strong> para el control local, y <strong>quimioterapia adyuvante</strong>. La intensidad del tratamiento depende del <strong>grupo de riesgo</strong> (bajo, intermedio, alto) [1][8].</p>
                     </details>
                     
                     <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
                         <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">La <strong>supervivencia global a 5 años</strong> para enfermedad localizada es del <strong>60-70%</strong> con tratamiento multimodal. El factor más importante es la <strong>respuesta histológica a la quimioterapia neoadyuvante</strong>: pacientes con >90% de necrosis tumoral tienen supervivencia >80%. En enfermedad metastásica, la supervivencia a 5 años es del 20-30% [8].</p>
+                        <p style="margin-top: 10px; padding-left: 25px;">La <strong>supervivencia global a 5 años</strong> para enfermedad localizada es del <strong>60-80%</strong>. El pronóstico depende del <strong>grupo de riesgo</strong>: bajo riesgo (80-90%), riesgo intermedio (60-80%), alto riesgo (20-40%). La localización <strong>orbitaria</strong> y el subtipo <strong>embrionario</strong> tienen mejor pronóstico, mientras que el subtipo <strong>alveolar</strong> con translocación PAX-FOXO1 tiene peor pronóstico [8].</p>
                     </details>
                     
                     <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
-                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué seguimiento necesito después del tratamiento?</summary>
-                        <p style="margin-top: 10px; padding-left: 25px;">El seguimiento es <strong>intensivo los primeros 5 años</strong> (mayor riesgo de recaída). <strong>Primeros 2 años:</strong> exploración física cada 3 meses, TC de tórax cada 3-6 meses. <strong>Años 3-5:</strong> exploración cada 6 meses, TC de tórax cada 6-12 meses. También se realiza <strong>ecografía cardíaca periódica</strong> por cardiotoxicidad de la doxorrubicina [9].</p>
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es la translocación PAX-FOXO1?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La <strong>translocación PAX3/7-FOXO1</strong> es una alteración cromosómica característica del <strong>rabdomiosarcoma alveolar</strong>, presente en aproximadamente el 70-80% de los casos de este subtipo. Esta translocación fusiona los genes <strong>PAX3 o PAX7</strong> con <strong>FOXO1</strong>, generando una proteína de fusión que actúa como factor de transcripción anómalo. Su presencia se asocia a <strong>peor pronóstico</strong> y se utiliza para estratificación de riesgo [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué efectos tardíos puede tener el tratamiento?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Los supervivientes de rabdomiosarcoma requieren <strong>seguimiento de por vida</strong> por posibles efectos tardíos: <strong>cardiotoxicidad</strong> (por dactinomicina), <strong>nefrotoxicidad</strong> (por ifosfamida), <strong>infertilidad</strong>, <strong>segundos tumores</strong>, <strong>déficit de crecimiento</strong> (por radioterapia), <strong>disfunción endocrina</strong> (tiroides, gonadal) y <strong>deterioro neurocognitivo</strong> (especialmente si recibió radioterapia craneal). Se recomienda seguimiento en unidades de supervivientes de cáncer infantil [9].</p>
                     </details>
                 </div>
             </section>
