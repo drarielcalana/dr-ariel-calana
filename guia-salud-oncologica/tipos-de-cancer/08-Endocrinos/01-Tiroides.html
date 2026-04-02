@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Cáncer de Tiroides: Información completa sobre carcinoma papilar, folicular, medular y anaplásico. Factores de riesgo (radiación, historia familiar), diagnóstico por ecografía y PAAF, clasificación TNM, tratamiento con tiroidectomía, terapia con yodo radiactivo, terapias dirigidas (lenvatinib, sorafenib) y seguimiento con tiroglobulina | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="cáncer de tiroides, carcinoma papilar, carcinoma folicular, carcinoma medular, carcinoma anaplásico, tiroidectomía, yodo radiactivo, tiroglobulina, RET, lenvatinib, sorafenib">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Cáncer de Tiroides | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre cáncer de tiroides: subtipos histológicos, diagnóstico, clasificación TNM, tratamiento y seguimiento.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Cáncer de Tiroides | Dr. Ariel Calaña Sabina</title>
+    
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Cáncer de Tiroides - Azul Cielo / Verde Mar */
+            --thy-sky: #7EC8E0;
+            --thy-sky-dark: #4A9FC1;
+            --thy-seafoam: #9FE2BF;
+            --thy-teal: #3D9B8A;
+            --thy-soft: #E8F4F8;
+            --thy-gold: #FFD966;
+            --thy-coral: #FF9F7C;
+            
+            --gradient-thy: linear-gradient(135deg, #4A9FC1 0%, #7EC8E0 100%);
+            --gradient-thy-soft: linear-gradient(135deg, #E8F4F8 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #F5FCFE; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* HEADER */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+        header.scrolled { padding: 5px 0; background: rgba(255, 255, 255, 0.98); box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--thy-sky-dark); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { display: block; padding: 10px 20px; color: var(--text-dark); font-size: 0.85rem; font-weight: 500; }
+        .dropdown-content a:hover { background: var(--light); color: var(--thy-sky-dark); padding-left: 25px; }
+        .dropdown-content a.active { background: var(--light); color: var(--accent); border-left: 3px solid var(--accent); }
+        .btn-header { background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700; box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); display: flex; align-items: center; gap: 8px; }
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+        
+        /* HERO ESPECÍFICO PARA CÁNCER DE TIROIDES */
+        .hero-thy {
+            background: var(--gradient-thy);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-thy::before {
+            content: '🦋 🎗️ 🦋';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.5;
+        }
+        .hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero-content h1 { font-family: 'Playfair Display', serif; font-size: 3.2rem; margin-bottom: 15px; line-height: 1.2; font-weight: 800; text-shadow: 0 2px 20px rgba(0,0,0,0.5); }
+        .hero-content h1 span { color: var(--thy-gold); position: relative; display: inline-block; }
+        .hero-content .subtitle { font-size: 1.4rem; opacity: 0.95; font-weight: 300; margin-bottom: 20px; }
+        .hero-badge-thy {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin-top: 25px;
+            border: 2px solid var(--thy-gold);
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .hero-badge-thy i { color: var(--thy-gold); }
+        
+        /* Breadcrumb */
+        .breadcrumb { background: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.02); margin-bottom: 30px; }
+        .breadcrumb-list { display: flex; align-items: center; gap: 10px; list-style: none; flex-wrap: wrap; }
+        
+        /* Quick Summary */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid var(--thy-sky-dark);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(74, 159, 193, 0.2);
+        }
+        .summary-icon { width: 60px; height: 60px; background: rgba(74, 159, 193, 0.1); color: var(--thy-sky-dark); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 15px; }
+        .summary-value { font-family: 'Montserrat', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--thy-sky-dark); }
+        
+        /* Content Grid */
+        .content-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; margin-bottom: 40px; }
+        .section-card { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 30px; margin-bottom: 30px; transition: var(--transition); border-top: 6px solid var(--thy-sky-dark); }
+        .section-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-3px); }
+        .section-card.thy-highlight { background: linear-gradient(135deg, #E8F4F8 0%, #ffffff 100%); border: 2px solid var(--thy-sky-dark); }
+        .section-title { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 2px solid #f0f0f0; }
+        .section-title-icon { width: 50px; height: 50px; background: rgba(74, 159, 193, 0.1); color: var(--thy-sky-dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
+        .section-title h2 { font-family: 'Montserrat', sans-serif; font-size: 1.6rem; color: var(--primary); margin: 0; }
+        .section-title h2 span { font-size: 1rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 3px; }
+        
+        /* Histology Grid */
+        .histology-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .histology-card {
+            border-radius: 15px;
+            padding: 20px;
+            transition: var(--transition);
+            color: white;
+        }
+        .histology-card.papilar { background: linear-gradient(135deg, #4A9FC1 0%, #7EC8E0 100%); }
+        .histology-card.folicular { background: linear-gradient(135deg, #3D9B8A 0%, #9FE2BF 100%); }
+        .histology-card.medular { background: linear-gradient(135deg, #FF9F7C 0%, #FFB88C 100%); }
+        .histology-card.anaplasico { background: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%); }
+        .histology-card h4 { color: white; margin-bottom: 10px; font-size: 1.1rem; }
+        .histology-percent { font-size: 0.7rem; opacity: 0.9; margin-top: 8px; display: inline-block; background: rgba(255,255,255,0.2); padding: 2px 10px; border-radius: 20px; }
+        .prognosis-badge { font-size: 0.7rem; margin-top: 8px; display: inline-block; padding: 2px 10px; border-radius: 20px; background: rgba(255,255,255,0.2); }
+        
+        /* Stats Grid */
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .stat-item { background: var(--light); padding: 20px; border-radius: 15px; text-align: center; border-left: 4px solid var(--thy-sky-dark); }
+        .stat-number { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--thy-sky-dark); line-height: 1; margin-bottom: 5px; }
+        
+        /* Feature List */
+        .feature-list { list-style: none; }
+        .feature-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list i { color: var(--thy-sky-dark); font-size: 1.1rem; margin-top: 3px; }
+        
+        /* Staging Table */
+        .staging-table { width: 100%; border-collapse: collapse; margin: 20px 0; border-radius: 15px; overflow: hidden; }
+        .staging-table th { background: var(--thy-sky-dark); color: white; padding: 15px; font-weight: 600; text-align: center; }
+        .staging-table td { padding: 12px 15px; border-bottom: 1px solid #f0f0f0; background: white; }
+        .staging-table tr:hover td { background: #E8F4F8; }
+        
+        /* Treatment Grid */
+        .treatment-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin: 20px 0; }
+        .treatment-card { background: var(--light); border-radius: 15px; padding: 25px 20px; transition: var(--transition); border: 1px solid rgba(74, 159, 193, 0.2); }
+        .treatment-card:hover { transform: translateY(-5px); border-color: var(--thy-sky-dark); }
+        .treatment-icon { width: 50px; height: 50px; background: white; color: var(--thy-sky-dark); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 15px; }
+        .treatment-tag { display: inline-block; padding: 4px 12px; background: rgba(74, 159, 193, 0.1); color: var(--thy-sky-dark); border-radius: 50px; font-size: 0.8rem; font-weight: 600; margin-top: 10px; }
+        
+        /* Sidebar */
+        .sidebar { position: sticky; top: 100px; }
+        .info-panel { background: white; border-radius: 20px; box-shadow: var(--shadow); padding: 25px; margin-bottom: 25px; border-top: 4px solid var(--thy-sky-dark); }
+        .info-panel.thy-panel { background: var(--gradient-thy); color: white; border-top: none; }
+        .info-panel.thy-panel .info-panel-title { color: white; border-bottom-color: rgba(255,255,255,0.2); }
+        .info-panel-title { font-family: 'Montserrat', sans-serif; font-size: 1.2rem; color: var(--primary); margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; display: flex; align-items: center; gap: 10px; }
+        .doctor-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 4px solid var(--thy-sky-dark); margin-bottom: 15px; }
+        .btn-whatsapp-sidebar { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: #25D366; color: white; padding: 12px 25px; border-radius: 50px; font-weight: 600; width: 100%; transition: var(--transition); }
+        .btn-thy { display: inline-flex; align-items: center; justify-content: center; gap: 10px; background: white; color: var(--thy-sky-dark); padding: 15px 25px; border-radius: 50px; font-weight: 700; width: 100%; }
+        .glossary-term { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .back-to-top { position: fixed; bottom: 30px; right: 30px; width: 50px; height: 50px; background: var(--thy-sky-dark); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; opacity: 0; visibility: hidden; transition: var(--transition); cursor: pointer; z-index: 100; }
+        .back-to-top.visible { opacity: 1; visibility: visible; }
+        footer { background: var(--primary); color: white; padding: 60px 0 30px; margin-top: 60px; }
+        .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
+        .copyright { text-align: center; opacity: 0.7; font-size: 0.9rem; margin-top: 40px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+        
+        @media (max-width: 992px) {
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .histology-grid { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2.5rem; }
+        }
+        @media (max-width: 768px) {
+            .nav-menu { position: fixed; top: 75px; left: -100%; width: 100%; background: white; flex-direction: column; padding: 40px; transition: 0.4s; }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        .bep-box { background: #E8F4F8; padding: 20px; border-radius: 15px; margin: 20px 0; border-left: 4px solid var(--thy-sky-dark); }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        @media (max-width: 768px) { .two-column { grid-template-columns: 1fr; } }
+        details { background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer; margin-bottom: 10px; }
+        summary { font-weight: 600; color: var(--primary); }
+        .thyroglobulin-box { background: #FFF8E7; padding: 15px; border-radius: 12px; margin: 15px 0; border-left: 4px solid var(--thy-gold); }
+        .risk-strat { display: flex; gap: 10px; margin: 15px 0; flex-wrap: wrap; }
+        .risk-badge { padding: 8px 15px; border-radius: 30px; font-size: 0.8rem; font-weight: 600; }
+        .risk-low { background: #9FE2BF; color: #1B5E3F; }
+        .risk-intermediate { background: #FFE5B4; color: #B45F1B; }
+        .risk-high { background: #FFB3B3; color: #C62828; }
+    </style>
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text"><span class="logo-name">Dr. Ariel Calaña</span><span class="logo-specialty">Oncólogo Clínico</span></div>
+                </a>
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link"><i class="fas fa-home"></i> Inicio</a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active"><i class="fas fa-book-medical"></i> Blog Oncológico</a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="cancer-intestino-delgado.html"><i class="fas fa-stethoscope"></i> Cáncer de Intestino Delgado</a>
+                            <a href="cancer-pancreas.html"><i class="fas fa-pancreas"></i> Cáncer de Páncreas</a>
+                            <a href="tumores-neuroendocrinos-pancreaticos.html"><i class="fas fa-hormone"></i> Tumores Neuroendocrinos Pancreáticos</a>
+                            <a href="cancer-cavidad-oral.html"><i class="fas fa-tooth"></i> Cáncer de Cavidad Oral</a>
+                            <a href="cancer-orofaringe.html"><i class="fas fa-virus"></i> Cáncer de Orofaringe</a>
+                            <a href="cancer-nasofaringe.html"><i class="fas fa-head-side-virus"></i> Cáncer de Nasofaringe</a>
+                            <a href="cancer-laringe.html"><i class="fas fa-microphone-alt"></i> Cáncer de Laringe</a>
+                            <a href="cancer-glandulas-salivales.html"><i class="fas fa-tint"></i> Cáncer de Glándulas Salivales</a>
+                            <a href="cancer-senos-paranasales.html"><i class="fas fa-head-side-mask"></i> Cáncer de Senos Paranasales</a>
+                            <a href="cancer-tiroides.html" class="active"><i class="fas fa-butterfly"></i> Cáncer de Tiroides</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link"><i class="fas fa-stethoscope"></i> Medicina General</a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank"><i class="fab fa-whatsapp"></i> <span>Agendar Cita</span></a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-thy">
+        <div class="container">
+            <div class="hero-content">
+                <h1>CÁNCER DE <span>TIROIDES</span></h1>
+                <p class="subtitle">Excelente pronóstico en la mayoría de los casos</p>
+                <p style="font-size: 1.1rem; max-width: 800px; margin: 0 auto;">El <strong>carcinoma papilar</strong> es el más frecuente (>80%). El manejo ha evolucionado hacia un enfoque <strong>personalizado</strong>, evitando cirugías innecesarias en tumores de bajo riesgo. La <strong>tiroglobulina</strong> es el marcador de seguimiento clave.</p>
+                <div class="hero-badge-thy"><i class="fas fa-chart-line"></i> >90% SV5 años global <i class="fas fa-dna"></i> Mutaciones BRAF, RET <i class="fas fa-flask"></i> Yodo radiactivo</div>
+            </div>
+        </div>
+    </section>
+
+    <div class="breadcrumb"><div class="container"><ul class="breadcrumb-list"><li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Tipos de Cáncer</a></li><li><i class="fas fa-chevron-right"></i></li><li><a href="#">Tumores Endocrinos</a></li><li><i class="fas fa-chevron-right"></i></li><li>Cáncer de Tiroides</li></ul></div></div>
+
+    <main class="main-content">
+        <div class="container">
+            <div class="quick-summary">
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-chart-line"></i></div><div class="summary-label">Incidencia creciente</div><div class="summary-value">+200%</div><div class="summary-desc">últimas décadas (sobrediagnóstico)</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-microscope"></i></div><div class="summary-label">Carcinoma papilar</div><div class="summary-value">80-85%</div><div class="summary-desc">subtipo más frecuente</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-chart-line"></i></div><div class="summary-label">SV5 años papilar</div><div class="summary-value">>95%</div><div class="summary-desc">excelente pronóstico</div></div>
+                <div class="summary-item"><div class="summary-icon"><i class="fas fa-flask"></i></div><div class="summary-label">Tiroglobulina</div><div class="summary-value">Marcador</div><div class="summary-desc">seguimiento post-tiroidectomía</div></div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-question-circle"></i></div><h2>¿Qué es? <span>El cáncer de la glándula mariposa</span></h2></div>
+                        <p>El <strong>cáncer de tiroides</strong> es una neoplasia maligna que se origina en las células de la glándula tiroides, ubicada en la región anterior del cuello. Es el <strong>tumor endocrino más frecuente</strong> y uno de los cánceres con <strong>mejor pronóstico</strong> cuando se diagnostica en estadios tempranos. La incidencia ha aumentado significativamente en las últimas décadas, principalmente debido al <strong>sobrediagnóstico</strong> de microcarcinomas (<1 cm) incidentales en estudios de imagen [8].</p>
+                        
+                        <div class="thyroglobulin-box">
+                            <i class="fas fa-droplet" style="color: var(--thy-gold); margin-right: 10px;"></i>
+                            <strong>La glándula tiroides:</strong> Produce hormonas tiroideas (T3, T4) que regulan el metabolismo. Su forma de <strong>mariposa</strong> con dos lóbulos unidos por el istmo. El cáncer puede originarse de las células foliculares (papilar, folicular, anaplásico) o de las células C parafoliculares (medular) [8].
+                        </div>
+                        
+                        <div class="quote-block" style="background: #E8F4F8; padding: 20px; border-radius: 15px; margin-top: 20px;"><i class="fas fa-quote-right"></i><p>El <strong>sobrediagnóstico</strong> del cáncer de tiroides es un fenómeno reconocido mundialmente. Muchos <strong>microcarcinomas papilares</strong> (<1 cm) detectados incidentalmente tienen un comportamiento <strong>indolente</strong> y nunca causarían síntomas o afectarían la supervivencia. Las guías actuales recomiendan <strong>vigilancia activa</strong> en lugar de cirugía inmediata en casos seleccionados de bajo riesgo [8].</p><div class="quote-author">— Guías NCCN 2026, ATA 2025</div></div>
+                    </section>
+
+                    <section class="section-card thy-highlight">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-microscope"></i></div><h2>Subtipos Histológicos <span>Espectro de agresividad</span></h2></div>
+                        <div class="histology-grid">
+                            <div class="histology-card papilar">
+                                <i class="fas fa-butterfly"></i>
+                                <h4>Carcinoma Papilar</h4>
+                                <p>80-85% de los casos. <strong>Mejor pronóstico</strong>. Asociado a mutaciones BRAF V600E. Puede presentar metástasis ganglionares cervicales precoces. Excelente respuesta a tratamiento [8].</p>
+                                <span class="histology-percent">80-85%</span>
+                                <span class="prognosis-badge">SV5 años >95%</span>
+                            </div>
+                            <div class="histology-card folicular">
+                                <i class="fas fa-circle"></i>
+                                <h4>Carcinoma Folicular</h4>
+                                <p>10-15% de los casos. Mayor tendencia a <strong>metástasis hematógenas</strong> (pulmón, hueso). Menor diseminación ganglionar. Asociado a mutaciones RAS [8].</p>
+                                <span class="histology-percent">10-15%</span>
+                                <span class="prognosis-badge">SV5 años 85-90%</span>
+                            </div>
+                            <div class="histology-card medular">
+                                <i class="fas fa-dna"></i>
+                                <h4>Carcinoma Medular</h4>
+                                <p>5-8% de los casos. Origina de células C (calcitonina). 25% hereditario (MEN2, mutaciones RET). <strong>No responde a yodo radiactivo</strong> [8].</p>
+                                <span class="histology-percent">5-8%</span>
+                                <span class="prognosis-badge">SV5 años 70-80%</span>
+                            </div>
+                            <div class="histology-card anaplasico">
+                                <i class="fas fa-bolt"></i>
+                                <h4>Carcinoma Anaplásico</h4>
+                                <p><1% de los casos. <strong>Extremadamente agresivo</strong>. Crecimiento rápido, invasión local, metástasis precoces. Pronóstico sombrío. Manejo multidisciplinario urgente [8].</p>
+                                <span class="histology-percent"><1%</span>
+                                <span class="prognosis-badge">SV5 años <10%</span>
+                            </div>
+                        </div>
+                        <div class="bep-box"><i class="fas fa-info-circle"></i> <strong>Variantes histológicas:</strong> El carcinoma papilar tiene variantes con diferente comportamiento: <strong>variante clásica</strong> (más frecuente), <strong>variante de células altas</strong> (más agresiva), <strong>variante folicular</strong> (mejor pronóstico), <strong>variante esclerosante difusa</strong> (agresiva) [8].</div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-exclamation-triangle"></i></div><h2>Factores de Riesgo <span>Radiación y genética</span></h2></div>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radiation"></i></div><h4>Radiación ionizante</h4><p>Principal factor de riesgo. Exposición a radioterapia en cabeza y cuello durante la infancia. Accidentes nucleares (Chernóbil) [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-dna"></i></div><h4>Historia familiar</h4><p>10% de los casos. Síndromes hereditarios: MEN2 (medular), poliposis familiar (papilar), Cowden, Carney [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-female"></i></div><h4>Sexo femenino</h4><p>3:1 mujeres:hombres. Influencia hormonal (estrógenos).</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-utensils"></i></div><h4>Deficiencia de yodo</h4><p>Asociada a carcinoma folicular en áreas con deficiencia endémica.</p></div>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-stethoscope"></i></div><h2>Diagnóstico <span>Nódulo tiroideo: evaluación sistemática</span></h2></div>
+                        <h4 style="margin: 0 0 10px; color: var(--thy-sky-dark);">Evaluación del nódulo tiroideo:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Ecografía tiroidea:</strong> Evalúa características ecográficas (composición, ecogenicidad, bordes, calcificaciones, forma). <strong>Sistema TI-RADS</strong> clasifica el riesgo de malignidad (1-5) [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Punción-aspiración con aguja fina (PAAF):</strong> Gold standard para nódulos >1 cm o con características sospechosas. Resultados: Benigno, indeterminado, sospechoso, maligno [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Marcadores moleculares:</strong> En muestras indeterminadas, paneles genómicos (ThyroSeq, Afirma) mejoran la precisión diagnóstica [8].</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Hormonas:</strong> TSH, T3, T4 (generalmente normales). Calcitonina en sospecha de carcinoma medular.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Ecografía cervical:</strong> Evaluación de metástasis ganglionares cervicales (niveles III, IV, VI).</li>
+                        </ul>
+                        
+                        <div class="risk-strat">
+                            <span class="risk-badge risk-low"><i class="fas fa-circle"></i> TI-RADS 2-3: Bajo riesgo</span>
+                            <span class="risk-badge risk-intermediate"><i class="fas fa-circle"></i> TI-RADS 4: Riesgo intermedio</span>
+                            <span class="risk-badge risk-high"><i class="fas fa-circle"></i> TI-RADS 5: Alto riesgo</span>
+                        </div>
+                        
+                        <div class="bep-box"><i class="fas fa-lightbulb"></i> <strong>Vigilancia activa:</strong> Los <strong>microcarcinomas papilares</strong> (<1 cm) sin características agresivas pueden manejarse con seguimiento ecográfico cada 6-12 meses en lugar de cirugía inmediata, con excelentes resultados [8].</div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Estadificación TNM (AJCC 8ª edición) <span>Edad como factor clave</span></h2></div>
+                        <div class="bep-box"><i class="fas fa-calendar-alt"></i> <strong>Novedad AJCC 8ª edición:</strong> El <strong>punto de corte de edad</strong> para la estadificación se modificó de 45 a <strong>55 años</strong>. Pacientes <55 años se estadifican como I (sin metástasis) o II (con metástasis), independientemente del tamaño tumoral o afectación ganglionar [8].</div>
+                        
+                        <table class="staging-table">
+                            <thead><tr><th>Edad</th><th>Estadio</th><th>Descripción</th><th>Supervivencia 5 años</th></thead>
+                            <tbody>
+                                <tr style="background: #E8F4F8;"><td rowspan="2"><strong><55 años</strong></td><td><strong>I</strong></td><td>Cualquier T, cualquier N, M0</td><td>>98%</td></tr>
+                                <tr style="background: #E8F4F8;"><td><strong>II</strong></td><td>Cualquier T, cualquier N, M1</td><td>70-80%</td></tr>
+                                <tr><td rowspan="4"><strong>≥55 años</strong></td><td><strong>I</strong></td><td>T1-2 N0 M0</td><td>95-98%</td></tr>
+                                <tr><td><strong>II</strong></td><td>T3 N0 M0 / T1-3 N1 M0</td><td>85-90%</td></tr>
+                                <tr><td><strong>III</strong></td><td>T4a N0-1 M0</td><td>70-75%</td></tr>
+                                <tr><td><strong>IVA</strong></td><td>T4b Cualquier N M0</td><td>50-60%</td></tr>
+                                <tr><td colspan="2"><strong>IVB</strong></td><td>M1</td><td>20-30%</td></tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-syringe"></i></div><h2>Tratamiento <span>Personalizado según riesgo</span></h2></div>
+                        
+                        <h4 style="margin: 0 0 10px; color: var(--thy-sky-dark);">Cirugía:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-cut"></i></div><h4>Tiroidectomía total</h4><p>Estándar para tumores >1 cm, multifocales, con metástasis ganglionares, variantes agresivas. Permite seguimiento con tiroglobulina y terapia con yodo radiactivo [8].</p><span class="treatment-tag">Estándar</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-cut"></i></div><h4>Lobectomía (hemitiroidectomía)</h4><p>Opción para tumores <4 cm, unifocales, sin metástasis, variante no agresiva. Menor riesgo de hipoparatiroidismo [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-cut"></i></div><h4>Disección ganglionar cervical</h4><p>Indicada si hay metástasis ganglionares confirmadas o sospechosas. Central (nivel VI) + lateral según extensión [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-chart-line"></i></div><h4>Vigilancia activa</h4><p>Para microcarcinomas papilares (<1 cm) sin características agresivas. Seguimiento ecográfico cada 6-12 meses [8].</p></div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--thy-sky-dark);">Terapia con yodo radiactivo (RAI):</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-radioactive"></i></div><h4>Indicaciones</h4><p>Post-tiroidectomía total en pacientes de alto riesgo: tumores >4 cm, extensión extratiroidea, metástasis, variantes agresivas, niveles de tiroglobulina elevados [8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-droplet"></i></div><h4>Preparación</h4><p>TSH >30 mUI/mL (por suspensión de hormona tiroidea o TSH recombinante). Dieta baja en yodo 1-2 semanas previas [8].</p></div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--thy-sky-dark);">Terapias sistémicas:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-pills"></i></div><h4>Terapias dirigidas (TKI)</h4><p><strong>Lenvatinib, sorafenib</strong> en carcinoma diferenciado refractario a yodo. <strong>Vandetanib, cabozantinib</strong> en carcinoma medular avanzado. <strong>Dabrafenib + trametinib</strong> en anaplásico con mutación BRAF V600E [1][8].</p><span class="treatment-tag">Medicina de precisión</span></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-dna"></i></div><h4>Terapias RET-específicas</h4><p><strong>Selpercatinib, pralsetinib</strong> para carcinoma medular con mutaciones RET (hereditario o esporádico) [1][8].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-vial"></i></div><h4>Inmunoterapia</h4><p>Papel limitado. En estudio para carcinoma anaplásico en combinación con TKI [1].</p></div>
+                            <div class="treatment-card"><div class="treatment-icon"><i class="fas fa-flask"></i></div><h4>Quimioterapia</h4><p>Respuesta limitada. Reservada para carcinoma anaplásico o enfermedad avanzada sin opciones [8].</p></div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: var(--thy-sky-dark);"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ <strong>Selpercatinib</strong> y <strong>pralsetinib</strong> como estándar en carcinoma medular con mutaciones RET [1].<br>
+                            ✔ <strong>Dabrafenib + trametinib</strong> aprobados para carcinoma anaplásico BRAF mutado.<br>
+                            ✔ Expansión de la <strong>vigilancia activa</strong> para microcarcinomas de bajo riesgo.<br>
+                            ✔ Nuevos inhibidores de <strong>BRAF</strong> de próxima generación en desarrollo.</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title"><div class="section-title-icon"><i class="fas fa-chart-line"></i></div><h2>Seguimiento <span>Tiroglobulina: el marcador clave</span></h2></div>
+                        <div class="stats-grid">
+                            <div class="stat-item"><div class="stat-number">>95%</div><div class="stat-label">SV5 años carcinoma diferenciado</div></div>
+                            <div class="stat-item"><div class="stat-number">70-80%</div><div class="stat-label">SV5 años carcinoma medular</div></div>
+                            <div class="stat-item"><div class="stat-number"><10%</div><div class="stat-label">SV5 años carcinoma anaplásico</div></div>
+                            <div class="stat-item"><div class="stat-number"><0.2 ng/mL</div><div class="stat-label">Tiroglobulina indetectable post-RAI</div></div>
+                        </div>
+                        
+                        <div class="thyroglobulin-box">
+                            <i class="fas fa-chart-line" style="color: var(--thy-gold); margin-right: 10px;"></i>
+                            <strong>Tiroglobulina (Tg):</strong> Marcador de seguimiento post-tiroidectomía total. Una <strong>tiroglobulina indetectable</strong> (<0.2 ng/mL) con TSH estimulada indica ausencia de tejido tiroideo residual o recurrencia. Elevación sugiere recaída. <strong>Anticuerpos antitiroglobulina (AcTg)</strong> interfieren y deben monitorizarse [8].
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--thy-sky-dark);">Estratificación de riesgo de recurrencia (ATA):</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-circle" style="color: #9FE2BF;"></i> <strong>Bajo riesgo:</strong> Tumor intratiroideo, sin metástasis, variante no agresiva → seguimiento con tiroglobulina y ecografía cada 6-12 meses.</li>
+                            <li><i class="fas fa-circle" style="color: #FFE5B4;"></i> <strong>Riesgo intermedio:</strong> Metástasis ganglionares cervicales, extensión extratiroidea microscópica → seguimiento cada 6 meses por 2 años, luego anual.</li>
+                            <li><i class="fas fa-circle" style="color: #FFB3B3;"></i> <strong>Alto riesgo:</strong> Metástasis a distancia, variante agresiva, invasión macroscópica → seguimiento intensivo con tiroglobulina y estudios de imagen [8].</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--thy-sky-dark);">Seguimiento recomendado [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>Primeros 2 años:</strong> Evaluación clínica, TSH, tiroglobulina y anticuerpos cada 6-12 meses. Ecografía cervical anual.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Años 3-5:</strong> Evaluación cada 6-12 meses según riesgo.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Más allá de 5 años:</strong> Seguimiento anual en pacientes de riesgo intermedio-alto.</li>
+                            <li><i class="fas fa-vial"></i> <strong>Calcitonina y CEA:</strong> En carcinoma medular, seguimiento con calcitonina y CEA cada 6 meses.</li>
+                            <li><i class="fas fa-pills"></i> <strong>Terapia supresora de TSH:</strong> Mantener TSH <0.1-0.5 mUI/mL según riesgo para reducir estímulo de crecimiento tumoral [8].</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-user-md"></i> Especialista</div>
+                        <div style="text-align: center;">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem;">Experiencia en tumores endocrinos, cáncer de tiroides y terapias dirigidas.</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank"><i class="fab fa-whatsapp"></i> Consultar especialista</a>
+                        </div>
+                    </div>
+
+                    <div class="info-panel thy-panel">
+                        <div class="info-panel-title"><i class="fas fa-stethoscope"></i> Datos Clave</div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>Tiroglobulina indetectable</span><span style="font-weight: 700;">Curación</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>BRAF V600E</span><span style="font-weight: 700;">Papilar, más agresivo</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.2);"><span>RET mutado</span><span style="font-weight: 700;">Medular, selpercatinib</span></div>
+                            <div style="display: flex; justify-content: space-between; padding: 8px 0;"><span>Edad ≥55 años</span><span style="font-weight: 700;">Cambia estadificación</span></div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-thy" target="_blank"><i class="fab fa-whatsapp"></i> Evaluación personalizada</a>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-book-open"></i> Glosario</div>
+                        <div class="glossary-term"><span class="term">Tiroglobulina (Tg)</span><span class="definition">Marcador de seguimiento post-tiroidectomía</span></div>
+                        <div class="glossary-term"><span class="term">RAI</span><span class="definition">Yodo radiactivo (I-131)</span></div>
+                        <div class="glossary-term"><span class="term">TI-RADS</span><span class="definition">Sistema de clasificación ecográfica</span></div>
+                        <div class="glossary-term"><span class="term">MEN2</span><span class="definition">Neoplasia endocrina múltiple tipo 2</span></div>
+                        <div class="glossary-term"><span class="term">TKI</span><span class="definition">Inhibidores de tirosina quinasa</span></div>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title"><i class="fas fa-dna"></i> Medicina de Precisión</div>
+                        <p><strong>Mutaciones y terapias dirigidas:</strong></p>
+                        <ul style="margin-top: 10px; padding-left: 20px;">
+                            <li><strong>BRAF V600E:</strong> Dabrafenib + trametinib (anaplásico)</li>
+                            <li><strong>RET:</strong> Selpercatinib, pralsetinib (medular)</li>
+                            <li><strong>NTRK:</strong> Larotrectinib (raro)</li>
+                            <li><strong>RAS:</strong> Terapias en investigación</li>
+                        </ul>
+                        <a href="#" class="resource-link" style="display: flex; align-items: center; gap: 10px; margin-top: 15px; padding: 10px; background: var(--light); border-radius: 10px;"><i class="fas fa-flask" style="color: var(--thy-sky-dark);"></i> Consultar sobre perfil molecular</a>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="section-card">
+                <div class="section-title"><div class="section-title-icon"><i class="fas fa-question"></i></div><h2>Preguntas Frecuentes</h2></div>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Todos los nódulos tiroideos son cancerosos?</summary><p>No. La <strong>gran mayoría de los nódulos tiroideos (90-95%) son benignos</strong>. La evaluación con ecografía (TI-RADS) y PAAF permite diferenciar los nódulos benignos de los malignos. Solo <strong>5-10% de los nódulos</strong> resultan ser cáncer [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué es la vigilancia activa en cáncer de tiroides?</summary><p>La <strong>vigilancia activa</strong> es una estrategia de manejo para <strong>microcarcinomas papilares</strong> (<1 cm) sin características agresivas. Consiste en <strong>seguimiento ecográfico cada 6-12 meses</strong> en lugar de cirugía inmediata. Estudios demuestran que la gran mayoría de estos tumores permanecen estables o crecen muy lentamente, sin afectar la supervivencia [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué es la terapia con yodo radiactivo y cuándo se indica?</summary><p>El <strong>yodo radiactivo (I-131)</strong> es un tratamiento que destruye el tejido tiroideo residual post-tiroidectomía y metástasis. Se indica en pacientes de <strong>alto riesgo</strong>: tumores >4 cm, extensión extratiroidea, metástasis ganglionares o a distancia, variantes agresivas. Requiere preparación con TSH elevada y dieta baja en yodo [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué es la tiroglobulina y por qué es importante?</summary><p>La <strong>tiroglobulina (Tg)</strong> es una proteína producida exclusivamente por las células tiroideas. Después de una <strong>tiroidectomía total</strong>, la tiroglobulina debe ser <strong>indetectable</strong>. Su elevación sugiere presencia de tejido tiroideo residual o recurrencia del cáncer. Es el <strong>marcador de seguimiento más importante</strong> en cáncer diferenciado de tiroides [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico del cáncer de tiroides?</summary><p>El pronóstico es <strong>excelente en la mayoría de los casos</strong>. La <strong>supervivencia a 5 años</strong> para el carcinoma papilar es >95%, para el folicular 85-90%, para el medular 70-80%. El <strong>carcinoma anaplásico</strong> es el de peor pronóstico (<10% a 5 años). Los <strong>factores pronósticos</strong> incluyen: edad <55 años, estadio temprano, ausencia de metástasis, variante histológica no agresiva [8].</p></details>
+                <details><summary><i class="fas fa-chevron-right"></i> ¿Qué terapias dirigidas existen para cáncer de tiroides avanzado?</summary><p>Existen múltiples <strong>terapias dirigidas</strong>: <strong>Lenvatinib y sorafenib</strong> para carcinoma diferenciado refractario a yodo; <strong>Vandetanib y cabozantinib</strong> para carcinoma medular; <strong>Selpercatinib y pralsetinib</strong> para carcinoma medular con mutaciones RET; <strong>Dabrafenib + trametinib</strong> para carcinoma anaplásico con mutación BRAF V600E [1][8].</p></details>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en tumores de cabeza y cuello, digestivos, endocrinos y neoplasias raras. Información basada en guías internacionales NCCN, ESMO, ASCO y ATA.</p>
+                    <div class="social-links" style="display: flex; gap: 15px; margin-top: 20px;">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul><li><a href="#">Aviso legal</a></li><li><a href="#">Política de privacidad</a></li><li><a href="#">Términos de uso</a></li><li><a href="#">Contacto</a></li></ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul><li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li><li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li><li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li></ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            document.getElementById('mainHeader').classList.toggle('scrolled', window.scrollY > 50);
+            document.getElementById('backToTop').classList.toggle('visible', window.scrollY > 500);
+        });
+        document.getElementById('menuBtn').addEventListener('click', () => document.getElementById('navMenu').classList.toggle('active'));
+        document.getElementById('backToTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => document.getElementById('navMenu').classList.remove('active'));
+        });
+    </script>
+</body>
+</html>
