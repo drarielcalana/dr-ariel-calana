@@ -1,0 +1,1466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Sarcoma de Kaposi: Información completa sobre esta neoplasia vascular asociada al HHV-8. Epidemiología de sus 4 variantes (clásica, endémica africana, asociada a SIDA, iatrogénica), diagnóstico clínico e histológico (lesiones violáceas, proliferación de husos), tratamiento con TARGA en VIH, quimioterapia (liposomal doxorrubicina, paclitaxel) según guías ESMO/NCCN 2025-2026 | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="sarcoma de Kaposi, HHV-8, lesiones violáceas, VIH, TARGA, doxorrubicina liposomal, paclitaxel, inmunosupresión, sarcoma vascular, dr ariel calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Sarcoma de Kaposi | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre sarcoma de Kaposi: diagnóstico diferencial, tipos clínicos, tratamiento según estadificación y manejo del HHV-8.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Sarcoma de Kaposi | Dr. Ariel Calaña Sabina</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Sarcoma de Kaposi (púrpura/granate/dorado) */
+            --ks-purple: #6A1B4D;
+            --ks-purple-dark: #4A0E33;
+            --ks-purple-light: #9B2E6B;
+            --ks-gold: #D4AF37;
+            --ks-soft: #F9EAF5;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-ks: linear-gradient(135deg, #4A0E33 0%, #6A1B4D 100%);
+            --gradient-ks-soft: linear-gradient(135deg, #F9EAF5 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* ============ HEADER ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* ============ HERO ESPECÍFICO PARA SARCOMA DE KAPOSI ============ */
+        .hero-ks {
+            background: var(--gradient-ks);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-ks::before {
+            content: '🟣 🔬 🩺';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(212, 175, 55, 0.05);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+        }
+        
+        .hero-ks::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(212, 175, 55, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #D4AF37;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(212, 175, 55, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #D4AF37;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-ks {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid #D4AF37;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-ks i {
+            color: #D4AF37;
+        }
+        
+        /* ============ BREADCRUMB ============ */
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* ============ CONTENIDO PRINCIPAL ============ */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        /* Tarjeta de resumen rápido */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #6A1B4D;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(106, 27, 77, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(106, 27, 77, 0.1);
+            color: #6A1B4D;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #6A1B4D;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        /* Grid de contenido principal */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas de sección */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #6A1B4D;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.ks-highlight {
+            background: linear-gradient(135deg, #F9EAF5 0%, #ffffff 100%);
+            border: 2px solid #6A1B4D;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(106, 27, 77, 0.1);
+            color: #6A1B4D;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        /* Tablas de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #6A1B4D;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #6A1B4D;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Listas de características */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #6A1B4D;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        /* Tabla de tipos de sarcoma de Kaposi */
+        .kaposi-types-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .kaposi-types-table th {
+            background: #6A1B4D;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .kaposi-types-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .kaposi-types-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .kaposi-types-table tr:hover td {
+            background: #F9EAF5;
+        }
+        
+        /* Estadificación AIDS Clinical Trials Group (ACTG) */
+        .staging-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .staging-table th {
+            background: #6A1B4D;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .staging-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .staging-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .staging-table tr:hover td {
+            background: #F9EAF5;
+        }
+        
+        /* Tratamiento grid */
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(106, 27, 77, 0.2);
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-5px);
+            border-color: #6A1B4D;
+            box-shadow: 0 10px 25px rgba(106, 27, 77, 0.1);
+        }
+        
+        .treatment-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #6A1B4D;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(106, 27, 77, 0.1);
+            color: #6A1B4D;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #6A1B4D;
+        }
+        
+        .info-panel.ks-panel {
+            background: linear-gradient(135deg, #6A1B4D 0%, #9B2E6B 100%);
+            color: white;
+        }
+        
+        .info-panel.ks-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.ks-panel .info-panel-title i {
+            color: #D4AF37;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #6A1B4D;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #6A1B4D;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #6A1B4D;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-ks {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            color: #6A1B4D;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-ks:hover {
+            background: #F9EAF5;
+            transform: translateY(-2px);
+            color: #4A0E33;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(106, 27, 77, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #6A1B4D;
+        }
+        
+        .quote-block {
+            background: linear-gradient(135deg, #F9EAF5 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #6A1B4D;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(106, 27, 77, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #6A1B4D;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #6A1B4D;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(106, 27, 77, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #9B2E6B;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #6A1B4D;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #6A1B4D;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background: #F9EAF5;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #6A1B4D;
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .two-column { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="osteosarcoma.html"><i class="fas fa-bone"></i> Osteosarcoma</a>
+                            <a href="hepatoblastoma.html"><i class="fas fa-liver"></i> Hepatoblastoma</a>
+                            <a href="carcinoma-basocelular.html"><i class="fas fa-sun"></i> Carcinoma Basocelular</a>
+                            <a href="sarcoma-kaposi.html" class="active"><i class="fas fa-virus"></i> Sarcoma de Kaposi</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO ESPECÍFICO PARA SARCOMA DE KAPOSI -->
+    <section class="hero-ks">
+        <div class="container">
+            <div class="hero-content">
+                <h1>SARCOMA DE <span>KAPOSI</span></h1>
+                <p class="subtitle">Neoplasia vascular asociada al herpesvirus humano tipo 8 (HHV-8)</p>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Tumor angioproliferativo multicéntrico, <strong>inducido por HHV-8</strong>. Se presenta en <strong>4 variantes epidemiológicas</strong>: clásica (mediterránea), endémica africana, asociada a SIDA (epidémica) e iatrogénica (post-trasplante). Las lesiones cutáneas son <strong>máculas, pápulas o nódulos violáceos</strong>.</p>
+                <div class="hero-badge-ks">
+                    <i class="fas fa-virus"></i> HHV-8 (causa necesaria)
+                    <i class="fas fa-chart-line"></i> Epidémica: 20-30% VIH sin TARGA
+                    <i class="fas fa-palette"></i> Lesiones violáceas
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Sarcomas</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Sarcoma de Kaposi</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- RESUMEN RÁPIDO -->
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-virus"></i></div>
+                    <div class="summary-label">Agente etiológico</div>
+                    <div class="summary-value">HHV-8</div>
+                    <div class="summary-desc">Herpesvirus humano tipo 8 (KSHV)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-tachometer-alt"></i></div>
+                    <div class="summary-label">Inmunosupresión</div>
+                    <div class="summary-value">Factor clave</div>
+                    <div class="summary-desc">VIH, trasplante, edad avanzada</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">TARGA</div>
+                    <div class="summary-value">Reduce 80-90%</div>
+                    <div class="summary-desc">Incidencia en VIH</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-syringe"></i></div>
+                    <div class="summary-label">Quimioterapia</div>
+                    <div class="summary-value">Doxorrubicina liposomal</div>
+                    <div class="summary-desc">Estándar para enfermedad avanzada</div>
+                </div>
+            </div>
+
+            <!-- GRID PRINCIPAL -->
+            <div class="content-grid">
+                <!-- COLUMNA PRINCIPAL -->
+                <div>
+                    <!-- SECCIÓN: ¿QUÉ ES? -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué es? <span>Neoplasia vascular asociada a HHV-8</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>Sarcoma de Kaposi (SK)</strong> es una <strong>neoplasia vascular multicéntrica</strong> de bajo grado, causada por el <strong>herpesvirus humano tipo 8 (HHV-8)</strong>, también conocido como KSHV (Kaposi Sarcoma-associated Herpesvirus). Se caracteriza por la proliferación de <strong>células fusiformes</strong> y neoformación vascular. Su incidencia aumentó drásticamente durante la epidemia del VIH, pero ha disminuido en países con acceso a <strong>TARGA (terapia antirretroviral de gran actividad)</strong> [1][6].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>El sarcoma de Kaposi es un tumor <strong>angiogénico y angioproliferativo</strong> impulsado por la <strong>infección por HHV-8</strong> en un contexto de <strong>inmunosupresión</strong>. En pacientes con VIH, la <strong>instauración de TARGA</strong> es el pilar del tratamiento, logrando remisión completa en 50-80% de los casos de enfermedad limitada sin quimioterapia [1][6].</p>
+                            <div class="quote-author">— Guías ESMO, NCCN, WHO 2025-2026</div>
+                        </div>
+                        
+                        <div class="two-column">
+                            <div class="info-box" style="margin: 0;">
+                                <h4 style="color: #6A1B4D;"><i class="fas fa-microscope"></i> Histología característica</h4>
+                                <p><strong>Células fusiformes (spindle cells):</strong> Proliferación de células fusiformes formando hendiduras vasculares.<br>
+                                <strong>Extravasación eritrocitaria:</strong> Depósitos de hemosiderina.<br>
+                                <strong>Inmunohistoquímica:</strong> HHV-8 LANA (+), CD31 (+), CD34 (+), D2-40 (+), FLI-1 (+) [6].</p>
+                            </div>
+                            <div class="info-box" style="margin: 0;">
+                                <h4 style="color: #6A1B4D;"><i class="fas fa-chart-line"></i> Epidemiología</h4>
+                                <p><strong>Prevalencia HHV-8:</strong> Variable geográficamente (Mediterráneo, África subsahariana 30-80%; Norteamérica/Europa 2-10%). <strong>SK asociado a VIH:</strong> 20-30% de los pacientes con SIDA antes de TARGA; actualmente <5% en países desarrollados [6].</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: VARIANTES CLÍNICAS -->
+                    <section class="section-card ks-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-globe"></i></div>
+                            <h2>Variantes Clínicas <span>4 formas epidemiológicas distintas</span></h2>
+                        </div>
+                        
+                        <table class="kaposi-types-table">
+                            <thead>
+                                <tr><th>Variante</th><th>Población</th><th>Características</th><th>Curso</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Clásica (mediterránea)</strong></td><td>Hombres ancianos (70-80 años), Europa del Este, Mediterráneo, judíos askenazíes</td><td>Lesiones en extremidades inferiores (pies, piernas), curso indolente</td><td>Lento (años-décadas)</td></tr>
+                                <tr><td><strong>Endémica africana</strong></td><td>África subsahariana, niños y adultos jóvenes (30-40 años)</td><td>Puede ser agresiva, afectación linfática (linfadenopática), niños con curso fulminante</td><td>Variable</td></tr>
+                                <tr><td><strong>Epidémica (asociada a SIDA)</strong></td><td>Pacientes con VIH, más frecuente en hombres que tienen sexo con hombres (HSH)</td><td>Lesiones mucocutáneas diseminadas, afectación visceral (pulmón, tracto GI, ganglios)</td><td>Agresivo sin TARGA</td></tr>
+                                <tr><td><strong>Iatrogénica (post-trasplante)</strong></td><td>Receptores de trasplante de órgano sólido (riñón > hígado > corazón)</td><td>Similar a clásica, puede regresar al reducir inmunosupresión</td><td>Variable</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="info-box">
+                            <h4 style="color: #6A1B4D;"><i class="fas fa-lightbulb"></i> Localizaciones más frecuentes:</h4>
+                            <p><strong>Cutánea:</strong> Extremidades inferiores (clásica), cara, tronco, genitales (epidémica).<br>
+                            <strong>Mucosa oral:</strong> Paladar duro, encías (frecuente en SK asociado a VIH).<br>
+                            <strong>Visceral:</strong> Pulmón (disnea, hemoptisis, infiltrados), tracto gastrointestinal (sangrado oculto, anemia, dolor), ganglios linfáticos, corazón [6].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: DIAGNÓSTICO Y ESTADIFICACIÓN -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-stethoscope"></i></div>
+                            <h2>Diagnóstico y Estadificación <span>Clínica, histología y sistema ACTG</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Manifestaciones clínicas [6]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Lesiones cutáneas:</strong> Máculas, pápulas, nódulos o placas de color <strong>violáceo, rojo-púrpura o pardo</strong>. Inicialmente planas, luego se elevan y pueden ulcerarse.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Edema:</strong> Por obstrucción linfática (frecuente en extremidades, genitales, cara).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Síntomas viscerales:</strong> Tos, disnea (SK pulmonar), hemorragia digestiva, dolor abdominal, obstrucción [6].</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Diagnóstico [6]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Biopsia cutánea o de lesión:</strong> Gold standard. Histología + inmunohistoquímica para HHV-8 LANA (antígeno nuclear latente).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Serología HHV-8:</strong> Detecta infección, pero no diagnóstico de SK activo.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Estudios de extensión:</strong> Broncoscopia (sospecha pulmonar), endoscopia digestiva (sangrado oculto), TC de tórax/abdomen.</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Estadificación ACTG (AIDS Clinical Trials Group) [6]:</h4>
+                        <table class="staging-table">
+                            <thead>
+                                <tr><th>Factor</th><th>Buen pronóstico (0)</th><th>Mal pronóstico (1)</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Tumor (T)</strong></td><td>Enfermedad limitada (lesiones orales, nodular < 25 lesiones, < 10 cm²)</td><td>Enfermedad extensa (edema, úlcera, > 25 lesiones, > 10 cm²)</td></tr>
+                                <tr><td><strong>Inmunidad (I)</strong></td><td>CD4 > 150 células/µL</td><td>CD4 ≤ 150 células/µL</td></tr>
+                                <tr><td><strong>Enfermedad sistémica (S)</strong></td><td>Sin enfermedad sistémica</td><td>Historia previa de infección oportunista, síntomas B (fiebre, sudoración, pérdida >10% peso), SK visceral</td></tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Estadio TIS:</strong> T0I0S0 (mejor pronóstico) a T1I1S1 (peor pronóstico).</p>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento <span>TARGA, terapias locales, quimioterapia</span></h2>
+                        </div>
+                        
+                        <div class="quote-block" style="background: #F9EAF5;">
+                            <i class="fas fa-pills"></i>
+                            <p>El tratamiento del sarcoma de Kaposi se basa en el <strong>estadio (TIS)</strong> y la <strong>variante epidemiológica</strong>. En pacientes con VIH, la <strong>TARGA (terapia antirretroviral de gran actividad)</strong> es el pilar fundamental. En enfermedad limitada, se usan <strong>terapias locales</strong> (crioterapia, radioterapia, intralesional). En enfermedad avanzada o visceral, <strong>quimioterapia sistémica</strong> (doxorrubicina liposomal pegilada) [6].</p>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Pilares del tratamiento [6]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-pills"></i></div>
+                                <h4>TARGA (en pacientes VIH+)</h4>
+                                <p><strong>Pilar fundamental.</strong> Restauración inmunológica. En enfermedad limitada, puede lograr <strong>remisión completa sin quimioterapia</strong> en 50-80% [6].</p>
+                                <span class="treatment-tag">Primera línea en VIH</span>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Terapias locales</h4>
+                                <p><strong>Lesiones limitadas (T0):</strong> Crioterapia, radioterapia (2-8 Gy), resección quirúrgica, intralesional (vinblastina, interferón alfa), imiquimod tópico [6].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                                <h4>Quimioterapia sistémica (T1 o visceral)</h4>
+                                <p><strong>Doxorrubicina liposomal pegilada (20 mg/m² cada 2-3 semanas)</strong> – estándar oro. Alternativas: paclitaxel (100 mg/m² cada 2 semanas), doxorrubicina liposomal no pegilada, etopósido oral [6].</p>
+                                <span class="treatment-tag">Estándar oro</span>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-flask"></i></div>
+                                <h4>SK iatrogénico (post-trasplante)</h4>
+                                <p><strong>Reducción de inmunosupresión</strong> (cambiar tacrolimus por sirolimus/everolimus – inhibidores mTOR). Respuesta en 50-60% [6].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h4 style="color: #6A1B4D;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ Nuevos inhibidores de la angiogénesis (lenalidomida, pomalidomida) en SK resistente.<br>
+                            ✔ Terapias dirigidas a HHV-8: antivirales (ganciclovir, valganciclovir) en prevención de SK en trasplante.<br>
+                            ✔ Inmunoterapia (inhibidores PD-1) en SK avanzado refractario [6].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: PRONÓSTICO Y SEGUIMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Pronóstico y Seguimiento <span>Depende del estadio y respuesta a TARGA</span></h2>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin-bottom: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-number">80-90%</div>
+                                <div class="stat-label">Respuesta a TARGA (SK limitado)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">70-80%</div>
+                                <div class="stat-label">Respuesta a doxorrubicina liposomal</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5-10%</div>
+                                <div class="stat-label">Recurrencia post-TARGA/quimio</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50-60%</div>
+                                <div class="stat-label">Respuesta con inhibidores mTOR (SK iatrogénico)</div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Factores pronósticos [6]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> <strong>Estadio TIS:</strong> T0 mejor pronóstico que T1.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Recuento de CD4:</strong> >200 células/µL asociado a mejor respuesta a TARGA.</li>
+                            <li><i class="fas fa-lungs"></i> <strong>Enfermedad visceral (especialmente pulmonar):</strong> Peor pronóstico.</li>
+                            <li><i class="fas fa-dna"></i> <strong>Variante epidemiológica:</strong> Clásica e iatrogénica más indolentes; epidémica más agresiva sin TARGA.</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento recomendado [6]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>Evaluación dermatológica cada 3-6 meses</strong> (detección de nuevas lesiones o progresión).</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>En VIH:</strong> Control de carga viral y CD4 cada 3-6 meses (cumplimiento de TARGA).</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>En SK visceral:</strong> TC de tórax/abdomen cada 3-6 meses hasta respuesta, luego cada 6-12 meses.</li>
+                            <li><i class="fas fa-lungs"></i> <strong>SK pulmonar:</strong> Broncoscopia de control si síntomas respiratorios persisten.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <!-- TARJETA DEL MÉDICO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Sarcomas y Tumores Asociados a VIH</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL ESPECIAL SARCOMA DE KAPOSI -->
+                    <div class="info-panel ks-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-virus"></i> Datos Clave Sarcoma de Kaposi
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Agente causal</span>
+                                <span style="font-weight: 700;">HHV-8 (KSHV)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Pilar terapéutico (VIH)</span>
+                                <span style="font-weight: 700;">TARGA</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Quimioterapia estándar</span>
+                                <span style="font-weight: 700;">Doxorrubicina liposomal</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>Estadificación</span>
+                                <span style="font-weight: 700;">ACTG (Tumor, Inmunidad, Sistémico)</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-ks" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación personalizada
+                        </a>
+                    </div>
+
+                    <!-- GLOSARIO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">HHV-8 / KSHV</span>
+                            <span class="definition">Herpesvirus humano tipo 8, causa necesaria</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">TARGA</span>
+                            <span class="definition">Terapia antirretroviral de gran actividad</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Células fusiformes</span>
+                            <span class="definition">Spindle cells, característica histológica</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Doxorrubicina liposomal</span>
+                            <span class="definition">Quimioterapia estándar para SK avanzado</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">ACTG</span>
+                            <span class="definition">Sistema de estadificación (Tumor, Inmunidad, Sistémico)</span>
+                        </div>
+                    </div>
+
+                    <!-- RECURSOS DE APOYO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Recursos y Asociaciones
+                        </div>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>AIDS Malignancy Consortium (AMC)</strong>
+                                <small style="color: var(--text-light); display: block;">Ensayos clínicos en neoplasias asociadas a VIH</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>National Cancer Institute - Kaposi Sarcoma</strong>
+                                <small style="color: var(--text-light); display: block;">Información para pacientes</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Fundación SEIMC-GESIDA</strong>
+                                <small style="color: var(--text-light); display: block;">Guías en español sobre VIH y neoplasias</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CTA ESPECIAL -->
+                    <div class="info-panel" style="background: linear-gradient(135deg, #6A1B4D 0%, #9B2E6B 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-virus" style="font-size: 3rem; margin-bottom: 15px; color: #D4AF37;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Lesiones violáceas o edema persistente?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El diagnóstico precoz del sarcoma de Kaposi, especialmente en pacientes con VIH o trasplantados, permite tratamientos menos agresivos. La TARGA es fundamental en VIH.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #6A1B4D; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿El sarcoma de Kaposi es contagioso?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El <strong>HHV-8 (virus causante) sí es contagioso</strong> (se transmite por saliva, relaciones sexuales, trasplante, transfusiones), pero el <strong>sarcoma de Kaposi solo se desarrolla en personas inmunosuprimidas</strong> (VIH, trasplante, ancianos). La mayoría de personas infectadas por HHV-8 <strong>no desarrollan SK</strong> si su sistema inmunológico está intacto [6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica el sarcoma de Kaposi?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico se confirma mediante <strong>biopsia de la lesión cutánea o mucosa</strong>, con estudio histológico (células fusiformes, hendiduras vasculares) e <strong>inmunohistoquímica para HHV-8 LANA</strong> (antígeno nuclear latente), que es altamente específico. La dermatoscopia puede orientar, pero la biopsia es el gold standard [6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el tratamiento del sarcoma de Kaposi en pacientes con VIH?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El pilar es la <strong>TARGA (terapia antirretroviral)</strong> para restaurar la inmunidad. En <strong>enfermedad limitada (T0)</strong>, solo TARGA puede lograr remisión en 50-80%. En <strong>enfermedad extensa o visceral (T1)</strong>, se añade <strong>quimioterapia sistémica</strong> (doxorrubicina liposomal pegilada o paclitaxel). También se usan terapias locales (crioterapia, radioterapia) para lesiones sintomáticas [6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es el sarcoma de Kaposi iatrogénico y cómo se trata?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Aparece en <strong>receptores de trasplante de órgano sólido</strong> por inmunosupresión crónica. El tratamiento principal es <strong>reducir la inmunosupresión</strong> y cambiar el esquema a <strong>inhibidores de mTOR (sirolimus, everolimus)</strong>, que tienen efecto antitumoral directo. La respuesta se observa en 50-60% de los casos. Si persiste, se usa quimioterapia local o sistémica [6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico del sarcoma de Kaposi?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Depende de la <strong>variante y el estadio</strong>. En <strong>SK asociado a VIH con TARGA</strong>, el pronóstico ha mejorado drásticamente (supervivencia >5 años en 70-80%). <strong>SK clásico</strong> es indolente (años o décadas). <strong>SK visceral (pulmonar, GI)</strong> tiene peor pronóstico (supervivencia media 12-18 meses sin tratamiento). Los factores de mal pronóstico son: T1 (enfermedad extensa), CD4 bajo, enfermedad visceral [6].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Se puede prevenir el sarcoma de Kaposi en pacientes con VIH?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Sí, la <strong>TARGA temprana</strong> reduce drásticamente la incidencia de SK al restaurar la inmunidad (disminución del 80-90% desde la era pre-TARGA). En pacientes con alto riesgo (CD4 bajo, infección por HHV-8), el <strong>valganciclovir</strong> ha mostrado reducir la replicación de HHV-8, pero no se usa de forma rutinaria. La prevención del VIH (profilaxis pre-exposición, uso de preservativos) también previene SK asociado a VIH [6].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.classList.toggle('fa-times');
+            });
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                if (menuBtn) menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
