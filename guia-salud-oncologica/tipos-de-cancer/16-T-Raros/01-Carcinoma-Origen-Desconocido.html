@@ -1,0 +1,1515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Carcinoma de Origen Desconocido (CUP): Información completa sobre este diagnóstico oncológico desafiante, clasificación por inmunohistoquímica, estudios moleculares (perfil genómico, secuenciación de próxima generación), tratamiento empírico y dirigido según guías NCCN/ESMO 2025-2026, y pronóstico | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="carcinoma de origen desconocido, CUP, tumor primario desconocido, inmunohistoquímica, perfil genómico, NGS, secuenciación, tratamiento dirigido, oncología, dr ariel calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Carcinoma de Origen Desconocido (CUP) | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre el Carcinoma de Origen Desconocido: diagnóstico por inmunohistoquímica, perfil genómico, tratamiento empírico y dirigido.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Carcinoma de Origen Desconocido (CUP) | Dr. Ariel Calaña Sabina</title>
+    
+    <!-- FAVICON - LOGO PERSONALIZADO -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            --cup-grey: #607D8B;
+            --cup-grey-dark: #455A64;
+            --cup-grey-light: #90A4AE;
+            --cup-silver: #B0BEC5;
+            --cup-gold: #F7DC6F;
+            --cup-soft: #ECEFF1;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-cup: linear-gradient(135deg, #455A64 0%, #607D8B 100%);
+            --gradient-cup-soft: linear-gradient(135deg, #ECEFF1 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        .hero-cup {
+            background: var(--gradient-cup);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-cup::before {
+            content: '❓ 🎗️ ❓';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(255, 255, 255, 0.03);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+            opacity: 0.5;
+        }
+        
+        .hero-cup::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(247, 220, 111, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #FFFFFF;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #FFFFFF;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-cup {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid #FFFFFF;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-cup i {
+            color: #FFFFFF;
+        }
+        
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #607D8B;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(96, 125, 139, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(96, 125, 139, 0.1);
+            color: #607D8B;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #607D8B;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #607D8B;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.cup-highlight {
+            background: linear-gradient(135deg, #ECEFF1 0%, #ffffff 100%);
+            border: 2px solid #607D8B;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(96, 125, 139, 0.1);
+            color: #607D8B;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #607D8B;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #607D8B;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #607D8B;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        .ihc-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .ihc-table th {
+            background: #607D8B;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .ihc-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .ihc-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .ihc-table tr:hover td {
+            background: #ECEFF1;
+        }
+        
+        .favorable-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .favorable-card {
+            background: linear-gradient(135deg, #607D8B 0%, #90A4AE 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid #F7DC6F;
+        }
+        
+        .favorable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(96, 125, 139, 0.3);
+        }
+        
+        .favorable-icon {
+            font-size: 2rem;
+            color: #F7DC6F;
+            margin-bottom: 15px;
+        }
+        
+        .favorable-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        @media (max-width: 992px) {
+            .favorable-grid { grid-template-columns: 1fr; }
+        }
+        
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(96, 125, 139, 0.2);
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-5px);
+            border-color: #607D8B;
+            box-shadow: 0 10px 25px rgba(96, 125, 139, 0.1);
+        }
+        
+        .treatment-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #607D8B;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(96, 125, 139, 0.1);
+            color: #607D8B;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #607D8B;
+        }
+        
+        .info-panel.cup-panel {
+            background: linear-gradient(135deg, #607D8B 0%, #90A4AE 100%);
+            color: white;
+        }
+        
+        .info-panel.cup-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.cup-panel .info-panel-title i {
+            color: white;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #607D8B;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #607D8B;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #607D8B;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-cup {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            color: #607D8B;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-cup:hover {
+            background: #ECEFF1;
+            transform: translateY(-2px);
+            color: #455A64;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(96, 125, 139, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #607D8B;
+        }
+        
+        .quote-block {
+            background: linear-gradient(135deg, #ECEFF1 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #607D8B;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(96, 125, 139, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #607D8B;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #607D8B;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(96, 125, 139, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #90A4AE;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #607D8B;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #607D8B;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        @media (max-width: 1200px) {
+            .hero-content h1 { font-size: 3rem; }
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            
+            .hero-content { padding: 0 20px; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .hero-content .subtitle { font-size: 1.3rem; }
+            
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            
+            .favorable-grid { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+            .hero-badge-cup { font-size: 0.9rem; padding: 10px 20px; }
+        }
+        
+        .bep-box {
+            background: #ECEFF1;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #607D8B;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .ngs-badge {
+            background: #607D8B;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="cup.html" class="active"><i class="fas fa-question-circle"></i> Carcinoma de Origen Desconocido</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-cup">
+        <div class="container">
+            <div class="hero-content">
+                <h1>CARCIOMA DE <span>ORIGEN DESCONOCIDO</span></h1>
+                <p class="subtitle">(CUP) - Un diagnóstico oncológico desafiante</p>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Diagnóstico cuando se identifica una metástasis sin tumor primario detectable después de una evaluación completa. La <strong>inmunohistoquímica</strong> y el <strong>perfil genómico (NGS)</strong> son clave para el diagnóstico y tratamiento dirigido.</p>
+                <div class="hero-badge-cup">
+                    <i class="fas fa-chart-line"></i> 3-5% de cánceres
+                    <i class="fas fa-microscope"></i> IHC + NGS
+                    <i class="fas fa-pills"></i> Tratamiento empírico / dirigido
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Tumores de Origen Desconocido</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Carcinoma de Origen Desconocido (CUP)</li>
+            </ul>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="container">
+            
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Incidencia</div>
+                    <div class="summary-value">3-5%</div>
+                    <div class="summary-desc">de todos los cánceres</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="summary-label">IHC clave</div>
+                    <div class="summary-value">CK7, CK20, CDX2, TTF-1</div>
+                    <div class="summary-desc">para orientar origen</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-dna"></i></div>
+                    <div class="summary-label">NGS</div>
+                    <div class="summary-value">Perfil genómico</div>
+                    <div class="summary-desc">tratamiento dirigido</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Supervivencia</div>
+                    <div class="summary-value">6-12 meses</div>
+                    <div class="summary-desc">mediana (favorable: 12-24)</div>
+                </div>
+            </div>
+
+            <div class="content-grid">
+                <div>
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué es? <span>Definición y epidemiología</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>Carcinoma de Origen Desconocido (CUP)</strong> es un diagnóstico oncológico que se establece cuando se identifica una <strong>metástasis</strong> (generalmente adenocarcinoma, carcinoma escamoso o carcinoma pobremente diferenciado) y no se encuentra el <strong>tumor primario</strong> después de una <strong>evaluación clínica, de imagen y patológica completa</strong>. Representa el <strong>3-5% de todos los cánceres</strong> y es la <strong>octava causa de muerte por cáncer</strong> en algunos países [8].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>El CUP es un <strong>diagnóstico de exclusión</strong>. La <strong>inmunohistoquímica (IHC)</strong> es fundamental para orientar el posible origen del tumor (CK7, CK20, TTF-1, CDX2, PAX8, GATA3, etc.). El <strong>perfil genómico por NGS</strong> (secuenciación de próxima generación) permite identificar <strong>mutaciones accionables</strong> (EGFR, BRAF, HER2, NTRK, MSI, etc.) que pueden guiar <strong>terapias dirigidas</strong> independientemente del origen. El <strong>tratamiento empírico</strong> con quimioterapia (platino + taxano o gemcitabina) sigue siendo el estándar cuando no se identifica una diana molecular [8].</p>
+                            <div class="quote-author">— Guías ESMO 2025, NCCN 2026</div>
+                        </div>
+                        
+                        <div class="two-column">
+                            <div class="bep-box" style="margin: 0;">
+                                <h4 style="color: #607D8B;"><i class="fas fa-microscope"></i> Histologías más comunes</h4>
+                                <p><strong>Adenocarcinoma (50-60%):</strong> Subtipo más frecuente.<br>
+                                <strong>Carcinoma escamoso (20-30%):</strong> Generalmente en cabeza, cuello, pulmón.<br>
+                                <strong>Carcinoma pobremente diferenciado (10-20%):</strong> Mayor desafío diagnóstico [8].</p>
+                            </div>
+                            <div class="bep-box" style="margin: 0;">
+                                <h4 style="color: #607D8B;"><i class="fas fa-chart-line"></i> Epidemiología</h4>
+                                <p>Edad media: 60-70 años. Ligero predominio masculino. La mayoría de los pacientes presentan <strong>enfermedad avanzada</strong> (estadio IV) al diagnóstico [8].</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section-card cup-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-microscope"></i></div>
+                            <h2>Inmunohistoquímica Clave <span>Orientación del origen</span></h2>
+                        </div>
+                        
+                        <table class="ihc-table">
+                            <thead>
+                                <tr><th>Marcador</th><th>Positividad sugerida</th><th>Origen probable</th></thead>
+                            <tbody>
+                                <tr><td>CK7+, CK20-</td><td>Pulmón, mama, tiroides, endometrio, ovario</td>
+                            <tbody>
+                                <tr>
+                                    <td>CK7+, CK20-</span>
+                                    <td>Pulmón, mama, tiroides, endometrio, ovario</span>
+                                </tr>
+                                <tr>
+                                    <td>CK7-, CK20+</span>
+                                    <td>Colorectal, gástrico (intestinal), pancreatobiliar</span>
+                                </tr>
+                                <tr>
+                                    <td>CK7+, CK20+</span>
+                                    <td>Urotelial, ovario (mucinoso), gástrico</span>
+                                </tr>
+                                <tr>
+                                    <td>TTF-1+, CK7+</span>
+                                    <td>Pulmón (adenocarcinoma, células pequeñas)</span>
+                                </tr>
+                                <tr>
+                                    <td>CDX2+, CK20+</span>
+                                    <td>Colorectal, gástrico intestinal</span>
+                                </tr>
+                                <tr>
+                                    <td>PAX8+, CK7+</span>
+                                    <td>Tiroides, riñón, ovario, endometrio</span>
+                                </tr>
+                                <tr>
+                                    <td>GATA3+, CK7+</span>
+                                    <td>Mama, urotelial</span>
+                                </tr>
+                                <tr>
+                                    <td>PSA+</span>
+                                    <td>Próstata</span>
+                                </tr>
+                                <tr>
+                                    <td>S-100+, SOX10+</span>
+                                    <td>Melanoma</span>
+                                </tr>
+                            </tbody>
+                        </table>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: #607D8B;"><i class="fas fa-lightbulb"></i> Panel básico recomendado:</h4>
+                            <p>CK7, CK20, TTF-1, CDX2, PAX8, GATA3, PSA, S-100. Este panel orienta el origen en >80% de los casos. El <strong>perfil genómico por NGS</strong> complementa el diagnóstico y puede identificar mutaciones accionables [8].</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Grupos Pronósticos Favorables</h2>
+                        </div>
+                        
+                        <div class="favorable-grid">
+                            <div class="favorable-card">
+                                <div class="favorable-icon"><i class="fas fa-female"></i></div>
+                                <h4>Adenocarcinoma axilar (mujer)</h4>
+                                <p>Metástasis axilar con primario probable de mama. Manejo similar a cáncer de mama. Mejor pronóstico [8].</p>
+                            </div>
+                            
+                            <div class="favorable-card">
+                                <div class="favorable-icon"><i class="fas fa-male"></i></div>
+                                <h4>Adenocarcinoma cervical (hombre)</h4>
+                                <p>Metástasis en ganglios cervicales. Primario probable de cabeza y cuello. Manejo local [8].</p>
+                            </div>
+                            
+                            <div class="favorable-card">
+                                <div class="favorable-icon"><i class="fas fa-tint"></i></div>
+                                <h4>Carcinoma peritoneal (mujer)</h4>
+                                <p>Similar a cáncer de ovario primario. Responde a quimioterapia basada en platino [8].</p>
+                            </div>
+                            
+                            <div class="favorable-card">
+                                <div class="favorable-icon"><i class="fas fa-bolt"></i></div>
+                                <h4>Carcinoma pobremente diferenciado</h4>
+                                <p>Subgrupo con buena respuesta a quimioterapia basada en platino (posible tumor germinal o neuroendocrino) [8].</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-dna"></i></div>
+                            <h2>Perfil Genómico (NGS) <span>Terapias dirigidas</span></h2>
+                        </div>
+                        
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-dna"></i></div>
+                                <h4>Mutaciones accionables</h4>
+                                <p><strong>EGFR, BRAF, HER2, ALK, ROS1, NTRK, KRAS G12C, MSI/dMMR, TMB alto, FGFR, IDH1</strong>. El perfil genómico permite tratamiento dirigido independiente del origen [1].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-vial"></i></div>
+                                <h4>Inmunoterapia</h4>
+                                <p><strong>Pembrolizumab</strong> aprobado para tumores MSI/dMMR o TMB alto (>10 mutaciones/Mb) en cualquier histología. También en combinación con quimioterapia [1].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: #607D8B;"><i class="fas fa-lightbulb"></i> Recomendación NGS:</h4>
+                            <p>Se recomienda <strong>secuenciación de próxima generación (NGS) en todos los pacientes con CUP</strong> para identificar mutaciones accionables. La <strong>terapia dirigida basada en el perfil genómico</strong> mejora la supervivencia en pacientes con alteraciones moleculares [1].</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento <span>Actualizado 2025-2026</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 10px; color: var(--primary);">Enfoque general [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-dna"></i></div>
+                                <h4>Terapia dirigida (NGS)</h4>
+                                <p>Si se identifica mutación accionable (BRAF, HER2, EGFR, ALK, NTRK, MSI, TMB alto). Tratamiento específico según alteración molecular [1].</p>
+                                <span class="treatment-tag">Precisión</span>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-flask"></i></div>
+                                <h4>Quimioterapia empírica</h4>
+                                <p>Estándar si no hay diana molecular. Esquemas: platino + taxano (carboplatino + paclitaxel) o platino + gemcitabina. Respuesta 30-40% [8].</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Tratamiento por subtipo favorable [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-female"></i></div>
+                                <h4>Adenocarcinoma axilar</h4>
+                                <p>Manejo similar a cáncer de mama: quimioterapia (taxano, antraciclina), hormonoterapia (si RE+), HER2 dirigido [8].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-male"></i></div>
+                                <h4>Adenocarcinoma cervical</h4>
+                                <p>Cirugía local (disección ganglionar) + radioterapia ± quimioterapia [8].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-tint"></i></div>
+                                <h4>Carcinoma peritoneal</h4>
+                                <p>Quimioterapia basada en platino (carboplatino + paclitaxel), similar a cáncer de ovario [8].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: #607D8B;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ Inmunoterapia (anti-PD-1) en combinación con quimioterapia en CUP sin diana molecular.<br>
+                            ✔ Terapias dirigidas para mutaciones raras (NTRK, FGFR, IDH1) en CUP.<br>
+                            ✔ Perfil genómico de próxima generación como estándar en el diagnóstico de CUP [1][8].</p>
+                        </div>
+                    </section>
+
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Pronóstico y Seguimiento</h2>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin-bottom: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-number">6-12 meses</div>
+                                <div class="stat-label">SG mediana (global)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">12-24 meses</div>
+                                <div class="stat-label">SG mediana (favorable)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">20-30%</div>
+                                <div class="stat-label">Respuesta quimioterapia</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">>50%</div>
+                                <div class="stat-label">Respuesta terapias dirigidas</div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Factores pronósticos [8]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> <strong>Subtipo favorable:</strong> Mejor pronóstico.</li>
+                            <li><i class="fas fa-dna"></i> <strong>Mutaciones accionables:</strong> Permiten terapias dirigidas.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Estado funcional (ECOG):</strong> ECOG 0-1 mejor pronóstico.</li>
+                            <li><i class="fas fa-microscope"></i> <strong>Histología:</strong> Adenocarcinoma vs escamoso vs pobremente diferenciado.</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento recomendado [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>Durante tratamiento:</strong> Evaluación clínica y de imagen (TC) cada 2-3 ciclos.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Post-tratamiento:</strong> TC cada 3-4 meses durante 2 años, luego cada 6-12 meses.</li>
+                            <li><i class="fas fa-camera"></i> <strong>Búsqueda de primario:</strong> Algunos pacientes pueden desarrollar tumor primario detectable durante el seguimiento (10-20%) [9].</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <aside class="sidebar">
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Diagnóstico Molecular</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="info-panel cup-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-question-circle"></i> Datos Clave
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>CK7+/CK20-</span>
+                                <span style="font-weight: 700;">pulmón, mama, tiroides</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>CK7-/CK20+</span>
+                                <span style="font-weight: 700;">colorectal</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>TTF-1+</span>
+                                <span style="font-weight: 700;">pulmón</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>CDX2+</span>
+                                <span style="font-weight: 700;">colorectal</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-cup" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación personalizada
+                        </a>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">CUP</span>
+                            <span class="definition">Carcinoma de origen desconocido</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">IHC</span>
+                            <span class="definition">Inmunohistoquímica</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">NGS</span>
+                            <span class="definition">Secuenciación de próxima generación</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">CK7 / CK20</span>
+                            <span class="definition">Citoqueratinas</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">MSI / dMMR</span>
+                            <span class="definition">Inestabilidad de microsatélites</span>
+                        </div>
+                    </div>
+
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Recursos y Asociaciones
+                        </div>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Cancer of Unknown Primary Foundation</strong>
+                                <small style="color: var(--text-light); display: block;">Información y apoyo a pacientes</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Guía ESMO para pacientes</strong>
+                                <small style="color: var(--text-light); display: block;">Información en español</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div class="info-panel" style="background: linear-gradient(135deg, #607D8B 0%, #90A4AE 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-ribbon" style="font-size: 3rem; margin-bottom: 15px; color: white;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Diagnóstico de CUP?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El perfil genómico (NGS) puede identificar terapias dirigidas independientemente del origen.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #607D8B; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es el carcinoma de origen desconocido (CUP)?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El CUP es un diagnóstico oncológico donde se identifica una <strong>metástasis</strong> (cáncer que se ha diseminado) pero no se encuentra el <strong>tumor primario</strong> después de una evaluación completa (historia clínica, exploración física, estudios de imagen, análisis de sangre y estudios patológicos). Representa el 3-5% de todos los cánceres [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica el CUP?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico incluye: <strong>Biopsia</strong> de la metástasis (confirmación histológica). <strong>Inmunohistoquímica (IHC)</strong> con panel de marcadores (CK7, CK20, TTF-1, CDX2, PAX8, GATA3) para orientar el origen. <strong>Estudios de imagen</strong> (TC, PET-TC) para buscar primario. <strong>Perfil genómico (NGS)</strong> para identificar mutaciones accionables. <strong>Endoscopias</strong> según sospecha clínica. Si no se encuentra primario después de esta evaluación, se diagnostica CUP [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es el perfil genómico (NGS) y por qué es importante?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El <strong>perfil genómico por secuenciación de próxima generación (NGS)</strong> analiza cientos de genes para identificar <strong>mutaciones accionables</strong> (EGFR, BRAF, HER2, ALK, NTRK, MSI, TMB alto, etc.). Es importante porque permite <strong>terapias dirigidas</strong> independientemente del origen del tumor, mejorando la supervivencia en pacientes con alteraciones moleculares. Se recomienda en todos los pacientes con CUP [1].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el tratamiento para el CUP?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El tratamiento depende de si se identifica una <strong>mutación accionable</strong> o un <strong>subtipo favorable</strong>. <strong>Terapia dirigida:</strong> si se identifica mutación (BRAF, HER2, EGFR, ALK, NTRK, MSI). <strong>Quimioterapia empírica:</strong> platino + taxano (carboplatino + paclitaxel) o platino + gemcitabina. <strong>Inmunoterapia:</strong> pembrolizumab en MSI/dMMR o TMB alto. <strong>Tratamiento específico:</strong> según subtipo favorable (adenocarcinoma axilar, cervical, peritoneal) [1][8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico del CUP?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El pronóstico es <strong>variable</strong> según el subtipo. La <strong>supervivencia global mediana</strong> es de <strong>6-12 meses</strong> para la mayoría de los pacientes. Los <strong>subtipos favorables</strong> (adenocarcinoma axilar, cervical, peritoneal) tienen mejor pronóstico (12-24 meses). Los pacientes con <strong>mutaciones accionables</strong> que reciben terapia dirigida tienen mejor pronóstico que aquellos que reciben solo quimioterapia empírica [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué seguimiento necesito?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El seguimiento incluye <strong>evaluación clínica y de imagen (TC)</strong> cada 2-3 ciclos durante tratamiento. Post-tratamiento: TC cada 3-4 meses durante 2 años, luego cada 6-12 meses. Algunos pacientes (10-20%) pueden desarrollar un <strong>tumor primario detectable</strong> durante el seguimiento, por lo que se debe mantener vigilancia [9].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.classList.toggle('fa-times');
+            });
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                if (menuBtn) menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
