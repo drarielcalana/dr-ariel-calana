@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Meningioma: Información completa sobre este tumor intracraneal primario más frecuente. Epidemiología (predominio femenino, 2:1), grados WHO (I, II, III), localizaciones típicas (parasagital, ala del esfenoides, convexidad), diagnóstico por RMN (lesión dural, realce homogéneo), tratamiento con cirugía (Simpson grade), radioterapia (SRS, SRT, FSRT) según guías EANO/NCCN 2025-2026 | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="meningioma, tumor cerebral benigno, duramadre, células aracnoideas, grado WHO, cirugía de Simpson, radiocirugía, Gamma Knife, meningioma atípico, meningioma anaplásico, dr ariel calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Meningioma | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre meningioma: diagnóstico diferencial, grados WHO, tratamiento quirúrgico y radiocirugía.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Meningioma | Dr. Ariel Calaña Sabina</title>
+    
+    <!-- FAVICON -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Meningioma (azul acero / gris pizarra / dorado) */
+            --meningio-blue: #2C4F6E;
+            --meningio-blue-dark: #1A334A;
+            --meningio-blue-light: #4A7A9E;
+            --meningio-gold: #C5A03A;
+            --meningio-soft: #E8F0F5;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-meningio: linear-gradient(135deg, #1A334A 0%, #2C4F6E 100%);
+            --gradient-meningio-soft: linear-gradient(135deg, #E8F0F5 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* ============ HEADER ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* ============ HERO ESPECÍFICO PARA MENINGIOMA ============ */
+        .hero-meningio {
+            background: var(--gradient-meningio);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-meningio::before {
+            content: '🧠 🔬 🩺';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(197, 160, 58, 0.05);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+        }
+        
+        .hero-meningio::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(197, 160, 58, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #C5A03A;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(197, 160, 58, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #C5A03A;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-meningio {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid #C5A03A;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-meningio i {
+            color: #C5A03A;
+        }
+        
+        /* ============ BREADCRUMB ============ */
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* ============ CONTENIDO PRINCIPAL ============ */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        /* Tarjeta de resumen rápido */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #2C4F6E;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(44, 79, 110, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(44, 79, 110, 0.1);
+            color: #2C4F6E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2C4F6E;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        /* Grid de contenido principal */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas de sección */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #2C4F6E;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.meningio-highlight {
+            background: linear-gradient(135deg, #E8F0F5 0%, #ffffff 100%);
+            border: 2px solid #2C4F6E;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(44, 79, 110, 0.1);
+            color: #2C4F6E;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        /* Tablas de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #2C4F6E;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #2C4F6E;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Listas de características */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #2C4F6E;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        /* Tabla de grados WHO */
+        .who-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .who-table th {
+            background: #2C4F6E;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .who-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .who-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .who-table tr:hover td {
+            background: #E8F0F5;
+        }
+        
+        /* Tabla de Simpson grade */
+        .simpson-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .simpson-table th {
+            background: #2C4F6E;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .simpson-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .simpson-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .simpson-table tr:hover td {
+            background: #E8F0F5;
+        }
+        
+        /* Tratamiento grid */
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(44, 79, 110, 0.2);
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-5px);
+            border-color: #2C4F6E;
+            box-shadow: 0 10px 25px rgba(44, 79, 110, 0.1);
+        }
+        
+        .treatment-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #2C4F6E;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(44, 79, 110, 0.1);
+            color: #2C4F6E;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #2C4F6E;
+        }
+        
+        .info-panel.meningio-panel {
+            background: linear-gradient(135deg, #2C4F6E 0%, #4A7A9E 100%);
+            color: white;
+        }
+        
+        .info-panel.meningio-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.meningio-panel .info-panel-title i {
+            color: #C5A03A;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #2C4F6E;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #2C4F6E;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #2C4F6E;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-meningio {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            color: #2C4F6E;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-meningio:hover {
+            background: #E8F0F5;
+            transform: translateY(-2px);
+            color: #1A334A;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(44, 79, 110, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #2C4F6E;
+        }
+        
+        .quote-block {
+            background: linear-gradient(135deg, #E8F0F5 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #2C4F6E;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(44, 79, 110, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #2C4F6E;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #2C4F6E;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(44, 79, 110, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #4A7A9E;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #2C4F6E;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #2C4F6E;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .info-box {
+            background: #E8F0F5;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #2C4F6E;
+        }
+        
+        .location-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .location-card {
+            background: var(--light);
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            border: 1px solid rgba(44, 79, 110, 0.2);
+        }
+        
+        .location-card i {
+            font-size: 2rem;
+            color: #2C4F6E;
+            margin-bottom: 10px;
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+            .two-column { grid-template-columns: 1fr; }
+            .location-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="osteosarcoma.html"><i class="fas fa-bone"></i> Osteosarcoma</a>
+                            <a href="hepatoblastoma.html"><i class="fas fa-liver"></i> Hepatoblastoma</a>
+                            <a href="carcinoma-basocelular.html"><i class="fas fa-sun"></i> Carcinoma Basocelular</a>
+                            <a href="sarcoma-kaposi.html"><i class="fas fa-virus"></i> Sarcoma de Kaposi</a>
+                            <a href="meningioma.html" class="active"><i class="fas fa-brain"></i> Meningioma</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO ESPECÍFICO PARA MENINGIOMA -->
+    <section class="hero-meningio">
+        <div class="container">
+            <div class="hero-content">
+                <h1>MENINGIOMA <span>Tumor Intracraneal Primario Más Frecuente</span></h1>
+                <p class="subtitle">Tumor originado en las células aracnoideas de la duramadre</p>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Tumor <strong>extraaxial</strong>, típicamente <strong>benigno y de crecimiento lento</strong> (grado WHO I en 80-90%). Predominio <strong>femenino</strong> (2-3:1). Localizaciones frecuentes: <strong>convexidad, parasagital, ala del esfenoides, surco olfatorio</strong>. Tratamiento: <strong>cirugía (grado de Simpson)</strong> y <strong>radiocirugía (Gamma Knife, CyberKnife)</strong>.</p>
+                <div class="hero-badge-meningio">
+                    <i class="fas fa-chart-line"></i> 35-40% de tumores cerebrales primarios
+                    <i class="fas fa-venus"></i> 2-3:1 (mujeres:varones)
+                    <i class="fas fa-microscope"></i> 80-90% grado WHO I
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Tumores Cerebrales</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Meningioma</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- RESUMEN RÁPIDO -->
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Incidencia</div>
+                    <div class="summary-value">8-10 / 100,000</div>
+                    <div class="summary-desc">Aumenta con la edad, pico 60-70 años</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-venus"></i></div>
+                    <div class="summary-label">Sexo</div>
+                    <div class="summary-value">2-3:1</div>
+                    <div class="summary-desc">Predominio femenino (receptores hormonales)</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Supervivencia (grado I)</div>
+                    <div class="summary-value">90-95%</div>
+                    <div class="summary-desc">SV10 años post-resección completa</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-microscope"></i></div>
+                    <div class="summary-label">Grado WHO III</div>
+                    <div class="summary-value">1-3%</div>
+                    <div class="summary-desc">Meningioma anaplásico (maligno)</div>
+                </div>
+            </div>
+
+            <!-- GRID PRINCIPAL -->
+            <div class="content-grid">
+                <!-- COLUMNA PRINCIPAL -->
+                <div>
+                    <!-- SECCIÓN: ¿QUÉ ES? -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué es? <span>Tumor de las células aracnoideas</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>meningioma</strong> es un tumor que se origina en las <strong>células aracnoideas de las vellosidades meníngeas</strong>, generalmente adherido a la <strong>duramadre</strong>. Representa el <strong>35-40% de todos los tumores cerebrales primarios</strong>, siendo el más frecuente. La mayoría son <strong>benignos y de crecimiento lento</strong> (grado WHO I), pero pueden presentar comportamiento atípico (grado II) o anaplásico/maligno (grado III) [1][7].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>El meningioma es un tumor <strong>extraaxial</strong> típicamente benigno, pero su localización y tamaño pueden causar <strong>déficits neurológicos significativos</strong> por compresión de estructuras adyacentes. La <strong>resección quirúrgica completa (Simpson grado I)</strong> es curativa en la mayoría de los casos. En tumores no resecables o residuales, la <strong>radiocirugía estereotáctica (Gamma Knife, CyberKnife)</strong> ofrece excelente control local (>90% a 5 años) [1][7].</p>
+                            <div class="quote-author">— Guías EANO, NCCN, WHO 2025-2026</div>
+                        </div>
+                        
+                        <div class="two-column">
+                            <div class="info-box" style="margin: 0;">
+                                <h4 style="color: #2C4F6E;"><i class="fas fa-microscope"></i> Histología</h4>
+                                <p><strong>Células meningoteliales</strong> en remolino (whorls). <strong>Cuerpos de psamoma</strong> (calcificaciones concéntricas). Inmunohistoquímica: <strong>EMA (+), vimentina (+), SSTR2A (+), progesterona (+)</strong> [7].</p>
+                            </div>
+                            <div class="info-box" style="margin: 0;">
+                                <h4 style="color: #2C4F6E;"><i class="fas fa-dna"></i> Genética</h4>
+                                <p>Mutación más frecuente: <strong>NF2</strong> (neurofibromatosis tipo 2). Otras: TRAF7, KLF4, AKT1, SMO. Asociación con <strong>radiación ionizante previa</strong> [7].</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: LOCALIZACIONES -->
+                    <section class="section-card meningio-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <h2>Localizaciones <span>Dependiendo de la región dural</span></h2>
+                        </div>
+                        
+                        <div class="location-grid">
+                            <div class="location-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Convexidad</h4>
+                                <p style="font-size: 0.9rem;">Superficie cerebral externa. 20-30%</p>
+                            </div>
+                            <div class="location-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Parasagital / Hoz</h4>
+                                <p style="font-size: 0.9rem;">A lo largo del seno sagital superior. 20-25%</p>
+                            </div>
+                            <div class="location-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Ala del esfenoides</h4>
+                                <p style="font-size: 0.9rem;">Región frontotemporal. 15-20%</p>
+                            </div>
+                            <div class="location-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Surco olfatorio</h4>
+                                <p style="font-size: 0.9rem;">Base frontal. 10-15%</p>
+                            </div>
+                            <div class="location-card">
+                                <i class="fas fa-brain"></i>
+                                <h4>Tentorio / Fosa posterior</h4>
+                                <p style="font-size: 0.9rem;">Ángulo pontocerebeloso. 10%</p>
+                            </div>
+                            <div class="location-card">
+                                <i class="fas fa-eye"></i>
+                                <h4>Región selar / supraselar</h4>
+                                <p style="font-size: 0.9rem;">Meningioma del tubérculo selar. 5-10%</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h4 style="color: #2C4F6E;"><i class="fas fa-lightbulb"></i> Síntomas según localización:</h4>
+                            <p><strong>Convexidad:</strong> Crisis epilépticas, déficit motor/sensitivo focal.<br>
+                            <strong>Parasagital:</strong> Debilidad de miembros inferiores (afectación motora bilateral), crisis.<br>
+                            <strong>Ala del esfenoides:</strong> Exoftalmos, oftalmoplejía, síndrome del seno cavernoso.<br>
+                            <strong>Surco olfatorio:</strong> Anosmia, cambios de personalidad (síndrome frontal).<br>
+                            <strong>Región selar:</strong> Defectos campimétricos (compresión quiasma óptico), cefalea [7].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: GRADOS WHO Y DIAGNÓSTICO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-layer-group"></i></div>
+                            <h2>Grados WHO y Diagnóstico <span>Clasificación pronóstica</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Clasificación WHO 2021 (5ª edición) [7]:</h4>
+                        <table class="who-table">
+                            <thead>
+                                <tr><th>Grado</th><th>Frecuencia</th><th>Características</th><th>Supervivencia a 5 años</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Grado I (Benigno)</strong></td><td>80-90%</td><td>Bajo índice mitótico (<4/10 HPF), sin atipia citológica. Subtipos: meningotelial, fibroblástico, transicional, psamomatoso, angiomatoso, secretor [7]</td><td>90-95%</td></tr>
+                                <tr><td><strong>Grado II (Atípico)</strong></td><td>15-20%</td><td>≥4/10 HPF o ≥3 de: aumento celular, células pequeñas, necrosis, atipia nuclear. Subtipo: cordoide, de células claras [7]</td><td>60-80%</td></tr>
+                                <tr><td><strong>Grado III (Anaplásico / Maligno)</strong></td><td>1-3%</td><td>≥20/10 HPF, histología similar a sarcoma o carcinoma. Subtipo: papilar, rabdoide [7]</td><td>30-40%</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Diagnóstico por imagen [7]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>RMN cerebral con contraste (Gold standard):</strong> Lesión <strong>extraaxial</strong> (interfase con parénquima), <strong>realce homogéneo intenso</strong>, "signo de la cola dural" (realce meníngeo adyacente).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>TC cerebral:</strong> Lesión <strong>hiperdensa</strong> (isodensa o hiperdensa), puede tener calcificaciones, engrosamiento óseo adyacente (hiperostosis).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Angio-RMN o angiografía:</strong> Evalúa vasculatura (meningiomas suelen ser hipervasculares).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>PET con SSTR (68Ga-DOTATATE):</strong> Útil para diagnóstico diferencial y seguimiento (meningiomas expresan receptores de somatostatina tipo 2) [7].</li>
+                        </ul>
+                        
+                        <div class="stats-grid" style="margin-top: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-number">90-95%</div>
+                                <div class="stat-label">Sensibilidad RMN con contraste</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">70-80%</div>
+                                <div class="stat-label">PET con SSTR (lesiones pequeñas)</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento <span>Cirugía, radiocirugía y radioterapia</span></h2>
+                        </div>
+                        
+                        <div class="quote-block" style="background: #E8F0F5;">
+                            <i class="fas fa-cut"></i>
+                            <p>El tratamiento del meningioma depende del <strong>grado WHO, tamaño, localización, síntomas y comorbilidades</strong>. El <strong>gold standard</strong> para meningiomas sintomáticos o en crecimiento es la <strong>resección quirúrgica</strong>, con objetivo de <strong>resección completa (Simpson grado I o II)</strong>. En tumores <strong>asintomáticos pequeños</strong> (<3 cm, sin edema), se puede optar por <strong>seguimiento con RMN seriada</strong>. La <strong>radiocirugía estereotáctica (Gamma Knife, CyberKnife)</strong> está indicada para tumores residuales, no resecables o en localizaciones de alto riesgo [1][7].</p>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Escala de Simpson (grado de resección quirúrgica) [7]:</h4>
+                        <table class="simpson-table">
+                            <thead>
+                                <tr><th>Grado Simpson</th><th>Descripción</th><th>Recurrencia a 5 años</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr><td><strong>Grado I</strong></td><td>Resección completa del tumor, duramadre y hueso anormal</td><td>5-10%</td></tr>
+                                <tr><td><strong>Grado II</strong></td><td>Resección completa del tumor + coagulación de la duramadre adherida</td><td>15-20%</td></tr>
+                                <tr><td><strong>Grado III</strong></td><td>Resección completa del tumor sin resección de duramadre/hueso</td><td>25-30%</td></tr>
+                                <tr><td><strong>Grado IV</strong></td><td>Resección subtotal (tumor residual macroscópico)</td><td>40-50%</td></tr>
+                            </tbody>
+                        </table>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Opciones terapéuticas [7]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Cirugía de resección</h4>
+                                <p><strong>Gold standard</strong> para meningiomas sintomáticos o en crecimiento. Objetivo: <strong>Simpson grado I/II</strong>. Morbilidad depende de localización [7].</p>
+                                <span class="treatment-tag">Estándar oro</span>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-microscope"></i></div>
+                                <h4>Radiocirugía estereotáctica (SRS)</h4>
+                                <p><strong>Gamma Knife, CyberKnife, LINAC</strong>. Para meningiomas residuales, no resecables o de alto riesgo (seno cavernoso, tronco). Control local >90% a 5 años [7].</p>
+                                <span class="treatment-tag">Excelente control local</span>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-radiation"></i></div>
+                                <h4>Radioterapia fraccionada (FRT/FSRT)</h4>
+                                <p>Para tumores grandes (>3-4 cm), grado II/III, o adyacentes a estructuras radiosensibles (quiasma, tallo). Dosis: 50-60 Gy [7].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-eye"></i></div>
+                                <h4>Observación (watchful waiting)</h4>
+                                <p>Para meningiomas <strong>asintomáticos pequeños</strong> (<3 cm, sin edema, sin efecto masa). RMN cada 6-12 meses inicialmente [7].</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Tratamiento sistémico (grado II/III refractario) [7]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-tablets"></i></div>
+                                <h4>Análogos de somatostatina</h4>
+                                <p><strong>Octreotida, lanreotida</strong> (receptores SSTR2+). Estabilización en 50-60% de meningiomas grado I/II [7].</p>
+                            </div>
+                            
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-tablets"></i></div>
+                                <h4>Terapia dirigida / Quimioterapia</h4>
+                                <p>Bevacizumab (anti-VEGF), everolimus, hidroxiurea, temozolomida (eficacia limitada). Ensayos con inhibidores de SSTR [7].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-box">
+                            <h4 style="color: #2C4F6E;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ Terapias dirigidas a receptores de somatostatina (SSTR2A) con radioligandos (177Lu-DOTATATE).<br>
+                            ✔ Inhibidores de la vía Hedgehog (vismodegib) en meningiomas con mutación SMO.<br>
+                            ✔ Inmunoterapia (inhibidores PD-1) en meningiomas grado III recurrentes [7].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: PRONÓSTICO Y SEGUIMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Pronóstico y Seguimiento <span>Factores pronósticos y vigilancia</span></h2>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin-bottom: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-number">90-95%</div>
+                                <div class="stat-label">SV10 años grado I (resección completa)</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">60-80%</div>
+                                <div class="stat-label">SV5 años grado II</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">30-40%</div>
+                                <div class="stat-label">SV5 años grado III</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">>90%</div>
+                                <div class="stat-label">Control local radiocirugía (5 años)</div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Factores pronósticos [7]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> <strong>Grado WHO:</strong> El factor más importante. Grado I excelente pronóstico, grado III mal pronóstico.</li>
+                            <li><i class="fas fa-cut"></i> <strong>Grado de resección (Simpson):</strong> I/II mejor que III/IV.</li>
+                            <li><i class="fas fa-map-marker-alt"></i> <strong>Localización:</strong> Tumores de la base de cráneo (seno cavernoso, clivus) menor resecabilidad.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Edad y estado funcional del paciente.</strong></li>
+                            <li><i class="fas fa-dna"></i> <strong>Marcadores moleculares:</strong> Pérdida de 1p, 14q, 22q asociada a mayor recurrencia [7].</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento recomendado [7]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>RMN cerebral con contraste:</strong> <strong>3 meses post-resección total</strong> (RMN basal), luego <strong>anual durante 5-10 años</strong>, luego cada 2-3 años (si estable).</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>En resección subtotal o grado II/III:</strong> RMN cada <strong>6-12 meses</strong> (mayor riesgo de recurrencia/progresión).</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>En observación (asintomático):</strong> RMN a los <strong>6 meses, luego anual</strong> si estable; si crecimiento >2 mm/año → considerar tratamiento.</li>
+                            <li><i class="fas fa-brain"></i> <strong>Evaluación neurológica y funcional periódica.</strong></li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <!-- TARJETA DEL MÉDICO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Tumores del Sistema Nervioso Central</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL ESPECIAL MENINGIOMA -->
+                    <div class="info-panel meningio-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-brain"></i> Datos Clave Meningioma
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Frecuencia</span>
+                                <span style="font-weight: 700;">35-40% tumores cerebrales primarios</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Grados WHO</span>
+                                <span style="font-weight: 700;">I (80-90%), II (15-20%), III (1-3%)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Gold standard diagnóstico</span>
+                                <span style="font-weight: 700;">RMN con contraste + cola dural</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>Tratamiento principal</span>
+                                <span style="font-weight: 700;">Cirugía (Simpson I/II) ± Radiocirugía</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-meningio" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación de tumor cerebral
+                        </a>
+                    </div>
+
+                    <!-- GLOSARIO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Extraaxial</span>
+                            <span class="definition">Fuera del parénquima cerebral (duramadre, aracnoides)</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Grado Simpson</span>
+                            <span class="definition">Escala de resección quirúrgica (I a V)</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Gamma Knife / CyberKnife</span>
+                            <span class="definition">Radiocirugía estereotáctica</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">SSTR2A</span>
+                            <span class="definition">Receptor de somatostatina tipo 2A</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Cuerpos de psamoma</span>
+                            <span class="definition">Calcificaciones concéntricas histológicas</span>
+                        </div>
+                    </div>
+
+                    <!-- RECURSOS DE APOYO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Recursos y Asociaciones
+                        </div>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Asociación Española de Meningioma (AEM)</strong>
+                                <small style="color: var(--text-light); display: block;">Información y apoyo a pacientes y familias</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>National Brain Tumor Society</strong>
+                                <small style="color: var(--text-light); display: block;">Recursos en inglés sobre meningioma</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>EANO (European Association of Neuro-Oncology)</strong>
+                                <small style="color: var(--text-light); display: block;">Guías clínicas para profesionales</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CTA ESPECIAL -->
+                    <div class="info-panel" style="background: linear-gradient(135deg, #2C4F6E 0%, #4A7A9E 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 15px; color: #C5A03A;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Cefalea persistente, crisis epilépticas o déficit neurológico?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">El diagnóstico precoz del meningioma permite opciones terapéuticas menos invasivas (radiocirugía) y mejor pronóstico. Consulte a un especialista en tumores cerebrales.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #2C4F6E; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿El meningioma es un cáncer?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La mayoría de los meningiomas (80-90%) son <strong>benignos (grado WHO I)</strong>, de crecimiento lento y no se consideran cáncer en el sentido clásico (no invaden tejido cerebral, sino que lo comprimen). Sin embargo, el <strong>15-20% son atípicos (grado II)</strong> y el <strong>1-3% son anaplásicos/malignos (grado III)</strong>, con comportamiento más agresivo y potencial de recurrencia. Por eso se clasifican como tumores del SNC, no como "cáncer" en términos generales [7].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica el meningioma?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico se realiza mediante <strong>RMN cerebral con contraste</strong>, que muestra una lesión <strong>extraaxial</strong>, con <strong>realce homogéneo intenso</strong> y frecuente "signo de la cola dural". La <strong>TC cerebral</strong> complementa (lesión hiperdensa, calcificaciones). La <strong>biopsia o resección quirúrgica</strong> confirma el diagnóstico histológico y el grado WHO [7].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuándo se debe operar un meningioma?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La cirugía está indicada en: <strong>meningiomas sintomáticos</strong> (crisis epilépticas, déficit neurológico, cefalea por hipertensión endocraneana), <strong>tumores en crecimiento</strong> en seguimiento, <strong>efecto masa significativo</strong> o <strong>edema peritumoral extenso</strong>. En meningiomas <strong>asintomáticos pequeños</strong> (<3 cm, sin edema, sin crecimiento), se puede optar por <strong>observación con RMN seriada</strong> [7].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es la radiocirugía (Gamma Knife) y cuándo se usa?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La <strong>radiocirugía estereotáctica (Gamma Knife, CyberKnife)</strong> es una técnica de <strong>radioterapia de alta precisión</strong> que administra una dosis alta de radiación en una sola sesión. Está indicada para: <strong>meningiomas residuales post-cirugía, meningiomas no resecables</strong> (seno cavernoso, tronco, clivus), <strong>meningiomas pequeños</strong> (<3 cm) en localizaciones de alto riesgo quirúrgico. Control local >90% a 5 años [7].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico del meningioma grado I?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Excelente. La <strong>supervivencia a 10 años post-resección completa (Simpson grado I)</strong> es del <strong>90-95%</strong>. Sin embargo, la <strong>recurrencia local a 5-10 años</strong> es del <strong>5-10%</strong> para Simpson I, 15-20% para Simpson II, y hasta 40-50% para resección subtotal. Por eso el seguimiento con RMN es fundamental [7].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿El meningioma puede ser hereditario?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">La mayoría de los meningiomas son <strong>esporádicos</strong>. Sin embargo, existe una asociación bien establecida con la <strong>neurofibromatosis tipo 2 (NF2)</strong>, un síndrome genético autosómico dominante. Los pacientes con NF2 tienen alto riesgo de desarrollar meningiomas múltiples, junto con schwannomas vestibulares y otros tumores del SNC. Otras formas familiares son raras [7].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.classList.toggle('fa-times');
+            });
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                if (menuBtn) menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
