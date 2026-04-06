@@ -1,0 +1,1538 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Meduloblastoma: Información completa sobre este tumor cerebral embrionario maligno de la fosa posterior, el más frecuente en niños. Clasificación molecular (WNT, SHH, Grupo 3, Grupo 4), diagnóstico por RMN, tratamiento con cirugía máxima segura, radioterapia craneoespinal, quimioterapia según estratificación de riesgo, pronóstico y seguimiento según guías SIOP/COG 2025-2026 | Dr. Ariel Calaña Sabina">
+    <meta name="keywords" content="meduloblastoma, tumor cerebral infantil, fosa posterior, WNT, SHH, radioterapia craneoespinal, síndrome de Gorlin, síndrome de Turcot, Dr. Ariel Calaña">
+    <meta name="author" content="Dr. Ariel Calaña Sabina">
+    <meta name="robots" content="index, follow">
+    
+    <meta property="og:title" content="Meduloblastoma | Dr. Ariel Calaña">
+    <meta property="og:description" content="Guía completa sobre meduloblastoma: clasificación molecular, diagnóstico por RMN, tratamiento multimodal y pronóstico.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg">
+    
+    <title>Meduloblastoma | Dr. Ariel Calaña Sabina</title>
+    
+    <!-- FAVICON - LOGO PERSONALIZADO -->
+    <link rel="icon" type="image/x-icon" href="/assets/img/Icono-logo.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/Icono-logo.ico">
+    <link rel="apple-touch-icon" href="/assets/img/Icono-logo.ico">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #0A2A5A;
+            --secondary: #1A5F7A;
+            --accent: #D32F2F;
+            --accent-light: #FF5252;
+            --medical-blue: #1976D2;
+            --medical-blue-light: #64B5F6;
+            --light: #F5F9FF;
+            --text-dark: #263238;
+            --text-light: #546E7A;
+            
+            /* Paleta para Meduloblastoma */
+            --med-blue: #0D47A1;
+            --med-blue-dark: #002171;
+            --med-blue-light: #1976D2;
+            --med-gold: #FFC107;
+            --med-soft: #E3F2FD;
+            
+            --gradient-primary: linear-gradient(135deg, #0A2A5A 0%, #1A5F7A 100%);
+            --gradient-accent: linear-gradient(135deg, #D32F2F 0%, #FF5252 100%);
+            --gradient-med: linear-gradient(135deg, #002171 0%, #0D47A1 100%);
+            --gradient-med-soft: linear-gradient(135deg, #E3F2FD 0%, #FFFFFF 100%);
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 15px 35px rgba(0,0,0,0.12);
+            --transition: all 0.3s ease;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark); 
+            background-color: #f8faff; 
+            padding-top: 80px; 
+        }
+        a { text-decoration: none; }
+        
+        /* ============ HEADER MEJORADO ============ */
+        header { 
+            background: rgba(255, 255, 255, 0.9); 
+            backdrop-filter: blur(15px); 
+            -webkit-backdrop-filter: blur(15px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05); 
+            position: fixed; width: 100%; top: 0; z-index: 2000; 
+            transition: var(--transition);
+        }
+
+        header.scrolled { 
+            padding: 5px 0; 
+            background: rgba(255, 255, 255, 0.98); 
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1); 
+        }
+
+        .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 75px; }
+
+        .logo { display: flex; align-items: center; gap: 12px; }
+        .logo-img { height: 48px; border-radius: 8px; }
+        .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+        .logo-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--primary); }
+        .logo-specialty { font-size: 0.75rem; color: var(--medical-blue); text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
+
+        .nav-menu { display: flex; gap: 25px; align-items: center; }
+        .nav-link { color: var(--primary); font-weight: 600; font-size: 0.9rem; transition: var(--transition); display: flex; align-items: center; gap: 6px; }
+        .nav-link:hover, .nav-link.active { color: var(--accent); }
+        
+        .dropdown { position: relative; }
+        .dropdown-content { 
+            position: absolute; top: 100%; left: 0; background: white; min-width: 220px; 
+            border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); padding: 10px 0;
+            opacity: 0; visibility: hidden; transform: translateY(10px); transition: var(--transition);
+            z-index: 100;
+        }
+        .dropdown:hover .dropdown-content { opacity: 1; visibility: visible; transform: translateY(0); }
+        .dropdown-content a { 
+            display: block; padding: 10px 20px; color: var(--text-dark); 
+            font-size: 0.85rem; font-weight: 500; 
+        }
+        .dropdown-content a:hover { 
+            background: var(--light); color: var(--medical-blue); padding-left: 25px; 
+        }
+        .dropdown-content a.active { 
+            background: var(--light); color: var(--accent); border-left: 3px solid var(--accent);
+        }
+
+        .btn-header { 
+            background: linear-gradient(135deg, var(--accent) 0%, #FF5252 100%); color: white; 
+            padding: 10px 20px; border-radius: 50px; font-size: 0.85rem; font-weight: 700;
+            box-shadow: 0 4px 15px rgba(211, 47, 47, 0.3); animation: pulse-red 2s infinite;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        @keyframes pulse-red {
+            0% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(211, 47, 47, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(211, 47, 47, 0); }
+        }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; color: var(--primary); cursor: pointer; }
+
+        /* ============ HERO ESPECÍFICO PARA MEDULOBLASTOMA ============ */
+        .hero-med {
+            background: var(--gradient-med);
+            color: white;
+            padding: 70px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-med::before {
+            content: '🧠 🔬 👶';
+            position: absolute;
+            top: -30px;
+            right: 5%;
+            font-size: 12rem;
+            color: rgba(255, 193, 7, 0.05);
+            font-weight: 800;
+            transform: rotate(15deg);
+            z-index: 1;
+        }
+        
+        .hero-med::after {
+            content: '';
+            position: absolute;
+            bottom: -100px;
+            left: -50px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 193, 7, 0.02);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            font-weight: 800;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content h1 span {
+            color: #FFC107;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .hero-content h1 span::after {
+            content: '';
+            position: absolute;
+            bottom: 5px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(255, 193, 7, 0.3);
+            z-index: -1;
+        }
+        
+        .hero-content .subtitle {
+            font-size: 1.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+        
+        .hero-content .highlight {
+            color: #FFC107;
+            font-weight: 700;
+            background: rgba(0,0,0,0.3);
+            padding: 2px 15px;
+            border-radius: 50px;
+        }
+        
+        .hero-badge-med {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(5px);
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            margin-top: 25px;
+            border: 2px solid #FFC107;
+            font-weight: 600;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .hero-badge-med i {
+            color: #FFC107;
+        }
+        
+        /* ============ BREADCRUMB ============ */
+        .breadcrumb {
+            background: white;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+            margin-bottom: 30px;
+        }
+        
+        .breadcrumb-list {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+        
+        .breadcrumb-list li {
+            font-size: 0.9rem;
+        }
+        
+        .breadcrumb-list li a {
+            color: var(--medical-blue);
+            transition: var(--transition);
+        }
+        
+        .breadcrumb-list li a:hover {
+            color: var(--accent);
+        }
+        
+        .breadcrumb-list li i {
+            font-size: 0.7rem;
+            color: var(--text-light);
+        }
+        
+        .breadcrumb-list li:last-child {
+            color: var(--text-light);
+            font-weight: 500;
+        }
+        
+        /* ============ CONTENIDO PRINCIPAL ============ */
+        .main-content {
+            padding: 40px 0 60px;
+        }
+        
+        /* Tarjeta de resumen rápido */
+        .quick-summary {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 40px;
+            border-left: 6px solid #0D47A1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            border: 2px solid rgba(13, 71, 161, 0.2);
+        }
+        
+        .summary-item {
+            text-align: center;
+            padding: 0 15px;
+        }
+        
+        .summary-item:not(:last-child) {
+            border-right: 1px solid #eee;
+        }
+        
+        .summary-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(13, 71, 161, 0.1);
+            color: #0D47A1;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin: 0 auto 15px;
+        }
+        
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            margin-bottom: 5px;
+        }
+        
+        .summary-value {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #0D47A1;
+        }
+        
+        .summary-desc {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            margin-top: 5px;
+        }
+        
+        /* Grid de contenido principal */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        /* Tarjetas de sección */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 30px;
+            margin-bottom: 30px;
+            transition: var(--transition);
+            border-top: 6px solid #0D47A1;
+            position: relative;
+        }
+        
+        .section-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+        }
+        
+        .section-card.med-highlight {
+            background: linear-gradient(135deg, #E3F2FD 0%, #ffffff 100%);
+            border: 2px solid #0D47A1;
+        }
+        
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .section-title-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(13, 71, 161, 0.1);
+            color: #0D47A1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .section-title h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin: 0;
+        }
+        
+        .section-title h2 span {
+            font-size: 1rem;
+            color: var(--text-light);
+            font-weight: 400;
+            display: block;
+            margin-top: 3px;
+        }
+        
+        /* Tablas de estadísticas */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border-left: 4px solid #0D47A1;
+        }
+        
+        .stat-number {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #0D47A1;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-dark);
+        }
+        
+        /* Listas de características */
+        .feature-list {
+            list-style: none;
+        }
+        
+        .feature-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .feature-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .feature-list i {
+            color: #0D47A1;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+        
+        .feature-list strong {
+            color: var(--primary);
+        }
+        
+        /* Subtipos moleculares grid */
+        .subtype-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .subtype-card {
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 20px;
+            transition: var(--transition);
+            border: 1px solid #FFC107;
+        }
+        
+        .subtype-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(13, 71, 161, 0.3);
+        }
+        
+        .subtype-icon {
+            font-size: 2rem;
+            color: #FFC107;
+            margin-bottom: 15px;
+        }
+        
+        .subtype-card h4 {
+            color: white;
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+        
+        .subtype-badge {
+            background: rgba(255, 193, 7, 0.3);
+            padding: 5px 15px;
+            border-radius: 50px;
+            display: inline-block;
+            font-weight: 600;
+            margin-top: 10px;
+            font-size: 0.8rem;
+        }
+        
+        /* Tabla de estratificación */
+        .risk-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .risk-table th {
+            background: #0D47A1;
+            color: white;
+            padding: 15px;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .risk-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #f0f0f0;
+            background: white;
+        }
+        
+        .risk-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .risk-table tr:hover td {
+            background: #E3F2FD;
+        }
+        
+        /* Tratamiento grid */
+        .treatment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .treatment-card {
+            background: var(--light);
+            border-radius: 15px;
+            padding: 25px 20px;
+            transition: var(--transition);
+            border: 1px solid rgba(13, 71, 161, 0.2);
+        }
+        
+        .treatment-card:hover {
+            transform: translateY(-5px);
+            border-color: #0D47A1;
+            box-shadow: 0 10px 25px rgba(13, 71, 161, 0.1);
+        }
+        
+        .treatment-icon {
+            width: 50px;
+            height: 50px;
+            background: white;
+            color: #0D47A1;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .treatment-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .treatment-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: rgba(13, 71, 161, 0.1);
+            color: #0D47A1;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+        }
+        
+        .info-panel {
+            background: white;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-top: 4px solid #0D47A1;
+        }
+        
+        .info-panel.med-panel {
+            background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%);
+            color: white;
+        }
+        
+        .info-panel.med-panel .info-panel-title {
+            color: white;
+            border-bottom-color: rgba(255,255,255,0.2);
+        }
+        
+        .info-panel.med-panel .info-panel-title i {
+            color: #FFC107;
+        }
+        
+        .info-panel-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .info-panel-title i {
+            color: #0D47A1;
+        }
+        
+        .doctor-card {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+        
+        .doctor-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #0D47A1;
+            margin-bottom: 15px;
+        }
+        
+        .doctor-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+        
+        .doctor-specialty {
+            color: #0D47A1;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        
+        .btn-whatsapp-sidebar {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin: 15px 0;
+            transition: var(--transition);
+            width: 100%;
+        }
+        
+        .btn-whatsapp-sidebar:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .btn-med {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            background: white;
+            color: #0D47A1;
+            padding: 15px 25px;
+            border-radius: 50px;
+            font-weight: 700;
+            margin: 10px 0;
+            transition: var(--transition);
+            width: 100%;
+            font-size: 1.1rem;
+        }
+        
+        .btn-med:hover {
+            background: #E3F2FD;
+            transform: translateY(-2px);
+            color: #002171;
+        }
+        
+        .glossary-term {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .glossary-term:last-child {
+            border-bottom: none;
+        }
+        
+        .term {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .definition {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+        
+        .resource-link {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px;
+            background: var(--light);
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: var(--transition);
+            color: var(--text-dark);
+        }
+        
+        .resource-link:hover {
+            background: rgba(13, 71, 161, 0.1);
+            transform: translateX(5px);
+        }
+        
+        .resource-link i {
+            color: #0D47A1;
+        }
+        
+        .quote-block {
+            background: linear-gradient(135deg, #E3F2FD 0%, #ffffff 100%);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            margin: 20px 0;
+            border-left: 4px solid #0D47A1;
+        }
+        
+        .quote-block i {
+            font-size: 2rem;
+            color: rgba(13, 71, 161, 0.2);
+            position: absolute;
+            top: 15px;
+            right: 20px;
+        }
+        
+        .quote-block p {
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+        
+        .quote-author {
+            margin-top: 10px;
+            font-weight: 600;
+            color: #0D47A1;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #0D47A1;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 20px rgba(13, 71, 161, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+            z-index: 100;
+            cursor: pointer;
+        }
+        
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .back-to-top:hover {
+            background: #1976D2;
+            transform: translateY(-3px);
+            color: white;
+        }
+        
+        footer { 
+            background: var(--primary); 
+            color: white; 
+            padding: 60px 0 30px; 
+            margin-top: 60px; 
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-section h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-section h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #0D47A1;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul li a {
+            color: rgba(255, 255, 255, 0.8);
+            transition: var(--transition);
+        }
+        
+        .footer-section ul li a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: #0D47A1;
+            transform: translateY(-3px);
+        }
+        
+        .copyright { 
+            text-align: center; 
+            opacity: 0.7; 
+            font-size: 0.9rem; 
+            margin-top: 40px; 
+            padding-top: 20px; 
+            border-top: 1px solid rgba(255,255,255,0.1); 
+        }
+        
+        @media (max-width: 992px) {
+            .nav-menu { 
+                position: fixed; top: 75px; left: -100%; width: 100%; height: calc(100vh - 75px); 
+                background: white; flex-direction: column; padding: 40px; transition: 0.4s;
+                overflow-y: auto;
+            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .btn-header span { display: none; }
+            .hero-content h1 { font-size: 2.5rem; }
+            .content-grid { grid-template-columns: 1fr; }
+            .sidebar { position: static; }
+            .summary-item:not(:last-child) { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; }
+            .quick-summary { grid-template-columns: 1fr; }
+            .subtype-grid { grid-template-columns: 1fr; }
+            .treatment-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 768px) {
+            body { padding-top: 75px; }
+            .hero-content h1 { font-size: 2rem; }
+            .section-title h2 { font-size: 1.4rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 { font-size: 1.7rem; }
+            .hero-content .subtitle { font-size: 1.1rem; }
+        }
+        
+        .bep-box {
+            background: #E3F2FD;
+            padding: 20px;
+            border-radius: 15px;
+            margin: 20px 0;
+            border-left: 4px solid #0D47A1;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        @media (max-width: 768px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .csi-box {
+            background: #FFF8E7;
+            border-left: 4px solid #FFC107;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header id="mainHeader">
+        <div class="container">
+            <nav class="navbar">
+                <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="logo">
+                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/assets/img/logo-dr.webp" alt="Dr. Ariel Calaña" class="logo-img" onerror="this.src='https://placehold.co/48x48/0A2A5A/white?text=Dr'">
+                    <div class="logo-text">
+                        <span class="logo-name">Dr. Ariel Calaña</span>
+                        <span class="logo-specialty">Oncólogo Clínico</span>
+                    </div>
+                </a>
+
+                <div class="nav-menu" id="navMenu">
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/" class="nav-link">
+                        <i class="fas fa-home"></i> Inicio
+                    </a>
+                    <div class="dropdown">
+                        <a href="#" class="nav-link active">
+                            <i class="fas fa-book-medical"></i> Blog Oncológico
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/Generalidades/blog-oncologia-generalidades.html"><i class="fas fa-microscope"></i> Generalidades</a>
+                            <a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html"><i class="fas fa-dna"></i> Tipos de Cáncer</a>
+                            <a href="meduloblastoma.html" class="active"><i class="fas fa-brain"></i> Meduloblastoma</a>
+                        </div>
+                    </div>
+                    <a href="https://drarielcalana.github.io/dr-ariel-calana/medicina-general" class="nav-link">
+                        <i class="fas fa-stethoscope"></i> Medicina General
+                    </a>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 15px;">
+                    <a href="https://wa.me/593984708234" class="btn-header" target="_blank">
+                        <i class="fab fa-whatsapp"></i> <span>Agendar Cita</span>
+                    </a>
+                    <i class="fas fa-bars mobile-toggle" id="menuBtn"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO ESPECÍFICO PARA MEDULOBLASTOMA -->
+    <section class="hero-med">
+        <div class="container">
+            <div class="hero-content">
+                <h1>MEDULOBLASTOMA <span>Tumor cerebral embrionario</span></h1>
+                <p class="subtitle">El tumor cerebral maligno más frecuente en niños</p>
+                <p style="font-size: 1.2rem; opacity: 0.95; max-width: 800px; margin: 0 auto;">Tumor cerebral embrionario de la <strong>fosa posterior</strong> (cerebelo), más frecuente en <strong>niños</strong> (75% de casos <10 años). Representa el <strong>20-25% de todos los tumores cerebrales pediátricos</strong>. Clasificación molecular: <strong>WNT</strong> (mejor pronóstico), <strong>SHH</strong>, <strong>Grupo 3</strong> y <strong>Grupo 4</strong> (pronóstico intermedio a malo). Tratamiento multimodal: <strong>cirugía máxima segura + radioterapia craneoespinal + quimioterapia</strong>. Supervivencia global >80% en pacientes de riesgo estándar.</p>
+                <div class="hero-badge-med">
+                    <i class="fas fa-chart-line"></i> 20-25% tumores cerebrales pediátricos
+                    <i class="fas fa-dna"></i> 4 grupos moleculares (WNT, SHH, G3, G4)
+                    <i class="fas fa-syringe"></i> RT craneoespinal + quimioterapia
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BREADCRUMB -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul class="breadcrumb-list">
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/"><i class="fas fa-home"></i> Inicio</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="https://drarielcalana.github.io/dr-ariel-calana/guia-salud-oncologica/tipos-de-cancer/blog-tipos-cancer.html">Tipos de Cáncer</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li><a href="#">Tumores Cerebrales Pediátricos</a></li>
+                <li><i class="fas fa-chevron-right"></i></li>
+                <li>Meduloblastoma</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-content">
+        <div class="container">
+            
+            <!-- RESUMEN RÁPIDO -->
+            <div class="quick-summary">
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Incidencia</div>
+                    <div class="summary-value">20-25% tumores pediátricos</div>
+                    <div class="summary-desc">~5-10 casos/millón niños/año</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-child"></i></div>
+                    <div class="summary-label">Edad media</div>
+                    <div class="summary-value">5-7 años</div>
+                    <div class="summary-desc">75% en <10 años</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="summary-label">Supervivencia</div>
+                    <div class="summary-value">>80%</div>
+                    <div class="summary-desc">Riesgo estándar, WNT >90%</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-icon"><i class="fas fa-dna"></i></div>
+                    <div class="summary-label">Grupo WNT</div>
+                    <div class="summary-value">Mejor pronóstico</div>
+                    <div class="summary-desc">Supervivencia >90-95%</div>
+                </div>
+            </div>
+
+            <!-- GRID PRINCIPAL -->
+            <div class="content-grid">
+                <!-- COLUMNA PRINCIPAL -->
+                <div>
+                    <!-- SECCIÓN: ¿QUÉ ES? -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-question-circle"></i></div>
+                            <h2>¿Qué es? <span>Tumor embrionario de la fosa posterior</span></h2>
+                        </div>
+                        
+                        <p style="font-size: 1.1rem; margin-bottom: 20px;">El <strong>meduloblastoma</strong> es un tumor cerebral <strong>embrionario maligno</strong> que se origina en el <strong>cerebelo</strong> (fosa posterior). Es el <strong>tumor cerebral maligno más frecuente en niños</strong>, representando el <strong>20-25% de todos los tumores cerebrales pediátricos</strong> y el <strong>40% de los tumores de la fosa posterior</strong>. La incidencia es de aproximadamente 5-10 casos por millón de niños por año. Tiene picos de incidencia a los <strong>5-7 años</strong> y en <strong>adultos jóvenes</strong> (20-30 años). La <strong>clasificación molecular de la OMS 2021</strong> define cuatro grupos principales: <strong>WNT, SHH, Grupo 3 y Grupo 4</strong>, cada uno con características genéticas, clínicas y pronósticas distintas [1][8].</p>
+                        
+                        <div class="quote-block">
+                            <i class="fas fa-quote-right"></i>
+                            <p>La <strong>clasificación molecular</strong> del meduloblastoma ha revolucionado el pronóstico y el tratamiento. Los tumores <strong>WNT</strong> (10%) tienen excelente pronóstico (>90-95% supervivencia a 5 años) y pueden beneficiarse de <strong>desescalada de tratamiento</strong> (menor dosis de radioterapia craneoespinal). Los <strong>Grupos 3 y 4</strong> tienen peor pronóstico (50-70% supervivencia) y requieren <strong>terapias más intensivas</strong>. El tratamiento multimodal incluye <strong>resección quirúrgica máxima segura, radioterapia craneoespinal (CSI) y quimioterapia</strong> (cisplatino, vincristina, lomustina, ciclofosfamida). La estratificación en <strong>riesgo estándar</strong> y <strong>alto riesgo</strong> guía la intensidad del tratamiento [1][8].</p>
+                            <div class="quote-author">— Guías SIOP 2025, COG 2026</div>
+                        </div>
+                        
+                        <div class="two-column">
+                            <div class="bep-box" style="margin: 0;">
+                                <h4 style="color: #0D47A1;"><i class="fas fa-microscope"></i> Localización</h4>
+                                <p><strong>Vermis cerebeloso (75%):</strong> Línea media, más frecuente en niños.<br>
+                                <strong>Hemisferios cerebelosos (25%):</strong> Más frecuente en adolescentes y adultos (asociado a SHH).<br>
+                                Diseminación leptomeníngea frecuente al diagnóstico (30-40%) [8].</p>
+                            </div>
+                            <div class="bep-box" style="margin: 0;">
+                                <h4 style="color: #0D47A1;"><i class="fas fa-chart-line"></i> Epidemiología</h4>
+                                <p>Incidencia: 5-10/1,000,000 niños/año. Pico: 5-7 años. Ligera predominancia masculina (1.5:1). Asociación con síndromes genéticos: <strong>Gorlin (SHH)</strong>, <strong>Turcot (WNT)</strong>, <strong>Rubinstein-Taybi, Li-Fraumeni</strong> [8].</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: CLASIFICACIÓN MOLECULAR -->
+                    <section class="section-card med-highlight">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-dna"></i></div>
+                            <h2>Clasificación Molecular <span>Grupos WNT, SHH, Grupo 3, Grupo 4</span></h2>
+                        </div>
+                        
+                        <div class="subtype-grid">
+                            <div class="subtype-card">
+                                <div class="subtype-icon"><i class="fas fa-smile"></i></div>
+                                <h4>WNT (10-15%)</h4>
+                                <p>Mutación CTNNB1 (β-catenina). Edad: niños mayores/adultos. Localización lateral. <strong>Excelente pronóstico</strong> (>90% supervivencia). Posible desescalada de tratamiento [8].</p>
+                                <span class="subtype-badge">Mejor pronóstico</span>
+                            </div>
+                            <div class="subtype-card">
+                                <div class="subtype-icon"><i class="fas fa-chart-line"></i></div>
+                                <h4>SHH (25-30%)</h4>
+                                <p>Mutaciones PTCH1, SMO, SUFU. Bimodal: lactantes y adultos. Pronóstico variable (SHH infantil: malo; SHH adulto: bueno) [8].</p>
+                                <span class="subtype-badge">Pronóstico variable</span>
+                            </div>
+                            <div class="subtype-card">
+                                <div class="subtype-icon"><i class="fas fa-fire"></i></div>
+                                <h4>Grupo 3 (20-25%)</h4>
+                                <p>MYC amplificado. Infrecuente en adultos. Mayor riesgo metastásico. <strong>Peor pronóstico</strong> (50-60% supervivencia) [8].</p>
+                                <span class="subtype-badge">Peor pronóstico</span>
+                            </div>
+                            <div class="subtype-card">
+                                <div class="subtype-icon"><i class="fas fa-chart-line"></i></div>
+                                <h4>Grupo 4 (35-40%)</h4>
+                                <p>El más frecuente. Mutaciones KDM6A, ZMYM3, MYCN. Pronóstico intermedio (70-80% supervivencia) [8].</p>
+                                <span class="subtype-badge">Pronóstico intermedio</span>
+                            </div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: #0D47A1;"><i class="fas fa-lightbulb"></i> Implicancias clínicas de la clasificación molecular:</h4>
+                            <p><strong>WNT:</strong> Desescalada de radioterapia craneoespinal (reducir a 18 Gy vs 23.4 Gy) para disminuir toxicidad tardía.<br>
+                            <strong>SHH infantil (<3 años):</strong> Evitar radioterapia (toxicidad neurológica severa), usar quimioterapia sola.<br>
+                            <strong>Grupo 3 (MYC amplificado):</strong> Quimioterapia intensiva + trasplante de progenitores [8].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: DIAGNÓSTICO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-stethoscope"></i></div>
+                            <h2>Diagnóstico <span>Clínica, RMN y análisis molecular</span></h2>
+                        </div>
+                        
+                        <h4 style="margin: 0 0 15px; color: var(--primary);">Manifestaciones clínicas (síndrome de hipertensión endocraneana + cerebeloso):</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Cefalea matutina con vómitos:</strong> Por hipertensión endocraneana.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Síndrome cerebeloso:</strong> Ataxia, dismetría, temblor intencional, nistagmo, disartria.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Papiledema:</strong> Por aumento de la presión intracraneal.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Irritabilidad, letargo, macrocefalia (lactantes), alteración de la marcha.</strong></li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Pruebas de imagen [8]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>RMN cerebral con contraste:</strong> Masa en fosa posterior (vermis cerebeloso), que realza con contraste. Evalúa diseminación leptomeníngea.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>RMN de columna total con contraste:</strong> Obligatoria para detectar metástasis leptomeníngeas (estadificación).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Punción lumbar (citología):</strong> Si es seguro realizarla (sin contraindicación por masa).</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Diagnóstico histológico y molecular [8]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-chevron-right"></i> <strong>Biopsia / resección quirúrgica:</strong> Tumor de células pequeñas, redondas, azules. Rosetas de Homer-Wright.</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Inmunohistoquímica:</strong> Sinaptofisina (+), NeuN (+), Ki-67 alto. β-catenina nuclear (WNT), GAB1 (SHH), MYC amplificado (Grupo 3).</li>
+                            <li><i class="fas fa-chevron-right"></i> <strong>Análisis molecular obligatorio:</strong> Secuenciación de CTNNB1 (WNT), PTCH1/SMO (SHH), amplificación MYC/MYCN, metilación de ADN.</li>
+                        </ul>
+                        
+                        <table class="risk-table">
+                            <thead>
+                                32<th>Estratificación de riesgo</th><th>Criterios</th><th>Supervivencia a 5 años</th><th>Tratamiento</th>
+                            </thead>
+                            <tbody>
+                                32<td><strong>Riesgo estándar</strong> ("ef="Edad ≥3 años, residuo ≤1.5cm², sin metástasis (M0), histología clásica/desmoplásica, WNT) <td>>80%</span> ("ef="CSI 23.4 Gy + quimioterapia estándar</span></td>
+                                
+                                <tr>
+                                    <td><strong>Alto riesgo</strong> ("ef="Edad <3 años, residuo >1.5cm², metástasis M1-M3, histología anaplásica, Grupo 3/MYC amplificado) <td>50-70%</span> ("ef="CSI 36-39.6 Gy + quimioterapia intensiva + trasplante</span>--
+                            </tbody>
+                        ~
+                        
+                        <div class="csi-box" style="background: #FFF8E7; border-left: 4px solid #FFC107;">
+                            <h4 style="color: #0D47A1;"><i class="fas fa-radiation"></i> Radioterapia craneoespinal (CSI):</h4>
+                            <p>La CSI es el <strong>pilar del tratamiento</strong> en niños ≥3 años. Dosis: <strong>23.4 Gy</strong> (riesgo estándar) o <strong>36-39.6 Gy</strong> (alto riesgo) a todo el neuroeje, con <strong>boost</strong> de 54-55.8 Gy a la fosa posterior. Efectos tardíos: déficit neurocognitivo, endocrinopatías, ototoxicidad, vasculopatía. La <strong>desescalada de dosis</strong> en WNT está en estudio [8].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: TRATAMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-syringe"></i></div>
+                            <h2>Tratamiento <span>Cirugía, RT craneoespinal y quimioterapia</span></h2>
+                        </div>
+                        
+                        <div class="quote-block" style="background: #E3F2FD;">
+                            <i class="fas fa-flask"></i>
+                            <p>El tratamiento del meduloblastoma es <strong>multimodal</strong> y depende de la <strong>edad y el grupo de riesgo</strong>. Para <strong>niños ≥3 años con riesgo estándar</strong>: <strong>resección máxima segura</strong> + <strong>radioterapia craneoespinal (CSI 23.4 Gy)</strong> + <strong>quimioterapia</strong> (vincristina, cisplatino, lomustina/CCNU, ciclofosfamida). Para <strong>alto riesgo</strong>: CSI 36-39.6 Gy + quimioterapia intensiva. Para <strong>lactantes (<3 años)</strong>: se <strong>evita la radioterapia</strong> (toxicidad neurológica severa), usando <strong>quimioterapia sola</strong> (esquemas con metotrexato, ciclofosfamida, cisplatino) o quimioterapia + trasplante de progenitores. Los <strong>inhibidores de vía SHH</strong> (vismodegib, sonidegib) están en estudio para SHH recurrente [1][8].</p>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Tratamiento por grupo de edad y riesgo [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-cut"></i></div>
+                                <h4>Cirugía</h4>
+                                <p><strong>Resección máxima segura</strong>. Objetivo: residuo <1.5cm². La resección subtotal se asocia a peor pronóstico. El <strong>síndrome de fosa posterior</strong> es una complicación temprana (mutismo, ataxia, déficits neurológicos) en 20-30% [8].</p>
+                                <span class="treatment-tag">Fundamental</span>
+                            </div>
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-radiation"></i></div>
+                                <h4>RT craneoespinal (CSI)</h4>
+                                <p>Niños ≥3 años. Dosis CSI: 23.4 Gy (riesgo estándar) o 36-39.6 Gy (alto riesgo). Boost fosa posterior: 54-55.8 Gy. Efectos tardíos importantes [8].</p>
+                            </div>
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                                <h4>Quimioterapia (riesgo estándar)</h4>
+                                <p><strong>Esquema COG ACNS0331:</strong> Vincristina durante CSI + 8 ciclos de vincristina, cisplatino, lomustina (CCNU) y ciclofosfamida [8].</p>
+                            </div>
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                                <h4>Lactantes (<3 años)</h4>
+                                <p><strong>Evitar radioterapia</strong>. Quimioterapia sola (metotrexato, ciclofosfamida, cisplatino, vincristina, etopósido) ± trasplante de progenitores. Esquema "Head Start" [8].</p>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Terapias dirigidas en estudio [8]:</h4>
+                        <div class="treatment-grid">
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-pills"></i></div>
+                                <h4>Inhibidores SHH</h4>
+                                <p><strong>Vismodegib, sonidegib:</strong> En meduloblastoma SHH recurrente. Respuestas en 50% con mutación PTCH1/SMO. Resistencia frecuente [8].</p>
+                            </div>
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-pills"></i></div>
+                                <h4>Inhibidores WNT</h4>
+                                <p>En desarrollo (inhibidores de porcupina, tankirasa). [8].</p>
+                            </div>
+                            <div class="treatment-card">
+                                <div class="treatment-icon"><i class="fas fa-syringe"></i></div>
+                                <h4>Inmunoterapia</h4>
+                                <p>Inhibidores PD-1 en estudio. CAR-T dirigidas contra GD2, B7-H3 [8].</p>
+                            </div>
+                        </div>
+                        
+                        <div class="bep-box">
+                            <h4 style="color: #0D47A1;"><i class="fas fa-newspaper"></i> Novedades 2025-2026:</h4>
+                            <p>✔ Desescalada de CSI en meduloblastoma WNT (reducir a 18 Gy, omitir quimioterapia en algunos).<br>
+                            ✔ Nuevos inhibidores SHH de segunda generación.<br>
+                            ✔ Terapias combinadas (inhibidores SHH + quimioterapia).<br>
+                            ✔ Vacunas peptídicas para meduloblastoma Grupo 3 [1][8].</p>
+                        </div>
+                    </section>
+
+                    <!-- SECCIÓN: PRONÓSTICO Y SEGUIMIENTO -->
+                    <section class="section-card">
+                        <div class="section-title">
+                            <div class="section-title-icon"><i class="fas fa-chart-line"></i></div>
+                            <h2>Pronóstico y Seguimiento <span>Vigilancia de efectos tardíos</span></h2>
+                        </div>
+                        
+                        <div class="stats-grid" style="margin-bottom: 20px;">
+                            <div class="stat-item">
+                                <div class="stat-number">>90-95%</div>
+                                <div class="stat-label">SV5 años Grupo WNT</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">70-80%</div>
+                                <div class="stat-label">SV5 años SHH / Grupo 4</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">50-60%</div>
+                                <div class="stat-label">SV5 años Grupo 3</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">20-30%</div>
+                                <div class="stat-label">SV5 años enfermedad metastásica alto riesgo</div>
+                            </div>
+                        </div>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Factores pronósticos [8]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-star"></i> <strong>Grupo molecular:</strong> El factor más importante (WNT > SHH/Grupo4 > Grupo3).</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Metástasis al diagnóstico (estadio M):</strong> M0 mejor que M+.</li>
+                            <li><i class="fas fa-cut"></i> <strong>Extensión de resección:</strong> Residuo <1.5cm² mejor pronóstico.</li>
+                            <li><i class="fas fa-chart-line"></i> <strong>Edad:</strong> Lactantes (<3 años) peor pronóstico (no pueden recibir radioterapia).</li>
+                            <li><i class="fas fa-dna"></i> <strong>Amplificación MYC:</strong> Asociada a mal pronóstico (Grupo 3).</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Efectos tardíos del tratamiento [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-brain"></i> <strong>Déficit neurocognitivo:</strong> Disminución del coeficiente intelectual (5-15 puntos por CSI).</li>
+                            <li><i class="fas fa-thyroid"></i> <strong>Endocrinopatías:</strong> Déficit de hormona de crecimiento (90%), hipotiroidismo, hipogonadismo, infertilidad.</li>
+                            <li><i class="fas fa-ear-deaf"></i> <strong>Ototoxicidad:</strong> Por cisplatino (hipoacusia neurosensorial).</li>
+                            <li><i class="fas fa-heart"></i> <strong>Cardiotoxicidad:</strong> Por ciclofosfamida, antraciclinas.</li>
+                            <li><i class="fas fa-chromosome"></i> <strong>Segundos tumores:</strong> Meningiomas (por radioterapia), leucemias.</li>
+                        </ul>
+                        
+                        <h4 style="margin: 20px 0 10px; color: var(--primary);">Seguimiento recomendado [9]:</h4>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-calendar-check"></i> <strong>RMN cerebral y de columna:</strong> Cada 3 meses durante el primer año post-tratamiento, luego cada 6 meses hasta el año 5, luego anual.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Evaluación neurocognitiva, endocrinológica, audiológica y cardiológica:</strong> Periódica según efectos tardíos.</li>
+                            <li><i class="fas fa-calendar-check"></i> <strong>Rehabilitación:</strong> Fisioterapia, terapia ocupacional, apoyo psicopedagógico.</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <!-- SIDEBAR -->
+                <aside class="sidebar">
+                    <!-- TARJETA DEL MÉDICO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-user-md"></i> Especialista
+                        </div>
+                        <div class="doctor-card">
+                            <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" alt="Dr. Ariel Calaña" class="doctor-img" onerror="this.src='https://via.placeholder.com/100x100?text=Dr'">
+                            <h3 class="doctor-name">Dr. Ariel Calaña Sabina</h3>
+                            <div class="doctor-specialty">Oncólogo Clínico - Neurooncólogo Pediátrico</div>
+                            <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 15px;">Especialista en Tumores Cerebrales Pediátricos</p>
+                            <a href="https://wa.me/593984708234" class="btn-whatsapp-sidebar" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar al especialista
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- PANEL ESPECIAL MEDULOBLASTOMA -->
+                    <div class="info-panel med-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-brain"></i> Datos Clave
+                        </div>
+                        <div style="padding: 10px 0;">
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Grupo molecular</span>
+                                <span style="font-weight: 700;">WNT (mejor pronóstico)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Grupo más agresivo</span>
+                                <span style="font-weight: 700;">Grupo 3 (MYC amplificado)</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(255,255,255,0.2);">
+                                <span>Radioterapia CSI</span>
+                                <span style="font-weight: 700;">Pilar en niños ≥3 años</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; padding: 10px 0;">
+                                <span>Lactantes (<3 años)</span>
+                                <span style="font-weight: 700;">Quimioterapia sola (evitar RT)</span>
+                            </div>
+                        </div>
+                        <a href="https://wa.me/593984708234" class="btn-med" target="_blank">
+                            <i class="fab fa-whatsapp"></i> Evaluación personalizada
+                        </a>
+                    </div>
+
+                    <!-- GLOSARIO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-book-open"></i> Glosario
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">CSI</span>
+                            <span class="definition">Radioterapia craneoespinal (Craniospinal Irradiation)</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">WNT / SHH</span>
+                            <span class="definition">Vías de señalización, grupos moleculares del meduloblastoma</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Síndrome de fosa posterior</span>
+                            <span class="definition">Mutismo cerebeloso post-cirugía</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Metástasis leptomeníngeas</span>
+                            <span class="definition">Diseminación del tumor por el líquido cefalorraquídeo</span>
+                        </div>
+                        <div class="glossary-term">
+                            <span class="term">Vismodegib</span>
+                            <span class="definition">Inhibidor de SMO, para SHH recurrente</span>
+                        </div>
+                    </div>
+
+                    <!-- RECURSOS DE APOYO -->
+                    <div class="info-panel">
+                        <div class="info-panel-title">
+                            <i class="fas fa-hand-holding-heart"></i> Recursos y Asociaciones
+                        </div>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Medulloblastoma Foundation</strong>
+                                <small style="color: var(--text-light); display: block;">Información y apoyo a pacientes</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Asociación de Familias con Tumores Cerebrales Infantiles (AFTEC)</strong>
+                                <small style="color: var(--text-light); display: block;">Recursos en español</small>
+                            </div>
+                        </a>
+                        <a href="#" class="resource-link">
+                            <i class="fas fa-external-link-alt"></i>
+                            <div>
+                                <strong>Guía SIOP para pacientes</strong>
+                                <small style="color: var(--text-light); display: block;">Información en español</small>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- CTA ESPECIAL -->
+                    <div class="info-panel" style="background: linear-gradient(135deg, #0D47A1 0%, #1976D2 100%); color: white; border-top: none;">
+                        <div style="text-align: center; padding: 15px 0;">
+                            <i class="fas fa-brain" style="font-size: 3rem; margin-bottom: 15px; color: #FFC107;"></i>
+                            <h4 style="color: white; margin-bottom: 10px;">¿Cefalea matutina, vómitos o alteración de la marcha en un niño?</h4>
+                            <p style="color: white; opacity: 0.9; margin-bottom: 20px;">La RMN cerebral urgente es fundamental para el diagnóstico precoz.</p>
+                            <a href="https://wa.me/593984708234" style="display: inline-block; background: white; color: #0D47A1; padding: 15px 30px; border-radius: 50px; font-weight: 700; transition: var(--transition);" target="_blank">
+                                <i class="fab fa-whatsapp"></i> Consultar especialista
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+
+            <!-- SECCIÓN: PREGUNTAS FRECUENTES -->
+            <section class="section-card" style="margin-top: 20px;">
+                <div class="section-title">
+                    <div class="section-title-icon"><i class="fas fa-question"></i></div>
+                    <h2>Preguntas Frecuentes</h2>
+                </div>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuáles son los síntomas del meduloblastoma?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Los síntomas son consecuencia de la <strong>hipertensión endocraneana</strong> y la <strong>afectación cerebelosa</strong>. Los más frecuentes son: <strong>cefalea matutina</strong> (que mejora durante el día), <strong>vómitos en proyectil</strong> (sin náusea previa), <strong>papiledema</strong> (visible en fondo de ojo), <strong>síndrome cerebeloso</strong> (ataxia, dismetría, temblor intencional, nistagmo, disartria), <strong>irritabilidad, letargo, macrocefalia</strong> (en lactantes), <strong>tortícolis</strong> (por afectación del tronco encefálico) y <strong>alteración de la marcha</strong> (inestabilidad, caídas frecuentes) [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cómo se diagnostica?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El diagnóstico requiere <strong>RMN cerebral con contraste</strong> que muestra una masa en fosa posterior (vermis cerebeloso). Es obligatoria la <strong>RMN de columna total</strong> para evaluar metástasis leptomeníngeas y la <strong>punción lumbar</strong> (si es seguro) para citología de líquido cefalorraquídeo. El diagnóstico definitivo es <strong>histológico y molecular</strong> tras la biopsia o resección quirúrgica. Se realiza <strong>análisis molecular</strong> para determinar el grupo (WNT, SHH, Grupo 3, Grupo 4), que define el pronóstico y el tratamiento [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el tratamiento del meduloblastoma?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El tratamiento es <strong>multimodal</strong>. En <strong>niños ≥3 años con riesgo estándar</strong>: <strong>resección quirúrgica máxima segura</strong> + <strong>radioterapia craneoespinal (CSI 23.4 Gy)</strong> + <strong>quimioterapia</strong> (vincristina, cisplatino, lomustina, ciclofosfamida). En <strong>alto riesgo</strong>: CSI 36-39.6 Gy + quimioterapia intensiva. En <strong>lactantes (<3 años)</strong>: se <strong>evita la radioterapia</strong> (toxicidad neurológica severa), usando <strong>quimioterapia sola</strong> (metotrexato, ciclofosfamida, cisplatino) ± trasplante de progenitores. Los <strong>inhibidores de vía SHH</strong> (vismodegib) están aprobados para SHH recurrente [1][8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Cuál es el pronóstico?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El pronóstico es <strong>excelente para el grupo WNT</strong> (>90-95% supervivencia a 5 años). Los <strong>grupos SHH y Grupo 4</strong> tienen supervivencia del 70-80%. El <strong>Grupo 3</strong> (especialmente con amplificación MYC) tiene peor pronóstico (50-60% supervivencia). En <strong>riesgo estándar</strong> (edad ≥3 años, sin metástasis, residuo <1.5cm²), la supervivencia a 5 años es >80%. Los factores de mal pronóstico incluyen: <strong>enfermedad metastásica al diagnóstico (M+), resección subtotal (>1.5cm² de residuo), edad <3 años, histología anaplásica, amplificación MYC</strong> [8].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué efectos tardíos tiene el tratamiento?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">Los supervivientes de meduloblastoma requieren <strong>seguimiento de por vida</strong> por los efectos tardíos de la radioterapia craneoespinal y la quimioterapia. Los más frecuentes son: <strong>déficit neurocognitivo</strong> (disminución del coeficiente intelectual, problemas de atención, memoria, funciones ejecutivas), <strong>endocrinopatías</strong> (déficit de hormona de crecimiento en >90%, hipotiroidismo, hipogonadismo, infertilidad, obesidad), <strong>ototoxicidad</strong> (hipoacusia neurosensorial por cisplatino), <strong>cardiotoxicidad</strong> (por ciclofosfamida), <strong>segundos tumores</strong> (meningiomas inducidos por radioterapia, leucemias) y <strong>vasculopatía</strong> (accidentes cerebrovasculares). Se recomienda <strong>rehabilitación neurocognitiva, seguimiento endocrinológico y audiológico anual</strong> [9].</p>
+                    </details>
+                    
+                    <details style="background: var(--light); padding: 15px; border-radius: 10px; cursor: pointer;">
+                        <summary style="font-weight: 600; color: var(--primary);"><i class="fas fa-chevron-right"></i> ¿Qué es el síndrome de fosa posterior?</summary>
+                        <p style="margin-top: 10px; padding-left: 25px;">El <strong>síndrome de fosa posterior</strong> (también llamado <strong>mutismo cerebeloso</strong>) es una complicación postoperatoria que ocurre en el <strong>20-30% de los niños</strong> tras la resección de tumores de fosa posterior (especialmente meduloblastoma). Se caracteriza por <strong>mutismo</strong> (incapacidad para hablar), <strong>ataxia</strong>, <strong>hipotonía</strong>, <strong>inestabilidad emocional</strong> e <strong>irritabilidad</strong>. Aparece típicamente <strong>24-72 horas después de la cirugía</strong> y puede durar semanas o meses. El mutismo generalmente se resuelve gradualmente, pero la ataxia y los déficits motores pueden persistir. Requiere <strong>rehabilitación intensiva</strong> (logopedia, fisioterapia, terapia ocupacional) [8].</p>
+                    </details>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Dr. Ariel Calaña Sabina</h4>
+                    <p>Oncólogo Clínico especializado en diagnóstico y tratamiento integral del cáncer. Miembro de la Sociedad Ecuatoriana de Oncología.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Información útil</h4>
+                    <ul>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Aviso legal</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Política de privacidad</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Términos de uso</a></li>
+                        <li><a href="#"><i class="fas fa-chevron-right"></i> Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <li><i class="fas fa-phone-alt"></i> +593 98 470 8234</li>
+                        <li><i class="fas fa-envelope"></i> consultas@drarielcalana.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Guayaquil, Ecuador</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 Dr. Ariel Calaña Sabina - Oncólogo Clínico. Todos los derechos reservados.</p>
+                <p style="margin-top: 10px; font-size: 0.8rem;">La información proporcionada en este sitio web es solo para fines educativos y no sustituye la consulta médica profesional. Siempre consulte con su médico ante cualquier duda sobre su salud.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN VOLVER ARRIBA -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) header.classList.add('scrolled');
+            else header.classList.remove('scrolled');
+            
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 500) backToTop.classList.add('visible');
+            else backToTop.classList.remove('visible');
+        });
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navMenu = document.getElementById('navMenu');
+        if (menuBtn) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                menuBtn.classList.toggle('fa-times');
+            });
+        }
+
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('.nav-link, .dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                if (menuBtn) menuBtn.classList.remove('fa-times');
+            });
+        });
+        
+        document.querySelectorAll('details').forEach(detail => {
+            detail.addEventListener('toggle', function() {
+                const icon = this.querySelector('summary i');
+                if (icon) {
+                    if (this.open) {
+                        icon.style.transform = 'rotate(90deg)';
+                    } else {
+                        icon.style.transform = 'rotate(0deg)';
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
