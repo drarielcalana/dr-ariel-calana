@@ -306,7 +306,7 @@
             margin-left: 15px;
         }
         
-        /* ============ HERO SECTION AJUSTADA ============ */
+        /* ============ HERO SECTION REDISEÑADO CON IMAGEN A LA DERECHA ============ */
         .hero {
             padding: 100px 0 80px;
             background: linear-gradient(135deg, var(--primary) 0%, #2c5282 100%);
@@ -341,35 +341,39 @@
             justify-content: space-between;
             position: relative;
             z-index: 1;
-            gap: 40px;
+            gap: 60px;
         }
         
         .hero-text {
-            flex: 1;
+            flex: 1 1 55%;
+            max-width: 600px;
             animation: fadeInLeft 1s ease;
         }
         
         .hero-image {
-            flex: 1;
-            text-align: center;
+            flex: 1 1 45%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
             animation: fadeInRight 1s ease;
+            position: relative;
         }
         
+        /* Imagen más grande, alineada a la derecha y sin recuadros */
         .hero-image img {
             width: 100%;
-            max-width: 420px;
+            max-width: 520px;
             height: auto;
-            border-radius: 12px;
-            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
-            border: 4px solid white;
-            transform: perspective(1000px) rotateY(-5deg);
-            transition: var(--transition);
+            border-radius: 0;
+            box-shadow: none;
             object-fit: cover;
             object-position: center;
+            transition: var(--transition);
+            display: block;
         }
         
         .hero-image img:hover {
-            transform: perspective(1000px) rotateY(0deg);
+            transform: scale(1.02);
         }
         
         /* TITULO HERO MEJORADO */
@@ -442,32 +446,55 @@
             max-width: 550px;
         }
         
-        .hero-badges {
+        /* NUEVOS PUNTOS DE VALOR */
+        .hero-value-points {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 25px;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         
-        .badge {
-            background: rgba(255,255,255,0.15);
-            padding: 7px 14px;
-            border-radius: 18px;
-            font-size: 0.85rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.2);
+        .hero-value-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            background: rgba(255, 255, 255, 0.08);
+            padding: 16px 20px;
+            border-radius: 14px;
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             transition: var(--transition);
+        }
+        
+        .hero-value-item:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateX(6px);
+            border-color: rgba(255, 255, 255, 0.25);
+        }
+        
+        .hero-value-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--hope-green), var(--prevention-teal));
             display: flex;
             align-items: center;
-            gap: 7px;
+            justify-content: center;
+            font-size: 1.1rem;
+            color: white;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
         }
         
-        .badge:hover {
-            background: rgba(255,255,255,0.25);
-            transform: translateY(-3px);
+        .hero-value-text {
+            font-size: 0.98rem;
+            line-height: 1.5;
+            color: rgba(255, 255, 255, 0.95);
+            font-weight: 400;
         }
         
-        /* ============ BOTONES MEJORADOS ============ */
+        /* ============ BOTONES MEJORADOS (se mantienen para otras secciones) ============ */
         .hero-buttons {
             display: flex;
             gap: 12px;
@@ -1240,14 +1267,23 @@
             .hero-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 40px;
             }
             
-            .hero-text, .hero-image {
-                width: 100%;
+            .hero-text {
+                flex: 1 1 100%;
+                max-width: 100%;
+                order: 2;
+            }
+            
+            .hero-image {
+                flex: 1 1 100%;
+                order: 1;
+                justify-content: center;
             }
             
             .hero-image img {
-                max-width: 380px;
+                max-width: 400px;
             }
             
             .hero-subtitle::before {
@@ -1272,6 +1308,10 @@
             
             .nav-links {
                 gap: 12px;
+            }
+            
+            .hero-value-item {
+                text-align: left;
             }
         }
         
@@ -1485,6 +1525,20 @@
             
             .option-arrow {
                 display: none;
+            }
+            
+            .hero-value-item {
+                padding: 12px 16px;
+            }
+            
+            .hero-value-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 0.95rem;
+            }
+            
+            .hero-value-text {
+                font-size: 0.9rem;
             }
         }
         
@@ -2894,7 +2948,7 @@
     </style>
 </head>
 <body>
-    <!-- ==================== HEADER MEGA OPTIMIZADO ==================== -->
+    <!-- ==================== HEADER MEGA OPTIMIZADO (SIN CAMBIOS) ==================== -->
 <header id="header">
     <div class="container">
         <nav class="navbar">
@@ -2982,7 +3036,7 @@
     </div>
 </header>
 
-    <!-- ==================== HERO SECTION ==================== -->
+    <!-- ==================== HERO SECTION REDISEÑADO CON IMAGEN A LA DERECHA ==================== -->
     <section class="hero" id="inicio">
         <div class="container">
             <div class="hero-content">
@@ -2993,37 +3047,38 @@
                     <!-- SUBTÍTULO CON ANIMACIÓN DE COLOR -->
                     <div class="hero-subtitle typing-text">Oncólogo Clínico • Docente Universitario</div>
                     
-                    <!-- BADGES COMPACTOS -->
-                    <div class="hero-badges">
-                        <div class="badge"><i class="fas fa-graduation-cap"></i> Especialista en Oncología</div>
-                        <div class="badge"><i class="fas fa-stethoscope"></i> Medicina General</div>
-                        <div class="badge"><i class="fas fa-home"></i> Medicina Familiar</div>
-                        <div class="badge"><i class="fas fa-chalkboard-teacher"></i> Docente Universitario</div>
-                        <div class="badge"><i class="fas fa-award"></i> 15+ Años Experiencia</div>
-                        <div class="badge"><i class="fas fa-certificate"></i> SENESCYT • ACESS • CEASSE</div>
-                    </div>
+                    <!-- DESCRIPCIÓN ACTUALIZADA -->
+                    <p>Oncólogo clínico con experiencia en el manejo de tumores sólidos mediante quimioterapia, inmunoterapia y terapias dirigidas, así como en cuidados paliativos.</p>
                     
-                    <p>Oncólogo clínico con experiencia en el manejo de enfermedades oncológicas mediante tratamiento con quimioterapia, inmunoterapia, terapia dirigida, entre otros. Abordaje integral del paciente en cuidados paliativos.</p>
-                    
-                    <div class="hero-buttons">
-                        <a href="#" class="btn-consultation open-consult-modal">
-                            <i class="fas fa-calendar-check"></i> SOLICITAR CONSULTA
-                        </a>
-                        <a href="#segunda-opinion" class="btn-opinion">
-                            <i class="fas fa-clipboard-check"></i> SEGUNDA OPINIÓN
-                        </a>
-                        <a href="#" class="btn-prevention open-info-modal">
-                            <i class="fas fa-book-medical"></i> GUÍAS DE SALUD
-                        </a>
+                    <!-- NUEVOS PUNTOS DE VALOR -->
+                    <div class="hero-value-points">
+                        <div class="hero-value-item">
+                            <div class="hero-value-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="hero-value-text">Práctica médica basada en la evidencia científica actualizada.</div>
+                        </div>
+                        <div class="hero-value-item">
+                            <div class="hero-value-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <div class="hero-value-text">Atención personalizada, empática y de alto valor humano.</div>
+                        </div>
+                        <div class="hero-value-item">
+                            <div class="hero-value-icon">
+                                <i class="fas fa-hands-helping"></i>
+                            </div>
+                            <div class="hero-value-text">Cuidado integral orientado al bienestar del paciente y su entorno.</div>
+                        </div>
                     </div>
                 </div>
                 
                 <div class="hero-image animate-on-scroll">
-                    <img src="https://raw.githubusercontent.com/drarielcalana/dr-ariel-calana/main/Dr%20Ariel.jpg" 
+                    <img src="assets/img/PortadaHero.jpeg" 
                          alt="Dr. Ariel Calaña Sabina - Oncólogo Clínico especialista en cáncer en Ecuador"
                          loading="lazy"
-                         width="420"
-                         height="520">
+                         width="520"
+                         height="650">
                 </div>
             </div>
         </div>
