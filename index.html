@@ -822,24 +822,73 @@
         
         .nav-items { display: flex; align-items: center; gap: 25px; }
         
+        /* ============ BOTÓN CENTRO DE INFORMACIÓN RESALTADO ============ */
         .info-dropdown-btn {
             display: flex;
             align-items: center;
             gap: 8px;
             text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
+            color: white;
+            font-weight: 700;
             font-size: 0.9rem;
-            padding: 8px 15px;
-            border-radius: 8px;
+            padding: 9px 18px;
+            border-radius: 25px;
             transition: var(--transition);
             white-space: nowrap;
-            background: none;
             border: none;
             cursor: pointer;
+            background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
+            box-shadow: 0 4px 14px rgba(26, 106, 165, 0.35);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 0.3px;
         }
         
-        .info-dropdown-btn:hover { background: rgba(26, 106, 165, 0.1); color: var(--medical-blue); }
+        .info-dropdown-btn::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            transition: 0.6s;
+        }
+        
+        .info-dropdown-btn:hover::before { left: 100%; }
+        
+        .info-dropdown-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(26, 106, 165, 0.5);
+        }
+        
+        .info-dropdown-btn i.fa-info-circle {
+            font-size: 1rem;
+            animation: pulseInfo 2s infinite;
+        }
+        
+        @keyframes pulseInfo {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+        
+        .info-dropdown-btn .badge-new {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--accent);
+            color: white;
+            font-size: 0.6rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 10px;
+            line-height: 1.2;
+            box-shadow: 0 2px 6px rgba(230, 57, 70, 0.4);
+            animation: badgePulse 2s infinite;
+        }
+        
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
         
         .nav-mobile {
             position: fixed;
@@ -883,16 +932,20 @@
         
         .info-dropdown-btn.mobile {
             width: 100%;
-            justify-content: space-between;
-            background: var(--light);
+            justify-content: center;
             margin-bottom: 10px;
             padding: 15px;
             border-radius: 10px;
+            background: linear-gradient(135deg, var(--medical-blue), var(--secondary));
+            color: white;
+            font-weight: 700;
         }
         
         @media (max-width: 768px) {
             .nav-compact, .info-compact, .header-consult-btn span { display: none; }
             .nav-dropdown-btn.mobile, .info-dropdown-btn.mobile { display: flex; }
+            .info-dropdown-btn { padding: 8px 12px; font-size: 0.8rem; }
+            .info-dropdown-btn .badge-new { display: none; }
         }
         
         /* ============ RESPONSIVE ============ */
@@ -1121,21 +1174,47 @@
             .specialties-grid { grid-template-columns: 1fr; }
         }
         
-        /* ============ ÁREAS DE ATENCIÓN ONCOLÓGICA - ESTILO VISUAL ============ */
+        /* ============ ÁREAS DE ATENCIÓN ONCOLÓGICA - DISEÑO MODERNO ============ */
         .services {
-            background: linear-gradient(135deg, #ffffff 0%, #f9fbfd 100%);
+            background: linear-gradient(135deg, #ffffff 0%, #f7fafd 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .services::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            right: -150px;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(26, 106, 165, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .services::after {
+            content: '';
+            position: absolute;
+            bottom: -200px;
+            left: -200px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(46, 204, 113, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
         }
         
         .areas-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 28px;
             margin-top: 20px;
+            position: relative;
+            z-index: 1;
         }
         
         .area-card {
             background: white;
-            border-radius: 18px;
+            border-radius: 20px;
             padding: 35px 28px 30px;
             text-align: center;
             transition: all 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.1);
@@ -1146,6 +1225,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
         
         .area-card::before {
@@ -1231,6 +1311,171 @@
         
         .area-card:hover .area-link i { transform: translateX(4px); }
         
+        /* ============ TARJETAS DESTACADAS: TERAPIAS Y ATENCIÓN INTEGRAL ============ */
+        .specialty-highlight-card {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #ffffff 0%, #f0f7ff 100%);
+            border-radius: 24px;
+            padding: 40px 35px;
+            box-shadow: 0 15px 40px rgba(26, 106, 165, 0.12);
+            border: 1px solid rgba(26, 106, 165, 0.15);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: var(--transition);
+            margin-bottom: 10px;
+        }
+        
+        .specialty-highlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--medical-blue), var(--hope-green), var(--prevention-teal), var(--medical-blue));
+            background-size: 300% 100%;
+            animation: gradientMove 4s linear infinite;
+        }
+        
+        @keyframes gradientMove {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 300% 50%; }
+        }
+        
+        .specialty-highlight-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 55px rgba(26, 106, 165, 0.18);
+            border-color: rgba(26, 106, 165, 0.3);
+        }
+        
+        .specialty-highlight-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+        
+        .specialty-highlight-card h3 {
+            font-size: 1.7rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .specialty-highlight-card > p {
+            color: #555;
+            font-size: 1rem;
+            line-height: 1.7;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+        
+        /* Nuevo estilo para la cuadrícula de Terapias Sistémicas (2 columnas para 4 tarjetas) */
+        .highlight-subgrid.therapies-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            width: 100%;
+            max-width: 900px;
+            margin: 10px auto 0;
+        }
+        
+        .highlight-subgrid.integral-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .highlight-subcard {
+            background: white;
+            border-radius: 16px;
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid rgba(26, 106, 165, 0.08);
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-bottom: 20px;
+        }
+        
+        .highlight-subcard-image {
+            width: 100%;
+            height: 140px;
+            overflow: hidden;
+            border-radius: 16px 16px 0 0;
+            position: relative;
+        }
+        
+        .highlight-subcard-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .highlight-subcard:hover .highlight-subcard-image img {
+            transform: scale(1.08);
+        }
+        
+        .highlight-subcard-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(to top, rgba(255,255,255,0.9), transparent);
+            pointer-events: none;
+        }
+        
+        .highlight-subcard-content {
+            padding: 15px 20px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex-grow: 1;
+        }
+        
+        .highlight-subcard h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .highlight-subcard p {
+            font-size: 0.85rem;
+            color: #777;
+            line-height: 1.5;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+        
+        .highlight-subcard .subcard-link {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--medical-blue);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            transition: var(--transition);
+            margin-top: auto;
+        }
+        
+        .highlight-subcard:hover .subcard-link { color: var(--hope-green); }
+        .highlight-subcard:hover .subcard-link i { transform: translateX(3px); }
+        
         /* CTA de la sección */
         .services-cta {
             background: linear-gradient(135deg, var(--primary), var(--secondary));
@@ -1294,12 +1539,20 @@
             }
             .area-card { padding: 28px 22px 25px; }
             .area-icon { width: 68px; height: 68px; font-size: 1.7rem; }
+            .specialty-highlight-card { padding: 30px 20px; }
+            .specialty-highlight-card h3 { font-size: 1.4rem; }
+            .highlight-subgrid.therapies-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .highlight-subgrid.integral-grid { grid-template-columns: repeat(2, 1fr); gap: 15px; }
+            .highlight-subcard-content { padding: 10px 15px 0; }
+            .highlight-subcard-image { height: 120px; }
         }
         
         @media (max-width: 576px) {
             .areas-grid { grid-template-columns: 1fr; }
             .services-cta { padding: 35px 25px; }
             .services-cta h3 { font-size: 1.5rem; }
+            .highlight-subgrid.therapies-grid { grid-template-columns: 1fr; }
+            .highlight-subgrid.integral-grid { grid-template-columns: 1fr; }
         }
         
         /* ============ CENTRO DE INFORMACIÓN ============ */
@@ -1610,6 +1863,7 @@
                 <button class="info-dropdown-btn" id="infoDropdownBtn">
                     <i class="fas fa-info-circle"></i>
                     <span>Centro de Información</span>
+                    <span class="badge-new"></span>
                 </button>
             </div>
             
@@ -1639,6 +1893,7 @@
                 </ul>
                 
                 <button class="info-dropdown-btn mobile" id="infoDropdownBtnMobile">
+                    <i class="fas fa-info-circle"></i>
                     <span>Centro de Información</span>
                 </button>
                 
@@ -1834,98 +2089,149 @@
         <div class="container">
             <div class="section-title">
                 <h2>Áreas de Atención Oncológica</h2>
-                <p>Servicios especializados para el diagnóstico, tratamiento y acompañamiento integral del paciente oncológico</p>
             </div>
             
             <div class="areas-grid">
-                <!-- 1. Consulta Oncológica -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-user-md"></i></div>
-                    <h3>Consulta Oncológica</h3>
-                    <p>Evaluación integral, diagnóstico y plan de tratamiento personalizado para pacientes con cáncer o sospecha de cáncer.</p>
-                    <a href="consulta-oncologica.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
+                <!-- BLOQUE DESTACADO 1: TERAPIAS SISTÉMICAS (4 tarjetas en cuadrícula de 2 columnas) -->
+                <div class="specialty-highlight-card animate-on-scroll">
+                    <div class="specialty-highlight-header">
+                        <h3>Terapias Sistémicas</h3>
+                    </div>
+                    <p>Tratamientos farmacológicos de vanguardia adaptados a las características biológicas del tumor y del paciente.</p>
+                    <div class="highlight-subgrid therapies-grid">
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=400&h=300&fit=crop&q=80" alt="Quimioterapia">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Quimioterapia</h4>
+                                <p>Fármacos que destruyen las células cancerosas de rápido crecimiento.</p>
+                                <a href="quimioterapia.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?w=400&h=300&fit=crop&q=80" alt="Inmunoterapia">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Inmunoterapia</h4>
+                                <p>Estimula el sistema inmunológico para reconocer y atacar el cáncer.</p>
+                                <a href="inmunoterapia.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1628595351029-c2bf17511435?w=400&h=300&fit=crop&q=80" alt="Terapia Dirigida">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Terapia Dirigida</h4>
+                                <p>Ataca alteraciones moleculares específicas de las células cancerosas.</p>
+                                <a href="terapia-dirigida.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=400&h=300&fit=crop&q=80" alt="Hormonoterapia">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Hormonoterapia</h4>
+                                <p>Bloquea hormonas que favorecen el crecimiento de ciertos tipos de cáncer.</p>
+                                <a href="hormonoterapia.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 
-                <!-- 2. Quimioterapia -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-syringe"></i></div>
-                    <h3>Quimioterapia</h3>
-                    <p>Administración de tratamientos de quimioterapia con supervisión y seguimiento especializado.</p>
-                    <a href="quimioterapia.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 3. Inmunoterapia -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Inmunoterapia</h3>
-                    <p>Tratamientos innovadores que estimulan el sistema inmunológico para combatir el cáncer.</p>
-                    <a href="inmunoterapia.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 4. Terapia Dirigida -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-dna"></i></div>
-                    <h3>Terapia Dirigida</h3>
-                    <p>Tratamientos específicos dirigidos a alteraciones moleculares particulares en las células cancerosas.</p>
-                    <a href="terapia-dirigida.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 5. Hormonoterapia -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-flask"></i></div>
-                    <h3>Hormonoterapia</h3>
-                    <p>Tratamiento dirigido a cánceres sensibles a hormonas, como el de mama y próstata, para controlar su crecimiento.</p>
-                    <a href="hormonoterapia.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 6. Cuidados Paliativos -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-procedures"></i></div>
-                    <h3>Cuidados Paliativos</h3>
-                    <p>Atención integral para el manejo de síntomas y mejora de la calidad de vida del paciente y su familia.</p>
-                    <a href="cuidados-paliativos.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 7. Seguimiento Oncológico -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-notes-medical"></i></div>
-                    <h3>Seguimiento Oncológico</h3>
-                    <p>Control y vigilancia posterior al tratamiento para detectar posibles recurrencias y mantener el bienestar.</p>
-                    <a href="seguimiento-oncologico.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 8. Segunda Opinión Oncológica -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-clipboard-check"></i></div>
-                    <h3>Segunda Opinión Oncológica</h3>
-                    <p>Revisión integral de tu diagnóstico y opciones de tratamiento con base en la evidencia científica más actualizada.</p>
-                    <a href="segunda-opinion.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-                
-                <!-- 9. Prevención y Detección Temprana -->
-                <div class="area-card animate-on-scroll">
-                    <div class="area-icon"><i class="fas fa-shield-virus"></i></div>
-                    <h3>Prevención y Detección Temprana</h3>
-                    <p>Evaluación de riesgo oncológico, programas de screening y diagnóstico precoz para detectar el cáncer en etapas iniciales.</p>
-                    <a href="prevencion-oncologica.html" class="area-link">
-                        Conocer más <i class="fas fa-arrow-right"></i>
-                    </a>
+                <!-- BLOQUE DESTACADO 2: ATENCIÓN INTEGRAL Y CONSULTA (8 tarjetas) -->
+                <div class="specialty-highlight-card animate-on-scroll">
+                    <div class="specialty-highlight-header">
+                        <h3>Atención Integral y Consulta</h3>
+                    </div>
+                    <p>Acompañamiento completo en cada etapa de tu proceso oncológico, con un enfoque centrado en la persona.</p>
+                    <div class="highlight-subgrid integral-grid">
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=400&h=300&fit=crop&q=80" alt="Consulta Oncológica">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Consulta Oncológica</h4>
+                                <p>Evaluación integral, diagnóstico y plan de tratamiento personalizado.</p>
+                                <a href="consulta-oncologica.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop&q=80" alt="Segunda Opinión Oncológica">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Segunda Opinión Oncológica</h4>
+                                <p>Revisión experta de tu diagnóstico y opciones de tratamiento.</p>
+                                <a href="segunda-opinion.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1512678080530-7760d81faba6?w=400&h=300&fit=crop&q=80" alt="Manejo de Complicaciones">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Manejo de Complicaciones y Soporte Agudo</h4>
+                                <p>Atención rápida y efectiva para efectos secundarios y urgencias.</p>
+                                <a href="manejo-complicaciones.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=400&h=300&fit=crop&q=80" alt="Prevención y Detección Temprana">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Prevención y Detección Temprana</h4>
+                                <p>Evaluación de riesgo y programas de diagnóstico precoz.</p>
+                                <a href="prevencion-oncologica.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?w=400&h=300&fit=crop&q=80" alt="Seguimiento y Control Oncológico">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Seguimiento y Control Oncológico</h4>
+                                <p>Vigilancia posterior al tratamiento para detectar recurrencias.</p>
+                                <a href="seguimiento-oncologico.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1544027993-37dbfe43562a?w=400&h=300&fit=crop&q=80" alt="Cuidados Paliativos">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Cuidados Paliativos y Calidad de Vida</h4>
+                                <p>Atención integral para el manejo de síntomas y bienestar.</p>
+                                <a href="cuidados-paliativos.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- NUEVO: Nutrición Oncológica -->
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=400&h=300&fit=crop&q=80" alt="Nutrición Oncológica">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Nutrición Oncológica</h4>
+                                <p>Soporte nutricional especializado para mantener la fuerza durante el tratamiento.</p>
+                                <a href="nutricion-oncologica.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <!-- NUEVO: Medicina de Precisión y Biomarcadores -->
+                        <div class="highlight-subcard">
+                            <div class="highlight-subcard-image">
+                                <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=300&fit=crop&q=80" alt="Medicina de Precisión y Biomarcadores">
+                            </div>
+                            <div class="highlight-subcard-content">
+                                <h4>Medicina de Precisión y Biomarcadores</h4>
+                                <p>Análisis de biomarcadores para tratamientos personalizados y más efectivos.</p>
+                                <a href="medicina-precision.html" class="subcard-link">Conocer más <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -2137,10 +2443,7 @@
                             <select id="service" name="service" class="form-control" required>
                                 <option value="">Seleccione un servicio</option>
                                 <option value="consulta-oncologica">Consulta Oncológica</option>
-                                <option value="quimioterapia">Quimioterapia</option>
-                                <option value="inmunoterapia">Inmunoterapia</option>
-                                <option value="terapia-dirigida">Terapia Dirigida</option>
-                                <option value="hormonoterapia">Hormonoterapia</option>
+                                <option value="terapias-sistemicas">Terapias Sistémicas</option>
                                 <option value="cuidados-paliativos">Cuidados Paliativos</option>
                                 <option value="seguimiento-oncologico">Seguimiento Oncológico</option>
                                 <option value="segunda-opinion">Segunda Opinión Oncológica</option>
@@ -2182,12 +2485,12 @@
                 </div>
                 <div class="footer-column">
                     <h3>Áreas de Atención</h3>
+                    <a href="#areas-atencion">Terapias Sistémicas</a>
                     <a href="#areas-atencion">Consulta Oncológica</a>
-                    <a href="#areas-atencion">Quimioterapia</a>
-                    <a href="#areas-atencion">Inmunoterapia</a>
-                    <a href="#areas-atencion">Terapia Dirigida</a>
-                    <a href="#areas-atencion">Hormonoterapia</a>
                     <a href="#areas-atencion">Cuidados Paliativos</a>
+                    <a href="#areas-atencion">Seguimiento Oncológico</a>
+                    <a href="#areas-atencion">Segunda Opinión Oncológica</a>
+                    <a href="#areas-atencion">Prevención y Detección Temprana</a>
                 </div>
                 <div class="footer-column">
                     <h3>Contacto Rápido</h3>
